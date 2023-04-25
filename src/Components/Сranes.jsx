@@ -94,7 +94,7 @@ t[i].classList.add(s.plus)
 else{ t[i].classList.add(s.notPlus)}
 }
 }
-let btn=()=>{hoist();f() ,setText('')
+let btn=()=>{hoist();f() ,setText(''),setBool(isBool)
 }
 
 
@@ -108,12 +108,24 @@ function toggle(){
 function sliceHoist(event) {
 let hoist=event.target.dataset.hoist
 console.log(hoist);
+setBool(!isBool)
+
+if (event.target.classList.contains(s.t)) {
+  console.log('ok');
+    event.target.classList.toggle(s.test)
+ 
+
+  // event.target.classList.add(s.test2)
+}
+// event.target.classList.toggle(s.test,false)
+
 
 let d=state.data.map((el)=>{
 
-  if (el.hoist.trim()==hoist) {
+  if (el.hoist.trim()==hoist&&isBool) {
     event.target.textContent='';
     event.target.textContent +=`${el.rp}`
+    // event.target.classList.add(s.test)
     
     console.log(111);
 

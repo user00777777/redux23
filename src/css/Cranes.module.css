@@ -143,3 +143,5 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', end
         .whit{color:rgb(255, 255, 255)}
         .hoist{width: 200px;height: 50px;background:#d2ebf9}
         .klad{background-color:#ff1a00;height: 100px;}
+        .test{background-color:cyan;width:200px;height: 200px;z-index: 30}
+        .test2{background-color: rgb(42, 232, 9);}
