@@ -1,5 +1,6 @@
 import f from "../foto/SheduleDistrict23.jpg";
 import { createSlice } from "@reduxjs/toolkit";
+import { Link } from "react-router-dom";
 
 const initialState = {
   data: [
@@ -38,7 +39,12 @@ const initialState = {
     { hoist: "51871 ", rp: 10, foto: "", avt: "№2 АП-10А" },
     { hoist: "51906 ", rp: 14, foto: "", avt: "№11 АЕ-20А" },
     { hoist: "51927 ", rp: 14, foto: "", avt: "№16 АП-16А" },
-    { hoist: "52939", rp: 2, foto: "", avt: "№6 АП-16А" },
+    {
+      hoist: "52939",
+      rp: 2,
+      foto: "",
+      avt: `  <Link> "<i> №6<i> <b>АП-16</b>А"</Link> `,
+    },
     {
       hoist: "51832",
       rp: 14,

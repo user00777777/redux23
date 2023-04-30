@@ -11,6 +11,16 @@ function Homepage() {
     setCount(count + 1);
   }
 
+
+  let one=1
+  let two=useMemo(()=>{
+    return one +10
+  },[one]
+  )
+console.log(one,'one');
+console.log(two,'two');
+one+1
+
   return (
     <div>
       <p>Count: {count}</p>

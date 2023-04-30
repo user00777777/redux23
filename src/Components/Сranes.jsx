@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
+import { createElement } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import s from '../css/Cranes.module.css'
@@ -9,6 +10,9 @@ import { addNumb, setData } from '../sliceReduce/tableSlice';
 
 
   const refP=useRef(null)
+
+  const telRef=useRef(null)
+  const refBtn=useRef(null)
   const[text,setText]=useState('')
   const[isBool,setBool]=useState(true)
 const dispatch=useDispatch()
@@ -52,14 +56,6 @@ monorail[i].classList.add(s.pp)
 
 function hoist() {
 let t = document.querySelectorAll('[data-hoist]');
-console.log(isBool);
-
-
-
-
-
-
-let arr =[]
 for (let i = 0; i < t.length; i++) {
  let a=t[i].dataset.machine
 t[i].addEventListener('click',(event)=>{
@@ -74,14 +70,6 @@ t[i].addEventListener('click',(event)=>{
 })
 const hoist = t[i]
 
-
-
-
-  
- 
-  
-
-  
 console.log(text);
 
 if (t[i].dataset.hoist==text) {
@@ -94,8 +82,11 @@ t[i].classList.add(s.plus)
 else{ t[i].classList.add(s.notPlus)}
 }
 }
-let btn=()=>{hoist();f() ,setText(''),setBool(isBool)
+let btn=()=>{hoist();f() ,setText(''),setBool(!isBool);
+
 }
+
+
 
 
 
@@ -104,53 +95,54 @@ function toggle(){
 
 
 }
+let oldContent = null;
+let oldTel = null;
 
 function sliceHoist(event) {
-let hoist=event.target.dataset.hoist
-console.log(hoist);
-setBool(!isBool)
+  let hoist = event.target.dataset.hoist;
+  let ell = event.target;
+  let t = telRef.current
+  state.data.map((el) => {
+  
+    if (el.hoist.trim() == hoist && isBool||t.classList.contains(s.test2)) {
+    // if (t.classList.contains(s.test2)) {
+    //   telRef.current.innerHTML=oldTel
+    //   console.log(1);
+    // }
 
-if (event.target.classList.contains(s.t)) {
-  console.log('ok');
-    event.target.classList.toggle(s.test)
- 
-
-  // event.target.classList.add(s.test2)
+      if (t.classList.contains(s.test2)) {
+       
+        console.log('no');
+        ell.innerHTML = oldContent;
+        t.innerHTML = oldTel
+        
+        t.classList.toggle(s.test2 );
+      } else {
+        oldTel = t.innerHTML;
+        t.innerHTML = `РП<b style=color:red> ${el.rp} </b> Автомат<i>${el.avt} </i></br><i>${el.info ? el.info : ''}</i>`;
+oldContent= ell.innerHTML
+        console.log(oldTel, 'ok');
+        
+       t.classList.toggle(s.test2,false);  
+    }
+    }
+  });
 }
-// event.target.classList.toggle(s.test,false)
 
 
-let d=state.data.map((el)=>{
 
-  if (el.hoist.trim()==hoist&&isBool) {
-    event.target.textContent='';
-    event.target.textContent +=`${el.rp}`
-    // event.target.classList.add(s.test)
-    
-    console.log(111);
-
-}})
-
-
-    
-   
-  }
-
-
-  // console.log(event.target.insertAdjacentElement('afterbegin',newB));
-
-console.log(state);
-
-useEffect(()=>{
-if (refP.current) {
-  refP.current.addEventListener('click',sliceHoist)
-}
-return ()=>{
+useEffect(() => {
   if (refP.current) {
-    refP.current.removeEventListener('click',sliceHoist )
+    refP.current.addEventListener('click', sliceHoist);
   }
-}
-})
+
+  return () => {
+    if (refP.current) {
+      refP.current.removeEventListener('click', sliceHoist);
+    }
+  };
+}, [isBool]);
+
 
 return (
   <>
@@ -183,7 +175,7 @@ return (
 <div data-hoist='51926'data-rp='' data-machine='клепка<br><span>№051791<span/>' className={[s.div24,s.t,'t'].join(' ')}> 51926</div>
 <div data-hoist='51925'data-rp='' data-machine='клепка<br><span>№051814<span/>' className={[s.div25,s.t,'t'].join(' ')}> 51925</div>
 <div data-hoist='51792'data-rp='' data-machine='SB972 <br><span>№052911<span/>' className={[s.div26,s.t,'t'].join(' ')}> 51792</div>
-<div className={[s.div27,s.cart].join(' ')} data-carts="051973"> телега№ 051973</div>
+<div className={[s.div27,s.cart,s.t].join(' ')} data-carts="051973"> телега№ 051973</div>
 <div className={[s.div28,s.t].join(' ')}> Шу Телеги</div>
 <div data-hoist='51872'data-machine='SB898 <br><span>№052331<span/>' className={[s.div29,s.t,'t'].join(' ')}> 51872</div>
 <div data-hoist='51908'data-machine='Сб973<br><span>№52913<span/>' className={[s.div30,s.t,'t'].join(' ')}> 51908</div>
@@ -193,7 +185,7 @@ return (
 <div data-hoist='51891'data-machine='клепка<br><span>№051814<span/>' className={[s.div34,s.t,'t'].join(' ')}> 51891</div>
 <div data-hoist='51834'data-machine='клепка<br><span>№051814<span/>' className={[s.div35,s.t,'t'].join(' ')}> 51834</div>
 <div data-hoist='51771'data-machine='стенд-стена' className={[s.div36,s.t,'t'].join(' ')}> 51771</div>
-<div className={[s.div37,s.cart].join(' ')} data-carts="051975"> Tелега № 051975</div>
+<div className={[s.div37,s.cart].join(' ')} data-carts="051975" ref={telRef}> Tелега № 051975</div>
 <div className={[s.div38,s.t].join(' ')}> ВС-300</div>
 <div className={[s.div39,s.t].join(' ')}> ВДМ</div>
 <div className={[s.div44,s.cart].join(' ')} data-carts="052087"> Телега <br/> 052087	</div>
@@ -217,8 +209,8 @@ return (
 <div data-monorail="51763" className={[s.div58,s.t,s.monorail].join(' ')}>Монорельс <span> №51763</span>	</div>
 <div  data-monorail="51690" className={[s.div59,s.t,s.monorail].join(' ')}>Монорельс <span> №51690</span>	</div>
 
-<input value={text} type="text" className={s.inp} onChange={(e)=>setText( e.target.value)}/>
-<button className={s.btn} onClick={btn}>Жми</button>
+<input value={text} type="text" className={s.inp}  onChange={(e)=>setText( e.target.value)}/>
+<button className={s.btn} onClick={btn} ref={refBtn}>Жми</button>
  <h3 className={s.h3}>Малярка</h3>
 <div data-hoist='52805' data-machine='тел возле крана'  className={[s.div60,s.t,s.mal,'t'].join(' ')}> 52805</div>
 <div data-hoist='52806' data-machine='комната строполей' className={[s.div61,s.t,s.mal,'t'].join(' ')}> 52806</div>
@@ -238,24 +230,7 @@ export default Сranes
         
 
 
-// import React, { useEffect } from 'react'
 
-// function Сranes() {
-//   let [isOpen, SetOpen] = useState(true)
-
-
-
-
-
-//   return (
-//     <div>
-//       <div onClick={toggle}>Toggle</div>
-//       {isOpen && <div data-hoist="hoist">Hoist</div>}
-//     </div>
-//   )
-// }
-
-// export default Сranes
 
 
 

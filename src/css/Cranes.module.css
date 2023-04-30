@@ -139,9 +139,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', end
         background-color:#ff0088
 
         }
-        .machine>span{color:rgb(251, 247, 247)}
+        .machine>span{color:rgb(251, 247, 247);}
         .whit{color:rgb(255, 255, 255)}
         .hoist{width: 200px;height: 50px;background:#d2ebf9}
         .klad{background-color:#ff1a00;height: 100px;}
-        .test{background-color:cyan;width:200px;height: 200px;z-index: 30}
-        .test2{background-color: rgb(42, 232, 9);}
+   
+        .test{height: 0px;color:white;}
+        .test2{background-color: rgb(247, 251, 246);width: 299px;height: 48px;column-fill:auto;font-size:12px;
+        ;
+   break-inside: avoid;
+    }
+    
+
+        /* .yy{font-size: 11px;} */
