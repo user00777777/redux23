@@ -57,10 +57,11 @@ monorail[i].classList.add(s.pp)
 function hoist() {
 let t = document.querySelectorAll('[data-hoist]');
 for (let i = 0; i < t.length; i++) {
- let a=t[i].dataset.machine
+ let a=t[i].dataset.machine ;
+ let _hoist=t[i].dataset.hoist;
 t[i].addEventListener('click',(event)=>{
 
-
+ 
  if (t[i].dataset.hoist) {
     event.target.innerHTML=a
     event.target.classList.add(s.machine)
@@ -68,12 +69,19 @@ t[i].addEventListener('click',(event)=>{
 
   
 })
-const hoist = t[i]
+// const hoist = t[i]
 
 console.log(text);
+console.log(_hoist);
 
-if (t[i].dataset.hoist==text) {
-  t[i].closest('[data-hoist]').classList.add(s.machine)
+
+// if (_hoist==text) {}
+const regexp=new RegExp(`${text}$`)
+if (regexp.test(_hoist)) {
+  console.log('ok');
+  
+
+  // t[i].closest('[data-hoist]').classList.add(s.machine)
 
 
 t[i].style.background='aqua';
@@ -91,7 +99,7 @@ let btn=()=>{hoist();f() ,setText(''),setBool(!isBool);
 
 
 
-function toggle(){
+function toggle(){ё
 
 
 }
@@ -115,14 +123,13 @@ function sliceHoist(event) {
         console.log('no');
         ell.innerHTML = oldContent;
         t.innerHTML = oldTel
-        
         t.classList.toggle(s.test2 );
       } else {
         oldTel = t.innerHTML;
-        t.innerHTML = `РП<b style=color:red> ${el.rp} </b> Автомат<i>${el.avt} </i></br><i>${el.info ? el.info : ''}</i>`;
+        t.innerHTML = `РП<b style=color:red> ${el.rp} </b> Автомат<i>${el.avt} </i></br><i>${el.info ? el.info : ''}  </i>`;
 oldContent= ell.innerHTML
         console.log(oldTel, 'ok');
-        
+        // ell.innerHTML=`<img className='im' src="${el.f}"/>`
        t.classList.toggle(s.test2,false);  
     }
     }
