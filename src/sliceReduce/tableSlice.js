@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 
 const initialState = {
   data: [
-    { hoist: "51854", rp: "12 с ШР", foto: f, avt: 3, info: "шр" },
-    { hoist: "51833", rp: 12, foto: "", avt: "" },
-    { hoist: "51770", rp: 12, foto: "", avt: "" },
-    { hoist: "51792", rp: 12, foto: "", avt: "" },
+    { hoist: "51854", rp: !12, foto: f, avt: 3, info: "шр возле буксового" },
+    { hoist: "51833", rp: 12, foto: "", avt: "шр возле буксового" },
+    { hoist: "51770", rp: 12, foto: "", avt: "шр возле буксового" },
+    { hoist: "51792", rp: 12, foto: "", avt: "шр возле буксового" },
     { hoist: "51834", rp: 8, foto: "", avt: "10A" },
     { hoist: "51771", rp: 7, foto: "", avt: "AE-20" },
     { hoist: "51939", rp: 2, foto: "", avt: "АП-16" },
@@ -18,7 +18,7 @@ const initialState = {
       avt: "№8-АЕ-20",
       info: "фаза одна идет к контролерам",
     },
-    { hoist: "52023", rp: 3, foto: "", avt: "" },
+    { hoist: "52023", rp: 3, foto: "", avt: "?" },
     { hoist: "51879", rp: 6, foto: "", avt: "№5- 100A" },
     { hoist: "52046", rp: "ШР18", foto: "", avt: "№5-10A" },
     { hoist: "51880", rp: 5, foto: "", avt: "№9 -40A" },
@@ -43,7 +43,7 @@ const initialState = {
       hoist: "52939",
       rp: 2,
       foto: "",
-      avt: `  <Link> "<i> №6<i> <b>АП-16</b>А"</Link> `,
+      avt: `   №6 (АП-16А) `,
     },
     {
       hoist: "51832",

@@ -1,9 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react'
+import { useMemo } from 'react';
 import { createElement } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import s from '../css/Cranes.module.css'
 import { addNumb, setData } from '../sliceReduce/tableSlice';
+import Telega from './Telega';
 
 
  function  Сranes() {
@@ -69,19 +71,16 @@ t[i].addEventListener('click',(event)=>{
 
   
 })
-// const hoist = t[i]
 
 console.log(text);
 console.log(_hoist);
 
 
-// if (_hoist==text) {}
 const regexp=new RegExp(`${text}$`)
 if (regexp.test(_hoist)) {
   console.log('ok');
   
 
-  // t[i].closest('[data-hoist]').classList.add(s.machine)
 
 
 t[i].style.background='aqua';
@@ -97,12 +96,9 @@ let btn=()=>{hoist();f() ,setText(''),setBool(!isBool);
 
 
 
+const[rp ,setRp]=useState({})
 
 
-function toggle(){ё
-
-
-}
 let oldContent = null;
 let oldTel = null;
 
@@ -110,31 +106,55 @@ function sliceHoist(event) {
   let hoist = event.target.dataset.hoist;
   let ell = event.target;
   let t = telRef.current
-  state.data.map((el) => {
+state.data.map((el) => {
+
+    if (el.hoist.trim() == hoist && isBool) {
   
-    if (el.hoist.trim() == hoist && isBool||t.classList.contains(s.test2)) {
-    // if (t.classList.contains(s.test2)) {
-    //   telRef.current.innerHTML=oldTel
-    //   console.log(1);
-    // }
 
       if (t.classList.contains(s.test2)) {
-       
-        console.log('no');
-        ell.innerHTML = oldContent;
-        t.innerHTML = oldTel
-        t.classList.toggle(s.test2 );
-      } else {
-        oldTel = t.innerHTML;
-        t.innerHTML = `РП<b style=color:red> ${el.rp} </b> Автомат<i>${el.avt} </i></br><i>${el.info ? el.info : ''}  </i>`;
-oldContent= ell.innerHTML
-        console.log(oldTel, 'ok');
-        // ell.innerHTML=`<img className='im' src="${el.f}"/>`
-       t.classList.toggle(s.test2,false);  
+        setRp( ()=>{
+          return {
+            rp:el.rp,
+            // avt:el.avt,
+            // info:el.info,
+            hoist:el.hoist
+          }})
+          
+          
+                 console.log('test2');
+   
+        t.classList.toggle(s.test2,false );
+          
+          }
+ 
+       else {
+        console.log('test2>false');
+   t.classList.add(s.test)
+    
+
+      
+
+
+console.log(el.info);
+
+      
+    setRp( ()=>{
+return {
+  // rp:el.rp,
+avt:el.avt,
+info:el.info,
+hoist:el.hoist
+}})
+
+
+
+
+       t.classList.toggle(s.test2);  
+    
     }
-    }
-  });
+ } });
 }
+
 
 
 
@@ -157,8 +177,8 @@ return (
 <div className={s.parent} id='p'  ref={refP}  >
 {/* <div className={[s.div1 ,s.y].join }> e</div> */}
 <div data-monorail='51788'  className={[s.div1,s.t,s.monorail,'t' ].join(' ') }  > Монорельс <span> №51788</span></div>
-<div data-monorail='51837' className={[s.div2,s.t,s.monorail].join(' ')} > Mонорельс<span><Link to='/first'>№51837</Link> </span></div>
-<div className={[s.div3,s.t,].join(' ')}onClick={toggle}  > <span> {isBool||( 'Рп')}</span></div>
+<div data-monorail='51837' className={[s.div2,s.t,s.monorail].join(' ')} > Mонорельс<span> №51837 </span></div>
+<div className={[s.div3,s.t,].join(' ')}  > <span> </span></div>
 <div data-monorail="51838" className={[s.div4,s.t,s.monorail].join(' ')}> Монорельс <span>№51838</span></div>
 <div className={[s.div5,s.t,s.storeroom,'klad'].join(' ')  }id='k' > Кладовые</div>
 <div className={[s.div6,s.t,s.wc].join(' ')}> WC/Ж</div>
@@ -169,7 +189,7 @@ return (
 <div data-hoist= {'51906'}  data-rp='рп 8 авт№2' data-machine='2A554<br><span>№052035<span/>' className={[s.div11,s.t,'t'].join(' ') }  >51906</div>
 <div data-hoist='52044'data-rp='  '  data-machine='клепка-правее' data-neighbour="клепка" className={[s.div12,s.t,'t'].join(' ')}  >52044</div>
 <div data-hoist='51915'data-rp='' data-machine='клепка-левее ' className={[s.div13,s.t,'t'].join(' ')}> 51915</div>
-<div data-hoist='51854'data-rp='' data-machine='2A554<br><span>№052068<span/> 'className={[s.div14,s.t,'t'].join(' ')}><Link to='/first'> 51854</Link></div>
+<div data-hoist='51854'data-rp='' data-machine='2A554<br><span>№052068<span/> 'className={[s.div14,s.t,'t'].join(' ')}>51854</div>
 <div data-hoist='51927'data-rp='' data-machine='СМ2126<br><span>№052050<span/>' className={[s.div15,s.t,'t'].join(' ')}> 51927</div>
 <div data-hoist='empty' className={[s.div16,s.t].join(' ')} data-machine='клепка<br><span>№052131<span/>'> ---------</div>
 <div data-hoist='51830'data-rp='' data-machine='клепка<br><span>№052035<span/>' className={[s.div17,s.t,'t'].join(' ')}> 51830 </div>
@@ -192,7 +212,7 @@ return (
 <div data-hoist='51891'data-machine='клепка<br><span>№051814<span/>' className={[s.div34,s.t,'t'].join(' ')}> 51891</div>
 <div data-hoist='51834'data-machine='клепка<br><span>№051814<span/>' className={[s.div35,s.t,'t'].join(' ')}> 51834</div>
 <div data-hoist='51771'data-machine='стенд-стена' className={[s.div36,s.t,'t'].join(' ')}> 51771</div>
-<div className={[s.div37,s.cart].join(' ')} data-carts="051975" ref={telRef}> Tелега № 051975</div>
+<div className={[s.div37,s.cart].join(' ')} data-carts="051975" >Телега № 051975</div>
 <div className={[s.div38,s.t].join(' ')}> ВС-300</div>
 <div className={[s.div39,s.t].join(' ')}> ВДМ</div>
 <div className={[s.div44,s.cart].join(' ')} data-carts="052087"> Телега <br/> 052087	</div>
@@ -206,7 +226,7 @@ return (
 <div data-monorail="52057" className={[s.div48,s.t,s.monorail].join(' ')}> Монорельс <span>52057</span></div>
 <div data-monorail="51779" className={[s.div49,s.t,s.monorail].join(' ')}>Монорельс <span>51779</span></div>
 <div data-monorail="51691" className={[s.div50,s.t,s.monorail].join(' ')}>Монорельс <span>51691</span></div>
-<div className={[s.div51,s.t].join(' ')}> дорога</div>
+<div className={[s.div51,s.t].join(' ') }  ref={telRef} > <Telega {...rp}  /></div>
 <div data-hoist='52045' data-machine='2H55<br><span>№11917<span/>' className={[s.div52,s.t,'t'].join(' ')}> 52045</div>
 <div data-hoist='51800' data-machine='ФП27П<br><span>№052232<span/>' className={[s.div53,s.t,'t'].join(' ')}> 51800	</div>
 <div data-hoist='51880' data-machine='SM2414<br><span>№52800<span/>' className={[s.div54,s.t,'t'].join(' ')}> 51880</div>
