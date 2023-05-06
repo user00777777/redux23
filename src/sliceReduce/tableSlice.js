@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const initialState = {
   data: [
-    { hoist: "51854", rp: !12, foto: f, avt: 3, info: "шр возле буксового" },
+    { hoist: "51854", rp: 12, foto: f, avt: "шр возле буксового" },
     { hoist: "51833", rp: 12, foto: "", avt: "шр возле буксового" },
     { hoist: "51770", rp: 12, foto: "", avt: "шр возле буксового" },
     { hoist: "51792", rp: 12, foto: "", avt: "шр возле буксового" },
