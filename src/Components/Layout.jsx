@@ -9,8 +9,8 @@ const Layout = () => {
         <Link to="/">Home</Link>
         <Link to="/m"> Тельфера </Link>
 
-        <Link to="/first">First</Link>
-        <Link to="/one">OneComponent</Link>
+        <Link to="/substation">Тп-32</Link>
+        <Link to="/machineTools">Станки</Link>
         <Link to="/workers"> Дежурные</Link>
         {/* <Link to ='main'>Главная</Link> */}
       </header>
