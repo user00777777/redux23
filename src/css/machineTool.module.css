@@ -11,9 +11,6 @@
 
 .div1 {
   grid-area: 1/1/2/2;
-  height: 100px;
-  width: 100px;
-  background-color: rgb(210, 51, 51);
 }
 
 .div2 {
@@ -410,4 +407,8 @@
 
 .div100 {
   grid-area: 21/1/22/2;
+}
+
+.r {
+  background-color: aqua;
 }/*# sourceMappingURL=machineTool.module.css.map */
