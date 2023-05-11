@@ -1,20 +1,81 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+aside, nav, footer, header, section, main {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul, ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+input, textarea, button, select {
+  font-family: inherit;
+  font-style: inherit;
+  color: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
 .parent {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(12, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  background-color: white;
+  background-color: rgb(246, 246, 246);
   height: 100vh;
-  width: 100%;
+  width: -moz-min-content;
+  width: min-content;
+  font-size: 14px;
 }
 
 .div1 {
   grid-area: 3/1/4/4;
+  width: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .div2 {
   grid-area: 4/1/5/4;
+  width: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .div3 {
@@ -23,109 +84,473 @@
 
 .div4 {
   grid-area: 6/3/8/4;
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
+  display: flex;
+  justify-content: center;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  font-weight: 500;
+  align-items: center;
+  font-size: 12px;
 }
 
 .div5 {
   grid-area: 6/2/7/3;
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
+  display: flex;
+  justify-content: center;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  font-weight: 500;
+  align-items: center;
+  font-size: 12px;
 }
 
 .div6 {
   grid-area: 7/2/8/3;
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
+  display: flex;
+  justify-content: center;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  font-weight: 500;
+  align-items: center;
+  font-size: 12px;
 }
 
 .div7 {
   grid-area: 6/1/8/2;
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
+  display: flex;
+  justify-content: center;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  font-weight: 500;
+  align-items: center;
+  font-size: 12px;
+}
+.div7 span {
+  font-size: 18px;
+  color: red;
 }
 
 .div8 {
   grid-area: 8/3/9/4;
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
+  display: flex;
+  justify-content: center;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  font-weight: 500;
+  align-items: center;
+  font-size: 12px;
 }
 
 .div9 {
   grid-area: 8/2/9/3;
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
+  display: flex;
+  justify-content: center;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  font-weight: 500;
+  align-items: center;
+  font-size: 12px;
 }
 
 .div10 {
   grid-area: 8/1/9/2;
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
+  display: flex;
+  justify-content: center;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  font-weight: 500;
+  align-items: center;
+  font-size: 12px;
 }
 
 .div11 {
   grid-area: 3/6/4/9;
+  width: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 149px;
 }
 
 .div12 {
   grid-area: 4/6/5/9;
+  width: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 149px;
 }
 
 .div13 {
   grid-area: 5/7/6/8;
+  margin-left: 50px;
 }
 
 .div14 {
   grid-area: 6/6/8/7;
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
+  display: flex;
+  justify-content: center;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  font-weight: 500;
+  align-items: center;
+  font-size: 12px;
+  width: -moz-max-content;
+  width: max-content;
+  margin-left: 72px;
 }
 
 .div15 {
   grid-area: 6/7/7/8;
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
+  display: flex;
+  justify-content: center;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  font-weight: 500;
+  align-items: center;
+  font-size: 12px;
 }
 
 .div16 {
   grid-area: 7/7/8/8;
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
+  display: flex;
+  justify-content: center;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  font-weight: 500;
+  align-items: center;
+  font-size: 12px;
 }
 
 .div17 {
   grid-area: 6/8/8/9;
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
+  display: flex;
+  justify-content: center;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  font-weight: 500;
+  align-items: center;
+  font-size: 12px;
+}
+.div17 span {
+  font-size: 18px;
+  color: red;
 }
 
 .div18 {
   grid-area: 8/8/9/9;
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
+  display: flex;
+  justify-content: center;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  font-weight: 500;
+  align-items: center;
+  font-size: 12px;
 }
 
 .div19 {
   grid-area: 8/7/9/8;
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
+  display: flex;
+  justify-content: center;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  font-weight: 500;
+  align-items: center;
+  font-size: 12px;
 }
 
 .div20 {
   grid-area: 8/6/9/7;
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
+  display: flex;
+  justify-content: center;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  font-weight: 500;
+  align-items: center;
+  font-size: 12px;
+  margin-left: 72px;
 }
 
 .div21 {
   grid-area: 10/8/11/9;
-}
-
-.div22 {
-  grid-area: 9/8/10/9;
-}
-
-.div23 {
-  grid-area: 9/7/10/8;
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
+  display: flex;
+  justify-content: center;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  font-weight: 500;
+  align-items: center;
+  font-size: 12px;
 }
 
 .div24 {
   grid-area: 10/7/11/8;
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
+  display: flex;
+  justify-content: center;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  font-weight: 500;
+  align-items: center;
+  font-size: 12px;
+}
+
+.div24 {
+  grid-area: 10/7/11/8;
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
+  display: flex;
+  justify-content: center;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  font-weight: 500;
+  align-items: center;
+  font-size: 12px;
+}
+
+.div23 {
+  grid-area: 9/7/10/8;
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
+  display: flex;
+  justify-content: center;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  font-weight: 500;
+  align-items: center;
+  font-size: 12px;
+}
+
+.div22 {
+  grid-area: 9/8/10/9;
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
+  display: flex;
+  justify-content: center;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  font-weight: 500;
+  align-items: center;
+  font-size: 12px;
+}
+
+.div24 {
+  grid-area: 10/7/11/8;
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
+  display: flex;
+  justify-content: center;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  font-weight: 500;
+  align-items: center;
+  font-size: 12px;
 }
 
 .div25 {
   grid-area: 9/6/11/7;
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
+  display: flex;
+  justify-content: center;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  font-weight: 500;
+  align-items: center;
+  font-size: 12px;
+  margin-left: 72px;
 }
 
 .div26 {
   grid-area: 1/8/3/9;
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
+  display: flex;
+  justify-content: center;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  font-weight: 500;
+  align-items: center;
+  font-size: 12px;
 }
 
 .div27 {
   grid-area: 2/1/3/2;
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
+  display: flex;
+  justify-content: center;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  font-weight: 500;
+  align-items: center;
+  font-size: 12px;
 }
 
 .div28 {
   grid-area: 1/2/2/3;
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
+  display: flex;
+  justify-content: center;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  font-weight: 500;
+  align-items: center;
+  font-size: 12px;
 }
 
 .div29 {
   grid-area: 1/6/2/7;
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
+  display: flex;
+  justify-content: center;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  font-weight: 500;
+  align-items: center;
+  font-size: 12px;
 }
 
 .div30 {
   grid-area: 12/4/13/6;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 40px;
+}
+
+.r {
+  background-color: rgb(201, 185, 173);
+  border: 3px solid rgb(35, 26, 26);
 }/*# sourceMappingURL=Substation.module.css.map */
-.r{background-color: rgb(209, 20, 156);border:3px solid black}
