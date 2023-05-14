@@ -1,34 +1,36 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState } from 'react';
 
-function Homepage() {
-  const [count, setCount] = useState(0);
+export  default function Homepage() {
+  const [attribut, setAttributes] = useState([]);
 
-  const doubleCount = useMemo(() => {
-    return count + 2;
-  }, [count]);
-
-  function increment() {
-    setCount(count + 1);
-  }
-
-
-  let one=1
-  let two=useMemo(()=>{
-    return one +10
-  },[one]
-  )
-console.log(one,'one');
-console.log(two,'two');
-one+1
+  const handleChildClick = (event) => {
+    const element = event.target;
+    const elementAttributes = Array.from(element.attributes).map((attribute) => ({
+      name: attribute.name,
+      value: attribute.value,
+    }));
+    setAttributes((prevAttributes) => [...prevAttributes, ...elementAttributes]);
+  };
 
   return (
-    <div>
-      <p>Count: {count}</p>
-      <p>Double count: {doubleCount}</p>
-      <button onClick={increment}>Increment</button>
+    <div onClick={handleChildClick}>
+      <ChildComponent name="Alice" age={30} />
+      <ChildComponent name="Bob" age={35} occupation="Engineer" />
+      <ChildComponent name="Charlie" age={40} occupation="Designer" hobby="Drawing" />
+      <ul>
+        {attribut.map((attribute, index) => (
+          <li key={index}>
+            {attribute.name}={attribute.value}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
 
-export default Homepage;
+function ChildComponent(props) {
+console.log();
 
+
+  return <div {...props}>Click me to see my attributes</div>;
+}

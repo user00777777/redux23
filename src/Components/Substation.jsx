@@ -1,16 +1,49 @@
-import React from 'react'
+import React, { useEffect,useState } from 'react'
+import { useRef } from 'react'
 import s from '../css/Substation.module.css'
+
 export default function Substation() {
+  const[bgColor,setBgColor]=useState(s.bgColor1)
+  const refA = useRef();
+useEffect(()=>{
+let interval= setInterval(() => {
+  setBgColor((prevBgcolor)=>prevBgcolor===s.bgColor1?s.bgColor2:s.bgColor1)
+}, 1000);
+
+return ()=> clearInterval(interval);
+},[])
+
+
+
+
+// useEffect(()=>{
+//   let interval=setInterval(()=>{
+    
+//     setBgColor((prevColor)=>prevColor===s.bgColor1?s.bgColor2:s.bgColor1 )
+  
+//   },1000)
+//   return ()=>clearInterval(interval)
+  
+  
+//   },[])
+
+
+
+
+
+
+
+
   return (
-    <div>
-<div className={[s.parent].join(' ')}>
-<div className={[s.div1,s.vmt1,s.r].join(' ')}>Внт1<br/> Запитан от<br /> кп #4 яч#3 </div>
+ 
+<div className={[s.parent ,'o'].join(' ')}  >
+<div className={[s.div1,s.vmt1,s.r ,'o'].join(' ')}>Внт1<br/> Запитан от<br /> кп #4 яч#3 </div>
 <div className={[s.div2,s.t1,s.r].join(' ')}> <h5>T1-1000kвa</h5> </div>
 <div className={[s.div3,s.connection,s.r].join(' ')}> </div>
 <div className={[s.div4,s.elCount,s.r].join(' ')}>Счетчик </div>
 <div className={[s.div5,s.elCell,s.r].join(' ')}>Яч # 2 </div>
-<div className={[s.div6,s.elCell,s.r].join(' ')}> яч#3</div>
-<div className={[s.div7,s.avm1,s.r].join(' ')}> Авм <span>#1</span></div>
+<div className={[s.div6,s.elCell,s.r,'o'].join(' ')}   title={'k'} > яч#3</div>
+<div className={[s.div7,s.avm1,s.r,bgColor].join(' ')  }ref={refA} data-avm='1' > Авм <span>#1</span></div>
 <div className={[s.div8,s.elCell,s.r].join(' ')}> яч#6</div>
 <div className={[s.div9,s.elCell,s.r].join(' ')}> яч#5</div>
 <div className={[s.div10,s.elCell,s.r].join(' ')}>яч#4 </div>
@@ -39,6 +72,8 @@ export default function Substation() {
 
 
 
-    </div>
   )
 }
+
+
+

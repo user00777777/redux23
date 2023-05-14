@@ -6,7 +6,11 @@
   grid-row-gap: 2px;
   height: 100vh;
   width: 100%;
-  background: aquamarine;
+  background-color: aqua;
+}
+
+.all {
+  border: solid red 2px;
 }
 
 .div1 {
@@ -409,6 +413,12 @@
   grid-area: 21/1/22/2;
 }
 
-.r {
-  background-color: aqua;
+.bgColor1 {
+  background-color: rgb(30, 213, 17);
+  font-size: 50px;
+}
+
+.bgColor2 {
+  background-color: rgb(255, 255, 255);
+  font-size: 49px;
 }/*# sourceMappingURL=machineTool.module.css.map */

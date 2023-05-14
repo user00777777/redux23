@@ -553,4 +553,20 @@ input::-ms-clear {
 .r {
   background-color: rgb(201, 185, 173);
   border: 3px solid rgb(35, 26, 26);
+}
+
+.change {
+  background-color: chartreuse;
+}
+
+.bgColor1 {
+  background-color: hotpink;
+}
+
+.bgColor2 {
+  background-color: rgb(150, 194, 142);
+}
+
+.avm1C {
+  background-color: gray;
 }/*# sourceMappingURL=Substation.module.css.map */
