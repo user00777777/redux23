@@ -10,6 +10,7 @@
 
 .parent {
     display: grid;
+    position: relative;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(12, 1fr);
     grid-column-gap: 0px;
@@ -73,7 +74,95 @@
     
     
     }
-    .change{background-color:chartreuse}
+    .change{
+        animation: myAnimation 2s 1s infinite linear;
+        -webkit-animation: myAnimation 4s 100ms infinite ease-out;
+      
+      }
 .bgColor1{background-color:hotpink;}
 .bgColor2{background-color:rgb(150, 194, 142);}
 .avm1C{background-color:gray}
+@keyframes myAnimation {
+  
+    0%
+    {
+       
+   border-color
+   : 
+   #000
+   ;
+   background-color
+: 
+#fff;
+       
+   box-shadow
+   : none;
+     }
+     
+   50%
+    {
+        background-color
+        : 
+        #f8f8f8
+        ;  
+   border-color
+   : 
+   #ff0
+   ;
+       
+   box-shadow
+   : 
+   0
+    
+   0
+    
+   10px
+    
+   #ff0
+   ;
+     }
+     
+   100%
+    {
+        background-color
+        : 
+        rgb(166, 159, 159)
+        ; 
+   border-color
+   : 
+   #000
+   ;
+       
+   box-shadow
+   : none;
+     }
+  }
+  .abs{
+
+    height: 230px;
+    width: 100px;
+    background-color:rgb(255, 255, 255);
+position:absolute ;
+margin-left: 130px;
+
+margin-top: 5rem;
+
+  }
+  .absChild{display: flex;
+
+width: 150px;
+height: 200px;
+background-color:rgb(197, 222, 198);
+// justify-content: center;
+// align-items:center;
+@include border();
+font-size: 10px;
+word-wrap: break-word;
+overflow-wrap: break-word;
+
+}
+// .con2{background-color:#ff0;
+//     position: absolute;
+// margin-left:12rem;
+
+// }
