@@ -601,6 +601,7 @@ input::-ms-clear {
 
 .absChild {
   display: flex;
+  padding-left: calc(20px + 30 * (100vw - 320px) / 880);
   width: 150px;
   height: 200px;
   background-color: rgb(197, 222, 198);

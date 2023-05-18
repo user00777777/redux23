@@ -1,60 +1,98 @@
 import React, { useEffect,useState } from 'react'
 import { createElement } from 'react';
 import { useRef } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
 import s from '../css/Substation.module.css'
+import { nCell } from '../sliceReduce/substationReducer';
 
 export default function Substation() {
-  // const[bgColor,setBgColor]=useState(s.bgColor1)
+  let dispatch=useDispatch()
+let[cel,setCell]=useState()
+let selector=useSelector(state=>state.tp32)
+
   const refA = useRef();
   const refAbs=useRef()
   const papaRef=useRef()
-// useEffect(()=>{
-// let interval= setInterval(() => {
-//   setBgColor((prevBgcolor)=>prevBgcolor===s.bgColor1?s.bgColor2:s.bgColor1)
-// }, 1000);
 
-// return ()=> clearInterval(interval);
-// },[])
+// let x = selector.data.reduce((acc,el) => {
 
-
-
-
-// useEffect(()=>{
-//   let interval=setInterval(()=>{
-    
-//     setBgColor((prevColor)=>prevColor===s.bgColor1?s.bgColor2:s.bgColor1 )
-  
-//   },1000)
-//   return ()=>clearInterval(interval)
-  
-  
-//   },[])
-
-useEffect(()=>{
+// if (el.hasOwnProperty('description')) {
  
-  function tp(event) {
-  
+//   const[typ,iN,breakCurent]=el.description
+   
+// const{type}=typ;
+// const{iNom}=iN;
+// const{breakCurrent}=breakCurent
 
-  let out=refAbs.current
-let element=event.target
-  if (element) {
+// acc={t:type,iN:iNom,bC:breakCurent}
 
-      out.innerHTML=`<ul><li>ccecec</li></li>rgrgrgrgr<li>edwdwdwdeed</li></ul>`
-    
-    out.classList.add(s.absChild)
-    
-  }
- 
-  
-  
-  }
-  papaRef.current.addEventListener('click',tp)
-return ()=>{
-  papaRef.current.removeEventListener('click',tp)
+// }
+// return acc
+// },{});
+
+let out=selector.list.reduce((acc,el)=>{
+if( el.description){
+
+  const[typ,iN,breakCurent]=el.description
+   
+const{type}=typ;
+const{iNom}=iN;
+const{breakCurrent}=breakCurent
+
+acc={t:type,iN:iNom,bC:breakCurent}
+
 }
-})
+return acc
+
+},{});
 
 
+
+
+let [cell]=selector.list.map((el)=>el.cell)
+
+
+
+
+
+
+
+
+function tp(event) {
+  let data = event.target.dataset.cell;
+
+// console.log('cel',cel);
+
+ 
+
+  dispatch(nCell(data));
+
+  let out = refAbs.current;
+
+  if (true) {
+    console.log('ok');
+    out.innerHTML += ` ${cell} `;
+    out.classList.add(s.absChild);
+  } else {
+    console.log('no');
+  }
+}
+
+useEffect(() => {
+  const papaElement = papaRef.current;
+
+  if (papaElement) {
+    papaElement.addEventListener('click', tp);
+  }
+
+  return () => {
+    if (papaElement) {
+      papaElement.removeEventListener('click', tp);
+    }
+  };
+}); // Добавьте зависимость `cell` в массив зависимостей
+
+// ...
 
 
 // function parent(event) {
@@ -75,7 +113,7 @@ return ()=>{
 <div className={[s.div4,s.elCount,s.r,].join(' ')}>Счетчик </div>
 <div className={[s.div5,s.elCell,s.r].join(' ')}>Яч # 2 </div>
 <div className={[s.div6,s.elCell,s.r,'o'].join(' ')}   title={'k'} > яч#3</div>
-<div className={[s.div7,s.avm1,s.r,s.change].join(' ')  }ref={refA} data-avm='1' > Авм <span>#1</span></div>
+<div className={[s.div7,s.avm1,s.r,s.change].join(' ')  }ref={refA} data-cell='avm1' > Авм <span>#1</span></div>
 <div className={[s.div8,s.elCell,s.r].join(' ')}> яч#6</div>
 <div className={[s.div9,s.elCell,s.r].join(' ')}> яч#5</div>
 <div className={[s.div10,s.elCell,s.r].join(' ')}>яч#4 </div>
@@ -107,6 +145,8 @@ return ()=>{
 
   )
 }
+
+
 
 
 

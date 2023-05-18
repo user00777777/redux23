@@ -149,8 +149,8 @@ margin-top: 5rem;
 
   }
   .absChild{display: flex;
-
-width: 150px;
+    padding-left: calc(20px + (50 - 20) * ((100vw - 320px) / (1200 - 320)));
+    width: 150px;
 height: 200px;
 background-color:rgb(197, 222, 198);
 // justify-content: center;
