@@ -4,11 +4,13 @@ import { useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import s from '../css/Substation.module.css'
 import { destr, nCell } from '../sliceReduce/substationReducer';
+import Avm2 from './sbbstationComponents/Avm2';
 
 export default function Substation() {
   const dispatch = useDispatch();
   const selector = useSelector(state => state.tp32);
   const refA = useRef();
+  const refA2 = useRef();
   const refAbs = useRef();
   const papaRef = useRef();
   const[x,setX]=useState('')
@@ -18,7 +20,6 @@ export default function Substation() {
 //   const nl = useSelector(state => state.tp32);
 // console.log(nl);
 
-  console.log('newcell',newcel);
   
 const [cell]=cel.map((el)=>el.description)
 const ce=cel.filter((el)=>el!==el.description)
@@ -31,6 +32,37 @@ dispatch( destr(cel))
 // let id=ce.find((el)=>{return el== el.id}
 // )
 // console.log(id);
+const value = localStorage.getItem("key");
+  
+
+useEffect(()=>{
+   function result(v) {
+if (v=='false') {
+  console.log(v);
+  
+return setX(!false)
+
+
+} else {
+
+  console.log(v);
+  
+  setX(!true)
+}}
+
+result(value)
+},[value,x])
+
+
+
+
+// let resultValue=value==
+
+
+
+
+
+
 
 function arDestr(c) {
 
@@ -65,24 +97,26 @@ let avm1=arDestr(cell)
   const tp = useCallback((event) => {
     let data = event.target.dataset.cell;
 
+
     dispatch(nCell(data));
   }, [dispatch, cell]);
 
   useEffect(() => {
     let out = refAbs.current;
 console.log(cel.cell);
-
+console.log(x);
+x&&refA2.current.classList.add(s.another)
     if (cell) {
       console.log('ok');
       if (avm1) {
            out.innerHTML += `<ul><p >${avm1.type}</p> <li>${avm1.iNom}</li><li> ${avm1.breakCurrent}</li><i >${avm1.other}</i></ul> `;
       out.classList.add(s.absChild);
+     
       }
    
-    } else {
-      console.log('no');
-    }
-  }, [cell]);
+    } 
+
+  }, [cell,x]);
 
   useEffect(() => {
     const papaElement = papaRef.current;
@@ -100,28 +134,28 @@ console.log(cel.cell);
 
 
   const btn = () => {
-  localStorage.setItem('key', '1');
-  value==='1'? alert('workTp1'): alert('worksTp2');
+   
+  localStorage.setItem('key', 'true');
+  // value==='1'? alert('workTp1'): alert('worksTp2');
  };
   const btn2 = () => {
-  localStorage.setItem('key', '2');
-  value==='1'? alert('workTp1'): alert('worksTp2');
+  localStorage.setItem('key', 'false');
+  // value==='1'? alert('workTp1'): alert('worksTp2');
  };
-  const value = localStorage.getItem("key");
-console.log(value);
 
-value==='1'? alert('workTp1'): alert('worksTp2');
+
+
 
   return (
  
 <div className={[s.parent ,'o'].join(' ')}  ref={papaRef} >
 <div className={[s.div1,s.vmt1,s.r ,'o'].join(' ')}>Внт1<br/> Запитан от<br /> кп #4 яч#3 </div>
-<div className={[s.div2,s.t1,s.r,s.change].join(' ')}> <h5>T1-1000kвa</h5> </div>
+<div className={[s.div2,s.t1,s.r].join(' ')}> <h5>T1-1000kвa</h5> </div>
 <div className={[s.div3,s.connection,s.r].join(' ')}> </div>
 <div className={[s.div4,s.elCount,s.r,].join(' ')}>Счетчик </div>
 <div className={[s.div5,s.elCell,s.r].join(' ')}>Яч # 2 </div>
 <div className={[s.div6,s.elCell,s.r,'o'].join(' ')}   title={'k'} > яч#3</div>
-<div className={[s.div7,s.avm1,s.r,s.change].join(' ')  }ref={refA} data-cell='avm1' > Авм <span>#1</span></div>
+<div className={[s.div7,s.avm1,s.r,].join(' ')  }ref={refA} data-cell='avm1' > Авм <span>#1</span></div>
 <div className={[s.div8,s.elCell,s.r].join(' ')}> яч#6</div>
 <div className={[s.div9,s.elCell,s.r].join(' ')}> яч#5</div>
 <div className={[s.div10,s.elCell,s.r].join(' ')}>яч#4 </div>
@@ -131,7 +165,7 @@ value==='1'? alert('workTp1'): alert('worksTp2');
 <div className={[s.div14,s.elCount,s.r].join(' ')}> <h5>Счетчик</h5></div>
 <div className={[s.div15,s.elCell,s.r].join(' ')}>яч #13 </div>
 <div className={[s.div16,s.elCell,s.r].join(' ')}> яч#14</div>
-<div className={[s.div17,s.avm2,s.r].join(' ')}> Авм#<span>2</span></div>
+<div className={[s.div17,s.avm2,s.r].join(' ') }ref={refA2} data-cell='avm2'> <Avm2         /> </div>
 <div className={[s.div18,s.elCell,s.r].join(' ')}>яч#10 </div>
 <div className={[s.div19,s.elCell,s.r].join(' ')}> яч#11</div>
 <div className={[s.div20,s.elCell,s.r].join(' ')}> яч#12</div>
