@@ -11,7 +11,7 @@ export default function Substation() {
   const refA = useRef();
   const refAbs = useRef();
   const papaRef = useRef();
-  const[arChanhe,setChen]=useState([])
+  const[x,setX]=useState('')
 
   const cel = useSelector(state => state.tp32.list);
   const newcel = useSelector(state => state.tp32.newList);
@@ -97,19 +97,20 @@ console.log(cel.cell);
       }
     };
   }, [tp]);
-  useEffect(() => {
-    const storedBackgroundColor = localStorage.getItem('backgroundColor');
-    if (storedBackgroundColor) {
-      document.body.style.backgroundColor = storedBackgroundColor;
-    }
-  }, []);
 
-  const handleChangeBackgroundColor = (event) => {
-    const newBackgroundColor = event.target.value;
-    document.body.style.backgroundColor = newBackgroundColor;
-    localStorage.setItem('backgroundColor', newBackgroundColor);
-  };
 
+  const btn = () => {
+  localStorage.setItem('key', '1');
+  value==='1'? alert('workTp1'): alert('worksTp2');
+ };
+  const btn2 = () => {
+  localStorage.setItem('key', '2');
+  value==='1'? alert('workTp1'): alert('worksTp2');
+ };
+  const value = localStorage.getItem("key");
+console.log(value);
+
+value==='1'? alert('workTp1'): alert('worksTp2');
 
   return (
  
@@ -147,7 +148,14 @@ console.log(cel.cell);
 <div className={[s.abs].join(' ')} ><div ref={refAbs} ></div></div>
 <div>
      
-    </div> <input type="color" onChange={handleChangeBackgroundColor} /></div>
+    </div> 
+    <button type="text" className={s.inp} onClick={btn} > Tp1</button>
+    <button type="text" className={s.inp} onClick={btn2} > Tp2</button>
+    {/* <button type="text" className={s.inp} onClick={btn} > Tp2</button> */}
+    
+    
+    
+     </div>
 
 
 
