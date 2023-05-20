@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useRef } from 'react'
 
 export default function Avm2() {
-const refA2=useRef()
+
 
 
 

@@ -13,7 +13,7 @@ export default function Substation() {
   const refA2 = useRef();
   const refAbs = useRef();
   const papaRef = useRef();
-  const[x,setX]=useState('')
+  const [x, setX] = useState(true);
 
   const cel = useSelector(state => state.tp32.list);
   const newcel = useSelector(state => state.tp32.newList);
@@ -21,9 +21,27 @@ export default function Substation() {
 // console.log(nl);
 
   
-const [cell]=cel.map((el)=>el.description)
-const ce=cel.filter((el)=>el!==el.description)
-// console.log(ce);
+const [cell,...arDescrip]=cel.map((el)=>el.description)
+
+    console.log(arDescrip);
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let attempt=true
+
+
 useEffect(()=>{
 dispatch( destr(cel))
 
@@ -32,26 +50,26 @@ dispatch( destr(cel))
 // let id=ce.find((el)=>{return el== el.id}
 // )
 // console.log(id);
+console.log(x);
+
 const value = localStorage.getItem("key");
   
+console.log(x);
 
-useEffect(()=>{
-   function result(v) {
-if (v=='false') {
-  console.log(v);
-  
-return setX(!false)
+useEffect(() => {
+  if (value=='true' ) {
+    refA.current?.classList.add(s.change)
+  } 
+  else if (value=='false' ) {
+    console.log('true', value);
+    refA2.current?.classList.add(s.change)
+}
+  else if (x ) {
+    console.log('true', value);
+    refA.current?.classList.add(s.change)
+}
+}, [value,x]);
 
-
-} else {
-
-  console.log(v);
-  
-  setX(!true)
-}}
-
-result(value)
-},[value,x])
 
 
 
@@ -100,23 +118,24 @@ let avm1=arDestr(cell)
 
     dispatch(nCell(data));
   }, [dispatch, cell]);
+ 
 
   useEffect(() => {
     let out = refAbs.current;
 console.log(cel.cell);
-console.log(x);
-x&&refA2.current.classList.add(s.another)
+
+
     if (cell) {
       console.log('ok');
       if (avm1) {
            out.innerHTML += `<ul><p >${avm1.type}</p> <li>${avm1.iNom}</li><li> ${avm1.breakCurrent}</li><i >${avm1.other}</i></ul> `;
       out.classList.add(s.absChild);
-     
+
       }
    
     } 
 
-  }, [cell,x]);
+  }, [cell]);
 
   useEffect(() => {
     const papaElement = papaRef.current;
@@ -142,6 +161,20 @@ x&&refA2.current.classList.add(s.another)
   localStorage.setItem('key', 'false');
   // value==='1'? alert('workTp1'): alert('worksTp2');
  };
+ console.log(x);
+x||console.log('ok');
+x&&console.log('no');
+
+
+// if (x) {
+//   console.log('A');
+  
+ 
+// }
+// else{
+//   console.log('A2');
+  
+//  }
 
 
 
@@ -149,6 +182,7 @@ x&&refA2.current.classList.add(s.another)
   return (
  
 <div className={[s.parent ,'o'].join(' ')}  ref={papaRef} >
+
 <div className={[s.div1,s.vmt1,s.r ,'o'].join(' ')}>Внт1<br/> Запитан от<br /> кп #4 яч#3 </div>
 <div className={[s.div2,s.t1,s.r].join(' ')}> <h5>T1-1000kвa</h5> </div>
 <div className={[s.div3,s.connection,s.r].join(' ')}> </div>
@@ -180,13 +214,14 @@ x&&refA2.current.classList.add(s.another)
 <div className={[s.div29,s.door,s.r].join(' ')}> дверь </div>
 <div className={[s.div30,s.door,s.r].join(' ')}>вход </div>
 <div className={[s.abs].join(' ')} ><div ref={refAbs} ></div></div>
-<div>
-     
-    </div> 
-    <button type="text" className={s.inp} onClick={btn} > Tp1</button>
-    <button type="text" className={s.inp} onClick={btn2} > Tp2</button>
-    {/* <button type="text" className={s.inp} onClick={btn} > Tp2</button> */}
-    
+
+ <div className={s.log} ></div>
+    <div className={s.buPearent}>
+      
+
+    <button  className={s.but} onClick={btn} > Tp1</button>
+    <button className={s.but2} onClick={btn2} > Tp2</button>
+    </div>
     
     
      </div>
@@ -199,4 +234,18 @@ x&&refA2.current.classList.add(s.another)
 
 
 
+// useEffect(() => {
+//   if (value === 'false') {
+//     console.log('FFFAlse', value);
+//     setX(false);
+//   } else if (value === 'true') {
+//     console.log('TTtrue', value);
+//     setX(true);
+//   }
+// }, [value]);
+
+// const [x, setX] = useState(false);
+
+// x && console.log('no');
+// !x && console.log('ok');
 
