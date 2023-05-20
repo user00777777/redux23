@@ -542,6 +542,7 @@ input::-ms-clear {
   font-weight: 500;
   align-items: center;
   font-size: 12px;
+  background-color: rgb(201, 20, 20);
 }
 
 .div30 {
@@ -601,12 +602,13 @@ input::-ms-clear {
 
 .absChild {
   display: flex;
-  padding-left: calc(20px + 30 * (100vw - 320px) / 880);
+  padding-left: 7px;
   width: 150px;
   height: 200px;
   background-color: rgb(197, 222, 198);
   border: 3px solid rgb(35, 26, 26);
-  font-size: 10px;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+  font-size: 14px;
+}
+.absChild i {
+  font-size: 12px;
 }/*# sourceMappingURL=Substation.module.css.map */

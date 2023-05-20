@@ -38,7 +38,7 @@
 }
     .div1 { grid-area: 3 / 1 / 4 / 4; @include t() }
     .div2 { grid-area: 4 / 1 / 5 / 4;@include t() }
-    .div3 { grid-area: 5 / 2 / 6 / 3; }
+    .div3 { grid-area: 5 / 2 / 6 / 3;background-color: rgb(12, 10, 10); }
     .div4 { grid-area: 6 / 3 / 8 / 4;@include vert() }
     .div5 { grid-area: 6 / 2 / 7 / 3;@include vert()}
     .div6 { grid-area: 7 / 2 / 8 / 3;@include vert()}
@@ -48,7 +48,7 @@
     .div10 { grid-area: 8 / 1 / 9 / 2;@include vert() }
     .div11 { grid-area: 3 / 6 / 4 / 9;@include t();margin-left: 149px; }
     .div12 { grid-area: 4 / 6 / 5 / 9; @include t();margin-left: 149px;}
-    .div13 { grid-area: 5 / 7 / 6 / 8;;margin-left: 50px }
+    .div13 { grid-area: 5 / 7 / 6 / 8;;margin-left: 50px; }
     .div14 { grid-area: 6 / 6 / 8 / 7;@include vert();width: max-content;margin-left: 72px; }
     .div15 { grid-area: 6 / 7 / 7 / 8; @include vert();}
     .div16 { grid-area: 7 / 7 / 8 / 8; @include vert();}
@@ -66,7 +66,7 @@
     .div26 { grid-area: 1 / 8 / 3 / 9;@include vert() }
     .div27 { grid-area: 2 / 1 / 3 / 2;@include vert() }
     .div28 { grid-area: 1 / 2 / 2 / 3;@include vert() }
-    .div29 { grid-area: 1 / 6 / 2 / 7;@include vert() }
+    .div29 { grid-area: 1 / 6 / 2 / 7;@include vert() ;background-color: rgb(201, 20, 20);}
     .div30 { grid-area: 12 / 4 / 13 / 6;width: fit-content;font-size: 40px; }
 
     .r{background-color: rgb(201, 185, 173);@include border();
@@ -148,21 +148,20 @@ margin-left: 130px;
 margin-top: 5rem;
 
   }
-  .absChild{display: flex;
-    padding-left: calc(20px + (50 - 20) * ((100vw - 320px) / (1200 - 320)));
+  .absChild{
+
+    display: flex;
+    // padding-left: calc(20px + (50 - 20) * ((100vw - 320px) / (1200 - 320)));
+    padding-left: 7px;
     width: 150px;
-height: 200px;
-background-color:rgb(197, 222, 198);
-// justify-content: center;
-// align-items:center;
-@include border();
-font-size: 10px;
-word-wrap: break-word;
-overflow-wrap: break-word;
-
+    height: 200px;
+    background-color:rgb(197, 222, 198);
+    //justify-content: center;
+    //align-items:center;
+    @include border();
+    font-size: 14px;
+    // word-wrap: break-word;
+    // overflow-wrap: break-word;
+    i{font-size: 12px;}
+   
 }
-// .con2{background-color:#ff0;
-//     position: absolute;
-// margin-left:12rem;
-
-// }

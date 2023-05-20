@@ -1,107 +1,114 @@
-import React, { useEffect,useState } from 'react'
+import React, { useCallback, useEffect,useState } from 'react'
 import { createElement } from 'react';
 import { useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import s from '../css/Substation.module.css'
-import { nCell } from '../sliceReduce/substationReducer';
+import { destr, nCell } from '../sliceReduce/substationReducer';
 
 export default function Substation() {
-  let dispatch=useDispatch()
-let[cel,setCell]=useState()
-let selector=useSelector(state=>state.tp32)
-
+  const dispatch = useDispatch();
+  const selector = useSelector(state => state.tp32);
   const refA = useRef();
-  const refAbs=useRef()
-  const papaRef=useRef()
+  const refAbs = useRef();
+  const papaRef = useRef();
+  const[arChanhe,setChen]=useState([])
 
-// let x = selector.data.reduce((acc,el) => {
+  const cel = useSelector(state => state.tp32.list);
+  const newcel = useSelector(state => state.tp32.newList);
+//   const nl = useSelector(state => state.tp32);
+// console.log(nl);
 
-// if (el.hasOwnProperty('description')) {
- 
-//   const[typ,iN,breakCurent]=el.description
-   
-// const{type}=typ;
-// const{iNom}=iN;
-// const{breakCurrent}=breakCurent
+  console.log('newcell',newcel);
+  
+const [cell]=cel.map((el)=>el.description)
+const ce=cel.filter((el)=>el!==el.description)
+// console.log(ce);
+useEffect(()=>{
+dispatch( destr(cel))
 
-// acc={t:type,iN:iNom,bC:breakCurent}
+},[cel])
 
-// }
-// return acc
-// },{});
+// let id=ce.find((el)=>{return el== el.id}
+// )
+// console.log(id);
 
-let out=selector.list.reduce((acc,el)=>{
-if( el.description){
+function arDestr(c) {
 
-  const[typ,iN,breakCurent]=el.description
-   
-const{type}=typ;
-const{iNom}=iN;
-const{breakCurrent}=breakCurent
-
-acc={t:type,iN:iNom,bC:breakCurent}
+  
+  if (c) {
+    const[typ,iN,bC,oth]=c;
+    const{type}=typ
+    const{iNom}=iN
+    const{breakCurrent}=bC
+   const{other}=oth
+  return  {type,
+  iNom,
+  breakCurrent,
+  other
+  }
+    
 
 }
-return acc
 
-},{});
-
-
-
-
-let [cell]=selector.list.map((el)=>el.cell)
-
-
-
-
-
-
-
-
-function tp(event) {
-  let data = event.target.dataset.cell;
-
-// console.log('cel',cel);
-
- 
-
-  dispatch(nCell(data));
-
-  let out = refAbs.current;
-
-  if (true) {
-    console.log('ok');
-    out.innerHTML += ` ${cell} `;
-    out.classList.add(s.absChild);
-  } else {
-    console.log('no');
-  }
 }
 
-useEffect(() => {
-  const papaElement = papaRef.current;
 
-  if (papaElement) {
-    papaElement.addEventListener('click', tp);
-  }
 
-  return () => {
-    if (papaElement) {
-      papaElement.removeEventListener('click', tp);
+// console.log(cel.cell);
+
+
+let avm1=arDestr(cell)
+
+
+
+
+  const tp = useCallback((event) => {
+    let data = event.target.dataset.cell;
+
+    dispatch(nCell(data));
+  }, [dispatch, cell]);
+
+  useEffect(() => {
+    let out = refAbs.current;
+console.log(cel.cell);
+
+    if (cell) {
+      console.log('ok');
+      if (avm1) {
+           out.innerHTML += `<ul><p >${avm1.type}</p> <li>${avm1.iNom}</li><li> ${avm1.breakCurrent}</li><i >${avm1.other}</i></ul> `;
+      out.classList.add(s.absChild);
+      }
+   
+    } else {
+      console.log('no');
     }
+  }, [cell]);
+
+  useEffect(() => {
+    const papaElement = papaRef.current;
+
+    if (papaElement) {
+      papaElement.addEventListener('click', tp);
+    }
+
+    return () => {
+      if (papaElement) {
+        papaElement.removeEventListener('click', tp);
+      }
+    };
+  }, [tp]);
+  useEffect(() => {
+    const storedBackgroundColor = localStorage.getItem('backgroundColor');
+    if (storedBackgroundColor) {
+      document.body.style.backgroundColor = storedBackgroundColor;
+    }
+  }, []);
+
+  const handleChangeBackgroundColor = (event) => {
+    const newBackgroundColor = event.target.value;
+    document.body.style.backgroundColor = newBackgroundColor;
+    localStorage.setItem('backgroundColor', newBackgroundColor);
   };
-}); // Добавьте зависимость `cell` в массив зависимостей
-
-// ...
-
-
-// function parent(event) {
-
-// console.log(event.target.attributes);
-
-
-// }
-
 
 
   return (
@@ -138,14 +145,15 @@ useEffect(() => {
 <div className={[s.div29,s.door,s.r].join(' ')}> дверь </div>
 <div className={[s.div30,s.door,s.r].join(' ')}>вход </div>
 <div className={[s.abs].join(' ')} ><div ref={refAbs} ></div></div>
-</div>
+<div>
+     
+    </div> <input type="color" onChange={handleChangeBackgroundColor} /></div>
 
 
 
 
   )
 }
-
 
 
 

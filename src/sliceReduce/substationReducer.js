@@ -4,6 +4,7 @@ import uuid from "react-uuid";
 
 const initialState = {
   list: [],
+  newList: {},
   data: [
     { cell: 2, id: uuid() },
     { cell: 3, id: uuid() },
@@ -27,8 +28,9 @@ const initialState = {
       id: uuid(),
       description: [
         { type: "АВМ-20СВ" },
-        { iNom: "2000A" },
-        { breakCurrent: "8000A" },
+        { iNom: "Iн=2000A" },
+        { breakCurrent: "Росцепитель=8000A" },
+        { other: "Расч-й ток=1440А" },
       ],
     },
     { cell: "avm2", id: uuid() },
@@ -41,7 +43,6 @@ const substation = createSlice({
   initialState,
   reducers: {
     nCell(state, action) {
-      console.log(state.list);
       // console.log(action.payload);
       let x = state.data.find((el) => el.cell === action.payload);
 
@@ -53,7 +54,18 @@ const substation = createSlice({
         // Обработка отсутствия соответствующего элемента в массиве
       }
     },
+    destr(state, action) {
+      console.log(action.payload);
+
+      let x = action.payload;
+      for (const key in x) {
+        let el = x[key];
+
+        const { id, cell } = el;
+        state.newList = { id, cell };
+      }
+    },
   },
 });
-export const { nCell } = substation.actions;
+export const { nCell, destr } = substation.actions;
 export default substation.reducer;
