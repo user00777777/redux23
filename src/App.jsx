@@ -12,6 +12,7 @@ import First from './Components/First'
 import Substation from './Components/Substation'
 import MachineTools from './Components/machine/machineTools'
 import Avm2 from './Components/sbbstationComponents/Avm2'
+import Log from './Components/sbbstationComponents/Log'
 // import First from './Components/First'
 // import OneComponent from './Components/OneComponent'
 
@@ -22,7 +23,9 @@ function App() {
     <div >
 <Routes>
 <Route  path='/' element={<Layout/>} >
+
  <Route path='avm' element={<Avm2/>}  />
+ <Route path='log' element={<Log/>}  />
 <Route index element={<Homepage />} />
 <Route path='workers' element={<Employees/>} />
 <Route path='machineTools' element={<MachineTools/>}/>

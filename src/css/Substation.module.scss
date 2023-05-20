@@ -18,7 +18,9 @@
     background-color:rgb(246, 246, 246);
     height: 100vh;
     width:min-content;
-    font-size:14px
+    font-size:14px;
+    padding-left: 0,5rem;
+  
     }
     @mixin t{width:8rem;display: flex;justify-content: center;align-items:center}
     @mixin vert{
@@ -168,20 +170,34 @@ margin-top: 5rem;
 .but ,.but2{ @include border();width: 50px;height:90px;background-color: rgb(144, 131, 131);}
 
 .buPearent{background-color: rgb(177, 209, 156);
-
+.but{margin-left: 9px;}
 height: 88px;
 position: absolute;
-margin-top: 200%;
+margin-top: 182%;
 
 }
 .but2{position: inherit;
-margin-left: 625%;
+margin-left: 500%;
 }
 .log{@include border();
   position:absolute;
   
 background: rgb(116, 101, 149);
-height:176px;
-width: 204px;
-margin-top: 120%;
+height:148px;
+width: 190px;
+margin-top: 141%;
+margin-left: 12px;
+}
+@media only screen and (max-width: 480px) {
+
+  .log{@include border();
+    position:absolute;
+    
+  background: rgb(116, 101, 149);
+  height:148px;
+  width: 190px;
+  margin-top: 141%;
+  margin-left: 12px;
+  }
+
 }

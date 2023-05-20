@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import s from '../css/Substation.module.css'
 import { destr, nCell } from '../sliceReduce/substationReducer';
 import Avm2 from './sbbstationComponents/Avm2';
+import Log from './sbbstationComponents/Log';
 
 export default function Substation() {
   const dispatch = useDispatch();
@@ -215,7 +216,7 @@ x&&console.log('no');
 <div className={[s.div30,s.door,s.r].join(' ')}>вход </div>
 <div className={[s.abs].join(' ')} ><div ref={refAbs} ></div></div>
 
- <div className={s.log} ></div>
+ <div className={s.log} ><Log/></div>
     <div className={s.buPearent}>
       
 
