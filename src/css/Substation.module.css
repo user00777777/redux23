@@ -596,7 +596,6 @@ input::-ms-clear {
 .abs {
   height: 230px;
   width: 100px;
-  background-color: rgb(255, 255, 255);
   position: absolute;
   margin-left: 130px;
   margin-top: 5rem;
@@ -667,7 +666,7 @@ input::-ms-clear {
     margin-left: 9px;
     height: 72px;
   }
-  .buPearent .but {
+  .buPearent .but2 {
     height: 72px;
   }
 }
@@ -676,4 +675,7 @@ input::-ms-clear {
     width: -moz-max-content;
     width: max-content;
   }
+}
+.x {
+  font-size: 20px;
 }/*# sourceMappingURL=Substation.module.css.map */

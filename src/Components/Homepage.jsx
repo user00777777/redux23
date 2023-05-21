@@ -15,8 +15,8 @@ export  default function Homepage() {
 var screenHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 
 // Вывод значений
-console.log("Ширина экрана: " + screenWidth + "px");
-console.log("Высота экрана: " + screenHeight + "px");
+alert("Ширина экрана: " + screenWidth + "px");
+alert("Высота экрана: " + screenHeight + "px");
 
   return (
     <div onClick={handleChildClick}>

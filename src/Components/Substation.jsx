@@ -17,45 +17,15 @@ export default function Substation() {
   const [x, setX] = useState(true);
 
   const cel = useSelector(state => state.tp32.list);
-  const newcel = useSelector(state => state.tp32.newList);
-//   const nl = useSelector(state => state.tp32);
-// console.log(nl);
-
-  
+  const newcel = useSelector(state => state.tp32.newList);  
 const [cell,...arDescrip]=cel.map((el)=>el.description)
-
-    console.log(arDescrip);
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// let attempt=true
-
 
 useEffect(()=>{
 dispatch( destr(cel))
 
 },[cel])
 
-// let id=ce.find((el)=>{return el== el.id}
-// )
-// console.log(id);
-console.log(x);
-
 const value = localStorage.getItem("key");
-  
-console.log(x);
 
 useEffect(() => {
   if (value=='true' ) {
@@ -71,18 +41,6 @@ useEffect(() => {
 }
 }, [value,x]);
 
-
-
-
-
-// let resultValue=value==
-
-
-
-
-
-
-
 function arDestr(c) {
 
   
@@ -96,47 +54,37 @@ function arDestr(c) {
   iNom,
   breakCurrent,
   other
-  }
-    
-
-}
-
-}
-
-
-
-// console.log(cel.cell);
-
+  }}}
 
 let avm1=arDestr(cell)
 
-
-
-
   const tp = useCallback((event) => {
     let data = event.target.dataset.cell;
-
-
-    dispatch(nCell(data));
-  }, [dispatch, cell]);
+dispatch(nCell(data));}, [dispatch, cell]);
  
 
   useEffect(() => {
     let out = refAbs.current;
-console.log(cel.cell);
+//     let oo = refAbs.current.classList.add('x')
+// console.log(oo.current.className);
+
+
 
 
     if (cell) {
-      console.log('ok');
+  
       if (avm1) {
            out.innerHTML += `<ul><p >${avm1.type}</p> <li>${avm1.iNom}</li><li> ${avm1.breakCurrent}</li><i >${avm1.other}</i></ul> `;
-      out.classList.add(s.absChild);
-
-      }
-   
-    } 
-
-  }, [cell]);
+           if (out.classList.contains('e')) {
+            console.log('c');
+            // out.classList.remove(s.absChild);
+          }
+          // else {
+          //   out.classList.add(s.absChild);
+          //   console.log('else');
+          // }
+}} 
+}, [cell,s.absChild]);
 
   useEffect(() => {
     const papaElement = papaRef.current;
@@ -162,20 +110,10 @@ console.log(cel.cell);
   localStorage.setItem('key', 'false');
   // value==='1'? alert('workTp1'): alert('worksTp2');
  };
- console.log(x);
-x||console.log('ok');
-x&&console.log('no');
 
 
-// if (x) {
-//   console.log('A');
-  
- 
-// }
-// else{
-//   console.log('A2');
-  
-//  }
+
+
 
 
 
@@ -214,7 +152,7 @@ x&&console.log('no');
 <div className={[s.div28,s.door,s.r].join(' ')}> дверь </div>
 <div className={[s.div29,s.door,s.r].join(' ')}> дверь </div>
 <div className={[s.div30,s.door,s.r].join(' ')}>вход </div>
-<div className={[s.abs].join(' ')} ><div ref={refAbs} ></div></div>
+<div className={[s.abs].join(' ')}  ><div ref={refAbs} ></div></div>
 
  <div className={s.log} ><Log/></div>
     <div className={s.buPearent}>

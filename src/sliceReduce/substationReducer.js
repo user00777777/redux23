@@ -55,8 +55,6 @@ const substation = createSlice({
       }
     },
     destr(state, action) {
-      console.log(action.payload);
-
       let x = action.payload;
       for (const key in x) {
         let el = x[key];
