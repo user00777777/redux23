@@ -15,6 +15,9 @@ export default function Substation() {
   const refAbs = useRef();
   const papaRef = useRef();
   const [x, setX] = useState(true);
+  let out = refAbs.current;
+
+
 
   const cel = useSelector(state => state.tp32.list);
   const newcel = useSelector(state => state.tp32.newList);  
@@ -25,9 +28,10 @@ dispatch( destr(cel))
 
 },[cel])
 
-const value = localStorage.getItem("key");
+
 
 useEffect(() => {
+  const value = localStorage.getItem("key");
   if (value=='true' ) {
     refA.current?.classList.add(s.change)
   } 
@@ -35,11 +39,11 @@ useEffect(() => {
     // console.log('true', value);
     refA2.current?.classList.add(s.change)
 }
-  else if (x ) {
+  else  {
     // console.log('true', value);
     refA.current?.classList.add(s.change)
 }
-}, [value,x]);
+},[]);
 
 function arDestr(c) {
 
@@ -56,58 +60,59 @@ function arDestr(c) {
   other
   }}}
 
-let avm1=arDestr(cell)
-   let out = refAbs.current;
-  const tp = useCallback((event) => {
-    let data = event.target.dataset.cell;
-    let clas = event.target.classList
-    let out = refAbs.current;
-    if (out.classList.contains(s.absChild)) {
-      console.log('ok');
-      out.classList.toggle(s.absChild)
-      
-    }
-    else{
-      out.classList.add(s.absChild)
+  
 
-    }
+let avm1=arDestr(cell)
+
+ 
+
  
   
-    
-dispatch(nCell(data));}, [dispatch, cell]);
- 
 
-  useEffect(() => {
- 
-  refAbs.current.classList.add('x')
-  // if (out.classList.contains(s.x)) {
-  //   console.log('yes');
-    
-  // }
-  // console.log(out.className);
-
-
-
+  // useEffect(() => {
 
     if (cell) {
-  
+    if (out.classList.contains(s.absChild)) {
       if (avm1) {
-           out.innerHTML += `<ul><p >${avm1.type}</p> <li>${avm1.iNom}</li><li> ${avm1.breakCurrent}</li><i >${avm1.other}</i></ul> `;
-          //  if (out.classList.contains('e')) {
-          //   console.log('c');
-          //   out.classList.remove(s.absChild);
-          // }
-          // else {
-          //   out.classList.add(s.absChild);
-          //   console.log('else');
-           
+      
+          console.log(11);
+          
+       
+      out.innerHTML = `<ul><p >${avm1.type}</p> <li>${avm1.iNom}</li><li> ${avm1.breakCurrent}</li><i >${avm1.other}</i></ul> `;
+       }
+}
+else{out.innerHTML=''
+console.log(22);
 
-          // }
-}} 
-}, [cell,s.absChild]);
+}
+
+
+
+} 
+// }, [cell,s.absChild]);
+
+
+
+const tp = useCallback((event) => {
+ 
+  let data = event.target.dataset.cell;
+  let clas = event.target.classList
+  let out = refAbs.current;
+  if (out.classList.contains(s.absChild)) {
+  
+
+  
+   
+    out.classList.toggle(s.absChild)
+    
+  }
+  else{
+    out.classList.add(s.absChild)}dispatch(nCell(data));}, [dispatch, cell]);
+
 
   useEffect(() => {
     const papaElement = papaRef.current;
+
 
     if (papaElement) {
       papaElement.addEventListener('click', tp);
@@ -122,11 +127,12 @@ dispatch(nCell(data));}, [dispatch, cell]);
 
 
   const btn = () => {
-   
+ 
   localStorage.setItem('key', 'true');
   // value==='1'? alert('workTp1'): alert('worksTp2');
  };
   const btn2 = () => {
+setX((pre)=>!x)
   localStorage.setItem('key', 'false');
   // value==='1'? alert('workTp1'): alert('worksTp2');
  };
@@ -193,18 +199,5 @@ dispatch(nCell(data));}, [dispatch, cell]);
 
 
 
-// useEffect(() => {
-//   if (value === 'false') {
-//     console.log('FFFAlse', value);
-//     setX(false);
-//   } else if (value === 'true') {
-//     console.log('TTtrue', value);
-//     setX(true);
-//   }
-// }, [value]);
 
-// const [x, setX] = useState(false);
-
-// x && console.log('no');
-// !x && console.log('ok');
 
