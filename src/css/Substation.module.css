@@ -626,7 +626,7 @@ input::-ms-clear {
   background-color: rgb(177, 209, 156);
   height: 88px;
   position: absolute;
-  margin-top: 182%;
+  margin-top: 183%;
 }
 .buPearent .but {
   margin-left: 9px;
@@ -652,9 +652,9 @@ input::-ms-clear {
     border: 3px solid rgb(35, 26, 26);
     position: absolute;
     background: rgb(116, 101, 149);
-    height: 148px;
+    height: 141px;
     width: 190px;
-    margin-top: 141%;
+    margin-top: 180%;
     margin-left: 12px;
   }
 }/*# sourceMappingURL=Substation.module.css.map */
