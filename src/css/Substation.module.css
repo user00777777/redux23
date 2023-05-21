@@ -652,7 +652,7 @@ input::-ms-clear {
     border: 3px solid rgb(35, 26, 26);
     position: absolute;
     background: rgb(116, 101, 149);
-    height: 128px;
+    height: 124px;
     width: 186px;
     margin-top: 130%;
     margin-left: 10px;
@@ -661,9 +661,10 @@ input::-ms-clear {
     background-color: rgb(177, 209, 156);
     height: 66px;
     position: absolute;
-    margin-top: 177%;
+    margin-top: 174%;
   }
   .buPearent .but {
     margin-left: 9px;
+    height: 72px;
   }
 }/*# sourceMappingURL=Substation.module.css.map */
