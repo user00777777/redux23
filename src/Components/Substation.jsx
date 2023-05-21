@@ -32,11 +32,11 @@ useEffect(() => {
     refA.current?.classList.add(s.change)
   } 
   else if (value=='false' ) {
-    console.log('true', value);
+    // console.log('true', value);
     refA2.current?.classList.add(s.change)
 }
   else if (x ) {
-    console.log('true', value);
+    // console.log('true', value);
     refA.current?.classList.add(s.change)
 }
 }, [value,x]);
@@ -57,16 +57,34 @@ function arDestr(c) {
   }}}
 
 let avm1=arDestr(cell)
-
+   let out = refAbs.current;
   const tp = useCallback((event) => {
     let data = event.target.dataset.cell;
+    let clas = event.target.classList
+    let out = refAbs.current;
+    if (out.classList.contains(s.absChild)) {
+      console.log('ok');
+      out.classList.toggle(s.absChild)
+      
+    }
+    else{
+      out.classList.add(s.absChild)
+
+    }
+ 
+  
+    
 dispatch(nCell(data));}, [dispatch, cell]);
  
 
   useEffect(() => {
-    let out = refAbs.current;
-//     let oo = refAbs.current.classList.add('x')
-// console.log(oo.current.className);
+ 
+  refAbs.current.classList.add('x')
+  // if (out.classList.contains(s.x)) {
+  //   console.log('yes');
+    
+  // }
+  // console.log(out.className);
 
 
 
@@ -75,13 +93,15 @@ dispatch(nCell(data));}, [dispatch, cell]);
   
       if (avm1) {
            out.innerHTML += `<ul><p >${avm1.type}</p> <li>${avm1.iNom}</li><li> ${avm1.breakCurrent}</li><i >${avm1.other}</i></ul> `;
-           if (out.classList.contains('e')) {
-            console.log('c');
-            // out.classList.remove(s.absChild);
-          }
+          //  if (out.classList.contains('e')) {
+          //   console.log('c');
+          //   out.classList.remove(s.absChild);
+          // }
           // else {
           //   out.classList.add(s.absChild);
           //   console.log('else');
+           
+
           // }
 }} 
 }, [cell,s.absChild]);
