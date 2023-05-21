@@ -11,6 +11,12 @@ export  default function Homepage() {
     }));
     setAttributes((prevAttributes) => [...prevAttributes, ...elementAttributes]);
   };
+  var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+var screenHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+// Вывод значений
+console.log("Ширина экрана: " + screenWidth + "px");
+console.log("Высота экрана: " + screenHeight + "px");
 
   return (
     <div onClick={handleChildClick}>

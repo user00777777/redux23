@@ -667,7 +667,13 @@ input::-ms-clear {
     margin-left: 9px;
     height: 72px;
   }
-  .buPearent .but2 {
+  .buPearent .but {
     height: 72px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .parent {
+    width: -moz-max-content;
+    width: max-content;
   }
 }/*# sourceMappingURL=Substation.module.css.map */
