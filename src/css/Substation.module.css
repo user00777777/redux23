@@ -639,11 +639,14 @@ input::-ms-clear {
 .log {
   border: 3px solid rgb(35, 26, 26);
   position: absolute;
-  background: rgb(116, 101, 149);
+  background: rgb(255, 255, 255);
   height: 148px;
   width: 190px;
   margin-top: 141%;
   margin-left: 12px;
+}
+.log li {
+  font-size: 20px;
 }
 
 @media only screen and (max-width: 480px) {

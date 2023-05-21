@@ -11,10 +11,12 @@ export default function Substation() {
   const dispatch = useDispatch();
   const selector = useSelector(state => state.tp32);
   const refA = useRef();
+  const refLog = useRef();
   const refA2 = useRef();
   const refAbs = useRef();
   const papaRef = useRef();
   const [x, setX] = useState(true);
+  const [tp32, setTP] = useState('');
   let out = refAbs.current;
 
 
@@ -71,7 +73,7 @@ let avm1=arDestr(cell)
 
   // useEffect(() => {
 
-    if (cell) {
+    if (cell&&out) {
     if (out.classList.contains(s.absChild)) {
       if (avm1) {
       
@@ -125,14 +127,19 @@ const tp = useCallback((event) => {
     };
   }, [tp]);
 
+console.log(tp32);
 
   const btn = () => {
- 
+    
+    setX(!x)
+    setTP(()=>'T1')
+
   localStorage.setItem('key', 'true');
   // value==='1'? alert('workTp1'): alert('worksTp2');
  };
   const btn2 = () => {
-setX((pre)=>!x)
+    setTP(()=>'T2')
+setX(!x)
   localStorage.setItem('key', 'false');
   // value==='1'? alert('workTp1'): alert('worksTp2');
  };
@@ -180,7 +187,7 @@ setX((pre)=>!x)
 <div className={[s.div30,s.door,s.r].join(' ')}>вход </div>
 <div className={[s.abs].join(' ')}  ><div ref={refAbs} ></div></div>
 
- <div className={s.log} ><Log/></div>
+ <div className={x&&s.log} ref={refLog} ><Log tp={tp32} /></div>
     <div className={s.buPearent}>
       
 
