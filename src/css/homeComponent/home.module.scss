@@ -1,11 +1,20 @@
 @import'./../reset';
+@mixin border(){border: solid 1px white;}
 .parent {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(14, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-.r{border: solid 1px white;background-color: black;color: gold;}    
+.r{
+  @include border;
+  background-color: black;
+  color:linen;
+  font-size: 16px;
+
+
+
+}    
 }
     
     .div1 { grid-area: 3 / 1 / 4 / 4; }
@@ -40,3 +49,17 @@
     .div30 { grid-area: 14 / 4 / 15 / 7; }
     .div31 { grid-area: 3 / 4 / 4 / 8; }
     .div32 { grid-area: 9 / 4 / 10 / 8; }
+
+
+
+    /* Общие стили для текста и других элементов */
+
+  
+  /* Медиа-запрос для смартфонов с адаптивным дизайном */
+  @media only screen and (max-width: 480px) {
+   .r {
+    font-size: 8px;
+  .avm2{font-size: 9px;}
+  }
+  }
+  
