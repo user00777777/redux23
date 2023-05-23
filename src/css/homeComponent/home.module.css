@@ -52,7 +52,7 @@ input::-ms-clear {
 
 .parent {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(10, 0, 5fr);
   grid-template-rows: repeat(14, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
@@ -61,7 +61,9 @@ input::-ms-clear {
   border: solid 1px white;
   background-color: black;
   color: linen;
-  font-size: 16px;
+  font-size: 12px;
+  min-width: 10px;
+  background-color: rgb(6, 6, 6);
 }
 
 .div1 {
