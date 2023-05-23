@@ -66,26 +66,30 @@ input::-ms-clear {
 
 .div1 {
   grid-area: 3/1/4/4;
+  width: 150px;
 }
 
 .div2 {
-  grid-area: 3/8/4/11;
+  grid-area: 3/9/4/11;
 }
 
 .div3 {
   grid-area: 4/1/5/4;
+  width: 150px;
 }
 
 .div4 {
-  grid-area: 4/8/5/11;
+  grid-area: 4/9/5/11;
 }
 
 .div5 {
   grid-area: 5/2/6/3;
+  width: 50px;
 }
 
 .div6 {
   grid-area: 5/9/6/10;
+  width: 50px;
 }
 
 .div7 {
