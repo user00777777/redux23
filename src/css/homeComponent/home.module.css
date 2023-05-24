@@ -61,9 +61,14 @@ input::-ms-clear {
   border: solid 1px white;
   background-color: black;
   color: linen;
-  font-size: 12px;
+  font-size: 16px;
   min-width: 10px;
   background-color: rgb(6, 6, 6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 2px 2px 2px;
+  margin: 1px;
 }
 
 .div1 {
@@ -191,11 +196,14 @@ input::-ms-clear {
 }
 
 .div31 {
-  grid-area: 3/4/4/8;
+  grid-area: 3/4/6/9;
+  background-color: darkorange;
+  border: solid 1px white;
 }
 
 .div32 {
-  grid-area: 9/4/10/8;
+  grid-area: 12/1/9/8;
+  background-color: aliceblue;
 }
 
 /* Общие стили для текста и других элементов */
@@ -207,4 +215,7 @@ input::-ms-clear {
   .r .avm2 {
     font-size: 9px;
   }
+}
+s.log {
+  position: relative;
 }/*# sourceMappingURL=home.module.css.map */
