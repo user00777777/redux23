@@ -1,0 +1,10 @@
+@media only screen and (max-width: 380px) {
+  .r {
+    font-size: 10px;
+    padding: 0.5rem;
+  }
+  .avm2 .avm1 {
+    font-size: 14px;
+    height: 2rem;
+  }
+}/*# sourceMappingURL=media.module.css.map */

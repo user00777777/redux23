@@ -50,6 +50,36 @@ input::-ms-clear {
   cursor: pointer;
 }
 
+@media only screen and (max-width: 380px) {
+  .r {
+    font-size: 10px;
+    padding: 0.5rem;
+  }
+  .avm2 .avm1 {
+    font-size: 14px;
+    height: 2rem;
+  }
+  .avm1 {
+    background-color: rgb(77, 29, 120);
+    animation: my;
+    -webkit-animation: my 1s 0ms linear infinite;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .r {
+    font-size: 12px;
+    padding: 1rem;
+  }
+  .avm2 .avm1 {
+    font-size: 16px;
+    height: 2rem;
+  }
+  .avm1 {
+    background-color: rgb(77, 29, 120);
+    animation: my;
+    -webkit-animation: my 1s 0ms linear infinite;
+  }
+}
 .parent {
   display: grid;
   grid-template-columns: repeat(10, 0.5fr); /* Исправленное значение repeat */
@@ -98,26 +128,6 @@ input::-ms-clear {
 /* Остальные .divN стили */
 /* Общие стили для текста и других элементов */
 /* Медиа-запрос для смартфонов с адаптивным дизайном */
-@media only screen and (max-width: 480px) {
-  .r {
-    font-size: 10px;
-    padding: 0.5rem;
-  }
-  :hover .avm2 .avm1 {
-    font-size: 14px;
-    height: 2rem;
-    transform: rotate(10dg);
-    -webkit-transform: rotate(10dg);
-    -moz-transform: rotate(10dg);
-    -ms-transform: rotate(10dg);
-    -o-transform: rotate(10dg);
-  }
-  .div8 {
-    background-color: rgb(77, 29, 120);
-    animation: my;
-    -webkit-animation: my 1s 0ms linear infinite;
-  }
-}
 /* Остальные стили и классы */
 .div1 {
   grid-area: 3/1/4/4;
