@@ -52,47 +52,75 @@ input::-ms-clear {
 
 .parent {
   display: grid;
-  grid-template-columns: repeat(10, 0, 5fr);
+  grid-template-columns: repeat(10, 0.5fr); /* Исправленное значение repeat */
   grid-template-rows: repeat(14, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  /* grid-column-gap: 1px; */
+  grid-row-gap: 0.5px; /* Исправленное значение grid-row-gap */
 }
-.parent .r {
+
+.r {
   border: solid 1px white;
   background-color: black;
   color: linen;
-  font-size: 16px;
-  min-width: 10px;
+  font-size: 18px;
+  min-width: 19px;
   background-color: rgb(6, 6, 6);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 2px 10px 2px;
-  margin: 2px;
+  padding: 1rem;
+  margin: 0.5px;
   max-height: -moz-fit-content;
   max-height: fit-content;
 }
-.parent .thinks {
+
+.thinks {
   writing-mode: vertical-rl;
   -webkit-writing-mode: vertical-rl;
   -ms-writing-mode: vertical-rl;
 }
-.parent .avm1, .parent .avm2 {
+
+.avm1,
+.avm2 {
   writing-mode: vertical-rl;
   -webkit-writing-mode: vertical-rl;
   -ms-writing-mode: vertical-rl;
-  font-size: 20px;
+  font-size: 23px;
 }
 
 .con {
   writing-mode: vertical-rl;
   -webkit-writing-mode: vertical-rl;
   -ms-writing-mode: vertical-rl;
+  color: brown;
 }
 
+/* Остальные .divN стили */
+/* Общие стили для текста и других элементов */
+/* Медиа-запрос для смартфонов с адаптивным дизайном */
+@media only screen and (max-width: 480px) {
+  .r {
+    font-size: 10px;
+    padding: 0.5rem;
+  }
+  :hover .avm2 .avm1 {
+    font-size: 14px;
+    height: 2rem;
+    transform: rotate(10dg);
+    -webkit-transform: rotate(10dg);
+    -moz-transform: rotate(10dg);
+    -ms-transform: rotate(10dg);
+    -o-transform: rotate(10dg);
+  }
+  .div8 {
+    background-color: rgb(77, 29, 120);
+    animation: my;
+    -webkit-animation: my 1s 0ms linear infinite;
+  }
+}
+/* Остальные стили и классы */
 .div1 {
   grid-area: 3/1/4/4;
-  width: 150px;
 }
 
 .div2 {
@@ -101,7 +129,6 @@ input::-ms-clear {
 
 .div3 {
   grid-area: 4/1/5/4;
-  width: 150px;
 }
 
 .div4 {
@@ -110,12 +137,10 @@ input::-ms-clear {
 
 .div5 {
   grid-area: 5/2/6/3;
-  width: 50px;
 }
 
 .div6 {
   grid-area: 5/9/6/10;
-  width: 50px;
 }
 
 .div7 {
@@ -217,7 +242,7 @@ input::-ms-clear {
 
 .div31 {
   grid-area: 3/4/6/9;
-  background-color: darkorange;
+  background-color: rgb(151, 207, 145);
   border: solid 1px white;
 }
 
@@ -228,14 +253,14 @@ input::-ms-clear {
 
 /* Общие стили для текста и других элементов */
 /* Медиа-запрос для смартфонов с адаптивным дизайном */
-@media only screen and (max-width: 480px) {
-  .r {
-    font-size: 8px;
+/* Общие стили для текста и других элементов */
+/* Медиа-запрос для смартфонов с адаптивным дизайном */
+@keyframes my {
+  0% {
+    background-color: brown;
+    color: cornflowerblue;
   }
-  .r .avm2 {
-    font-size: 9px;
+  90% {
+    background-color: darkolivegreen;
   }
-}
-s.log {
-  position: relative;
 }/*# sourceMappingURL=home.module.css.map */
