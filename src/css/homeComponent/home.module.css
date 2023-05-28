@@ -52,8 +52,9 @@ input::-ms-clear {
 
 @media only screen and (max-width: 380px) {
   .r {
-    font-size: 10px;
+    font-size: 1px;
     padding: 0.5rem;
+    color: red;
   }
   .avm2 .avm1 {
     font-size: 14px;
@@ -63,6 +64,9 @@ input::-ms-clear {
     background-color: rgb(77, 29, 120);
     animation: my;
     -webkit-animation: my 1s 0ms linear infinite;
+  }
+  body {
+    background-color: rgb(80, 25, 190);
   }
 }
 @media only screen and (max-width: 480px) {
@@ -78,6 +82,9 @@ input::-ms-clear {
     background-color: rgb(77, 29, 120);
     animation: my;
     -webkit-animation: my 1s 0ms linear infinite;
+  }
+  body {
+    background-color: crimson;
   }
 }
 .parent {
