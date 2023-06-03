@@ -1,5 +1,5 @@
-@import './../reset';
-@import './../mediaSub';
+// @import './../reset';
+
 
 @mixin border() {
   border: solid 1px white;
@@ -17,7 +17,7 @@
   @include border;
   background-color: black;
   color: linen;
-  font-size: 18px;
+  font-size: 19px;
   min-width: 19px;
   background-color: rgb(6, 6, 6);
   display: flex;
@@ -135,3 +135,4 @@ background-color:darkolivegreen;
   }
 
 }
+@import './../mediaSub';

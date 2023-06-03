@@ -47,6 +47,8 @@ const substation = createSlice({
       let x = state.data.find((el) => el.cell === action.payload);
 
       if (x) {
+        console.log(x);
+
         state.list.push(x);
       } else {
         false;

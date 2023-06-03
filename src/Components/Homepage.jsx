@@ -1,6 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useRef } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import s from '../css/homeComponent/home.module.css'
+import { nCell } from '../sliceReduce/substationReducer';
+import { setData } from '../sliceReduce/tableSlice';
+import Log from './sbbstationComponents/Log';
 
 export  default function Homepage() {
  const papaRef=useRef()
@@ -8,6 +12,38 @@ export  default function Homepage() {
  const refA2=useRef()
  const refAbs=useRef()
  const refLog=useRef()
+ let[data,stData]=useState()
+ let dispatch=useDispatch()
+ let selector=useSelector((state)=>state.tp32)
+//  let [cell]=useSelector((state)=>state.tp32.list)
+
+// console.log(description);
+
+
+
+ function tp(event) {
+
+  let dataSet=event.target.dataset.cell
+  dispatch(nCell(dataSet))
+ }
+
+
+
+ useEffect(() => {
+  if ( papaRef.current) {
+    papaRef.current.addEventListener('click',tp)
+   } 
+   return () => {
+  
+
+if ( papaRef.current) {
+  papaRef.current.removeEventListener('click',tp)
+  
+}
+
+   }
+ }, [papaRef.current])
+ 
 
   return (
 <div className={[s.parent ,'o'].join(' ')}  ref={papaRef} >
@@ -42,7 +78,7 @@ export  default function Homepage() {
 <div className={[s.div28,s.door,s.r].join(' ')}> дверь </div>
 <div className={[s.div29,s.door,s.r].join(' ')}> песок </div>
 <div className={[s.div30,s.door,s.r].join(' ')}>вход </div>
-<div className={[s.div31,s.abs].join(' ')}  ><div ref={refAbs} >es</div></div>
+<div className={[s.div31,s.abs].join(' ')}  ><div ref={refAbs} ><Log/></div></div>
 
  <div className={[s.div32 ,s.log].join(' ')} ref={refLog} >ergerg </div>
     <div className={s.buPearent}>

@@ -1,8 +1,27 @@
-@media only screen and (max-width: 380px) {
+
+@media only screen and (max-width: 480px) {
   .r {
+    font-size: 12px;
+    padding: 1rem;
+
+  }
+  .avm2 .avm1 {
     font-size: 1px;
+    height: 2rem;
+
+}
+  .avm1 {
+  background-color: rgb(77, 29, 120);
+  animation:my ;
+  -webkit-animation:my 1s 0ms  linear infinite;
+}}
+
+@media only screen and (max-width: 380px) {
+
+  .r {
+    font-size: 10px;
     padding: 0.5rem;
-color:red
+
   }
   .avm2 .avm1 {
     font-size: 14px;
@@ -13,26 +32,8 @@ color:red
   background-color: rgb(77, 29, 120);
   animation:my ;
   -webkit-animation:my 1s 0ms  linear infinite;
+  font-size: 10px;
 }
 
-body{background-color: rgb(80, 25, 190);}
-}
-@media only screen and (max-width: 480px) {
-  .r {
-    font-size: 12px;
-    padding: 1rem;
-
-  }
-  .avm2 .avm1 {
-    font-size: 16px;
-    height: 2rem;
-
-}
-  .avm1 {
-  background-color: rgb(77, 29, 120);
-  animation:my ;
-  -webkit-animation:my 1s 0ms  linear infinite;
-}
-body{background-color:crimson}
 
 }

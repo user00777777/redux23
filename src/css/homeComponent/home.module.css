@@ -1,92 +1,4 @@
 @charset "UTF-8";
-* {
-  margin: 0px;
-  padding: 0px;
-  border: none;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-aside, nav, footer, header, section, main {
-  display: block;
-}
-
-h1, h2, h3, h4, h5, h6, p {
-  font-size: inherit;
-  font-weight: inherit;
-}
-
-ul, ul li {
-  list-style: none;
-}
-
-img {
-  vertical-align: top;
-}
-
-img, svg {
-  max-width: 100%;
-  height: auto;
-}
-
-input, textarea, button, select {
-  font-family: inherit;
-  font-style: inherit;
-  color: inherit;
-}
-
-input::-ms-clear {
-  display: none;
-  background-color: transparent;
-  background: none;
-  cursor: pointer;
-}
-
-@media only screen and (max-width: 380px) {
-  .r {
-    font-size: 1px;
-    padding: 0.5rem;
-    color: red;
-  }
-  .avm2 .avm1 {
-    font-size: 14px;
-    height: 2rem;
-  }
-  .avm1 {
-    background-color: rgb(77, 29, 120);
-    animation: my;
-    -webkit-animation: my 1s 0ms linear infinite;
-  }
-  body {
-    background-color: rgb(80, 25, 190);
-  }
-}
-@media only screen and (max-width: 480px) {
-  .r {
-    font-size: 12px;
-    padding: 1rem;
-  }
-  .avm2 .avm1 {
-    font-size: 16px;
-    height: 2rem;
-  }
-  .avm1 {
-    background-color: rgb(77, 29, 120);
-    animation: my;
-    -webkit-animation: my 1s 0ms linear infinite;
-  }
-  body {
-    background-color: crimson;
-  }
-}
 .parent {
   display: grid;
   grid-template-columns: repeat(10, 0.5fr); /* Исправленное значение repeat */
@@ -99,7 +11,7 @@ input::-ms-clear {
   border: solid 1px white;
   background-color: black;
   color: linen;
-  font-size: 18px;
+  font-size: 19px;
   min-width: 19px;
   background-color: rgb(6, 6, 6);
   display: flex;
@@ -279,5 +191,36 @@ input::-ms-clear {
   }
   90% {
     background-color: darkolivegreen;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .r {
+    font-size: 12px;
+    padding: 1rem;
+  }
+  .avm2 .avm1 {
+    font-size: 1px;
+    height: 2rem;
+  }
+  .avm1 {
+    background-color: rgb(77, 29, 120);
+    animation: my;
+    -webkit-animation: my 1s 0ms linear infinite;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .r {
+    font-size: 10px;
+    padding: 0.5rem;
+  }
+  .avm2 .avm1 {
+    font-size: 14px;
+    height: 2rem;
+  }
+  .avm1 {
+    background-color: rgb(77, 29, 120);
+    animation: my;
+    -webkit-animation: my 1s 0ms linear infinite;
+    font-size: 10px;
   }
 }/*# sourceMappingURL=home.module.css.map */
