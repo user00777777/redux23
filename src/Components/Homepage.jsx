@@ -58,7 +58,7 @@ if ( papaRef.current) {
 <div className={[s.div8,s.elCell,s.r,s.avm2].join(' ')}> Авм#2</div>
 <div className={[s.div9,s.elCell,s.r].join(' ')}> №13</div>
 <div className={[s.div10,s.elCell,s.r].join(' ')}>№14 </div>
-<div className={[s.div11,s.vmt2,s.r].join(' ')}>№2  </div>
+<div className={[s.div11,s.vmt2,s.r].join(' ')} data-cell='2' >№2  </div>
 <div className={[s.div12,s.t2,s.r].join(' ')}> <h5> №3</h5></div>
 <div className={[s.div13,s.r,s.con].join(' ')}>Счетчик </div>
 <div className={[s.div14,s.elCount,s.r,s.con].join(' ')}> <h5>Счетчик</h5></div>

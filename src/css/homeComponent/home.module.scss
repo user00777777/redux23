@@ -1,4 +1,4 @@
-// @import './../reset';
+@import './../reset';
 
 
 @mixin border() {
@@ -49,31 +49,7 @@
   color: brown;
 }
 
-// .div1 {
-//   grid-area: 3 / 1 / 4 / 4;
-//   width: 150px;
-// }
-/* Остальные .divN стили */
 
-/* Общие стили для текста и других элементов */
-
-/* Медиа-запрос для смартфонов с адаптивным дизайном */
-// @media only screen and (max-width: 380px) {
-//   .r {
-//     font-size: 10px;
-//     padding: 0.5rem;
-
-//   }
-//   .avm2 .avm1 {
-//     font-size: 14px;
-//     height: 2rem;
-
-// }
-//   .avm1 {
-//   background-color: rgb(77, 29, 120);
-//   animation:my ;
-//   -webkit-animation:my 1s 0ms  linear infinite;
-// }}
 
 
 
@@ -113,14 +89,7 @@
     .div32 { grid-area: 12 / 1 / 9 / 8;background-color:aliceblue }
 
 
-
-    /* Общие стили для текста и других элементов */
-
-  
-  /* Медиа-запрос для смартфонов с адаптивным дизайном */
-/* Общие стили для текста и других элементов */
-
-/* Медиа-запрос для смартфонов с адаптивным дизайном */
+    @import './../mediaSub';
 
 @keyframes my {
   0%{
@@ -135,4 +104,4 @@ background-color:darkolivegreen;
   }
 
 }
-@import './../mediaSub';
+

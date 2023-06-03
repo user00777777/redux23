@@ -1,4 +1,55 @@
 @charset "UTF-8";
+* {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+aside, nav, footer, header, section, main {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul, ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+input, textarea, button, select {
+  font-family: inherit;
+  font-style: inherit;
+  color: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
 .parent {
   display: grid;
   grid-template-columns: repeat(10, 0.5fr); /* Исправленное значение repeat */
@@ -44,9 +95,6 @@
   color: brown;
 }
 
-/* Остальные .divN стили */
-/* Общие стили для текста и других элементов */
-/* Медиа-запрос для смартфонов с адаптивным дизайном */
 /* Остальные стили и классы */
 .div1 {
   grid-area: 3/1/4/4;
@@ -180,19 +228,6 @@
   background-color: aliceblue;
 }
 
-/* Общие стили для текста и других элементов */
-/* Медиа-запрос для смартфонов с адаптивным дизайном */
-/* Общие стили для текста и других элементов */
-/* Медиа-запрос для смартфонов с адаптивным дизайном */
-@keyframes my {
-  0% {
-    background-color: brown;
-    color: cornflowerblue;
-  }
-  90% {
-    background-color: darkolivegreen;
-  }
-}
 @media only screen and (max-width: 480px) {
   .r {
     font-size: 12px;
@@ -222,5 +257,14 @@
     animation: my;
     -webkit-animation: my 1s 0ms linear infinite;
     font-size: 10px;
+  }
+}
+@keyframes my {
+  0% {
+    background-color: brown;
+    color: cornflowerblue;
+  }
+  90% {
+    background-color: darkolivegreen;
   }
 }/*# sourceMappingURL=home.module.css.map */

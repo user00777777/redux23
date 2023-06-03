@@ -1,40 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 export default function Log(props) {
- let time=new Date().toLocaleDateString()
+  const date = useSelector((state) => state.tp32.list);
+  const [description, setDescription] = useState([]);
 
-
-let date=useSelector((state)=>state.tp32.list)
 console.log(date);
-let x=null
-for (const i of date) {
- x=i.description
-
-}
-console.log(x);
 
 
 
-
-
-
-
-
-
-
-
-
+  
   
   
   return (
     <div>
-
-
+      { date.map((el, index) => (
+        <div key={el.id || index}>
+          <div>{el.type}</div>
+          <div>{el.iNom}</div>
+          <div>{el.other}</div>
+        </div>
+      ))}
     </div>
-  )
+  );
+  
 }
-     
-
-
-
