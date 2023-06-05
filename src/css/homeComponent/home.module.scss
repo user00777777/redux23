@@ -85,7 +85,7 @@
     .div28 { grid-area: 1 / 2 / 2 / 4; }
     .div29 { grid-area: 1 / 1 / 3 / 2; }
     .div30 { grid-area: 13 / 4 / 13 / 7; width: 4rem;}
-    .div31 { grid-area: 3 / 4 / 6 / 9;background-color:rgb(151, 207, 145);@include border();  }
+    .div31 { grid-area: 3 / 4 / 6 / 9;background-color:rgb(151, 207, 145);@include border(); word-wrap: break-word;white-space: normal; }
     .div32 { grid-area: 12 / 1 / 9 / 8;background-color:aliceblue }
 
 
@@ -105,3 +105,4 @@ background-color:darkolivegreen;
 
 }
 
+.ab{font-size:0.8rem;background-color:darkturquoise;height: 100%;}

@@ -75,6 +75,19 @@ const initialState = {
       cell: 7,
       id: uuid(),
       description: [
+        // { id: uuid() },
+        // { type: "АВМ-4СВ" },
+        // { iNom: "Iн=200A" },
+        // { breakCurrent: "Росцепитель=1600A" },
+        // { other: "Расч-й ток=180А" },
+        { path: "??" },
+        // { p: "100" },
+      ],
+    },
+    {
+      cell: "section",
+      id: uuid(),
+      description: [
         { id: uuid() },
         { type: "АВМ20-4СВ" },
         { iNom: "Iн=1500A" },
@@ -204,13 +217,16 @@ const initialState = {
       id: uuid(),
       description: [
         { other: "Расч-й ток 96.3" },
-        { path: "Ввод 6Кв кП-4 яч-3" },
+        { path: "Ввод 6Кв кП-4  яч-3 " },
       ],
     },
     {
       cell: "vnt2",
       id: uuid(),
-      description: [{ other: "96.3" }, { path: "Ввод 6Кв кП-4 яч-13" }],
+      description: [
+        { other: "Расч-й ток 96.3" },
+        { path: "Ввод 6Кв кП-4 яч-13" },
+      ],
     },
   ],
 };

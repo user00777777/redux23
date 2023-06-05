@@ -12,7 +12,7 @@ export  default function Homepage() {
  const refA2=useRef()
  const refAbs=useRef()
  const refLog=useRef()
- let[data,stData]=useState()
+ let[bool,setBool]=useState()
  let dispatch=useDispatch()
  let selector=useSelector((state)=>state.tp32)
 //  let [cell]=useSelector((state)=>state.tp32.list)
@@ -29,7 +29,15 @@ if (dataSet) {
   
     dispatch(nCell(dataSet))
 }
-else{
+// if (!dataSet) {
+//   console.log(
+//    refAbs.current.contains(s.div31));
+//   // refAbs.current.classList.add(s.ab)
+//   console.log('no');
+  
+   
+// }
+else {
  if (event.target.closest('[data-cell]')) {
   let dataSet2=event.target.closest('[data-cell]'). getAttribute(['data-cell'])
   dispatch(nCell(dataSet2))
@@ -64,8 +72,8 @@ if ( papaRef.current) {
 
 <div className={[s.div1,s.vmt1,s.r ,'o'].join(' ')} data-cell='vnt1'>Внт1 </div>
 <div className={[s.div2,s.t1,s.r].join(' ')} data-cell='vnt2'> <h5>ВНТ2</h5> </div>
-<div className={[s.div3,s.r].join(' ')} data-cell='t1'>T1 </div>
-<div className={[s.div4,s.elCount,s.r,].join(' ')} data-cell='t2'>Т2 </div>
+<div className={[s.div3,s.r].join(' ')} data-cel='t1'>T1 </div>
+<div className={[s.div4,s.elCount,s.r,].join(' ')} data-cel='t2'>Т2 </div>
 <div className={[s.div5,s.elCell,s.r,s.connection].join(' ')}>вв </div>
 <div className={[s.div6,s.elCell,s.r,'o',s.connection].join(' ')}   title={'k'} > вв</div>
 <div className={[s.div7,s.avm1,s.r,].join(' ')  }ref={refA} data-cell='avm1' > Авм <span>#1</span></div>
@@ -74,8 +82,8 @@ if ( papaRef.current) {
 <div className={[s.div10,s.elCell,s.r].join(' ')} data-cell='14'>№14 </div>
 <div className={[s.div11,s.vmt2,s.r].join(' ')} data-cell='2' >№2  </div>
 <div className={[s.div12,s.t2,s.r].join(' ')} data-cell='3'> <h5> №3</h5></div>
-<div className={[s.div13,s.r,s.con].join(' ')} data-cell='count1'>Счетчик </div>
-<div className={[s.div14,s.elCount,s.r,s.con].join(' ')} data-cell='count2'> <h5>Счетчик</h5></div>
+<div className={[s.div13,s.r,s.con].join(' ')} data-cel='count1'>Счетчик </div>
+<div className={[s.div14,s.elCount,s.r,s.con].join(' ')} data-cel='count2'> <h5>Счетчик</h5></div>
 <div className={[s.div15,s.elCell,s.r].join(' ')} data-cell='13'>яч #13 </div>
 <div className={[s.div16,s.elCell,s.r].join(' ')} data-cell='5'> №5</div>
 <div className={[s.div17,s.r].join(' ') }ref={refA2} data-cell='avm2'> №6 </div>
@@ -86,13 +94,13 @@ if ( papaRef.current) {
 <div className={[s.div22,s.elCell,s.r].join(' ')} data-cell='section'> Секц-к</div>
 <div className={[s.div23,s.elCell,s.r].join(' ')} data-cell='9'>№9 </div>
 <div className={[s.div24,s.elCell,s.r].join(' ')}data-cell='8'>№8  </div>
-<div className={[s.div25,s.emptyCell,s.r].join(' ')} data-cell='empty'>яч-- </div>
-<div className={[s.div26,s.thinks,s.r].join(' ')} data-cell=''> безпека</div>
-<div className={[s.div27,s.fireShield,s.r].join(' ')} data-cell='door7Right'>дверь </div>
-<div className={[s.div28,s.door,s.r].join(' ')} data-cell='door7left'> дверь </div>
-<div className={[s.div29,s.door,s.r].join(' ')} data-cell=''> песок </div>
-<div className={[s.div30,s.door,s.r].join(' ')} data-cell='enter6'>вход </div>
-<div className={[s.div31,s.abs].join(' ')}  data-cell='log'><div ref={refAbs} ><Log/></div></div>
+<div className={[s.div25,s.emptyCell,s.r].join(' ')} data-cel='empty'>яч-- </div>
+<div className={[s.div26,s.thinks,s.r].join(' ')} data-cel=''> безпека</div>
+<div className={[s.div27,s.fireShield,s.r].join(' ')} data-cel='door7Right'>дверь </div>
+<div className={[s.div28,s.door,s.r].join(' ')} data-cel='door7left'> дверь </div>
+<div className={[s.div29,s.door,s.r].join(' ')} data-cel=''> песок </div>
+<div className={[s.div30,s.door,s.r].join(' ')} data-cel='enter6'>вход </div>
+<div className={[s.div31,s.abs].join(' ')}  data-cel='log'><div ref={refAbs} >{true&&<Log/>}</div></div>
 
  {/* <div className={[s.div32 ,s.log].join(' ')} ref={refLog} >ergerg </div> */}
     <div className={s.buPearent}>
@@ -111,24 +119,3 @@ if ( papaRef.current) {
 
 
 
-
-
-// const handleSpanClick = (event) => {
-//   const span = event.target;
-//   const parentDiv = span.closest('[data-cell]'); // Поиск ближайшего родительского элемента с атрибутом data-cell
-
-//   if (parentDiv) {
-//     const cell = parentDiv.getAttribute('data-cell'); // Получение значения атрибута data-cell
-
-//     // Дальнейшие действия в зависимости от значения атрибута data-cell
-//     if (cell === 'нужное значение') {
-//       // Ваш код
-//     }
-//   }
-// };
-
-// return (
-//   <div className={[s.div7, s.avm1, s.r].join(' ')} ref={refA} data-cell="avm1">
-//     Авм <span onClick={handleSpanClick}>#1</span>
-//   </div>
-// );

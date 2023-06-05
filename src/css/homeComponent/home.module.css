@@ -221,6 +221,8 @@ input::-ms-clear {
   grid-area: 3/4/6/9;
   background-color: rgb(151, 207, 145);
   border: solid 1px white;
+  word-wrap: break-word;
+  white-space: normal;
 }
 
 .div32 {
@@ -243,7 +245,7 @@ input::-ms-clear {
     -webkit-animation: my 1s 0ms linear infinite;
   }
 }
-@media only screen and (max-width: 380px) {
+@media only screen and (max-width: 370px) {
   .r {
     font-size: 10px;
     padding: 0.5rem;
@@ -267,4 +269,9 @@ input::-ms-clear {
   90% {
     background-color: darkolivegreen;
   }
+}
+.ab {
+  font-size: 0.8rem;
+  background-color: darkturquoise;
+  height: 100%;
 }/*# sourceMappingURL=home.module.css.map */
