@@ -51,6 +51,7 @@ input::-ms-clear {
 }
 
 .parent {
+  background-image: url("../../foto/substation.jpg");
   display: grid;
   grid-template-columns: repeat(10, 0.5fr); /* Исправленное значение repeat */
   grid-template-rows: repeat(14, 1fr);
@@ -60,16 +61,18 @@ input::-ms-clear {
 
 .r {
   border: solid 1px white;
-  background-color: black;
-  color: linen;
+  color: rgb(194, 237, 2);
   font-size: 19px;
   min-width: 19px;
-  background-color: rgb(6, 6, 6);
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#45484d+0,000000+100;Black+3D+%231 */
+  background: #45484d; /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #45484d 0%, #000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#45484d", endColorstr="#000000",GradientType=0 ); /* IE6-9 */
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  margin: 0.5px;
+  margin: 0.3rem;
   max-height: -moz-fit-content;
   max-height: fit-content;
 }
@@ -219,7 +222,7 @@ input::-ms-clear {
 
 .div31 {
   grid-area: 3/4/6/9;
-  background-color: rgb(151, 207, 145);
+  background-color: rgb(191, 167, 169);
   border: solid 1px white;
   word-wrap: break-word;
   white-space: normal;
