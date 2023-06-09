@@ -25,4 +25,8 @@
 .l3 {
   color: black;
   font-weight: 700;
+}
+
+.change {
+  visibility: hidden;
 }/*# sourceMappingURL=log.module.css.map */

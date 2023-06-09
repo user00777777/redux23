@@ -1,12 +1,28 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import s from '../../css/homeComponent/log.module.css'
-export default function Log(props) {
+import home from '../../css/homeComponent/home.module.css'
+export default function Log({k,r}) {
   const date = useSelector((state) => state.tp32.list);
   const [description, setDescription] = useState([]);
+let el=r.current;
+  
+// if (!el?.textContent){   
+  
+// el?.classList.remove(home.abs)
+// console.log('no');
 
-console.log(date);
+  
+//   }
 
+
+if (el?.textContent) {
+  console.log(77);
+  el?.classList.add(home.abs)
+
+
+}
+else{el}
 
 
   

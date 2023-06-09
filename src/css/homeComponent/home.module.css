@@ -51,7 +51,10 @@ input::-ms-clear {
 }
 
 .parent {
-  background-image: url("../../foto/substation.jpg");
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e9f6fd+0,d3eefb+100;Blue+3D+%233 */
+  background: #e9f6fd; /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #e9f6fd 0%, #d3eefb 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#e9f6fd", endColorstr="#d3eefb",GradientType=0 ); /* IE6-9 */
   display: grid;
   grid-template-columns: repeat(10, 0.5fr); /* Исправленное значение repeat */
   grid-template-rows: repeat(14, 1fr);
@@ -222,10 +225,6 @@ input::-ms-clear {
 
 .div31 {
   grid-area: 3/4/6/9;
-  background-color: rgb(191, 167, 169);
-  border: solid 1px white;
-  word-wrap: break-word;
-  white-space: normal;
 }
 
 .div32 {
@@ -248,22 +247,6 @@ input::-ms-clear {
     -webkit-animation: my 1s 0ms linear infinite;
   }
 }
-@media only screen and (max-width: 370px) {
-  .r {
-    font-size: 10px;
-    padding: 0.5rem;
-  }
-  .avm2 .avm1 {
-    font-size: 14px;
-    height: 2rem;
-  }
-  .avm1 {
-    background-color: rgb(77, 29, 120);
-    animation: my;
-    -webkit-animation: my 1s 0ms linear infinite;
-    font-size: 10px;
-  }
-}
 @keyframes my {
   0% {
     background-color: brown;
@@ -277,4 +260,11 @@ input::-ms-clear {
   font-size: 0.8rem;
   background-color: darkturquoise;
   height: 100%;
+}
+
+.abs {
+  background-color: rgb(191, 167, 169);
+  border: solid 1px white;
+  word-wrap: break-word;
+  white-space: normal;
 }/*# sourceMappingURL=home.module.css.map */

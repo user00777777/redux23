@@ -6,7 +6,13 @@
 }
 
 .parent {
-  background-image: url('../../foto/substation.jpg');
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e9f6fd+0,d3eefb+100;Blue+3D+%233 */
+background: #e9f6fd; /* Old browsers */
+background: -moz-linear-gradient(top,  #e9f6fd 0%, #d3eefb 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #e9f6fd 0%,#d3eefb 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #e9f6fd 0%,#d3eefb 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e9f6fd', endColorstr='#d3eefb',GradientType=0 ); /* IE6-9 */
+
   display: grid;
   grid-template-columns: repeat(10,0.5fr); /* Исправленное значение repeat */
   grid-template-rows: repeat(14, 1fr);
@@ -92,7 +98,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', end
     .div28 { grid-area: 1 / 2 / 2 / 4; }
     .div29 { grid-area: 1 / 1 / 3 / 2; }
     .div30 { grid-area: 13 / 4 / 13 / 7; width: 4rem;}
-    .div31 { grid-area: 3 / 4 / 6 / 9;background-color:rgb(191, 167, 169);@include border(); word-wrap: break-word;white-space: normal; }
+    .div31 { grid-area: 3 / 4 / 6 / 9;}
     .div32 { grid-area: 12 / 1 / 9 / 8;background-color:aliceblue }
 
 
@@ -106,10 +112,11 @@ color:cornflowerblue;
   }
   90%{
 
-background-color:darkolivegreen;
+    background-color:darkolivegreen;
 
   }
 
 }
 
 .ab{font-size:0.8rem;background-color:darkturquoise;height: 100%;}
+.abs{background-color:rgb(191, 167, 169);@include border(); word-wrap: break-word;white-space: normal; }

@@ -134,13 +134,13 @@ console.log(tp32);
     setX(!x)
     setTP(()=>'T1')
 
-  localStorage.setItem('key', 'true');
+  // localStorage.setItem('key', 'true');
   // value==='1'? alert('workTp1'): alert('worksTp2');
  };
   const btn2 = () => {
     setTP(()=>'T2')
 setX(!x)
-  localStorage.setItem('key', 'false');
+  // localStorage.setItem('key', 'false');
   // value==='1'? alert('workTp1'): alert('worksTp2');
  };
 
