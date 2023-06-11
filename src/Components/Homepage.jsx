@@ -96,7 +96,7 @@ setKey(x)
 <div className={[s.div28,s.door,s.r].join(' ')} data-cel='door7left'> дверь </div>
 <div className={[s.div29,s.door,s.r].join(' ')} data-cel=''> песок </div>
 <div className={[s.div30,s.door,s.r].join(' ')} data-cel='enter6'>вход </div>
-<div className={[s.div31].join(' ') }ref={refAbs}  data-cel='log'> <Log  k={key} r={refAbs} /></div>
+<div className={[s.div31].join(' ') }ref={refAbs}  data-cel='log'> <Log  k={key}/></div>
 
  {/* <div className={[s.div32 ,s.log].join(' ')} ref={refLog} >ergerg </div> */}
     <div className={s.buPearent}>

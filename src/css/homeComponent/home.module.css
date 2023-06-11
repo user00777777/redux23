@@ -260,11 +260,4 @@ input::-ms-clear {
   font-size: 0.8rem;
   background-color: darkturquoise;
   height: 100%;
-}
-
-.abs {
-  background-color: rgb(191, 167, 169);
-  border: solid 1px white;
-  word-wrap: break-word;
-  white-space: normal;
 }/*# sourceMappingURL=home.module.css.map */
