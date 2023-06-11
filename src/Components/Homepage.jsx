@@ -5,13 +5,14 @@ import s from '../css/homeComponent/home.module.css'
 import { nCell } from '../sliceReduce/substationReducer';
 import { setData } from '../sliceReduce/tableSlice';
 import Log from './sbbstationComponents/Log';
+import TpLog from './sbbstationComponents/TpLog';
 
 export  default function Homepage() {
  const papaRef=useRef()
  const refA=useRef()
  const refA2=useRef()
  const refAbs=useRef()
- const refLog=useRef()
+ const refT=useRef()
  let[key,setKey]=useState('')
  let dispatch=useDispatch()
  let selector=useSelector((state)=>state.tp32)
@@ -63,6 +64,7 @@ setKey(x)
 }
 
 
+
   return (
 <div className={[s.parent ,'o'].join(' ')}  ref={papaRef} >
 
@@ -96,9 +98,9 @@ setKey(x)
 <div className={[s.div28,s.door,s.r].join(' ')} data-cel='door7left'> дверь </div>
 <div className={[s.div29,s.door,s.r].join(' ')} data-cel=''> песок </div>
 <div className={[s.div30,s.door,s.r].join(' ')} data-cel='enter6'>вход </div>
-<div className={[s.div31].join(' ') }ref={refAbs}  data-cel='log'> <Log  k={key}/></div>
+<div className={[s.div31].join(' ') }ref={refAbs}  data-cel='log'> <Log /></div>
 
- {/* <div className={[s.div32 ,s.log].join(' ')} ref={refLog} >ergerg </div> */}
+ <div className={[s.div32 ].join(' ')} ref={refT} ><TpLog k={key} /> </div>
     <div className={s.buPearent}>
       
 

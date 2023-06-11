@@ -44,10 +44,11 @@
 @media only screen and (max-width: 480px) {
   .logContainer {
     background-color: chartreuse;
-    font-size: 10px;
+    font-size: 14px;
     width: 9rem;
-    margin-left: 1px;
-    margin-right: 1px;
+    margin-left: 0.5px;
+    margin-right: 0.5px;
+    padding: 1px 1px, 0.5rem;
   }
   .l3 {
     color: rgb(9, 9, 245);
@@ -59,10 +60,11 @@
   }
   .l1 {
     color: rgb(47, 6, 229);
-    font-weight: 700;
+    font-weight: 500;
+    font-size: 0.8rem;
   }
   .l1 span {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
   .l2 {
     color: black;
@@ -72,13 +74,13 @@
   }
   .l2 span {
     color: red;
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 @media only screen and (max-width: 340px) {
   .logContainer {
     background-color: rgb(206, 240, 16);
-    font-size: 10px;
+    font-size: 11px;
   }
   .l3 {
     color: rgb(9, 9, 245);

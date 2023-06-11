@@ -230,6 +230,8 @@ input::-ms-clear {
 .div32 {
   grid-area: 12/1/9/8;
   background-color: aliceblue;
+  display: flex;
+  justify-content: end;
 }
 
 @media only screen and (max-width: 480px) {

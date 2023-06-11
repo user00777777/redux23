@@ -1,0 +1,20 @@
+.wrapper {
+  background-color: rgb(255, 255, 251);
+  width: 13rem;
+  height: 12.2rem;
+  font-size: 10px;
+  color: rgb(0, 0, 0);
+}
+
+.btSel {
+  background-color: cadetblue;
+}
+
+@media only screen and (max-width: 480px) {
+  .wrapper {
+    width: 6.8rem;
+  }
+  .select {
+    font-size: 0.7rem;
+  }
+}/*# sourceMappingURL=tp.module.css.map */

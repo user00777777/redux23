@@ -13,6 +13,7 @@ import Substation from './Components/Substation'
 import MachineTools from './Components/machine/machineTools'
 import Avm2 from './Components/sbbstationComponents/Avm2'
 import Log from './Components/sbbstationComponents/Log'
+import TpLog from './Components/sbbstationComponents/TpLog'
 // import First from './Components/First'
 // import OneComponent from './Components/OneComponent'
 
@@ -32,6 +33,8 @@ function App() {
 {/* <Route path='/main' element={<Main/>}/> */}
 <Route path='m' element={<Cranes/>}/>
 <Route path='substation' element={<Substation  />}/>
+<Route path='tpLog' element={<TpLog />}/>
+
 </Route>
 
 
