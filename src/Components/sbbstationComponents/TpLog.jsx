@@ -70,11 +70,10 @@ let dates=  new Date().toLocaleDateString()
       </select>
       {/* <button ref={btSelRef} className={s.btSel} onClick={btSelect}>Жми</button> */}
 
-      <p>{t}</p>
-      <p>дата осмотра {d}</p>
-<p>время{time}</p>
-      <p>произвел осмотр</p>
-      <p>{user}</p>
+      <p><b> {t}</b></p>
+      <p>дата осмотра <span>{d}</span></p>
+<time>время <span> {time}</span></time>
+      <p>произвел осмотр<span> {user}</span></p>
     </div>
   );
 }

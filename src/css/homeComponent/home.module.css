@@ -52,6 +52,9 @@ input::-ms-clear {
 
 .parent {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e9f6fd+0,d3eefb+100;Blue+3D+%233 */
+  width: 100%;
+  height: -moz-min-content;
+  height: min-content;
   background: #e9f6fd; /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, #e9f6fd 0%, #d3eefb 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#e9f6fd", endColorstr="#d3eefb",GradientType=0 ); /* IE6-9 */
@@ -229,9 +232,8 @@ input::-ms-clear {
 
 .div32 {
   grid-area: 12/1/9/8;
-  background-color: aliceblue;
   display: flex;
-  justify-content: end;
+  justify-content: start;
 }
 
 @media only screen and (max-width: 480px) {

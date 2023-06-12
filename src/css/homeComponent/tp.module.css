@@ -1,9 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap");
 .wrapper {
-  background-color: rgb(255, 255, 251);
-  width: 13rem;
+  width: 100%;
   height: 12.2rem;
-  font-size: 10px;
+  font-size: 1rem;
   color: rgb(0, 0, 0);
+}
+.wrapper .select {
+  font-size: 1.1rem;
+  background-color: rgb(197, 209, 186);
+}
+.wrapper b {
+  font-size: 1.5rem;
+  font-family: " Verdana, sans-serif, cursive;font-weight: 900";
+}
+.wrapper span {
+  color: red;
+  font-size: large;
+  font-weight: 700;
 }
 
 .btSel {
@@ -12,9 +25,9 @@
 
 @media only screen and (max-width: 480px) {
   .wrapper {
-    width: 6.8rem;
+    width: 100%;
   }
   .select {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
 }/*# sourceMappingURL=tp.module.css.map */
