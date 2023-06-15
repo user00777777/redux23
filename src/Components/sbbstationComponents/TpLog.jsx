@@ -13,19 +13,10 @@ export default function TpLog({ k }) {
   let time=localStorage.getItem('time');
 console.log(date);
 
-  // useEffect(() => {
-  //   const savedValue = localStorage.getItem('user');
-  //   console.log(savedValue);
-    
-  //   const t = localStorage.getItem('key');
-  //   if (savedValue) {
-  //     setSelectedValue(savedValue);
-  //   }
-  //   if (t) {
-  //     setSelectedText(t);
-  //   }
-  // }, []);
 
+
+
+console.log(selectedT);
 
 
 
@@ -40,17 +31,18 @@ console.log(date);
 let dates=  new Date().toLocaleDateString()
   function handleSelectChange() {
     let dat=  new Date().toLocaleTimeString()
-    console.log(dat);
+ 
   
     const selectedIndex = selectRef.current.selectedIndex;
-    // console.log(selectedIndex);
+    const selec  =selectRef.current.options[selectedIndex].value
+    console.log(selec);
     
     // setSelectedText(selectRef.current.value);
-    let user=selectRef.current.options[selectedIndex].textContent
+    let currentuser=selectRef.current.options[selectedIndex].textContent
 
   
     
-    localStorage.setItem("user",user);
+    localStorage.setItem("user",currentuser);
     localStorage.setItem("time",dat);
     localStorage.setItem("date",dates);
     setSelectedText( localStorage.getItem("user"))
@@ -70,7 +62,7 @@ let dates=  new Date().toLocaleDateString()
       </select>
       {/* <button ref={btSelRef} className={s.btSel} onClick={btSelect}>Жми</button> */}
 
-      <p><b> {t}</b></p>
+      <p>В нагрузке<b> {t}</b></p>
       <p>дата осмотра <span>{d}</span></p>
 <time>время <span> {time}</span></time>
       <p>произвел осмотр<span> {user}</span></p>
@@ -78,29 +70,4 @@ let dates=  new Date().toLocaleDateString()
   );
 }
 
-// import React, { useEffect, useState } from 'react';
 
-// const MyComponent = () => {
-//   const [selectedValue, setSelectedValue] = useState('');
-
-//   useEffect(() => {
-//     const savedValue = localStorage.getItem('selectedValue');
-//     if (savedValue) {
-//       setSelectedValue(savedValue);
-//     }
-//   }, []);
-
-//   const handleSelectChange = (event) => {
-//     const value = event.target.value;
-//     setSelectedValue(value);
-//     localStorage.setItem('selectedValue', value);
-//   };
-
-//   return (
-//     <select value={selectedValue} onChange={handleSelectChange}>
-//       <option value="option1">Option 1</option>
-//       <option value="option2">Option 2</option>
-//       <option value="option3">Option 3</option>
-//     </select>
-//   );
-// };

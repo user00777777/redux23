@@ -54,7 +54,9 @@ if ( papaRef.current) {
  
 function setT1() {
 localStorage.setItem('key','T1')
-let x=localStorage.getItem('key')
+let x=localStorage.getItem('key');
+console.log(x);
+
 setKey(x)
 }
 function setT2() {
@@ -62,7 +64,29 @@ localStorage.setItem('key','T2');
 let x=localStorage.getItem('key')
 setKey(x)
 }
+let avm =document.querySelector('[data-cell=avm1]')
+let avm2 =document.querySelector('[data-cell=avm2]')
 
+
+// avm.classList.contains(s.avm1)
+// avm2.classList.contains(s.avm2)
+if (key==='T1'  ) {
+console.log(key);
+avm2?.classList.remove(s.avm1);
+
+avm.classList.add(s.avmBlinc)
+ avm2?.classList.remove(s.avmBlinc)
+
+} 
+if(key==='T2'  ) {
+  console.log(key);
+
+  avm?.classList.remove(s.avmBlinc)
+  avm2?.classList.remove(s.avm2);
+  avm2?.classList.add(s.avmBlinc)
+
+ 
+}
 
 
   return (
@@ -113,9 +137,4 @@ setKey(x)
 
   );
 }
-
-
-
-
-
 
