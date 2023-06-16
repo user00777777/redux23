@@ -1,15 +1,27 @@
 
 @media only screen and (max-width: 480px) {
   .r {
-    font-size: 10px;
-    padding: 1rem;
-    height: max-content;
-    width: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem;
+  margin: 0.1rem;
+  max-height: max-content;
 
   }
+  .thinks{  writing-mode: vertical-rl;
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: vertical-rl;
+    font-size: 0.8rem;
+    max-height: 100vh
+  }
+  .connection{font-size: 1.4rem;}
+
+
   .avm2 ,.avm1 {
-    font-size: 11px;
-    height: 2rem;
+    font-size: 0.7rem;
+    height: 5rem;
 
 }
   .avmBlinc {
@@ -18,24 +30,3 @@
   -webkit-animation:my 1s 0ms  linear infinite;
 }}
 
-// @media only screen and (max-width: 370px) {
-
-//   .r {
-//     font-size: 10px;
-//     padding: 0.5rem;
-
-//   }
-//   .avm2 .avm1 {
-//     font-size: 14px;
-//     height: 2rem;
-
-// }
-//   .avm1 {
-//   background-color: rgb(77, 29, 120);
-//   animation:my ;
-//   -webkit-animation:my 1s 0ms  linear infinite;
-//   font-size: 10px;
-// }
-
-
-// }

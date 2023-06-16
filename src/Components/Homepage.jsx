@@ -13,9 +13,10 @@ export  default function Homepage() {
  const refA2=useRef()
  const refAbs=useRef()
  const refT=useRef()
- let[key,setKey]=useState('')
+ let[key,setKey]=useState(localStorage.getItem('key'))
  let dispatch=useDispatch()
  let selector=useSelector((state)=>state.tp32)
+console.log(key);
 
  function tp(event) {
 // console.log(event.target.closest('[data-cell]'). getAttribute(['data-cell']));
@@ -51,44 +52,65 @@ if ( papaRef.current) {
 
    }
  }, [papaRef.current])
- 
+
 function setT1() {
 localStorage.setItem('key','T1')
-let x=localStorage.getItem('key');
-console.log(x);
+let res=localStorage.getItem('key')
+setKey(res)
 
-setKey(x)
+
 }
-function setT2() {
-localStorage.setItem('key','T2');
-let x=localStorage.getItem('key')
-setKey(x)
-}
-let avm =document.querySelector('[data-cell=avm1]')
-let avm2 =document.querySelector('[data-cell=avm2]')
 
-
-// avm.classList.contains(s.avm1)
-// avm2.classList.contains(s.avm2)
-if (key==='T1'  ) {
 console.log(key);
-avm2?.classList.remove(s.avm1);
 
-avm.classList.add(s.avmBlinc)
- avm2?.classList.remove(s.avmBlinc)
 
-} 
-if(key==='T2'  ) {
-  console.log(key);
+function setT2() {
+localStorage.setItem('key','T2')
+ let res=localStorage.getItem('key')
+console.log(res);
+setKey(res)
 
-  avm?.classList.remove(s.avmBlinc)
-  avm2?.classList.remove(s.avm2);
-  avm2?.classList.add(s.avmBlinc)
+;}
+
+
+
+
+
+
+useEffect(()=>{ 
+ let newKey=localStorage.getItem('key');
+console.log(newKey);
+
+  if (newKey==='T1'  ) {
+    console.log('ok>T1');
+    if ( refA.current) {
+      
+    console.log('ref');
+    
+   refA.current?.classList.remove(s.avm1);
+   refA.current?.classList.add(s.avmBlinc);
+   refA2.current?.classList.remove(s.avmBlinc);
+  }
+   
+ 
+   //  avm2?.classList.remove(s.avmBlinc)
+   
+   } 
+   if (newKey === 'T2') {
+    console.log('ok>T2');
+    if (refA2.current) {
+      refA.current?.classList.remove(s.avm2);
+      refA.current?.classList.remove(s.avmBlinc);
+      refA2.current?.classList.add(s.avmBlinc);
+
+    
+    }
+  }},[key])
+
+
+  
 
  
-}
-
-
   return (
 <div className={[s.parent ,'o'].join(' ')}  ref={papaRef} >
 
@@ -96,27 +118,27 @@ if(key==='T2'  ) {
 <div className={[s.div2,s.t1,s.r].join(' ')} data-cell='vnt2'> <h5>ВНТ2</h5> </div>
 <div className={[s.div3,s.r].join(' ')} data-cel='t1'>T1 </div>
 <div className={[s.div4,s.elCount,s.r,].join(' ')} data-cel='t2'>Т2 </div>
-<div className={[s.div5,s.elCell,s.r,s.connection].join(' ')}onClick={setT1} >Set1 </div>
-<div className={[s.div6,s.elCell,s.r,'o',s.connection].join(' ')}   title={'k'} onClick={setT2}> Set2</div>
+<div className={[s.div5,s.elCell,s.r,s.connection,s.thinks].join(' ')}onClick={setT1} >Set1 </div>
+<div className={[s.div6,s.elCell,s.r,'o',s.connection,s.thinks].join(' ')}    onClick={setT2}> Set2</div>
 <div className={[s.div7,s.avm1,s.r,].join(' ')  }ref={refA} data-cell='avm1' > Авм <span>#1</span></div>
-<div className={[s.div8,s.elCell,s.r,s.avm2].join(' ')} data-cell='avm2'> Авм#2</div>
-<div className={[s.div9,s.elCell,s.r].join(' ')} data-cell='13'> №13</div>
-<div className={[s.div10,s.elCell,s.r].join(' ')} data-cell='14'>№14 </div>
-<div className={[s.div11,s.vmt2,s.r].join(' ')} data-cell='2' >№2  </div>
-<div className={[s.div12,s.t2,s.r].join(' ')} data-cell='3'> <h5> №3</h5></div>
+<div className={[s.div8,s.elCell,s.r,s.avm2].join(' ') } ref={refA2}  data-cell='avm2'> Авм#2</div>
+<div className={[s.div9,s.elCell,s.r].join(' ')} data-cell='13'>13</div>
+<div className={[s.div10,s.elCell,s.r].join(' ')} data-cell='14'>14 </div>
+<div className={[s.div11,s.vmt2,s.r].join(' ')} data-cell='2' >2  </div>
+<div className={[s.div12,s.t2,s.r].join(' ')} data-cell='3'> <h5> 3</h5></div>
 <div className={[s.div13,s.r,s.con].join(' ')} data-cel='count1'>Счетчик </div>
 <div className={[s.div14,s.elCount,s.r,s.con].join(' ')} data-cel='count2'> <h5>Счетчик</h5></div>
-<div className={[s.div15,s.elCell,s.r].join(' ')} data-cell='13'>яч #13 </div>
-<div className={[s.div16,s.elCell,s.r].join(' ')} data-cell='5'> №5</div>
-<div className={[s.div17,s.r].join(' ') }ref={refA2} data-cell='avm2'> №6 </div>
-<div className={[s.div18,s.elCell,s.r].join(' ')} data-cell='10'>№10 </div>
-<div className={[s.div19,s.elCell,s.r].join(' ')} data-cell='11'> №11</div>
-<div className={[s.div20,s.elCell,s.r].join(' ')} data-cell='12'> №12</div>
-<div className={[s.div21,s.elSec,s.r].join(' ')} data-cell='7'> №7</div>
+<div className={[s.div15,s.elCell,s.r].join(' ')} data-cell='13'>13 </div>
+<div className={[s.div16,s.elCell,s.r].join(' ')} data-cell='5'> 5</div>
+<div className={[s.div17,s.r].join(' ') }> 6 </div>
+<div className={[s.div18,s.elCell,s.r].join(' ')} data-cell='10'>10 </div>
+<div className={[s.div19,s.elCell,s.r].join(' ')} data-cell='11'> 11</div>
+<div className={[s.div20,s.elCell,s.r].join(' ')} data-cell='12'>12</div>
+<div className={[s.div21,s.elSec,s.r].join(' ')} data-cell='7'> 7</div>
 <div className={[s.div22,s.elCell,s.r].join(' ')} data-cell='section'> Секц-к</div>
-<div className={[s.div23,s.elCell,s.r].join(' ')} data-cell='9'>№9 </div>
-<div className={[s.div24,s.elCell,s.r].join(' ')}data-cell='8'>№8  </div>
-<div className={[s.div25,s.emptyCell,s.r].join(' ')} data-cel='empty'>яч-- </div>
+<div className={[s.div23,s.elCell,s.r].join(' ')} data-cell='9'>9 </div>
+<div className={[s.div24,s.elCell,s.r].join(' ')}data-cell='8'>8  </div>
+<div className={[s.div25,s.emptyCell,s.r,s.thinks].join(' ')} data-cel='empty'>--------- </div>
 <div className={[s.div26,s.thinks,s.r].join(' ')} data-cel=''> безпека</div>
 <div className={[s.div27,s.fireShield,s.r].join(' ')} data-cel='door7Right'>дверь </div>
 <div className={[s.div28,s.door,s.r].join(' ')} data-cel='door7left'> дверь </div>
@@ -137,4 +159,7 @@ if(key==='T2'  ) {
 
   );
 }
+
+
+
 
