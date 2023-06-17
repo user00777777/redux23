@@ -16,17 +16,21 @@ export  default function Homepage() {
  let[key,setKey]=useState(localStorage.getItem('key'))
  let dispatch=useDispatch()
  let selector=useSelector((state)=>state.tp32)
-console.log(key);
+
 
  function tp(event) {
 // console.log(event.target.closest('[data-cell]'). getAttribute(['data-cell']));
-  let dataSet=event.target.dataset.cell
+  let dataSet=event.target.dataset.cell;
+
+  
 if (dataSet) dispatch(nCell(dataSet))
 
 
 else {
  if (event.target.closest('[data-cell]')) {
   let dataSet2=event.target.closest('[data-cell]'). getAttribute(['data-cell'])
+  console.log(dataSet2);
+  
   dispatch(nCell(dataSet2))
 
 
@@ -82,10 +86,10 @@ useEffect(()=>{
 console.log(newKey);
 
   if (newKey==='T1'  ) {
-    console.log('ok>T1');
+    // console.log('ok>T1');
     if ( refA.current) {
       
-    console.log('ref');
+    // console.log('ref');
     
    refA.current?.classList.remove(s.avm1);
    refA.current?.classList.add(s.avmBlinc);
@@ -99,7 +103,7 @@ console.log(newKey);
    if (newKey === 'T2') {
     console.log('ok>T2');
     if (refA2.current) {
-      refA.current?.classList.remove(s.avm2);
+      refA2.current?.classList.remove(s.avm2);
       refA.current?.classList.remove(s.avmBlinc);
       refA2.current?.classList.add(s.avmBlinc);
 

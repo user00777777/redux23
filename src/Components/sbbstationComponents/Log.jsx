@@ -10,6 +10,8 @@ export default function Log({ k }) {
   
   let refL = useRef();
   const date = useSelector((state) => state.tp32.list);
+  console.log(date);
+  
   const [description, setDescription] = useState([]);
   const[almost,setAlmost]= useState()
 

@@ -10,7 +10,8 @@
   max-height: max-content;
 
   }
-  .thinks{  writing-mode: vertical-rl;
+  .thinks{  
+    writing-mode: vertical-rl;
     -webkit-writing-mode: vertical-rl;
     -ms-writing-mode: vertical-rl;
     font-size: 0.8rem;
@@ -21,12 +22,17 @@
 
   .avm2 ,.avm1 {
     font-size: 0.7rem;
-    height: 5rem;
+    height: 100%;
 
 }
   .avmBlinc {
+    color:aliceblue;
+    font-size: 0.6rem;
+    // writing-mode: vertical-rl;
+    // -webkit-writing-mode: vertical-rl;
+    // -ms-writing-mode: vertical-rl;
   background-color: rgb(234, 231, 236);
   animation:my ;
-  -webkit-animation:my 1s 0ms  linear infinite;
+  -webkit-animation:my 3s 1000ms  ease-in infinite;
 }}
 

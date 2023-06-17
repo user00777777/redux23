@@ -115,15 +115,38 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', end
 
 @keyframes my {
   0%{
-background-color:rgb(249, 247, 247);
-color:rgb(226, 12, 83);
-
-  }
+     //align-items: start;
+     font-size: 0.7;
+     font-weight: 700;
+     border-radius: 10px;
+     color:rgb(239, 239, 239);
+     -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+     -ms-border-radius: 10px;
+     -o-border-radius: 10px;
+     background:rgb(255, 77, 0);
+     writing-mode:vertical-rl ;
+     -webkit-writing-mode:vertical-rl ;
+     -ms-writing-mode:vertical-rl ;
+     transform: scale(1.2);
+     -webkit-transform: scale(1.2);
+     -moz-transform: scale(1.2);
+     -ms-transform: scale(1.2);
+     -o-transform: scale(1.2);
+}
   90%{
-
-    background-color:darkolivegreen;
-
-  }
+    font-weight: 500;
+    transform: skew(2deg);
+    background:darkolivegreen;
+    display: flex;
+    justify-content: end;
+    //align-items: flex-end;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
 
 }
 

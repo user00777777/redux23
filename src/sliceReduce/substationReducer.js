@@ -235,12 +235,12 @@ const substation = createSlice({
   initialState,
   reducers: {
     nCell(state, action) {
-      // let x = state.data.find((el) => el.cell == action.payload);
-      // if (x && Array.isArray(x.description)) {
-      //   state.list = [...x?.description];
-      // } else {
-      //   console.log(...x?.description);
-      // }
+      let x = state.data.find((el) => el.cell == action.payload);
+      if (x && Array.isArray(x.description)) {
+        state.list = [...x?.description];
+      } else {
+        console.log(...x?.description);
+      }
     },
 
     destr(state, action) {
