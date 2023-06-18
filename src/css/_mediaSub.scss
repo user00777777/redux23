@@ -26,6 +26,18 @@
 
 }
   .avmBlinc {
+    justify-content:center;
+    writing-mode: vertical-rl;
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: vertical-rl;
+    // align-items: center;
+    text-align: center;
+    height :100vh;
+    span{ 
+
+      height:7.8rem;
+      font-size: 1.5rem;
+    }
     color:aliceblue;
     font-size: 0.6rem;
     // writing-mode: vertical-rl;
@@ -33,6 +45,6 @@
     // -ms-writing-mode: vertical-rl;
   background-color: rgb(234, 231, 236);
   animation:my ;
-  -webkit-animation:my 3s 1000ms  ease-in infinite;
+  -webkit-animation:my 1s 100ms  ease-in infinite;
 }}
 
