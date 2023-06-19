@@ -25,9 +25,7 @@ console.log(selectedT);
 
 
 
-  function btSelect() {
-    console.log(btSelRef.current);
-  }
+
 let dates=  new Date().toLocaleDateString()
   function handleSelectChange() {
     let dat=  new Date().toLocaleTimeString()
@@ -40,14 +38,23 @@ let dates=  new Date().toLocaleDateString()
     // setSelectedText(selectRef.current.value);
     let currentuser=selectRef.current.options[selectedIndex].textContent
 
-  
+ 
     
-    localStorage.setItem("user",currentuser);
+  localStorage.setItem("user",currentuser);
     localStorage.setItem("time",dat);
     localStorage.setItem("date",dates);
     setSelectedText( localStorage.getItem("user"))
     setSelectedValue( localStorage.getItem("date"))
   }
+  let blinks=localStorage.getItem('blink');
+  let tp=''
+  if (blinks=='true') {
+    tp='T1,T2'
+  } else {
+    tp=`${t}`
+  }
+  blinks=='true'?1:2
+console.log(tp);
 
 
   return (
@@ -62,7 +69,7 @@ let dates=  new Date().toLocaleDateString()
       </select>
       {/* <button ref={btSelRef} className={s.btSel} onClick={btSelect}>Жми</button> */}
 
-      <p>В нагрузке<b> {t}</b></p>
+      <p>В нагрузке<b>{tp}</b></p>
       <p>дата осмотра <span>{d}</span></p>
 <time>время <span> {time}</span></time>
       <p>произвел осмотр<span> {user}</span></p>
