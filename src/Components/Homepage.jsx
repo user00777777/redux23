@@ -61,11 +61,24 @@ if ( papaRef.current) {
  }, [papaRef.current])
 
 function setT1() {
+  console.log(0);
+ 
   localStorage.setItem('blink','false')
   refA2.current?.classList.remove(s.blink);
 localStorage.setItem('key','T1')
-let res=localStorage.getItem('key')
-setKey(res)
+
+let t1=localStorage.getItem('key')
+let blink=localStorage.getItem('blink')
+
+// if (t1==='T1'&&blink==='false') {
+//   console.log(1);
+  
+//   refA.current?.classList.remove(s.avm1);
+//   refA.current?.classList.add(s.avmBlinc);
+//   refA2.current?.classList.remove(s.avmBlinc);
+//   refA2.current?.classList.add(s.avm2);
+// }
+setKey(t1)
 
 
 }
@@ -74,65 +87,56 @@ console.log(key);
 
 
 function setT2() {
+  localStorage.setItem('blink','false')
+  localStorage.setItem('key','T2')
+  let t2=localStorage.getItem('key')
   let blink=localStorage.getItem('blink')
-  refA.current?.classList.remove(s.blink);
-localStorage.setItem('blink','false')
-localStorage.setItem('key','T2')
+  
+setKey(t2)
 
- let res=localStorage.getItem('key')
-console.log(res);
-setKey(res)
-
-;}
+}
 
 
-refA.current
+useEffect(()=>{
 
-
-
-useEffect(()=>{ 
- let newKey=localStorage.getItem('key');
-console.log(newKey);
-
-  if (newKey==='T1'  ) {
-    // console.log('ok>T1');
-    if ( refA.current) {
-      
-    // console.log('ref');
+  // console.log('set2');
+  let t=localStorage.getItem('key')
+  if (t==='T2'&&blink==='false') {
+    console.log('set2');
     
-   refA.current?.classList.remove(s.avm1);
-   refA.current?.classList.add(s.avmBlinc);
-   refA2.current?.classList.remove(s.avmBlinc);
-   refA2.current?.classList.add(s.avm2);
+    refA2.current?.classList.remove(s.avm2);
+    refA2.current?.classList.add(s.avmBlinc);
+    refA.current?.classList.remove(s.avmBlinc);
+    refA.current?.classList.add(s.avm);
   }
-   
- 
-   
-   } 
-   if (newKey === 'T2') {
-    console.log('ok>T2');
-    if (refA2.current) {
-      refA2.current?.classList.remove(s.avm2);
-      refA.current?.classList.remove(s.avmBlinc);
-      refA2.current?.classList.add(s.avmBlinc);
-      refA.current?.classList.add(s.avm1);
-
+  if (t==='T1'&&blink==='false') {
+    console.log(1);
     
-    }
-  }},[key])
+    refA.current?.classList.remove(s.avm1);
+    refA.current?.classList.add(s.avmBlinc);
+    refA2.current?.classList.remove(s.avmBlinc);
+    refA2.current?.classList.add(s.avm2);
+  }
+if (blink==='true') {
+  refA.current?.classList.remove(s.avm1);
+  refA2.current?.classList.remove(s.avm2);
+  refA.current?.classList.add(s.avmBlinc);
+  refA2.current?.classList.add(s.avmBlinc);
+}
+
+
+},[key,blink])
+
+
+
+
+   
  
- //doubleTouch
+   
+
  useEffect(()=>{
 let blink=localStorage.getItem('blink')
-if (blink=='true'&&refA2.current&& refA.current) {
-  console.log('iam hear');
-  refA2.current?.classList.remove(s.avm2);
-    refA.current?.classList.remove(s.avm1);
-    refA2.current?.classList.add(s.avmBlinc);
-    refA.current?.classList.add(s.avmBlinc);
-}
-else{console.log('not hear');
-}
+
 
  },[blink])
   const handleTouchStart = () => {
