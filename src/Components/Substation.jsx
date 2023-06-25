@@ -1,209 +1,215 @@
-import React, { useCallback, useEffect,useState } from 'react'
-import { createElement } from 'react';
-import { useRef } from 'react'
+import React, { useEffect, useState } from 'react';
+import { useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import s from '../css/Substation.module.css'
-import { destr, nCell } from '../sliceReduce/substationReducer';
-import Avm2 from './sbbstationComponents/Avm2';
+import s from '../css/homeComponent/home.module.css'
+import { nCell } from '../sliceReduce/substationReducer';
+import { setData } from '../sliceReduce/tableSlice';
 import Log from './sbbstationComponents/Log';
+import TpLog from './sbbstationComponents/TpLog';
 
-export default function Substation() {
-  const dispatch = useDispatch();
-  const selector = useSelector(state => state.tp32);
-  const refA = useRef();
-  const refLog = useRef();
-  const refA2 = useRef();
-  const refAbs = useRef();
-  const papaRef = useRef();
-  const [x, setX] = useState(true);
-  const [tp32, setTP] = useState('');
-  let out = refAbs.current;
-
-
-
-  const cel = useSelector(state => state.tp32.list);
-  const newcel = useSelector(state => state.tp32.newList);  
-const [cell,...arDescrip]=cel.map((el)=>el.description)
-
-useEffect(()=>{
-dispatch( destr(cel))
-
-},[cel])
+export  default function Substation() {
+  const [isDoubleTap, setIsDoubleTap] = useState(false);
+  const doubleTapTimer = useRef(null);
+ const papaRef=useRef()
+ const refA=useRef()
+ const refA2=useRef()
+ const refAbs=useRef()
+ const refT=useRef()
+ let[key,setKey]=useState(localStorage.getItem('key'))
+ let[blink,setBlink]=useState(localStorage.getItem('blink'))
+ let dispatch=useDispatch()
+ let selector=useSelector((state)=>state.tp32)
 
 
-
-useEffect(() => {
-  const value = localStorage.getItem("key");
-  if (value=='true' ) {
-    refA.current?.classList.add(s.change)
-  } 
-  else if (value=='false' ) {
-    // console.log('true', value);
-    refA2.current?.classList.add(s.change)
-}
-  else  {
-    // console.log('true', value);
-    refA.current?.classList.add(s.change)
-}
-},[]);
-
-function arDestr(c) {
+ function tp(event) {
+  let dataSet=event.target.dataset.cell;
 
   
-  if (c) {
-    const[typ,iN,bC,oth]=c;
-    const{type}=typ
-    const{iNom}=iN
-    const{breakCurrent}=bC
-   const{other}=oth
-  return  {type,
-  iNom,
-  breakCurrent,
-  other
-  }}}
+if (dataSet) dispatch(nCell(dataSet))
 
+
+else {
+ if (event.target.closest('[data-cell]')) {
+  let dataSet2=event.target.closest('[data-cell]'). getAttribute(['data-cell'])
+  console.log(dataSet2);
+  
+  dispatch(nCell(dataSet2))
+
+
+}
+}
   
 
-let avm1=arDestr(cell)
+ }
 
+
+
+ useEffect(() => {
+  if ( papaRef.current) {
+    papaRef.current.addEventListener('click',tp)
+   } 
+   return () => {
+  
+
+if ( papaRef.current) {
+  papaRef.current.removeEventListener('click',tp)
+  
+}
+
+   }
+ }, [papaRef.current])
+
+function setT1() {
+  localStorage.setItem('blink','false')
+  refA2.current?.classList.remove(s.blink);
+localStorage.setItem('key','T1')
+let res=localStorage.getItem('key')
+setKey(res)
  
 
- 
-  
+}
 
-  // useEffect(() => {
+console.log(key);
 
-    if (cell&&out) {
-    if (out.classList.contains(s.absChild)) {
-      if (avm1) {
+
+function setT2() {
+  let blink=localStorage.getItem('blink')
+  refA.current?.classList.remove(s.blink);
+localStorage.setItem('blink','false')
+localStorage.setItem('key','T2')
+
+ let res=localStorage.getItem('key')
+console.log(res);
+setKey(res)
+
+;}
+
+
+refA.current
+
+
+
+useEffect(()=>{ 
+  let newKey=localStorage.getItem('key');
+console.log(newKey);
+
+  if (newKey==='T1'  ) {
+    // console.log('ok>T1');
+    if ( refA.current) {
       
-          console.log(11);
-          
-       
-      out.innerHTML = `<ul><p >${avm1.type}</p> <li>${avm1.iNom}</li><li> ${avm1.breakCurrent}</li><i >${avm1.other}</i></ul> `;
-       }
-}
-else{out.innerHTML=''
-console.log(22);
-
-}
-
-
-
-} 
-// }, [cell,s.absChild]);
-
-
-
-const tp = useCallback((event) => {
- 
-  let data = event.target.dataset.cell;
-  let clas = event.target.classList
-  let out = refAbs.current;
-  if (out.classList.contains(s.absChild)) {
-  
-
-  
-   
-    out.classList.toggle(s.absChild)
+    // console.log('ref');
     
+   refA.current?.classList.remove(s.avm1);
+   refA.current?.classList.add(s.avmBlinc);
+   refA2.current?.classList.remove(s.avmBlinc);
+   refA2.current?.classList.add(s.avm2);
   }
-  else{
-    out.classList.add(s.absChild)}dispatch(nCell(data));}, [dispatch, cell]);
+   
+ 
+   
+   } 
+   if (newKey === 'T2') {
+    console.log('ok>T2');
+    if (refA2.current) {
+      refA2.current?.classList.remove(s.avm2);
+      refA.current?.classList.remove(s.avmBlinc);
+      refA2.current?.classList.add(s.avmBlinc);
+      refA.current?.classList.add(s.avm1);
 
-
-  useEffect(() => {
-    const papaElement = papaRef.current;
-
-
-    if (papaElement) {
-      papaElement.addEventListener('click', tp);
+    
     }
 
-    return () => {
-      if (papaElement) {
-        papaElement.removeEventListener('click', tp);
-      }
-    };
-  }, [tp]);
-
-console.log(tp32);
-
-  const btn = () => {
-    
-    setX(!x)
-    setTP(()=>'T1')
-
-  // localStorage.setItem('key', 'true');
-  // value==='1'? alert('workTp1'): alert('worksTp2');
- };
-  const btn2 = () => {
-    setTP(()=>'T2')
-setX(!x)
-  // localStorage.setItem('key', 'false');
-  // value==='1'? alert('workTp1'): alert('worksTp2');
- };
 
 
-
-
-
-
-
-
-  return (
+  }
+},[key,blink])
  
+
+
+  const handleTouchStart = () => {
+    if (doubleTapTimer.current) {
+      console.log('doubleTapTimer.current');
+      
+      clearTimeout(doubleTapTimer.current);
+      setIsDoubleTap(true);
+    } else {
+      console.log('no');
+      
+      doubleTapTimer.current = setTimeout(() => {
+        console.log('time');
+        localStorage.setItem('blink', 'false');
+        setIsDoubleTap(false);
+        doubleTapTimer.current = null;
+      }, 300); // Интервал между двойными касаниями в миллисекундах
+    }
+  };
+  const handleTouchEnd = () => {
+    if (isDoubleTap) {
+      localStorage.setItem('blink', 'true');
+      console.log('Двойной клик');
+   let blink=localStorage.getItem('blink')
+      refA2.current?.classList.remove(s.avm2);
+    refA.current?.classList.remove(s.avm1);
+    refA2.current?.classList.add(s.avmBlinc);
+    refA.current?.classList.add(s.avmBlinc);
+   // Ваш код, который будет выполнен при двойном касании
+    } else {
+      localStorage.setItem('blink', 'false');
+    }
+  };
+  
+
+  
+
+ 
+  return (
 <div className={[s.parent ,'o'].join(' ')}  ref={papaRef} >
 
-<div className={[s.div1,s.vmt1,s.r ,'o'].join(' ')}>Внт1<br/> Запитан от<br /> кп #4 яч#3 </div>
-<div className={[s.div2,s.t1,s.r].join(' ')}> <h5>T1-1000kвa</h5> </div>
-<div className={[s.div3,s.connection,s.r].join(' ')}> </div>
-<div className={[s.div4,s.elCount,s.r,].join(' ')}>Счетчик </div>
-<div className={[s.div5,s.elCell,s.r].join(' ')}>Яч # 2 </div>
-<div className={[s.div6,s.elCell,s.r,'o'].join(' ')}   title={'k'} > яч#3</div>
-<div className={[s.div7,s.avm1,s.r,].join(' ')  }ref={refA} data-cell='avm1' > Авм <span>#1</span></div>
-<div className={[s.div8,s.elCell,s.r].join(' ')}> яч#6</div>
-<div className={[s.div9,s.elCell,s.r].join(' ')}> яч#5</div>
-<div className={[s.div10,s.elCell,s.r].join(' ')}>яч#4 </div>
-<div className={[s.div11,s.vmt2,s.r].join(' ')}>Внт2<br/> Запитан от<br /> кп #4 яч#13  </div>
-<div className={[s.div12,s.t2,s.r].join(' ')}> <h5> Т2-1000ква </h5></div>
-<div className={[s.div13,s.connection,s.r,s.con2].join(' ')}>f </div>
-<div className={[s.div14,s.elCount,s.r].join(' ')}> <h5>Счетчик</h5></div>
-<div className={[s.div15,s.elCell,s.r].join(' ')}>яч #13 </div>
-<div className={[s.div16,s.elCell,s.r].join(' ')}> яч#14</div>
-<div className={[s.div17,s.avm2,s.r].join(' ') }ref={refA2} data-cell='avm2'> <Avm2         /> </div>
-<div className={[s.div18,s.elCell,s.r].join(' ')}>яч#10 </div>
-<div className={[s.div19,s.elCell,s.r].join(' ')}> яч#11</div>
-<div className={[s.div20,s.elCell,s.r].join(' ')}> яч#12</div>
-<div className={[s.div21,s.elSec,s.r].join(' ')}> Секц-к</div>
-<div className={[s.div22,s.elCell,s.r].join(' ')}> яч#7</div>
-<div className={[s.div23,s.elCell,s.r].join(' ')}>яч#9 </div>
-<div className={[s.div24,s.elCell,s.r].join(' ')}>яч#8  </div>
-<div className={[s.div25,s.emptyCell,s.r].join(' ')}>яч-- </div>
-<div className={[s.div26,s.thinks,s.r].join(' ')}> безопасность</div>
-<div className={[s.div27,s.fireShield,s.r].join(' ')}>пожарный щит </div>
-<div className={[s.div28,s.door,s.r].join(' ')}> дверь </div>
-<div className={[s.div29,s.door,s.r].join(' ')}> дверь </div>
-<div className={[s.div30,s.door,s.r].join(' ')}>вход </div>
-<div className={[s.abs].join(' ')}  ><div ref={refAbs} ></div></div>
+<div className={[s.div1,s.vmt1,s.r ,'o'].join(' ')} data-cell='vnt1'>Внт1 </div>
+<div className={[s.div2,s.t1,s.r].join(' ')} data-cell='vnt2'> <h5>ВНТ2</h5> </div>
+<div className={[s.div3,s.r].join(' ')} data-cel='t1'>T1 </div>
+<div className={[s.div4,s.elCount,s.r,].join(' ')} data-cel='t2'>Т2 </div>
+<div className={[s.div5,s.elCell,s.r,s.connection,s.thinks].join(' ')}onClick={setT1} >Set1 </div>
+<div className={[s.div6,s.elCell,s.r,'o',s.connection,s.thinks].join(' ')}    onClick={setT2}> Set2</div>
+<div className={[s.div7,s.avm1,s.r,].join(' ')  }ref={refA} data-cell='avm1'  onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd} >  <span>Авм#1</span></div>
+<div className={[s.div8,s.elCell,s.r,s.avm2].join(' ') } ref={refA2}  data-cell='avm2' onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd} id='avm2'><span> Авм#2</span></div>
+<div className={[s.div9,s.elCell,s.r].join(' ')} data-cell='13'>13</div>
+<div className={[s.div10,s.elCell,s.r].join(' ')} data-cell='14'>14 </div>
+<div className={[s.div11,s.vmt2,s.r].join(' ')} data-cell='2' >2  </div>
+<div className={[s.div12,s.t2,s.r].join(' ')} data-cell='3'> <h5> 3</h5></div>
+<div className={[s.div13,s.r,s.con].join(' ')} data-cel='count1'><h5>Счетчик</h5> </div>
+<div className={[s.div14,s.elCount,s.r,s.con].join(' ')} data-cel='count2'> <h5>Счетчик</h5></div>
+<div className={[s.div15,s.elCell,s.r].join(' ')} data-cell='6'>6 </div>
+<div className={[s.div16,s.elCell,s.r].join(' ')} data-cell='5'> 5</div>
+<div className={[s.div17,s.r].join(' ') }> 4 </div>
+<div className={[s.div18,s.elCell,s.r].join(' ')} data-cell='10'>10 </div>
+<div className={[s.div19,s.elCell,s.r].join(' ')} data-cell='11'> 11</div>
+<div className={[s.div20,s.elCell,s.r].join(' ')} data-cell='12'>12</div>
+<div className={[s.div21,s.elSec,s.r].join(' ')} data-cell='7'> 7</div>
+<div className={[s.div22,s.elCell,s.r].join(' ')} data-cell='section'> Секц-к</div>
+<div className={[s.div23,s.elCell,s.r].join(' ')} data-cell='9'>9 </div>
+<div className={[s.div24,s.elCell,s.r].join(' ')}data-cell='8'>8  </div>
+<div className={[s.div25,s.emptyCell,s.r,s.thinks].join(' ')} data-cel='empty'>--------- </div>
+<div className={[s.div26,s.thinks,s.r].join(' ')} data-cel=''> безпека</div>
+<div className={[s.div27,s.fireShield,s.r].join(' ')} data-cel='door7Right'>дверь </div>
+<div className={[s.div28,s.door,s.r].join(' ')} data-cel='door7left'> дверь </div>
+<div className={[s.div29,s.door,s.r].join(' ')} data-cel=''> песок </div>
+<div className={[s.div30,s.door,s.r].join(' ')} data-cel='enter6'>вход </div>
+<div className={[s.div31].join(' ') }ref={refAbs}  data-cel='log'> <Log /></div>
 
- <div className={x&&s.log} ref={refLog} ><Log tp={tp32} /></div>
+ <div className={[s.div32 ].join(' ')} ref={refT} ><TpLog k={key} /> </div>
     <div className={s.buPearent}>
       
 
-    <button  className={s.but} onClick={btn} > Tp1</button>
-    <button className={s.but2} onClick={btn2} > Tp2</button>
+    {/* <button  className={s.but} onClick={btn} > Tp1</button>
+    <button className={s.but2} onClick={btn2} > Tp2</button> */}
     </div>
     
     
      </div>
 
-
-
-
-  )
+  );
 }
-
 
 
 

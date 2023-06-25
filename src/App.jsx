@@ -15,6 +15,7 @@ import Avm2 from './Components/sbbstationComponents/Avm2'
 import Log from './Components/sbbstationComponents/Log'
 import TpLog from './Components/sbbstationComponents/TpLog'
 import SinglTp from './Components/sbbstationComponents/SinglTp'
+import Train from './Components/sbbstationComponents/train/Train'
 // import First from './Components/First'
 // import OneComponent from './Components/OneComponent'
 
@@ -36,6 +37,7 @@ function App() {
 <Route path='substation' element={<Substation  />}/>
 <Route path='tpLog' element={<TpLog />}/>
 <Route path='tpLog/:id' element={<SinglTp />}/>
+<Route path='train' element={<Train />}/>
 
 </Route>
 

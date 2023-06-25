@@ -43,12 +43,13 @@ return (
       {date.map((el,index) => (
         
         <div key={index}> {/* Используйте el.id в качестве свойства key */}
-          <div className={s.lType}><span>{el.type}</span></div>
+          {/* <div className={s.lType}><span>{el.type}</span></div> */}
+          <Link to={ `tpLog/${el.id}`}>{el.type}</Link>
           <div className={s.l2}>{el.iNom}</div>
           <div className={s.l3}>{el.other}</div>
 
-         { el.id&&<Link to={ `tpLog/${el.id}`}>Go</Link>}
-          {el.p && <div className={s.l1}>Подкл.мощ <span>{el.p}</span>Квт</div>}
+         { el.id&&<Link to={ `tpLog/${el.id}`}>{el.type}</Link>}
+          {el.p && <div className={s.l1}>Подкл.мощ <span>{el.iNom}</span>Квт</div>}
           {el.path && <div className={s.l2}>Подключены <p><span>{el.path}</span></p></div>}
         </div>
       ))}

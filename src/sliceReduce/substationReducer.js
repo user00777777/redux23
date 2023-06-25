@@ -161,9 +161,9 @@ const initialState = {
     },
     {
       cell: 13,
-      id: uuid(),
+      id: 2,
       description: [
-        { id: uuid() },
+        { id: 2 },
         { type: "АВМ-4НВ" },
         { iNom: "Iн=400A" },
         { breakCurrent: "Росцепитель=3200A" },
