@@ -4,15 +4,34 @@ import two from "../images/two.jpg";
 import three from "../images/three.jpg";
 
 
-import s from '../../css/machineTool.module.css';
+import s from '../../css/mashineCss/mashine.module.css';
 
 const MachineTools = () => {
   return (
     <div className={s.parent}>
-      <div className={[s.div1].join('')}>1</div>
-      <div className={s.div2}>2</div>
-      <div className={s.div3}>4</div>
-      <div className={s.div4}>4</div>
+      <div className={[s.div1].join('')}>Майстерня</div>
+      <div className={[s.div2].join('')}>Туалет</div>
+      <div className={[s.div3].join('')}>Кладова</div>
+      <div className={[s.div4,s.c].join(' ')}>ГСМ</div>
+      {/* <div className={[s.div].join('')}></div>
+      <div className={[s.div].join('')}></div>
+      <div className={[s.div].join('')}></div>
+      <div className={[s.div].join('')}></div>
+      <div className={[s.div].join('')}></div>
+      <div className={[s.div].join('')}></div>
+      <div className={[s.div].join('')}></div>
+      <div className={[s.div].join('')}></div>
+      <div className={[s.div].join('')}></div>
+      <div className={[s.div].join('')}></div>
+      <div className={[s.div].join('')}></div>
+      <div className={[s.div].join('')}></div>
+      <div className={[s.div].join('')}></div>
+      <div className={[s.div].join('')}></div>
+      <div className={[s.div].join('')}></div>
+      <div className={[s.div].join('')}></div>
+      <div className={[s.div].join('')}></div>
+      <div className={[s.div].join('')}></div>
+      <div className={[s.div].join('')}></div> */}
       <div className={s.div5}>5</div>
       <div className={s.div6}>6</div>
       <div className={s.div7}></div>
