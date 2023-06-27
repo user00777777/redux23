@@ -11,8 +11,8 @@ const Layout = () => {
 
         <Link to="/substation">Тп-32</Link>
         <Link to="/machineTools">Станки</Link>
-        <Link to="/workers"> Дежурные</Link>
-        <Link to="/train"> train</Link>
+        {/* <Link to="/workers"> Дежурные</Link> */}
+        {/* <Link to="/train"> train</Link> */}
         {/* <Link to ='main'>Главная</Link> */}
       </header>
       <main className="container">

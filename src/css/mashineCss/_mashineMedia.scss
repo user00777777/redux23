@@ -1,12 +1,71 @@
+@mixin b(){
+    color: #FFFFFF;
+    background: #232323;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+    color: #FFFFFF;
+    background: #232323;
+    border: 0.2rem inset #1C6EA4;
+    border-radius:  10px;
+    display: flex;justify-content: center
+
+}
+
 @media only screen and (max-width: 480px) {
+  
 .parent{font-size: 1rem;}
-.div1{border:red solid 3px}
-.div2{border:red solid 3px}
-.div3{border:red solid 3px}
-.div4{border:red solid 3px;}
-.c{display: flex;justify-content: center;}
+.div1{
+    @include b();
+  
+}
 
-
+.div2{  @include b();}
+.div3{
+    @include b();}
+.div4{ 
+   
+    @include b();
+}
+.div5{ 
+   
+    @include b();
+}
+.div6{ 
+   
+    @include b();
+}
+.div7{ 
+   
+    @include b();
+}
+.div8{ 
+   
+    @include b();
+}
+.div9{ 
+   
+    @include b();
+}
+.div10{ 
+   
+    @include b();
+}
+.div11{ 
+   
+    @include b();
+}
+// .div{ 
+   
+//     @include b();
+// }
+// .div{ 
+   
+//     @include b();
+// }
+// .div{ 
+   
+//     @include b();
+// }
+// .c{display: flex;justify-content: center;}
 
 
 }
