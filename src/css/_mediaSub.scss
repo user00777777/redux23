@@ -1,5 +1,8 @@
 
 @media only screen and (max-width: 480px) {
+
+
+
   .r {
 
   display: flex;
@@ -8,6 +11,7 @@
   padding: 0.3rem;
   margin: 0.1rem;
   max-height: max-content;
+
 
   }
   .thinks{  
@@ -46,5 +50,8 @@
   background-color: rgb(234, 231, 236);
   animation:my ;
   -webkit-animation:my 1s 100ms  ease-in infinite;
-}}
+}
+
+
+}
 

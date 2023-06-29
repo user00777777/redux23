@@ -3,12 +3,15 @@
 @mixin b(){
     color: #FFFFFF;
     background: #232323;
-    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+    // text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
     color: #FFFFFF;
     background: #232323;
     border: 0.2rem inset #1C6EA4;
     border-radius:  10px;
-    display: flex;justify-content: center
+    display: flex;justify-content: center;
+    white-space
+: pre-line;
+word-wrap: break-word;
 
 }
 .parent {
@@ -28,21 +31,21 @@
     .div6 { grid-area: 3 / 1 / 4 / 2;     @include b()}
     .div7 { grid-area: 3 / 3 / 4 / 4;    @include b() }
     .div8 { grid-area: 3 / 4 / 4 / 5;    @include b() }
-    .div9 { grid-area: 3 / 6 / 4 / 7;    @include b() }
+    .div9 { grid-area: 3 / 6 / 4 / 7;    @include b()}
     .div10 { grid-area: 4 / 1 / 5 / 2;    @include b() }
     .div11 { grid-area: 5 / 1 / 6 / 2;    @include b() }
     .div12 { grid-area: 6 / 1 / 7 / 2;    @include b() }
     .div13 { grid-area: 4 / 6 / 5 / 7;    @include b()     }
     .div14 { grid-area: 5 / 6 / 6 / 7;    @include b() }
     .div15 { grid-area: 6 / 6 / 7 / 7;    @include b() }
-    .div16 { grid-area: 4 / 3 / 5 / 4; }
-    .div17 { grid-area: 4 / 4 / 5 / 5; }
-    .div18 { grid-area: 5 / 3 / 6 / 4; }
-    .div19 { grid-area: 5 / 4 / 6 / 5; }
-    .div20 { grid-area: 6 / 3 / 7 / 4; }
-    .div21 { grid-area: 6 / 4 / 7 / 5; }
-    .div22 { grid-area: 7 / 1 / 8 / 5; }
-    .div23 { grid-area: 7 / 6 / 8 / 7; }
+    .div16 { grid-area: 4 / 3 / 5 / 4;@include b() }
+    .div17 { grid-area: 4 / 4 / 5 / 5;@include b() }
+    .div18 { grid-area: 5 / 3 / 6 / 4;@include b() }
+    .div19 { grid-area: 5 / 4 / 6 / 5; @include b()}
+    .div20 { grid-area: 6 / 3 / 7 / 4;@include b() }
+    .div21 { grid-area: 6 / 4 / 7 / 5;@include b() }
+    .div22 { grid-area: 7 / 1 / 8 / 5;@include b() }
+    .div23 { grid-area: 7 / 6 / 8 / 7;@include b() }
     .div24 { grid-area: 8 / 1 / 9 / 2; }
     .div25 { grid-area: 9 / 1 / 10 / 2; }
     .div26 { grid-area: 10 / 1 / 11 / 2; }

@@ -1,18 +1,30 @@
 @mixin b(){
     color: #FFFFFF;
     background: #232323;
-    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+    // text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
     color: #FFFFFF;
-    background: #232323;
+
     border: 0.2rem inset #1C6EA4;
     border-radius:  10px;
-    display: flex;justify-content: center
+    display: flex;justify-content: center;
+    font-size: 0.7rem;
+
+   height: 1.7rem;
+   width: 3.5rem;
+   word-wrap: break-word;
+   white-space:pre-wrap;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   line-height: 1.1;
+   span{color: #0fe8bd;font-size: 0.6rem;}
 
 }
 
 @media only screen and (max-width: 480px) {
   
-.parent{font-size: 1rem;}
+.parent{font-size: 0.3rem;}
 .div1{
     @include b();
   
@@ -27,7 +39,7 @@
 }
 .div5{ 
    
-    @include b();
+  font-size: 1rem;
 }
 .div6{ 
    
@@ -41,8 +53,8 @@
    
     @include b();
 }
-.div9{ 
-   
+.div9{
+  
     @include b();
 }
 .div10{ 
@@ -53,18 +65,75 @@
    
     @include b();
 }
-// .div{ 
+.div12{ 
    
-//     @include b();
-// }
-// .div{ 
+    @include b();
+}
+.div13{ 
    
-//     @include b();
-// }
-// .div{ 
+    @include b();
+}
+.div14{ 
    
-//     @include b();
-// }
+    @include b();
+}
+.div15{ 
+   
+    @include b();
+}
+.div16{ 
+   
+    @include b();
+}
+.div17{ 
+   
+    @include b();
+}
+.div18{ 
+   
+    @include b();
+}
+.div19{ 
+   
+    @include b();
+}
+.div20{ 
+   
+    @include b();
+}
+.div21{ 
+   
+    @include b();
+}
+.div22{ 
+   font-size: 0.9rem;
+   span{color: red}
+  
+}
+.div23{ 
+   
+    @include b();
+}
+.div{ 
+   
+    @include b();
+}
+.div{ 
+   
+    @include b();
+}
+.div{ 
+   
+    @include b();
+}
+.div{ 
+   
+    @include b();
+}
+.div{ 
+   
+    @include b();
+}
 // .c{display: flex;justify-content: center;}
 
 
