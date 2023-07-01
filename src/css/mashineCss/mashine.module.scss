@@ -1,19 +1,23 @@
 
 @import'./mashineMedia';
+
 @mixin b(){
-    color: #FFFFFF;
+
     background: #232323;
-    // text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+    //text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
     color: #FFFFFF;
     background: #232323;
     border: 0.2rem inset #1C6EA4;
-    border-radius:  10px;
-    display: flex;justify-content: center;
-    white-space
-: pre-line;
-word-wrap: break-word;
+    border-radius:  5px;
+    display: flex;
+    justify-content: center;
+    -webkit-border-radius:  5px;
+    -moz-border-radius:  5px;
+    -ms-border-radius:  5px;
+    -o-border-radius:  5px;
 
 }
+@mixin road(){}
 .parent {
     display: grid;
     grid-template-columns: 1.1fr 0.02fr repeat(2, 1.1fr) 0.02fr 1.1fr;
