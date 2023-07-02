@@ -1,5 +1,62 @@
-@mixin road(){
+ @mixin road(){
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         color: rgb(238, 239, 239);
+         font-size: 20px;
+         text-shadow: 2px 2px 5px #e90707;
+         -webkit-box-shadow: 5px 8px 15px 5px #000000;
+         box-shadow: 5px 8px 15px 5px #605656;
+         border: 2px ridge rgba(164,57,106,0.8);
+         border-radius:7px;
+         -webkit-border-radius:7px;
+         -moz-border-radius:7px;
+         -ms-border-radius:7px;
+         -o-border-radius:7px;
+         /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#3f4c6b+0,3f4c6b+100;Blue+Grey+Flat */
+background: rgb(63,76,107); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(63,76,107,1) 0%, rgba(63,76,107,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(63,76,107,1) 0%,rgba(63,76,107,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(63,76,107,1) 0%,rgba(63,76,107,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f4c6b', endColorstr='#3f4c6b',GradientType=0 ); /* IE6-9 */
 
-background-color: mediumblue;
+}
+@mixin b(){
+    color: #FFFFFF;
+    background: #232323;
+    //text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+    color: #FFFFFF;
+    border: 0.9rem inset #07e91a;
+    border-radius:  10px;
+    display: flex;
+    justify-content: center;
+    font-size:0.9rem;
+    height: 2rem;
+    width: 5.9rem;
+    word-wrap: break-word;
+    white-space:pre-wrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.2;
+    -webkit-border-radius:  10px;
+    -moz-border-radius:  10px;
+    -ms-border-radius:  10px;
+    -o-border-radius:  10px;
+    span
+{color: #d6e80f;font-size: 0.7rem;}
 
+}
+@mixin telega(){
+
+    font-size: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+       letter-spacing: 0.2rem;
+    text-transform:capitalize;
+       span{color: rgb(234, 15, 15);
+        font-family:'Times New Roman', Times, serif;
+
+    
+    }
 }

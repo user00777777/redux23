@@ -1,30 +1,7 @@
-@mixin b(){
-    color: #FFFFFF;
-    background: #232323;
-    //text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
-    color: #FFFFFF;
-    border: 0.9rem inset #07e91a;
-    border-radius:  10px;
-    display: flex;
-    justify-content: center;
-    font-size:0.9rem;
-    height: 2rem;
-    width: 5.5rem;
-    word-wrap: break-word;
-    white-space:pre-wrap;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    line-height: 1.2;
-    -webkit-border-radius:  10px;
-    -moz-border-radius:  10px;
-    -ms-border-radius:  10px;
-    -o-border-radius:  10px;
-    span:;
-{color: #d6e80f;font-size: 0.7rem;}
+@import './mixinM';
 
-}
+
+
 
 @media only screen and (max-width: 480px) {
   
@@ -42,8 +19,9 @@
     @include b();
 }
 .div5{ 
+    @include road();
    
-  font-size: 1rem;
+ 
 }
 .div6{ 
    
@@ -110,31 +88,266 @@
     @include b();
 }
 .div22{ 
-   font-size: 0.9rem;
-   span{color: red}
-  
+@include telega()
+ 
 }
 .div23{ 
    
     @include b();
 }
-.div{ 
+.div24{ 
    
     @include b();
 }
-.div{ 
+.div25{ 
    
     @include b();
 }
-.div{ 
+.div26{ 
    
     @include b();
 }
-.div{ 
+.div27{ 
    
     @include b();
 }
-.div{ 
+.div28{ 
+   
+    @include b();
+}
+.div29{ 
+   
+    @include b();
+}
+.div30{ 
+   
+    @include b();
+}
+.div31{ 
+   
+    @include b();
+}
+.div32{ 
+   
+    @include b();
+}
+.div33{ 
+   
+    @include b();
+}
+.div34{ 
+   
+    @include b();
+}
+.div35{ 
+   
+    @include b();
+}
+.div36{ 
+   
+    @include b();
+}
+.div37{ 
+   @include telega();
+    
+}
+.div38{ 
+   
+    @include b();
+}
+.div40{ 
+    @include b();
+   
+}
+.div41{ 
+   
+    @include b();
+}
+.div42{ 
+   
+    @include b();
+}
+.div43{ 
+   
+    @include b();
+}
+.div44{ 
+   
+    @include b();
+}
+.div45{ 
+   
+    @include b();
+}
+.div46{ 
+   
+    @include b();
+}
+.div47{ 
+   
+    @include b();
+}
+.div48{ 
+   
+    @include b();
+}
+.div49{ 
+   
+    @include b();
+}
+.div50{ 
+   
+    @include b();
+}
+.div51{ 
+   
+    @include b();
+}
+.div52{ 
+   
+    @include b();
+}
+.div53{ 
+   
+    @include b();
+}
+.div54{ 
+   
+    @include b();
+}
+.div55{ 
+   
+    @include b();
+}
+.div56{ 
+   @include road()
+   
+}
+.div57{ 
+   
+    @include b();
+}
+.div58{ 
+   
+    @include b();
+}
+.div59{ 
+   
+    @include b();
+}
+.div61{ 
+   
+    @include b();
+}
+.div62{ 
+   
+    @include b();
+}
+.div63{ 
+ 
+    @include b();
+}
+.div64{ 
+   
+    @include b();
+}
+.div65{ 
+   
+    @include b();
+}
+.div66{ 
+   
+    @include b();
+}
+.div67{ 
+   
+    @include b();
+}
+.div68{ 
+   
+    @include b();
+}
+.div69{ 
+   
+    @include b();
+}
+.div70{ 
+   
+    @include b();
+}
+.div71{ 
+//    width: 200px;
+    @include b();
+}
+.div72{ 
+   
+    @include b();
+}
+.div73{ 
+   
+    @include b();
+}
+.div74{ 
+   
+    @include b();
+}
+.div75{ 
+   
+    @include b();
+}
+.div76{ 
+   
+    @include b();
+}
+.div77{ 
+   
+    @include b();
+}
+.div78{ 
+   
+    @include b();
+}
+.div79{ 
+   
+    @include b();
+}
+.div80{ 
+   
+    @include b();
+}
+.div81{ 
+   
+    @include b();
+}
+.div82{ 
+   
+    @include b();
+}
+.div8{ 
+   
+    @include b();
+}
+.div8{ 
+   
+    @include b();
+}
+.div8{ 
+   
+    @include b();
+}
+.div8{ 
+   
+    @include b();
+}
+.div8{ 
+   
+    @include b();
+}
+.div8{ 
+   
+    @include b();
+}
+.div8{ 
    
     @include b();
 }

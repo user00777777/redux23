@@ -105,10 +105,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', end
             background: -webkit-linear-gradient(top,  #ff1a00 0%,#ff1a00 100%); /* Chrome10-25,Safari5.1-6 */
             background: linear-gradient(to bottom,  #ff1a00 0%,#ff1a00 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff1a00', endColorstr='#ff1a00',GradientType=0 ); /* IE6-9 */
-           color:rgb(255, 255, 255) }
+           color:rgb(6, 6, 6) }
            .p{width: 200px;border:red 4px;width: 200px;font-size:20px}
            .noHoist{background-color:aliceblue}
-           .hoist{background-color:aqua;z-index: 2;} 
+           .hoist{background-color:rgb(0, 255, 128);z-index: 2;} 
            .btn {
             display: flex;
             height: 30px;
@@ -139,7 +139,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', end
         background-color:#ff0088
 
         }
-        .machine>span{color:rgb(251, 247, 247);}
+        .machine>span{color:rgb(255, 0, 140);}
         .whit{color:rgb(255, 255, 255)}
         .hoist{width: 200px;height: 50px;background:#d2ebf9}
         .klad{background-color:#ff1a00;height: 70px;}
@@ -161,7 +161,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d6f9ff', end
             animation: typing 1s steps(22), blink .5s step-end infinite alternate;
             white-space: nowrap;
             /* overflow: hidden; */
-          color:black;
+          color:rgb(199, 9, 9);
             font-family: monospace;
             font-size: 16px;
             -webkit-animation: typing 1s steps(24),
