@@ -79,10 +79,10 @@ const MachineTools = () => {
       <div className={[s.div68].join('')}>2С 132<span>51772</span></div>
       {/* <div className={[s.div69].join('')}>5<span></span></div> */}
       <div className={[s.div70].join('')}>K0501<span>№52150</span></div>
-      <div className={[s.div71].join('')}>Телега<span></span></div>
-      <div className={[s.div72].join('')}>8<span></span></div>
+      <div className={[s.div71].join('')}>Телега<span>№51656</span></div>
+      <div className={[s.div72].join('')}>K0501<span>№51855</span></div>
       {/* <div className={[s.div73].join('')}>9<span></span></div> */}
-      <div className={[s.div74].join('')}>10<span></span></div>
+      {/* <div className={[s.div74].join('')}>10<span></span></div>
       <div className={[s.div75].join('')}>11<span></span></div>
       <div className={[s.div76].join('')}>12<span></span></div>
       <div className={[s.div77].join('')}>13<span></span></div>
@@ -93,7 +93,7 @@ const MachineTools = () => {
       <div className={[s.div82].join('')}><span></span></div>
       <div className={[s.div83].join('')}><span></span></div>
       <div className={[s.div84].join('')}><span></span></div>
-      <div className={[s.div85].join('')}><span></span></div>
+      <div className={[s.div85].join('')}><span></span></div> */}
 
     
   

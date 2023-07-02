@@ -562,6 +562,7 @@
     font-size: 0.7rem;
   }
   .div22 {
+    background-color: #d6e80f;
     font-size: 1rem;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     letter-spacing: 0.2rem;
@@ -950,6 +951,7 @@
     font-size: 0.7rem;
   }
   .div37 {
+    background-color: #d6e80f;
     font-size: 1rem;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     letter-spacing: 0.2rem;
@@ -1305,10 +1307,19 @@
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    background-color: #d6e80f;
+    font-size: 1rem;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    letter-spacing: 0.2rem;
+    text-transform: capitalize;
   }
   .div51 span {
     color: #d6e80f;
     font-size: 0.7rem;
+  }
+  .div51 span {
+    color: rgb(234, 15, 15);
+    font-family: "Times New Roman", Times, serif;
   }
   .div52 {
     color: #FFFFFF;
@@ -1810,10 +1821,19 @@
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    background-color: #d6e80f;
+    font-size: 1rem;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    letter-spacing: 0.2rem;
+    text-transform: capitalize;
   }
   .div71 span {
     color: #d6e80f;
     font-size: 0.7rem;
+  }
+  .div71 span {
+    color: rgb(234, 15, 15);
+    font-family: "Times New Roman", Times, serif;
   }
   .div72 {
     color: #FFFFFF;
@@ -3279,7 +3299,7 @@
 }
 
 .div67 {
-  grid-area: 2/3/24/4;
+  grid-area: 24/3/24/4;
   background: #232323;
   color: #FFFFFF;
   background: #232323;
