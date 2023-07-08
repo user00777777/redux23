@@ -95,8 +95,6 @@ const MachineTools = () => {
       <div className={[s.div84].join('')}><span></span></div>
       <div className={[s.div85].join('')}><span></span></div> */}
 
-    
-  
     </div>
   );
 };

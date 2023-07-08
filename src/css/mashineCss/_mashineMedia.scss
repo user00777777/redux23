@@ -8,12 +8,16 @@
 .parent{font-size: 0.3rem;}
 .div1{
     @include b();
+
   
 }
 
-.div2{  @include b();}
+.div2{ 
+     @include b();
+    }
 .div3{
-    @include b();}
+    @include b();
+}
 .div4{ 
    
     @include b();
@@ -24,6 +28,7 @@
  
 }
 .div6{ 
+    
    
     @include b();
 }
@@ -277,10 +282,12 @@
     @include b();
 }
 .div71{ 
-//    width: 200px;
-    @include b();
+   width: 200px;
+   height: 2rem;
+    // @include b();
     @include telega();
- 
+
+
  
 }
 .div72{ 
@@ -327,35 +334,57 @@
    
     @include b();
 }
-.div8{ 
+// .div8{ 
    
-    @include b();
-}
-.div8{ 
+//     @include b();
+// }
+// .div8{ 
    
-    @include b();
-}
-.div8{ 
+//     @include b();
+// }
+// .div8{ 
    
-    @include b();
-}
-.div8{ 
+//     @include b();
+// }
+// .div8{ 
    
-    @include b();
-}
-.div8{ 
+//     @include b();
+// }
+// .div8{ 
    
-    @include b();
-}
-.div8{ 
+//     @include b();
+// }
+// .div8{ 
    
-    @include b();
-}
-.div8{ 
+//     @include b();
+// }
+// .div8{ 
    
-    @include b();
-}
+//     @include b();
+// }
 // .c{display: flex;justify-content: center;}
 
 
 }
+@media only screen and (min-width: 480px) {
+    .div71{ 
+        width: 22rem;
+        height: 2rem;
+         // @include b();
+         @include telega();
+     
+     
+      
+     }
+}
+// @media only screen and (min-width: 375px) {
+//     .div71{ 
+//         // width: 22rem;
+//         // height: 2rem;
+//         //  // @include b();
+//         //  @include telega();
+     
+     
+      
+//      }
+// }
