@@ -13,7 +13,7 @@ const MachineTools = () => {
       <div className={[s.div2].join('')}>Туалет</div>
       <div className={[s.div3].join('')}>Кладова</div>
       <div className={[s.div4].join(' ')}>ГСM</div>
-      <div className={[s.div5].join(' ')}>Дорога в никуда</div>
+      <div className={[s.div5].join(' ')}> <div >Дорога в никуда</div></div>
       <div className={[s.div6].join('')}>2A554</div>
       {/* <div className={[s.div7].join('')}>11</div> */}
       {/* <div className={[s.div8].join('')}>1</div> */}

@@ -1,7 +1,4 @@
 @media only screen and (max-width: 480px) {
-  .parent {
-    font-size: 0.3rem;
-  }
   .div1 {
     color: #FFFFFF;
     background: #232323;
@@ -124,6 +121,7 @@
     background: rgb(63, 76, 107); /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, rgb(63, 76, 107) 0%, rgb(63, 76, 107) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#3f4c6b", endColorstr="#3f4c6b",GradientType=0 ); /* IE6-9 */
+    max-width: 99.8%;
   }
   .div6 {
     color: #FFFFFF;
@@ -553,6 +551,7 @@
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     letter-spacing: 0.2rem;
     text-transform: capitalize;
+    border: 2px ridge rgba(194, 130, 12, 0.8);
     border-radius: 8px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
@@ -939,6 +938,7 @@
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     letter-spacing: 0.2rem;
     text-transform: capitalize;
+    border: 2px ridge rgba(194, 130, 12, 0.8);
     border-radius: 8px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
@@ -1262,50 +1262,7 @@
     font-size: 0.7rem;
   }
   .div51 {
-    color: #FFFFFF;
-    background: #232323;
-    border: 3px inset #11b0ea;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    font-size: 0.9rem;
-    height: 2rem;
-    width: 5.4rem;
-    word-wrap: break-word;
-    white-space: pre-wrap;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    line-height: 1.2;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fefefd+0,dce3c4+42,aebf76+100;Olive+3D+%231 */
-    background: rgb(254, 254, 253); /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, rgb(254, 254, 253) 0%, rgb(220, 227, 196) 42%, rgb(174, 191, 118) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#fefefd", endColorstr="#aebf76",GradientType=0 ); /* IE6-9 */
-    font-size: 1rem;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    letter-spacing: 0.2rem;
-    text-transform: capitalize;
-    border-radius: 8px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
-  }
-  .div51 span {
-    color: #d6e80f;
-    font-size: 0.7rem;
-  }
-  .div51 span {
-    color: rgb(234, 15, 15);
-    font-family: "Times New Roman", Times, serif;
+    color: black;
   }
   .div52 {
     color: #FFFFFF;
@@ -1429,6 +1386,7 @@
     background: rgb(63, 76, 107); /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, rgb(63, 76, 107) 0%, rgb(63, 76, 107) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#3f4c6b", endColorstr="#3f4c6b",GradientType=0 ); /* IE6-9 */
+    max-width: 99.8%;
   }
   .div57 {
     color: #FFFFFF;
@@ -1769,7 +1727,7 @@
     font-size: 0.7rem;
   }
   .div71 {
-    width: 200px;
+    width: 99.9%;
     height: 2rem;
     display: flex;
     justify-content: center;
@@ -1782,6 +1740,7 @@
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     letter-spacing: 0.2rem;
     text-transform: capitalize;
+    border: 2px ridge rgba(194, 130, 12, 0.8);
     border-radius: 8px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
@@ -2094,6 +2053,7 @@
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     letter-spacing: 0.2rem;
     text-transform: capitalize;
+    border: 2px ridge rgba(194, 130, 12, 0.8);
     border-radius: 8px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
@@ -2103,6 +2063,31 @@
   .div71 span {
     color: rgb(234, 15, 15);
     font-family: "Times New Roman", Times, serif;
+  }
+  .div1, .div2, .div3, .div4 {
+    color: #FFFFFF;
+    background: #232323;
+    border: 3px inset #11b0ea;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    font-size: 0.9rem;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.2;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+  }
+  .div1 span, .div2 span, .div3 span, .div4 span {
+    color: #d6e80f;
+    font-size: 0.7rem;
   }
 }
 .parent {
@@ -2192,6 +2177,7 @@
   background: rgb(63, 76, 107); /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, rgb(63, 76, 107) 0%, rgb(63, 76, 107) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#3f4c6b", endColorstr="#3f4c6b",GradientType=0 ); /* IE6-9 */
+  max-width: 99.8%;
 }
 
 .div6 {
@@ -2447,6 +2433,7 @@
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   letter-spacing: 0.2rem;
   text-transform: capitalize;
+  border: 2px ridge rgba(194, 130, 12, 0.8);
   border-radius: 8px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
@@ -2681,6 +2668,7 @@
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   letter-spacing: 0.2rem;
   text-transform: capitalize;
+  border: 2px ridge rgba(194, 130, 12, 0.8);
   border-radius: 8px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
@@ -2888,18 +2876,28 @@
 }
 
 .div51 {
-  grid-area: 18/1/19/2;
-  background: #232323;
-  color: #FFFFFF;
-  background: #232323;
-  border: 0.2rem inset #1C6EA4;
-  border-radius: 5px;
+  grid-area: 18/1/19/4;
   display: flex;
   justify-content: center;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  align-items: center;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fefefd+0,dce3c4+42,aebf76+100;Olive+3D+%231 */
+  background: rgb(254, 254, 253); /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgb(254, 254, 253) 0%, rgb(220, 227, 196) 42%, rgb(174, 191, 118) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#fefefd", endColorstr="#aebf76",GradientType=0 ); /* IE6-9 */
+  font-size: 1rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  letter-spacing: 0.2rem;
+  text-transform: capitalize;
+  border: 2px ridge rgba(194, 130, 12, 0.8);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.div51 span {
+  color: rgb(234, 15, 15);
+  font-family: "Times New Roman", Times, serif;
 }
 
 .div52 {
@@ -2981,6 +2979,7 @@
   background: rgb(63, 76, 107); /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, rgb(63, 76, 107) 0%, rgb(63, 76, 107) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#3f4c6b", endColorstr="#3f4c6b",GradientType=0 ); /* IE6-9 */
+  max-width: 99.8%;
 }
 
 .div57 {
@@ -3205,6 +3204,7 @@
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   letter-spacing: 0.2rem;
   text-transform: capitalize;
+  border: 2px ridge rgba(194, 130, 12, 0.8);
   border-radius: 8px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
