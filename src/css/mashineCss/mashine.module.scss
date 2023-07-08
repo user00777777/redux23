@@ -1,6 +1,6 @@
 
-@import'./mashineMedia';
-@import'./mixinM';
+    @import'./mixinM';
+
 
 @mixin b(){
 
@@ -19,14 +19,16 @@
 
 }
 
-.parent {
+.parent{
+   
     display: grid;
     grid-template-columns: 1.1fr 0.02fr repeat(2, 1.1fr) 0.02fr 1.1fr;
     grid-template-rows: repeat(29, 1fr);
     grid-column-gap: 0.09rem;
     grid-row-gap: 0.1rem;
 
-    }
+
+}
     
     .div1 { grid-area: 1 / 5 / 2 / 7;     @include b() }
     .div2 { grid-area: 1 / 4 / 2 / 5;    @include b()  }
@@ -127,3 +129,4 @@
     .div82 { grid-area: 29 / 3 / 30 / 4;@include b() }
     .div83 { grid-area: 29 / 1 / 30 / 2;@include b() }
     .div84 { grid-area: 28 / 1 / 29 / 2;@include b() }
+    @import'./mashineMedia';

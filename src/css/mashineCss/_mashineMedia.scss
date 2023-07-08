@@ -1,12 +1,19 @@
-@import './mixinM';
 
+@import './mixinM';
 
 
 
 @media only screen and (max-width: 480px) {
   
 // .parent{
-//   width: 380px;
+   
+//         display: grid;
+//         grid-template-columns: 1.1fr 0.02fr repeat(2, 1.1fr) 0.02fr 1.1fr;
+//         grid-template-rows: repeat(29, 1fr);
+//         grid-column-gap: 0.01rem;
+//         grid-row-gap: 0.1rem;
+    
+    
 // }
 .div1{
     @include b();
@@ -370,6 +377,18 @@
 
 }
 @media only screen and (min-width: 480px) {
+
+    .parent{
+   
+        display: grid;
+        grid-template-columns: 1.1fr 0.02fr repeat(2, 1.1fr) 0.02fr 1.1fr;
+        grid-template-rows: repeat(29, 1fr);
+        grid-column-gap: 5rem;
+        grid-row-gap: 1rem;
+
+    
+    }
+
     .div71{ 
         width: 22rem;
         height: 2rem;
@@ -407,16 +426,9 @@
             text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
 
      }
-     .div1, .div2,.div3,.div4{@include b()}
+     .div1, .div2,.div3,.div4{@include b()};
+
+
+
+
 }
-// @media only screen and (min-width: 375px) {
-//     .div71{ 
-//         // width: 22rem;
-//         // height: 2rem;
-//         //  // @include b();
-//         //  @include telega();
-     
-     
-      
-//      }
-// }
