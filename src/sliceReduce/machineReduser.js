@@ -1,6 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
-  data: [[{ machine: "052068" }, { machine: 11 }]],
+  data: [
+    {
+      link: "https://photos.app.goo.gl/umMPXYs8beFYhgwj8",
+    },
+  ],
 };
 
 const machine = createSlice({

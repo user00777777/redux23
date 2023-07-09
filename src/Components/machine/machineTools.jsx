@@ -7,21 +7,25 @@ import three from "../images/three.jpg";
 import s from '../../css/mashineCss/mashine.module.css';
 import { useEffect } from 'react';
 import { useRef } from 'react';
+import Radialka from './Radialka';
+import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const MachineTools = () => {
 let fatherRef=useRef(null);
 
-  
+    let stateMashine=useSelector((state)=>state.mashine.data)
 const father = (event) => {
   let el = event.target;
-  console.log(el);
+  console.log(el.textContent);
 
-  if (el.classList.contains(s.div9)) {
-    el.classList.remove(s.div6);
-    el.classList.add(s.radialka);
-  } else {
-    console.log('no');
-  }
+
+  // if (el.classList.contains(s.div9)) {
+  //   el.classList.remove(s.div9);
+  //   el.classList.add(s.radialka);
+  // } else {
+  //   console.log('no');
+  // }
 };
 
 useEffect(() => {
@@ -37,7 +41,7 @@ useEffect(() => {
 }, [fatherRef]); // Добавляем fatherRef в массив зависимостей
 
 
-
+console.log(stateMashine);
 
 
   return (
@@ -47,7 +51,7 @@ useEffect(() => {
       <div className={[s.div3].join('')}>Кладова</div>
       <div className={[s.div4].join(' ')}>ГСM</div>
       <div className={[s.div5].join(' ')}> <div >Дорога в никуда</div></div>
-      <div className={[s.div6,s.radialka].join(' ')}>2А554</div>
+      <div className={[s.div6,s.radialka].join(' ')}><Link to='/radialka'>2А554</Link><span>№52035</span> </div>
       {/* <div className={[s.div7].join('')}>11</div> */}
       {/* <div className={[s.div8].join('')}>1</div> */}
       <div className={[s.div9,s.radialka].join(' ')}>2А554   <span>№5268</span></div>
@@ -58,7 +62,7 @@ useEffect(() => {
       <div className={[s.div14,s.sb833].join(' ')}>СБ833<span>№52055</span></div>
       <div className={[s.div15,s.sb972].join(' ')}>СБ972<span>№52911</span></div>
       <div className={[s.div16,s.klepka].join(' ')}>Клепка<span>№52131</span></div>
-      <div className={[s.div17,s.klepka].join(' ')}>Клепка<span>№52035</span></div>
+      <div className={[s.div17,s.klepka].join(' ')}>Клепка<span>№52155</span></div>
       <div className={[s.div18,s.radialka].join(' ')}>2А554<span>№51773</span></div>
       <div className={[s.div19,s.radialka].join(' ')}>2Н55<span>№1705</span></div>
       <div className={[s.div20,s.klepka].join(' ')}>Клепка<span>№51791</span></div>

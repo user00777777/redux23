@@ -16,6 +16,7 @@ import Log from './Components/sbbstationComponents/Log'
 import TpLog from './Components/sbbstationComponents/TpLog'
 import SinglTp from './Components/sbbstationComponents/SinglTp'
 import Train from './Components/sbbstationComponents/train/Train'
+import Radialka from './Components/machine/Radialka'
 // import First from './Components/First'
 // import OneComponent from './Components/OneComponent'
 
@@ -38,6 +39,7 @@ function App() {
 <Route path='tpLog' element={<TpLog />}/>
 <Route path='tpLog/:id' element={<SinglTp />}/>
 <Route path='train' element={<Train />}/>
+<Route path='radialka' element={<Radialka />}/>
 
 </Route>
 

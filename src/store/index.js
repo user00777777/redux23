@@ -8,7 +8,7 @@ const store = configureStore({
   reducer: {
     job: employeesReducer,
     hoist: tableReducer,
-    machine: machineReducer,
+    mashine: machineReducer,
     tp32: substationReducer,
     train: tp,
   },
