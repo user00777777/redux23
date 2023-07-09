@@ -9,15 +9,21 @@ import { useEffect } from 'react';
 import { useRef } from 'react';
 import Radialka from './Radialka';
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { mashineGet } from '../../sliceReduce/machineReduser';
 
 const MachineTools = () => {
 let fatherRef=useRef(null);
-
+let dispatch=useDispatch()
     let stateMashine=useSelector((state)=>state.mashine.data)
 const father = (event) => {
   let el = event.target;
   console.log(el.textContent);
+  if (el.textContent) {
+    
+    dispatch( mashineGet(el.textContent))
+  }
+
 
 
   // if (el.classList.contains(s.div9)) {

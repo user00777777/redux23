@@ -8,7 +8,7 @@ const Employee = ({ work1, work2 }) => {
     return (
     <div className={s.wrapper}><div className={s.work1}>{work1()}</div >
     <div>{work2()}</div>
-    
+    <img src="../" alt="" />
     <div>1</div>
     <div>1</div>
     <div>2</div>

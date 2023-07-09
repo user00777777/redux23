@@ -10,7 +10,11 @@ const initialState = {
 const machine = createSlice({
   name: "machine",
   initialState,
-  reducers: {},
+  reducers: {
+    mashineGet(state, action) {
+      console.log(action.payload);
+    },
+  },
 });
-export const {} = machine.actions;
+export const { mashineGet } = machine.actions;
 export default machine.reducer;
