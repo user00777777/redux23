@@ -12,8 +12,10 @@ import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { mashineGet } from '../../sliceReduce/machineReduser';
 
-const MachineTools = () => {
+const MachineTools = (props) => {
 let fatherRef=useRef(null);
+console.log(props);
+
 let dispatch=useDispatch()
     let stateMashine=useSelector((state)=>state.mashine.data)
 const father = (event) => {
@@ -21,7 +23,7 @@ const father = (event) => {
   console.log(el.textContent);
   if (el.textContent) {
     
-    dispatch( mashineGet(el.textContent))
+    // dispatch( mashineGet({text:el.textContent,src:}))
   }
 
 
