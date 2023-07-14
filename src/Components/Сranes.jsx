@@ -72,13 +72,16 @@ t[i].addEventListener('click',(event)=>{
   
 })
 
-console.log(text);
-console.log(_hoist);
+// console.log(text);
+// console.log(_hoist);
 
 
 const regexp=new RegExp(`${text}$`)
+console.log(regexp);
+
 if (regexp.test(_hoist)) {
-  console.log('ok');
+  // console.log(t[i]);
+  console.log(regexp.test(_hoist));
   
 
 

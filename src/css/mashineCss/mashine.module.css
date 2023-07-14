@@ -3361,6 +3361,7 @@
     background: rgb(254, 252, 234); /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, rgb(254, 252, 234) 0%, rgb(241, 218, 54) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#fefcea", endColorstr="#f1da36",GradientType=0 ); /* IE6-9 */
+    margin-top: 1px;
     border: 3px inset #11b0ea;
     border-radius: 10px;
     display: flex;
@@ -3374,7 +3375,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 1;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
@@ -3382,7 +3383,7 @@
   }
   .radialka span {
     color: rgb(84, 0, 239);
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
   .sm2126 {
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d2dfed+0,c8d7eb+26,bed0ea+51,a6c0e3+51,afc7e8+62,bad0ef+75,99b5db+88,799bc8+100;Grey+Blue+Gloss+%231 */
@@ -3501,4 +3502,8 @@
   .div71 {
     grid-area: 23/6/27/7;
   }
+}
+.div6, .div9 {
+  padding-top: 0.2rem;
+  line-height: 0.73rem;
 }/*# sourceMappingURL=mashine.module.css.map */
