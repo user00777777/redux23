@@ -3,10 +3,11 @@ import { createElement } from 'react';
 import { useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import s from '../../css/mashineCss/rarialka.module.css'
-import rad from '../images/mashineFoto/rad/rad2A554.jpg'
+
 import r from '../images/mashineFoto/rad/photo_2023-07-11_22-44-56.jpg'
 
 import MachineTools from './machineTools';
+import Foto from './Foto';
 
 
 export default function Radialka() {
@@ -18,9 +19,11 @@ let [ss ,setS]=useState(false)
 let selector=useSelector((state)=>state.mashine.result);
 // console.log(selector)  ;
 let numArr=selector?.length-1;
-const mashine=selector[numArr]
-const myMachine= mashine?.el.machine
-const myNumber= mashine?.el.idMachine
+const mashine=selector[numArr];
+console.log(mashine);
+
+// const nameMachine= mashine?.el.machine
+// const myNumber= mashine?.el.idMachine
 
 // const {id,idMachine,machine}=mashine?.el;
 // console.log(id,idMachine,machine);
@@ -38,7 +41,9 @@ let goBack=()=>navigate(-1);
 
 <div className={s.fatherTwo}>
   <div className={s.imgContainer}>
-<img src={rad}/>
+<Foto
+mashine={mashine.el}
+  />
 </div>    
 <button className={s.button} onClick={goBack}>
 Назад
@@ -52,9 +57,9 @@ let goBack=()=>navigate(-1);
 <button onClick={()=> setS(true)} >Схема</button>
 <li><Link to='engine'> Двигателя</Link></li>
 <li><Link to='different'> Разное</Link></li>
-<div><h1>{myMachine&&myMachine}</h1><span>{myNumber}</span></div>
+{/* <div><h1>{nameMachine&&nameMachine}</h1><span>{myNumber}</span></div> */}
 </ul>
-{ss && <img  src={r}/>}
+
 </div>
 
     </div>

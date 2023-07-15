@@ -21,16 +21,11 @@ let dispatch=useDispatch()
 const father = (event) => {
   let currentElement=event.target;
   const closestDiv=event.target.closest('div')
-  // console.log(event.target.firstElementChild.textContent);
-  // console.log(event.target.nextElementSibling.textContent);
-  // console.log(event.target.previousElementSibling.textContent);
-  // console.log(event.target.closest('div').textContent);
-// console.log(closestDiv.textContent)
+
 if (closestDiv) {
   
 let mashine=closestDiv.textContent;
-// console.log(regex.test('Клепка№52131\g\i'));
-// console.log(closestDiv.textContent);
+
 dispatch(mashineGet(mashine))
 
 
@@ -111,10 +106,10 @@ useEffect(() => {
       <div className={[s.div25,s.sb833].join(' ')}>СБ898<Link to='/radialka'><span>№052331</span></Link></div>
       <div className={[s.div26,s.sm2126 ].join(' ')}>СБ973<Link to='/radialka'><span>№52913</span></Link></div>
       {/* <div className={[s.div27].join('')}><Link to='/radialka'><span></span></Link></div> */}
-      <div className={[s.div28,s.klepka].join(' ')}>клепка<Link to='/radialka'><span>№51791</span></Link></div>
+      <div className={[s.div28,s.klepka].join(' ')}>клепка<Link to='/radialka'><span>№51910</span></Link></div>
       {/* <div className={[s.div30].join('')}>empty<Link to='/radialka'><span></span></Link></div> */}
 
-      <div className={[s.div31,s.klepka].join(' ')}>клепка<Link to='/radialka'><span>№051814</span></Link></div>
+      {/* <div className={[s.div31,s.klepka].join(' ')}>клепка<Link to='/radialka'><span>№051814</span></Link></div> */}
       <div className={[s.div32,s.radialka].join(' ')}>2А554<Link to='/radialka'><span>№51824</span></Link></div>
       <div className={[s.div33].join('')}>Ящики<Link to='/radialka'><span>рабочих</span></Link></div>
       <div className={[s.div34].join('')}>К28 86<Link to='/radialka'><span>№51778</span></Link></div>
@@ -130,7 +125,7 @@ useEffect(() => {
       {/* <div className={[s.div44].join('')}>1<Link to='/radialka'><span></span></Link></div> */}
       <div className={[s.div45].join('')}>М30 48<Link to='/radialka'><span>№51836</span></Link></div>
       <div className={[s.div46].join('')}>М30 48<Link to='/radialka'><span>№51748</span></Link></div>
-      <div className={[s.div47,s.klepka].join(' ')}>клепка<Link to='/radialka'><span>№51819</span></Link></div>
+      <div className={[s.div47,s.klepka].join(' ')}>клепка<Link to='/radialka'><span>№51110</span></Link></div>
       <div className={[s.div48,s.radialka].join(' ')}>2А554<Link to='/radialka'><span>№51819</span></Link></div>
       <div className={[s.div49,s.sb832].join(' ')}>СБ832<Link to='/radialka'><span>№52052</span></Link></div>
       {/* <div className={[s.div50].join('')}>1<Link to='/radialka'><span></span></Link></div> */}
