@@ -68,7 +68,6 @@ const initialState = {
       id: 3,
     },
     {
-      src: "../images/mashineFoto/rad/rad2A554.jpg",
       machine: "2А554",
       idMachine: "№51824",
 
@@ -89,6 +88,72 @@ const initialState = {
     {
       machine: "2Н55",
       idMachine: "№2653",
+
+      id: 3,
+    },
+    {
+      machine: "СМ2126",
+      idMachine: "№52050",
+
+      id: 3,
+    },
+    {
+      machine: "СМ2126",
+      idMachine: "52049",
+
+      id: 3,
+    },
+    {
+      machine: "СБ833",
+      idMachine: "№52056",
+
+      id: 3,
+    },
+    {
+      machine: "СБ833",
+      idMachine: "№52055",
+
+      id: 3,
+    },
+    {
+      machine: "СБ972",
+      idMachine: "№52911",
+
+      id: 3,
+    },
+    {
+      machine: "СБ972",
+      idMachine: "№52910",
+
+      id: 3,
+    },
+    {
+      machine: "СБ898",
+      idMachine: "№052331",
+
+      id: 3,
+    },
+    {
+      machine: "Am19176",
+      idMachine: "№52333",
+
+      id: 3,
+    },
+    {
+      machine: "СБ890",
+      idMachine: "№52944",
+
+      id: 3,
+    },
+    {
+      machine: "СБ832",
+      idMachine: "№052051",
+
+      id: 3,
+    },
+    {
+      machine: "СБ832",
+      idMachine: "№52052",
 
       id: 3,
     },

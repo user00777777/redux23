@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import one from "../images/one.jpg";
-import two from "../images/two.jpg";
-import three from "../images/three.jpg";
+// import two from "../images/two.jpg";
+// import three from "../images/three.jpg";
 
 
 import s from '../../css/mashineCss/mashine.module.css';
@@ -151,11 +151,11 @@ useEffect(() => {
       <div className={[s.div70].join('')}>K0501<Link to='/radialka'><span>№52150</span></Link></div>
       <div className={[s.div71].join('')}>Телега<Link to='/radialka'><span>№51656</span></Link></div>
       <div className={[s.div72].join('')}>K0501<Link to='/radialka'><span>№51855</span></Link></div>
-      {/* <div className={[s.div73].join('')}>9<Link to='/radialka'></span></span></div> */}
-      {/* <div className={[s.div74].join('')}>10<Link to='/radialka'></span></span></div>
-      <div className={[s.div75].join('')}>11<Link to='/radialka'><Link to='/radialka'><span></span></div>
-      <div className={[s.div76].join('')}>12<Link to='/radialka'><span></span></div>
-      <div className={[s.div77].join('')}>13<span></span></div>
+      {/* <div className={[s.div73].join(' ')}>  <Link to='/radialka'>  111  </Link> </div> */}
+      {/* <div className={[s.div74].join(' ')}>10<span></span></div>
+      <div className={[s.div75].join(' ')}>11<span></span></div> */}
+      <div className={[s.div76].join(' ')}>6Р82<span>№1419</span></div>
+      {/* <div className={[s.div77].join('')}>13<span></span></div>
       <div className={[s.div78].join('')}><span></span></div>
       <div className={[s.div79].join('')}><span></span></div>
       <div className={[s.div80].join('')}><span></span></div>
