@@ -42,7 +42,7 @@ let goBack=()=>navigate(-1);
 <div className={s.fatherTwo}>
   <div className={s.imgContainer}>
 <Foto
-mashine={mashine.el}
+mashine={mashine?.el}
   />
 </div>    
 <button className={s.button} onClick={goBack}>
