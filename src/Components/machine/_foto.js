@@ -8,6 +8,11 @@ import sb972 from "../images/mashineFoto/sb972/sb972.jpg";
 import am from "../images/Am/am.jpg";
 import sb890 from "../images/mashineFoto/sb890/cb890.jpg";
 import sb832 from "../images/mashineFoto/sb832/sb832.jpg";
+import vs_300 from "../images/vs300/vs_300.jpg";
+import vdm from "../images/vs300/Vdm1201.jpg";
+import fp from "../images/mashineFoto/fpSavelovo/Fp.jpg";
+import m3048 from "../images/mashineFoto/m3048/m30_48.jpg";
+import r682 from "../images/mashineFoto/6r82/6r.jpg";
 export default function _foto(name) {
   console.log(name);
 
@@ -50,6 +55,26 @@ export default function _foto(name) {
       break;
     case "СБ832":
       return sb832;
+
+      break;
+    case "ВС-300":
+      return vs_300;
+
+      break;
+    case "ВДМ":
+      return vdm;
+
+      break;
+    case "ФП27П":
+      return fp;
+
+      break;
+    case "М3048":
+      return m3048;
+
+      break;
+    case "6Р82":
+      return r682;
 
       break;
 

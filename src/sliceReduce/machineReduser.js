@@ -157,6 +157,42 @@ const initialState = {
 
       id: 3,
     },
+    {
+      machine: "ВС-300",
+      idMachine: "№51631",
+
+      id: 3,
+    },
+    {
+      machine: "ВДМ",
+      idMachine: "№51667",
+
+      id: 3,
+    },
+    {
+      machine: "ФП27П",
+      idMachine: "№52232",
+
+      id: 3,
+    },
+    {
+      machine: "М3048",
+      idMachine: "№51748",
+
+      id: 3,
+    },
+    {
+      machine: "6Р82",
+      idMachine: "№1419",
+
+      id: 3,
+    },
+    {
+      machine: "",
+      idMachine: "",
+
+      id: 3,
+    },
   ],
   result: [],
 };
@@ -166,22 +202,24 @@ const machine = createSlice({
   initialState,
   reducers: {
     mashineGet(state, action) {
-      // console.log(action.payload);
+      console.log(action.payload == "ВС-300");
       state.data.find((el) => {
         let regexp = new RegExp(`${el.idMachine}$`);
         console.log(action.payload);
 
         if (regexp.test(action.payload)) {
-          console.log(1111111);
+          console.log("yes");
           let lentH = state.result.length;
 
           if (state.result.length >= 1) {
             state.result.shift();
           }
+
           return state.result.push({ el });
 
           state.result.myMachine.push(el.machine);
         } else {
+          state.result.push(null);
           console.log("no");
         }
       });

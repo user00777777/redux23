@@ -116,15 +116,15 @@ useEffect(() => {
       <div className={[s.div35].join('')}>Намотка <Link to='/radialka'><span>проволки</span></Link></div>
       <div className={[s.div36].join('')}>Стенд<Link to='/radialka'><span></span></Link></div>
       <div className={[s.div37].join('')}>телега---<Link to='/radialka'><span>№051975</span></Link>---</div>
-      <div className={[s.div38,s.weld].join( ' ')}>ВС-300<Link to='/radialka'><span></span></Link></div>
+      <div className={[s.div38,s.weld].join(' ')}>ВС-300<Link to='/radialka'><span>№51631</span></Link></div>
       {/* <div className={[s.div39].join('')}>4<Link to='/radialka'><span></span></Link></div> */}
       <div className={[s.div40].join('')}>Шу <Link to='/radialka'><span>телеги</span></Link></div>
       {/* <div className={[s.div41].join('')}>1<Link to='/radialka'><span></span></Link></div> */}
-      <div className={[s.div42,s.weld].join(' ')}>ВДМ<Link to='/radialka'><span></span></Link></div>
+      <div className={[s.div42,s.weld].join(' ')}>ВДМ<Link to='/radialka'><span>№51667</span></Link></div>
       <div className={[s.div43].join('')}>СБ890<Link to='/radialka'><span>№52944</span></Link></div>
       {/* <div className={[s.div44].join('')}>1<Link to='/radialka'><span></span></Link></div> */}
-      <div className={[s.div45].join('')}>М30 48<Link to='/radialka'><span>№51836</span></Link></div>
-      <div className={[s.div46].join('')}>М30 48<Link to='/radialka'><span>№51748</span></Link></div>
+      <div className={[s.div45].join('')}>М3048<Link to='/radialka'><span>№51836</span></Link></div>
+      <div className={[s.div46].join('')}>М3048<Link to='/radialka'><span>№51748</span></Link></div>
       <div className={[s.div47,s.klepka].join(' ')}>клепка<Link to='/radialka'><span>№51110</span></Link></div>
       <div className={[s.div48,s.radialka].join(' ')}>2А554<Link to='/radialka'><span>№51819</span></Link></div>
       <div className={[s.div49,s.sb832].join(' ')}>СБ832<Link to='/radialka'><span>№52052</span></Link></div>
@@ -154,7 +154,7 @@ useEffect(() => {
       {/* <div className={[s.div73].join(' ')}>  <Link to='/radialka'>  111  </Link> </div> */}
       {/* <div className={[s.div74].join(' ')}>10<span></span></div>
       <div className={[s.div75].join(' ')}>11<span></span></div> */}
-      <div className={[s.div76].join(' ')}>6Р82<span>№1419</span></div>
+      <div className={[s.div76].join(' ')}>6Р82<Link  to='/radialka'><span>№1419</span></Link></div>
       {/* <div className={[s.div77].join('')}>13<span></span></div>
       <div className={[s.div78].join('')}><span></span></div>
       <div className={[s.div79].join('')}><span></span></div>
