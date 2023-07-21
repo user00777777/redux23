@@ -1,4 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
+function Mashin(machine, idMachine) {
+  return {
+    machine,
+    idMachine,
+  };
+}
 const initialState = {
   data: [
     {
@@ -193,6 +199,7 @@ const initialState = {
 
       id: 3,
     },
+    new Mashin("nameMashine", 1111111111),
   ],
   result: [],
 };

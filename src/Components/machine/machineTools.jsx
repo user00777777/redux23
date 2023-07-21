@@ -18,6 +18,8 @@ let fatherRef=useRef(null);
 
 let dispatch=useDispatch()
     let stateMashine=useSelector((state)=>state.mashine.data)
+    console.log(stateMashine);
+    
 const father = (event) => {
   let currentElement=event.target;
   const closestDiv=event.target.closest('div')

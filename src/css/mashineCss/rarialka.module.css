@@ -108,4 +108,9 @@ ul {
 li:before {
   content: "•";
   margin-right: 0.5em;
+}
+
+.circuit {
+  background: burlywood;
+  height: 100vh;
 }/*# sourceMappingURL=rarialka.module.css.map */
