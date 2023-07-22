@@ -215,7 +215,7 @@ const machine = createSlice({
         console.log(action.payload);
 
         if (regexp.test(action.payload)) {
-          console.log("yes");
+          // console.log("yes");
           let lentH = state.result.length;
 
           if (state.result.length >= 1) {

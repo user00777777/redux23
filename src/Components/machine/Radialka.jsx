@@ -62,7 +62,7 @@ mashine={mashine?.el}
 </ul>
 
 </div>
-<div className={s.circuit}>dd</div>
+{/* <div className={s.circuit}>dd</div> */}
 
     </div>
   )
