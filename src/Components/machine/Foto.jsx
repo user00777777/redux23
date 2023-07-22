@@ -17,8 +17,8 @@ mid=idMachine;}
 
   return (
 <div className={s.parent}>
-  <div className={s.text}>{m}d<span>{mid}</span></div>
-
-   <img  src={_foto(m)}/></div>
+  <div className={s.text}>{m}<span>{mid}</span></div>
+<div className={s.imgwrapper}>
+   <img className={s.image} src={_foto(m,mid)}/></div></div>
   )
 }

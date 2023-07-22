@@ -1,6 +1,12 @@
 import React from "react";
 import rad from "../images/mashineFoto/rad/rad2A554.jpg";
 import klepka from "../images/klepka/klepka910.jpg";
+import k109 from "../images/klepka/k109.jpg";
+import k110 from "../images/klepka/k110.jpg";
+import k791 from "../images/klepka/k791.jpg";
+import k814 from "../images/klepka/k814.jpg";
+import k910 from "../images/klepka/k51910.jpg";
+import k131 from "../images/klepka/k131.jpg";
 import sb973 from "../images/mashineFoto/rad/sb973/sb973.jpg";
 import sm2126 from "../images/mashineFoto/rad/sm2126/sm2126.jpg";
 import sb833 from "../images/mashineFoto/sb833/sb833.jpg";
@@ -13,7 +19,7 @@ import vdm from "../images/vs300/Vdm1201.jpg";
 import fp from "../images/mashineFoto/fpSavelovo/Fp.jpg";
 import m3048 from "../images/mashineFoto/m3048/m30_48.jpg";
 import r682 from "../images/mashineFoto/6r82/6r.jpg";
-export default function _foto(name) {
+export default function _foto(name, mid) {
   console.log(name);
 
   switch (name) {
@@ -26,7 +32,24 @@ export default function _foto(name) {
 
       break;
     case "Клепка":
-      return klepka;
+      switch (mid) {
+        case "№51109":
+          return k109;
+        case "№51110":
+          return k110;
+        case "№51791":
+          return k791;
+        case "№51814":
+          return k814;
+        case "№51910":
+          return k910;
+        case "№52131":
+          return k131;
+
+        default:
+          return "https://i.gifer.com/4Bye.gif";
+          break;
+      }
 
       break;
     case "СБ973":

@@ -52,10 +52,10 @@ import _fotoSliderArr from './_fotoSliderArr';
 
 
 const Mashine = ({mashine}) => {
-  console.log(_fotoSliderArr(mashine).n);
+  // console.log(_fotoSliderArr(mashine).n);
 const ref =useRef(null)
 
-  console.log(_fotoSliderArr(mashine).n);
+
   
   useEffect(()=>{
     if (ref) {

@@ -209,10 +209,10 @@ const machine = createSlice({
   initialState,
   reducers: {
     mashineGet(state, action) {
-      console.log(action.payload == "ВС-300");
+      // console.log(action.payload == "ВС-300");
       state.data.find((el) => {
         let regexp = new RegExp(`${el.idMachine}$`);
-        console.log(action.payload);
+        // console.log(action.payload);
 
         if (regexp.test(action.payload)) {
           // console.log("yes");
@@ -227,7 +227,7 @@ const machine = createSlice({
           state.result.myMachine.push(el.machine);
         } else {
           state.result.push(null);
-          console.log("no");
+          // console.log("no");
         }
       });
     },

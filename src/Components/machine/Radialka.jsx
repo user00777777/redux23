@@ -20,13 +20,14 @@ let selector=useSelector((state)=>state.mashine.result);
 // console.log(selector)  ;
 let numArr=selector?.length-1;
 const mashine=selector[numArr];
-console.log(mashine);
+// console.log(mashine.el);
 
 // const nameMachine= mashine?.el.machine
 // const myNumber= mashine?.el.idMachine
 
 // const {id,idMachine,machine}=mashine?.el;
 // console.log(id,idMachine,machine);
+
 
 
 

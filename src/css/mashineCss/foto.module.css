@@ -8,14 +8,6 @@
   background: linear-gradient(to bottom, rgba(30, 87, 153, 0) 0%, rgba(30, 87, 153, 0.8) 15%, rgb(30, 87, 153) 19%, rgb(30, 87, 153) 20%, rgb(41, 137, 216) 50%, rgb(30, 87, 153) 80%, rgb(30, 87, 153) 81%, rgba(30, 87, 153, 0.8) 85%, rgba(30, 87, 153, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#001e5799", endColorstr="#001e5799",GradientType=0 ); /* IE6-9 */
 }
-.parent img {
-  height: 350px;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-          clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-}
 
 .text {
   max-width: 480px;
@@ -38,4 +30,16 @@
   align-items: center;
   font-size: 25px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.imgwrapper {
+  margin: 1px auto 5px;
+  width: 90%;
+  height: 100%;
+}
+
+.image {
+  padding: 1px auto;
+  height: 90%;
+  width: 100%;
 }/*# sourceMappingURL=foto.module.css.map */
