@@ -44,8 +44,9 @@ let x=null;
 
   // console.log(slides[currentIndex]);
   // Circuit8337.jpg
+  // const regexp=new RegExp(`Circuit8337.jpg`,'i')
   const regexp=new RegExp(`Circuit8337.jpg`,'i')
-  if (regexp.test(OneSlide)){
+  if (regexp.test(`drfrrkerjkicdljCircuit8337.jpg`)){
 
   x=true
   console.log('yes');
