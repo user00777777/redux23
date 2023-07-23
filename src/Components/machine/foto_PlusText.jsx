@@ -35,8 +35,10 @@ a1Z(){
 
 
 }
-let OneSlide=props;
+let oneSlide=props;
 let x=null;
+oneSlide&&console.log('прошло');
+
 
   const a1 = new Table (31,32,33)
  
@@ -46,10 +48,12 @@ let x=null;
   // Circuit8337.jpg
   // const regexp=new RegExp(`Circuit8337.jpg`,'i')
   const regexp=new RegExp(`Circuit8337.jpg`,'i')
-  if (regexp.test(`drfrrkerjkicdljCircuit8337.jpg`)){
-
+  // if (regexp.test(`circuit8337.jpg`.)){
+if(oneSlide.endsWith(`circuit8337.jpg`)){
   x=true
   console.log('yes');
+  console.log('');
+  
   
 
   
