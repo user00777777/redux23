@@ -54,7 +54,7 @@ let x=null;
   x=false
   
   }
-  console.log(x);
+  console.log('boolean',x);
   
   
   return <div>{x&&a1?.a1Z()}</div>;
