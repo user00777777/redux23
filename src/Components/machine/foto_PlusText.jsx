@@ -1,4 +1,8 @@
-import React from "react";
+  import React from "react";
+
+
+export default function foto_PlusText(props) {
+
 
 class Parent{
 constructor(x,y)
@@ -31,9 +35,6 @@ a1Z(){
 
 
 }
-
-
-export default function foto_PlusText(props) {
 let OneSlide=props;
 let x=null;
 
