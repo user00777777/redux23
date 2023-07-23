@@ -4,15 +4,15 @@ import { Link } from "react-router-dom";
 import cK from "../images/klepka/circuitKlupka.jpg";
 // import k109 from "../images/klepka/circuitKlupka.jpg";
 import shedule from "../images/SheduleDistrict23.jpg";
-import s8331  from "../images/mashineFoto/sb833/circuit833/circuit 8338.jpg";
+// import s8331  from "../images/mashineFoto/sb833/circuit833/circuit 8338.jpg";
 import s8332  from "../images/mashineFoto/sb833/circuit833/circuit 833_2.jpg";
 import s8333  from "../images/mashineFoto/sb833/circuit833/circuit 833_3.jpg";
 import s8334  from "../images/mashineFoto/sb833/circuit833/circuit 833_5.jpg";
 import s8335  from "../images/mashineFoto/sb833/circuit833/circuit _4833.jpg";
 import s8336  from "../images/mashineFoto/sb833/circuit833/circuit833.jpg";
-import s8337  from "../images/mashineFoto/sb833/circuit833/circuit8331.jpg";
+// import s8337  from "../images/mashineFoto/sb833/circuit833/circuit8331.jpg";
 import s8338  from "../images/mashineFoto/sb833/circuit833/circuit8332.jpg";
-import s8339  from "../images/mashineFoto/sb833/circuit833/circuit8333.jpg";
+// import s8339  from "../images/mashineFoto/sb833/circuit833/circuit8333.jpg";
 import s833_1  from "../images/mashineFoto/sb833/circuit833/circuit8335.jpg";
 import s833_2  from "../images/mashineFoto/sb833/circuit833/circuit8337.jpg";
 import s833_3  from "../images/mashineFoto/sb833/circuit833/circuit8339.jpg";
@@ -61,7 +61,7 @@ if (idMachine=='№52131') {
       return obj;
       case 'СБ833':
         arrFoto.length=0;
-        arrFoto.push(s8331,s8332,s8333,s8333_0,s8333_5,s8333_6,s8334,s8335,s8336,s8337,s8338,s8339,s833_1,s833_2,s833_3,s833_4,s833_7,s833_8,s833_9);
+        arrFoto.push(s8332,s8333,s8333_0,s8333_5,s8333_6,s8334,s8335,s8336,s8338,s833_1,s833_2,s833_3,s833_4,s833_7,s833_8,s833_9);
         const sb833_52055 = createObj(
           arrFoto,
           ` <li>${machine} ${idMachine}</li>
