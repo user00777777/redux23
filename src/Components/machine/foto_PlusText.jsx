@@ -47,13 +47,13 @@ oneSlide&&console.log('прошло');
   // console.log(slides[currentIndex]);
   // Circuit8337.jpg
   // const regexp=new RegExp(`Circuit8337.jpg`,'i')
-  const regexp=new RegExp(`Circuit8337.jpg`,'i')
-  // if (regexp.test(`circuit8337.jpg`.)){
+  const regexp=new RegExp(`circuit8337`,'i')
+  // 
     if (oneSlide) {
       
     console.log(oneSlide);
     
-if(oneSlide.endsWith(`circuit8337.jpg`)){
+if (regexp.test(oneSlide)){
   x=true
   console.log('yes');
   console.log('');
