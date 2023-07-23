@@ -51,6 +51,8 @@ let x=null;
   
   }
   else{
+    console.log('все сюда');
+    
   x=false
   
   }
