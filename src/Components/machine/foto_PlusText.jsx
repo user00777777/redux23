@@ -49,6 +49,10 @@ oneSlide&&console.log('прошло');
   // const regexp=new RegExp(`Circuit8337.jpg`,'i')
   const regexp=new RegExp(`Circuit8337.jpg`,'i')
   // if (regexp.test(`circuit8337.jpg`.)){
+    if (oneSlide) {
+      
+    console.log(oneSlide);
+    
 if(oneSlide.endsWith(`circuit8337.jpg`)){
   x=true
   console.log('yes');
@@ -58,7 +62,7 @@ if(oneSlide.endsWith(`circuit8337.jpg`)){
 
   
   
-  }
+  }}
   else{
     console.log('не попал');
     
