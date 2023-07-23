@@ -57,4 +57,12 @@ ol {
 
 ol :nth-child(1) {
   font-size: 23px;
+}
+
+.oneFoto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aqua;
+  font-size: 20px;
 }/*# sourceMappingURL=mashineFoto.module.css.map */

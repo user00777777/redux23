@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import cK from "../images/klepka/circuitKlupka.jpg";
 import s from "../../css/mashineCss/mashineFoto.module.css"
 import _fotoSliderArr from './_fotoSliderArr';
+import foto_PlusText from "./foto_PlusText";
 // Импортируйте другие изображения, если они есть
 
 // const slideStyles = {
@@ -54,7 +55,9 @@ import _fotoSliderArr from './_fotoSliderArr';
 const Mashine = ({mashine}) => {
   // console.log(_fotoSliderArr(mashine).n);
 const ref =useRef(null)
-
+let [test,setTest]=useState(null);
+const [currentIndex, setCurrentIndex] = useState(0);
+const slides = _fotoSliderArr(mashine).ar;
 
   
   useEffect(()=>{
@@ -64,13 +67,14 @@ const ref =useRef(null)
   
 
 
-  },[_fotoSliderArr(mashine).n])
-  const slides = _fotoSliderArr(mashine).ar;
+  })
 
-  
-  // Добавьте другие импортированные изображения в массив slides
 
-  const [currentIndex, setCurrentIndex] = useState(0);
+
+
+
+
+
 
   const goToPrevious = () => {
     const isFirstSlide = currentIndex === 0;
@@ -116,8 +120,10 @@ const ref =useRef(null)
             ●
           </div>
         ))}
-      </div>
+</div>
+{/* <img src={test}></img> */}
  <ol ref={ref}></ol>
+ <div className={s.oneFoto}>{foto_PlusText(slides[currentIndex])}</div>
     </div>
   );
 };
