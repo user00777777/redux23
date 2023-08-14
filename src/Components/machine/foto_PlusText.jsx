@@ -1,6 +1,6 @@
   import React from "react";
 
-
+import s from './stylesM/fotoText.module.css'
 export default function foto_PlusText(props) {
 
 
@@ -18,7 +18,7 @@ show(i){
 class Table extends Parent{
 
 constructor(a,b,c){
-super()
+super(c)
   this.a=a
   this.b=b
   this.c=c
@@ -36,6 +36,8 @@ a1Z(){
 
 }
 let oneSlide=props;
+console.log(oneSlide);
+
 let x=null;
 oneSlide&&console.log('прошло');
 
@@ -72,5 +74,22 @@ if (regexp.test(oneSlide)){
   console.log('boolean',x);
   
   
-  return <div>{x&&a1?.a1Z()}</div>;
+  return <div>
+    {/* <table >
+      <tbody className={s.tbody}>
+<tr className={s.tr1}>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+            </tr>
+<tr className={s.tr2}>
+  <td>11</td>
+  <td>12</td>
+  <td>13</td>
+            </tr>
+            </tbody>
+    </table> */}
+    
+    
+    </div>;
 }

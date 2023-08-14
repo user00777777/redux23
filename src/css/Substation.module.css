@@ -58,7 +58,6 @@ input::-ms-clear {
   grid-row-gap: 0px;
   background-color: rgb(246, 246, 246);
   height: 100vh;
-  width: -moz-min-content;
   width: min-content;
   font-size: 14px;
 }
@@ -245,7 +244,6 @@ input::-ms-clear {
   font-weight: 500;
   align-items: center;
   font-size: 12px;
-  width: -moz-max-content;
   width: max-content;
   margin-left: 72px;
 }
@@ -548,7 +546,6 @@ input::-ms-clear {
 
 .div30 {
   grid-area: 12/4/13/6;
-  width: -moz-fit-content;
   width: fit-content;
   font-size: 40px;
 }
@@ -674,7 +671,6 @@ input::-ms-clear {
 }
 @media only screen and (min-width: 1024px) {
   .parent {
-    width: -moz-max-content;
     width: max-content;
   }
 }
@@ -683,4 +679,4 @@ input::-ms-clear {
   background-color: rgb(196, 23, 78);
   width: 100px;
   height: 50px;
-}/*# sourceMappingURL=Substation.module.css.map */
+}

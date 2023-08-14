@@ -1,0 +1,28 @@
+.tbody {
+  background-color: cadetblue;
+  width: 200px;
+  height: 100%;
+}
+.tbody .tr1 td:nth-child(1) {
+  width: 200px;
+  color: rgb(11, 29, 232);
+  background-color: #fff;
+  font-weight: 900;
+}
+
+.tr2 td:nth-child(1) {
+  width: 20px;
+  color: rgb(11, 29, 232);
+  background-color: rgb(219, 222, 217);
+  font-weight: 900;
+}
+
+table {
+  border: solid 1px rgb(73, 4, 222);
+  width: 300px;
+}
+
+td {
+  border: solid 1px rgb(11, 3, 3);
+  color: brown;
+}

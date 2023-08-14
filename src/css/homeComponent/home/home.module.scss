@@ -1,0 +1,47 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Edu+SA+Beginner:wght@700&family=Handjet:wght@100&display=swap');
+
+
+@import'./mH';
+
+.container{height: 100vh;
+// background:chartreuse;
+color: black;
+display: flex;
+align-items: center;
+main{
+    font-size: 22px;
+// background-color: lightskyblue;
+font-family: 'Caveat', cursive;
+height:max-content;
+min-height: 20px;
+}
+
+
+
+}
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Edu+SA+Beginner:wght@700&family=Handjet:wght@100&display=swap");
+.link {
+  font-size: 18px;
+  color: black;
+  font-weight: 700;
+}
+.link span{
+    color: black;
+  list-style: none;
+//   color: rgb(200, 16, 16);
+}
+
+.container {
+  height: 100vh;
+  color: black;
+  display: flex;
+  align-items: center;
+}
+.container main {
+  font-size: 22px;
+  font-family: "Caveat", cursive;
+  height: max-content;
+  min-height: 20px;
+}
