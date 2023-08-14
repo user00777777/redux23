@@ -45,11 +45,11 @@ class Shift{
       // const currentShift = shifts[(day ) % shifts.length];
       // console.log(currentShift);
       // dayOfMonth-=1
-dayOfMonth=19
+// dayOfMonth=19
       const currentWorker2 = workers2[(dayOfMonth ) % workers2.length];
 
       
-hour=8
+// hour=8
 
 console.log(dayOfMonth);
 
