@@ -1,0 +1,51 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Handjet:100,200,300,regular,500,600,700,800,900);
+li:before {
+  content: none; /* Убираем содержимое псевдоэлемента */
+  margin-right: 0; /* Убираем отступ справа */
+}
+
+.container {
+  background-color: rgb(230, 220, 217);
+  height: 100vh;
+  width: 100%;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#6db3f2+0,54a3ee+50,3690f0+51,1e69de+100;Blue+Gloss+%233 */
+  background: rgb(109, 179, 242); /* Old browsers */
+  background: -moz-linear-gradient(top, rgb(109, 179, 242) 0%, rgb(84, 163, 238) 50%, rgb(54, 144, 240) 51%, rgb(30, 105, 222) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgb(109, 179, 242) 0%, rgb(84, 163, 238) 50%, rgb(54, 144, 240) 51%, rgb(30, 105, 222) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgb(109, 179, 242) 0%, rgb(84, 163, 238) 50%, rgb(54, 144, 240) 51%, rgb(30, 105, 222) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#6db3f2", endColorstr="#1e69de",GradientType=0 ); /* IE6-9 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: column;
+}
+
+.item {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  max-height: fit-content;
+  min-width: 200px;
+  border: 5px ridge rgba(28, 110, 164, 0.53);
+  border-radius: 23px;
+  -webkit-border-radius: 23px;
+  -moz-border-radius: 23px;
+  -ms-border-radius: 23px;
+  -o-border-radius: 23px;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fefcea+99,f1da36+100 */
+  background: rgb(254, 252, 234); /* Old browsers */
+  background: -moz-linear-gradient(top, rgb(254, 252, 234) 99%, rgb(241, 218, 54) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgb(254, 252, 234) 99%, rgb(241, 218, 54) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgb(254, 252, 234) 99%, rgb(241, 218, 54) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#fefcea", endColorstr="#f1da36",GradientType=0 ); /* IE6-9 */
+  font-family: "Handjet";
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: 4px;
+}

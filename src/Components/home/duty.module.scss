@@ -2,8 +2,8 @@
 *{box-sizing: border-box;}
 .twoShift{
     position: relative;
-   min-width: 230px;
-   max-width: 255px;
+   min-width: 130px;
+   max-width: 359px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,16 +11,25 @@
     padding: 20px 20px;
     text-align: center;
     justify-content: center;
- 
+ padding: 0 px 20px;
     backdrop-filter: blur(30px);
-/* From https://css.glass */
-background: rgba(132, 123, 54, 0.51);
+
+
 border-radius: 16px;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(0px);
 -webkit-backdrop-filter: blur(0px);
 border: 1px solid rgba(132, 123, 54, 0.3);
-color:rgb(0, 0, 0)
+color:rgb(0, 0, 0);
+span{font-size: 20px;
+color: rgb(34, 0, 255);}
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#88bfe8+0,70b0e0+100;Blue+3D+%2317 */
+background: rgb(136,191,232); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(136,191,232,1) 0%, rgba(112,176,224,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(136,191,232,1) 0%,rgba(112,176,224,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(136,191,232,1) 0%,rgba(112,176,224,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#88bfe8', endColorstr='#70b0e0',GradientType=0 ); /* IE6-9 */
+h2{color:firebrick;font-family:Georgia,   serif; font-size: 23px;letter-spacing:2px}
 }
     .container{
         width: 100%;

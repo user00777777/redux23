@@ -20,6 +20,7 @@ import Radialka from './Components/machine/Radialka'
 import Foto from './Components/machine/Foto'
 import Mashine from './Components/machine/Mashine'
 import Duty from './Components/home/Duty'
+import District23 from './Components/District23/District23'
 // import First from './Components/First'
 // import OneComponent from './Components/OneComponent'
 
@@ -38,6 +39,7 @@ function App() {
 <Route path='machineTools' element={<MachineTools/>}/>
 {/* <Route path='/main' element={<Main/>}/> */}
 <Route path='m' element={<Cranes/>}/>
+<Route path='district23' element={ <District23/>}/>
 <Route path='substation' element={<Substation  />}/>
 <Route path='tpLog' element={<TpLog />}/>
 <Route path='tpLog/:id' element={<SinglTp />}/>
