@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .mainGates {
   width: 100%;
   height: 100vh;
@@ -30,6 +31,7 @@
 }
 
 .wrap_right {
+  background-color: rgb(43, 72, 82);
   flex-flow: column;
   width: 50px;
   height: 800px;
@@ -54,6 +56,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  writing-mode: vertical-rl;
+  font-weight: 500;
+  font-size: 23px;
+  /*Этоустанавливаетвертикальноенаправление*/
+  transform: rotate(180deg);
 }
 
 .insideContainer {
@@ -89,7 +96,7 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#eeeeee", endColorstr="#cccccc",GradientType=0 ); /* IE6-9 */
 }
 
-.middle:nth-child(1) { /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#aebcbf+0,6e7774+50,0a0e0a+51,0a0809+100;Black+Gloss */
+.middle:nth-child(1) {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#7abcff+0,60abf8+44,4096ee+100;Blue+3D+%2314 */
   background: rgb(122, 188, 255); /* Old browsers */
   background: -moz-linear-gradient(top, rgb(122, 188, 255) 0%, rgb(96, 171, 248) 44%, rgb(64, 150, 238) 100%); /* FF3.6-15 */
@@ -99,4 +106,69 @@
   display: flex;
   color: black;
   font-size: 28px;
+}
+
+.tel7 {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: end;
+  background-color: inherit;
+}
+
+.smallMal {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: start;
+}
+
+.middl:nth-child(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 188px;
+  font-size: 23px;
+  font-weight: 600;
+  background-color: darkorange;
+}
+
+.slMal {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 23px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  min-width: fit-content;
+  padding: 0px 10px;
+  background-color: darkorange;
+}
+
+.rightgate6 {
+  background: white;
+  border: 2px dotted gray;
+}
+
+.middle:nth-child(5) {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#7abcff+0,60abf8+44,4096ee+100;Blue+3D+%2314 */
+  background: rgb(122, 188, 255); /* Old browsers */
+  background: -moz-linear-gradient(top, rgb(122, 188, 255) 0%, rgb(96, 171, 248) 44%, rgb(64, 150, 238) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgb(122, 188, 255) 0%, rgb(96, 171, 248) 44%, rgb(64, 150, 238) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgb(122, 188, 255) 0%, rgb(96, 171, 248) 44%, rgb(64, 150, 238) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#7abcff", endColorstr="#4096ee",GradientType=0 ); /* IE6-9 */
+  font-size: 28px;
+  font-weight: 800;
+  color: black;
+  letter-spacing: 4px;
+}
+
+.gateItem span {
+  writing-mode: vertical-rl;
+  font-weight: 500;
+  /*Этоустанавливаетвертикальноенаправление*/
+  transform: rotate(180deg);
+  font-size: 30px;
 }
