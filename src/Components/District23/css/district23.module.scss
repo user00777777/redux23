@@ -47,3 +47,12 @@ font-size: 23px;
 font-weight: 700;
 letter-spacing: 4px;
 }
+
+
+
+@media (prefers-color-scheme: dark) {
+    .item {
+      background-color: #1a1a1a;
+      color: #ffffff;
+    }
+  }
