@@ -10,11 +10,8 @@ li:before {
   height: 100vh;
   width: 100%;
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#6db3f2+0,54a3ee+50,3690f0+51,1e69de+100;Blue+Gloss+%233 */
-  background: rgb(109, 179, 242); /* Old browsers */
-  background: -moz-linear-gradient(top, rgb(109, 179, 242) 0%, rgb(84, 163, 238) 50%, rgb(54, 144, 240) 51%, rgb(30, 105, 222) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgb(109, 179, 242) 0%, rgb(84, 163, 238) 50%, rgb(54, 144, 240) 51%, rgb(30, 105, 222) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, rgb(109, 179, 242) 0%, rgb(84, 163, 238) 50%, rgb(54, 144, 240) 51%, rgb(30, 105, 222) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#6db3f2", endColorstr="#1e69de",GradientType=0 ); /* IE6-9 */
+  background-image: url(".././foto/pexels-frans-van-heerden-682078.jpg");
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,6 +20,7 @@ li:before {
 .wrapper {
   display: flex;
   flex-flow: column;
+  background-position: center;
 }
 
 .item {
