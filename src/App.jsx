@@ -22,6 +22,7 @@ import Mashine from './Components/machine/Mashine'
 import Duty from './Components/home/Duty'
 import District23 from './Components/District23/District23'
 import Gate from './Components/District23/Gate/Gate'
+import Gates9 from './Components/District23/Gate/Gates9' 
 // import First from './Components/First'
 // import OneComponent from './Components/OneComponent'
 
@@ -50,6 +51,7 @@ function App() {
 <Route path='mashine' element={<Mashine />}/>
 <Route path='duty' element={<Duty />}/>
 <Route path='gate' element={<Gate />}/>
+<Route path='gates' element={<Gates9 />}/>
 
 </Route>
 

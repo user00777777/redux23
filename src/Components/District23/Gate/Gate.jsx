@@ -1,40 +1,57 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import s from './cssGate/gate.module.css' 
+import Gates9 from './Gates9';
 export default function Gate() {
+let state = useSelector((state)=>state)
+let main=useRef()
+let gate=state.gates
+
+const{g9,g10,g11,g12,g13}=gate
 
 
-  return (
-    <div className={s.mainGates}>
-<div className={s.wrap_left}>
-    <div className={[s.leftgate1,s.gateItem].join(' ')}><span>14</span></div>
-    <div className={[s.leftgate2,s.gateItem].join(' ')}><span>10</span></div>
-    <div className={[s.leftgate3,s.gateItem].join(' ')}><span>11</span></div>
-    <div className={[s.leftgate4,s.gateItem].join(' ')}><span>12</span></div>
-    <div className={[s.leftgate5,s.gateItem].join(' ')}><span>13</span></div>
-    <div className={[s.leftgate6,s.gateItem].join(' ')}></div>
+
   
-</div>
-<div className={s.insideContainer}>
-<div className={s.middle}>Вьезд с улицы</div>
-<div className={s.middle}>Телега эстакада</div>
-<div className={s.middle}>Телега сдача</div>
-<div className={s.smallMal}>
-  <div className={s.slMal}>Телега-яма</div>
+
+
+
+
+
+
+return (
+    <div data-t='55' ref={main} className={s.mainGates}>
+
   
-</div>
-<div className={s.middle}>Дорога</div>
-<div className={s.tel7}><div className={s.middl}>Телега 7-пролет</div></div>
+<ul className={s.container}>
+  <li className={[s.gate,s.gate1].join(" ")}> Ворота<span> #9</span> </li>
+  <li className={[s.gate,s.gate2].join(" ")}>Ворота <span>#10</span></li>
+  <li className={[s.gate,s.gate3].join(" ")}>Ворота <span>#11</span></li>
+  <li className={[s.gate,s.gate4].join(" ")}>Ворота <span>#12</span></li>
+  <li className={[s.gate,s.gate5].join(" ")}>Ворота <span>#13</span></li>
+</ul>
+<div className={s.district6}>  <span>  6-й пролет  </span></div>
+<div className={s.middle}>
+
+<div className={s.door}></div>
+<div className={s.door}></div>
+<div className={s.door}></div>
+<div className={s.door}></div>
+<div className={[s.door,s.doorNot].join(" ")}> <div>ворота <span>6-7</span></div> </div>
+
 
 </div>
 
-<div className={s.wrap_right}>
-<div className={[s.rightgate1,s.gateItem_right].join(' ')}></div>
-    <div className={[s.rightgate2,s.gateItem_right].join(' ')}></div>
-    <div className={[s.rightgate3,s.gateItem_right].join(' ')}></div>
-    <div className={[s.rightgate4,s.gateItem_right].join(' ')}></div>
-    <div className={[s.rightgate5,s.gateItem_right].join(' ')}><span>проезд</span></div>
-    <div className={[s.rightgate6,s.gateItem_right].join(' ')}></div>
+<div className={s.preend}><div className={s.seven}>7 пролет </div></div>
+
+<div className={s.wrapper67}>
+<div className={[s.gate,s.gate7].join(" ")}>ворота <span>7</span> пролет</div>
+
 </div>
+
+
+
+
 
     </div>
   )

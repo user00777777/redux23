@@ -51,12 +51,12 @@ class Shift{
       
 // hour=8
 
-console.log(dayOfMonth);
+// console.log(dayOfMonth);
 
 
 if (hour>=7&&hour<19) {
   const currentWorker = workers1[(dayOfMonth ) % workers1.length];
-  console.log(currentWorker);
+  // console.log(currentWorker);
   
   return <div className={s.container}><div className={s.twoShift}> <h2>Електрики</h2><span> На первой смене</span> {currentWorker.duty1} и {currentWorker.duty2}</div></div>
 
@@ -74,7 +74,7 @@ if (hour>=0&&hour<7) {
   dayOfMonth-=1
         const currentWorker2 = workers2[(dayOfMonth ) % workers2.length];
 
-console.log([(dayOfMonth ) % workers2.length]);
+// console.log([(dayOfMonth ) % workers2.length]);
 
   return <div className={s.container}> <div className={s.twoShift}><span> На второй смене</span> {currentWorker2?.duty1} и {currentWorker2?.duty2}</div></div>
 
