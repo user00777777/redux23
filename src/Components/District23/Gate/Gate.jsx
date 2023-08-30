@@ -41,13 +41,20 @@ if (strGate===myGate.gate) {
   console.log(myGate);
 
   let reg=new RegExp(`${myGate.gate}`)
-//  if (reg.test(img11)) {
+
   logRef.current?.classList.add(s.log)
  logRef.current.classList.add(s.blinck)
  target.classList.add(s.blinck)
+ setTimeout(()=>{  target.classList.remove(s.blinck);
+
+},2000)
+
  dispatch(imgGate(myGate.gate))
 
 setInfo(< Info my={myGate}/>)}
+
+
+
 }}}
 
 useEffect(() => {
@@ -104,8 +111,7 @@ return (
 </div>
 
 
-<div><img src={info} alt="" />
-</div>
+
 
     </div>
   )
