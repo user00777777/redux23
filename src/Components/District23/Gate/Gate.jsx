@@ -1,12 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import s from './cssGate/gate.module.css' 
 import Gates9 from './Gates9';
 import img11 from "../foto/gate11.jpg";
 import Info from './Info';
+import { imgGate } from '../../../sliceReduce/sliceGates';
 
 export default function Gate() {
+  let dispatch= useDispatch()
 let state = useSelector((state)=>state)
 let main=useRef()
 let logRef=useRef()
@@ -16,7 +18,7 @@ const[info,setInfo]=useState()
 const{g9,g10,g11,g12,g13}=gate
 
 
-console.log(g11);
+
 
 
 
@@ -38,29 +40,15 @@ if (strGate===myGate.gate) {
   console.log('ok');
   console.log(myGate);
 
-let reg=new RegExp(`${myGate.gate}`)
+  let reg=new RegExp(`${myGate.gate}`)
 //  if (reg.test(img11)) {
-  logRef.current?.classList.add(s.no)
+  logRef.current?.classList.add(s.log)
+ logRef.current.classList.add(s.blinck)
+ target.classList.add(s.blinck)
+ dispatch(imgGate(myGate.gate))
 
-setInfo(< Info my={myGate}/>)
-  
-//  }
-//   }
-
-  // else{console.log('no');
-  
-}
-    // const el = gate[i];
-    // console.log(el.gate);
-    
-
-}
-
-}
-
-
-}
-
+setInfo(< Info my={myGate}/>)}
+}}}
 
 useEffect(() => {
   if (main.current) {
@@ -98,7 +86,7 @@ return (
 <div className={s.middle}>
 
 <div className={s.door}></div>
-<div  className={[s.door,s.log].join(" ")}>
+<div ref={logRef}  className={[s.door].join(" ")}>
   {info}
 </div>
 <div className={s.door}></div>

@@ -174,29 +174,40 @@ span {
 .log {
   display: flex;
   max-height: 90%;
-  max-width: 69%;
+  max-width: 79%;
   min-height: 25%;
-  min-width: 40%;
+  min-width: 65%;
   position: absolute;
   font-family: "Raleway";
-  transform: translate(-45%, -20%);
-  -webkit-transform: translate(-45%, -20%);
-  -moz-transform: translate(-45%, -20%);
-  -ms-transform: translate(-45%, -20%);
-  -o-transform: translate(-45%, -20%);
+  transform: translate(-39%, -20%);
+  -webkit-transform: translate(-39%, -20%);
+  -moz-transform: translate(-39%, -20%);
+  -ms-transform: translate(-39%, -20%);
+  -o-transform: translate(-39%, -20%);
   z-index: 4;
   color: rgb(0, 0, 0);
   font-weight: 500;
   overflow: hidden;
   word-break: break-all;
   padding: 5px;
+  transition: all 2s ease-in-out;
+  -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  -ms-transition: all 2s ease-in-out;
+  -o-transition: all 2s ease-in-out;
 }
 
-.log {
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffc578+0,fb9d23+100;Orange+3D+%233 */
-  background: rgb(255, 197, 120); /* Old browsers */
-  background: -moz-linear-gradient(top, rgb(255, 197, 120) 0%, rgb(251, 157, 35) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgb(255, 197, 120) 0%, rgb(251, 157, 35) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, rgb(255, 197, 120) 0%, rgb(251, 157, 35) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ffc578", endColorstr="#fb9d23",GradientType=0 ); /* IE6-9 */
+.blinck {
+  z-index: 8;
+  animation: blinck 4500ms ease-in;
+  -webkit-animation: blinck 4500ms ease-in;
+}
+
+@keyframes blinck {
+  10% {
+    background-color: red;
+  }
+  30% {
+    background-color: rgb(7, 99, 220);
+  }
 }

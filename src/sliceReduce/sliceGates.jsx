@@ -27,12 +27,45 @@ const initialState = {
   g12,
   g13,
   g14,
+arrImg:''
+
 };
 
 const machineSlice = createSlice({
   name: "machine",
   initialState,
-  reducers: {},
-});
+  reducers: {
+    imgGate(state,action){
+for(let key in state) {
+let el=state[key].gate;
+if (el=action.payload) {
 
+state.arrImg='';
+
+switch (action.payload) {
+  case 11:state.arrImg=11
+    
+    break;
+
+  default:
+    break;
+}
+}
+console.log(state.arrImg);
+
+
+}      
+ 
+
+
+
+
+    }
+
+
+
+
+  },
+});
+export const{imgGate}=machineSlice.actions;
 export default machineSlice.reducer;
