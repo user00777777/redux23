@@ -68,12 +68,12 @@ console.log(tp);
         <option value={selectedT}>Дидусь</option>
       </select>
       {/* <button ref={btSelRef} className={s.btSel} onClick={btSelect}>Жми</button> */}
-
-      <p>В нагрузке<b>{tp}</b></p>
+<div className={s.miniLog}>
+      <p>В нагрузке:<b>{tp}</b></p>
       <p>дата осмотра <span>{d}</span></p>
 <time>время <span> {time}</span></time>
       <p>произвел осмотр<span> {user}</span></p>
-    </div>
+   </div> </div>
   );
 }
 

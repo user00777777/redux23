@@ -12,7 +12,10 @@ span{ color:red;font-size: 1.1rem;}
 .logContainer{ background-color:aqua; border-radius:10px ; -webkit-border-radius:10px ; -moz-border-radius:10px ; -ms-border-radius:10px ; -o-border-radius:10px ; font-size: 14px;
 }
 @media only screen and (max-width: 480px){
-    .logContainer{background-color:chartreuse;
+    .logContainer{
+        width: max-content;
+        padding: 10px;
+        background-color:chartreuse;
     font-size: 14px;width: 9rem;margin-left: 0.5px;margin-right: 0.5px;
      padding:1px 1px, 0.5rem   ;
 

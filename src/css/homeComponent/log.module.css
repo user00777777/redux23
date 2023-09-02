@@ -43,6 +43,8 @@
 
 @media only screen and (max-width: 480px) {
   .logContainer {
+    width: max-content;
+    padding: 10px;
     background-color: chartreuse;
     font-size: 14px;
     width: 9rem;
