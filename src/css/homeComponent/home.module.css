@@ -94,22 +94,18 @@ input::-ms-clear {
 
 .avm1, .avm2 {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fcfff4+0,dfe5d7+40,b3bead+100;Wax+3D+%233 */
-  background: #fcfff4; /* Old browsers */
-  background: -moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#fcfff4", endColorstr="#b3bead",GradientType=0 ); /* IE6-9 */
-  color: brown;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  width: max-content;
+  height: 100px;
   writing-mode: vertical-rl;
   -webkit-writing-mode: vertical-rl;
   -ms-writing-mode: vertical-rl;
-  text-align: center;
-  height: 100vh;
 }
 .avm1 span, .avm2 span {
-  height: 7.8rem;
-  font-size: 1.5rem;
+  height: 100%;
+  width: 100%;
 }
 
 .con {
@@ -254,7 +250,7 @@ input::-ms-clear {
   justify-content: start;
 }
 
-@media only screen and (max-width: 2480px) {
+@media only screen and (max-width: 480px) {
   .div31 {
     width: 100%;
     display: flex;
@@ -279,27 +275,45 @@ input::-ms-clear {
     font-size: 1.4rem;
   }
   .avm2, .avm1 {
-    font-size: 0.7rem;
-    height: 100%;
+    margin: 0px;
+    position: relative;
+    justify-content: center;
+  }
+  .avm2 span, .avm1 span {
+    position: relative;
+    width: fit-content;
+    height: 125px;
+    padding: 0px;
   }
   .avmBlinc {
+    display: flex;
     justify-content: center;
     writing-mode: vertical-rl;
     -webkit-writing-mode: vertical-rl;
     -ms-writing-mode: vertical-rl;
-    text-align: center;
+    align-items: center;
     height: 100vh;
     color: aliceblue;
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     background-color: rgb(234, 231, 236);
     animation: my;
-    -webkit-animation: my 1s 100ms ease-in infinite;
+    -webkit-animation: my 1s 900ms ease-in infinite;
   }
   .avmBlinc span {
-    height: 7.8rem;
-    font-size: 1.5rem;
+    display: flex;
+    height: 125px;
+    width: 100%;
   }
 }
+.avm2 {
+  display: grid;
+  height: 200px;
+  place-items: center;
+}
+.avm2 span {
+  display: flex;
+}
+
 @keyframes my {
   0% { /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a90329+0,8f0222+44,6d0019+100;Brown+Red+3D */
     background: #a90329; /* Old browsers */

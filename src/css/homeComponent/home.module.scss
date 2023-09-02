@@ -54,24 +54,26 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', end
 
 .avm1,.avm2 {
  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fcfff4+0,dfe5d7+40,b3bead+100;Wax+3D+%233 */
-background: #fcfff4; /* Old browsers */
-background: -moz-linear-gradient(top,  #fcfff4 0%, #dfe5d7 40%, #b3bead 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  #fcfff4 0%,#dfe5d7 40%,#b3bead 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  #fcfff4 0%,#dfe5d7 40%,#b3bead 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 ); /* IE6-9 */
-color:brown;
-  // display: block;
+// background: #fcfff4; /* Old browsers */
+// background: -moz-linear-gradient(top,  #fcfff4 0%, #dfe5d7 40%, #b3bead 100%); /* FF3.6-15 */
+// background: -webkit-linear-gradient(top,  #fcfff4 0%,#dfe5d7 40%,#b3bead 100%); /* Chrome10-25,Safari5.1-6 */
+// background: linear-gradient(to bottom,  #fcfff4 0%,#dfe5d7 40%,#b3bead 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 ); /* IE6-9 */
+// color:brown;
+  
+  display: flex;
   justify-content:center;
-  writing-mode: vertical-rl;
-  -webkit-writing-mode: vertical-rl;
-  -ms-writing-mode: vertical-rl;
-  // align-items: center;
-  text-align: center;
-  height :100vh;
-  span{ 
+align-items: center;
+width:max-content;
+height: 100px;
 
-    height:7.8rem;
-    font-size: 1.5rem;
+writing-mode: vertical-rl;
+-webkit-writing-mode: vertical-rl;
+-ms-writing-mode: vertical-rl;
+  span{ 
+height: 100%;
+width: 100%;
+   
   }
 }
 
@@ -215,3 +217,7 @@ color:ivory;
 
 .ab{font-size:0.8rem;background-color:darkturquoise;height: 100%;}
 .abs{background-color:rgb(191, 167, 169);@include border(); word-wrap: break-word;white-space: normal; }
+
+// #avm1{width: 200px;
+// background-color:#a90329
+// }

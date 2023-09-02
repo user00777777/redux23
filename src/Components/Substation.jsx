@@ -171,7 +171,7 @@ console.log(newKey);
 <div className={[s.div4,s.elCount,s.r,].join(' ')} data-cel='t2'>Т2 </div>
 <div className={[s.div5,s.elCell,s.r,s.connection,s.thinks].join(' ')}onClick={setT1} >Set1 </div>
 <div className={[s.div6,s.elCell,s.r,'o',s.connection,s.thinks].join(' ')}    onClick={setT2}> Set2</div>
-<div className={[s.div7,s.avm1,s.r,].join(' ')  }ref={refA} data-cell='avm1'  onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd} >  <span>Авм#1</span></div>
+<div className={[s.div7,s.avm1,s.r,].join(' ')  }ref={refA} data-cell='avm1'  onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd} >  <span id='avm1'>Авм#1</span></div>
 <div className={[s.div8,s.elCell,s.r,s.avm2].join(' ') } ref={refA2}  data-cell='avm2' onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd} id='avm2'><span> Авм#2</span></div>
 <div className={[s.div9,s.elCell,s.r].join(' ')} data-cell='13'>13</div>
 <div className={[s.div10,s.elCell,s.r].join(' ')} data-cell='14'>14 </div>
