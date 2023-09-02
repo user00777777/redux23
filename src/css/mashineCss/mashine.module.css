@@ -1337,7 +1337,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -1346,11 +1346,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div1 span {
     color: #d6e80f;
@@ -1363,7 +1364,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -1372,11 +1373,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div2 span {
     color: #d6e80f;
@@ -1389,7 +1391,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -1398,11 +1400,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div3 span {
     color: #d6e80f;
@@ -1415,7 +1418,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -1424,11 +1427,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div4 span {
     color: #d6e80f;
@@ -1465,7 +1469,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -1474,11 +1478,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div6 span {
     color: #d6e80f;
@@ -1491,7 +1496,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -1500,11 +1505,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div7 span {
     color: #d6e80f;
@@ -1517,7 +1523,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -1526,11 +1532,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div8 span {
     color: #d6e80f;
@@ -1543,7 +1550,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -1552,11 +1559,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div9 span {
     color: #d6e80f;
@@ -1569,7 +1577,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -1578,11 +1586,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div10 span {
     color: #d6e80f;
@@ -1595,7 +1604,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -1604,11 +1613,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div11 span {
     color: #d6e80f;
@@ -1621,7 +1631,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -1630,11 +1640,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div12 span {
     color: #d6e80f;
@@ -1647,7 +1658,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -1656,11 +1667,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div13 span {
     color: #d6e80f;
@@ -1673,7 +1685,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -1682,11 +1694,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div14 span {
     color: #d6e80f;
@@ -1699,7 +1712,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -1708,11 +1721,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div15 span {
     color: #d6e80f;
@@ -1725,7 +1739,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -1734,11 +1748,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div16 span {
     color: #d6e80f;
@@ -1751,7 +1766,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -1760,67 +1775,23 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div17 span {
     color: #d6e80f;
     font-size: 0.7rem;
   }
   .div18 {
-    color: #FFFFFF;
-    background: #232323;
-    border: 3px inset #11b0ea;
-    border-radius: 10px;
     display: flex;
-    justify-content: center;
-    font-size: 0.9rem;
-    height: 2rem;
-    width: 5.4rem;
-    word-wrap: break-word;
-    white-space: pre-wrap;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    line-height: 1.2;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
   }
   .div18 span {
-    color: #d6e80f;
-    font-size: 0.7rem;
-  }
-  .div19 {
-    color: #FFFFFF;
-    background: #232323;
-    border: 3px inset #11b0ea;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    font-size: 0.9rem;
-    height: 2rem;
-    width: 5.4rem;
-    word-wrap: break-word;
-    white-space: pre-wrap;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    line-height: 1.2;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-  }
-  .div19 span {
-    color: #d6e80f;
-    font-size: 0.7rem;
+    font-size: 20px;
+    padding-top: 20px;
   }
   .div20 {
     color: #FFFFFF;
@@ -1829,7 +1800,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -1838,11 +1809,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div20 span {
     color: #d6e80f;
@@ -1855,7 +1827,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -1864,11 +1836,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div21 span {
     color: #d6e80f;
@@ -1906,7 +1879,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -1915,11 +1888,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div23 span {
     color: #d6e80f;
@@ -1932,7 +1906,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -1941,11 +1915,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div24 span {
     color: #d6e80f;
@@ -1958,7 +1933,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -1967,11 +1942,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div25 span {
     color: #d6e80f;
@@ -1984,7 +1960,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -1993,11 +1969,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div26 span {
     color: #d6e80f;
@@ -2010,7 +1987,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -2019,11 +1996,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div27 span {
     color: #d6e80f;
@@ -2036,7 +2014,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -2045,11 +2023,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div28 span {
     color: #d6e80f;
@@ -2062,7 +2041,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -2071,11 +2050,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div29 span {
     color: #d6e80f;
@@ -2088,7 +2068,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -2097,11 +2077,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div30 span {
     color: #d6e80f;
@@ -2114,7 +2095,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -2123,39 +2104,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div31 span {
-    color: #d6e80f;
-    font-size: 0.7rem;
-  }
-  .div32 {
-    color: #FFFFFF;
-    background: #232323;
-    border: 3px inset #11b0ea;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    font-size: 0.9rem;
-    height: 2rem;
-    width: 5.4rem;
-    word-wrap: break-word;
-    white-space: pre-wrap;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    line-height: 1.2;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-  }
-  .div32 span {
     color: #d6e80f;
     font-size: 0.7rem;
   }
@@ -2166,7 +2122,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -2175,11 +2131,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div33 span {
     color: #d6e80f;
@@ -2192,7 +2149,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -2201,11 +2158,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div34 span {
     color: #d6e80f;
@@ -2218,7 +2176,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -2227,11 +2185,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div35 span {
     color: #d6e80f;
@@ -2244,7 +2203,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -2253,11 +2212,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div36 span {
     color: #d6e80f;
@@ -2295,7 +2255,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -2304,11 +2264,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div38 span {
     color: #d6e80f;
@@ -2321,7 +2282,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -2330,11 +2291,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div40 span {
     color: #d6e80f;
@@ -2347,7 +2309,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -2356,11 +2318,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div41 span {
     color: #d6e80f;
@@ -2373,7 +2336,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -2382,11 +2345,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div42 span {
     color: #d6e80f;
@@ -2399,7 +2363,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -2408,11 +2372,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div43 span {
     color: #d6e80f;
@@ -2425,7 +2390,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -2434,11 +2399,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div44 span {
     color: #d6e80f;
@@ -2451,7 +2417,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -2460,11 +2426,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div45 span {
     color: #d6e80f;
@@ -2477,7 +2444,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -2486,11 +2453,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div46 span {
     color: #d6e80f;
@@ -2503,7 +2471,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -2512,11 +2480,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div47 span {
     color: #d6e80f;
@@ -2529,7 +2498,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -2538,11 +2507,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div48 span {
     color: #d6e80f;
@@ -2555,7 +2525,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -2564,11 +2534,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div49 span {
     color: #d6e80f;
@@ -2581,7 +2552,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -2590,11 +2561,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div50 span {
     color: #d6e80f;
@@ -2610,7 +2582,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -2619,11 +2591,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div52 span {
     color: #d6e80f;
@@ -2636,7 +2609,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -2645,11 +2618,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div53 span {
     color: #d6e80f;
@@ -2662,7 +2636,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -2671,11 +2645,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div54 span {
     color: #d6e80f;
@@ -2688,7 +2663,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -2697,11 +2672,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div55 span {
     color: #d6e80f;
@@ -2730,32 +2706,6 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#3f4c6b", endColorstr="#3f4c6b",GradientType=0 ); /* IE6-9 */
     max-width: 99.8%;
   }
-  .div57 {
-    color: #FFFFFF;
-    background: #232323;
-    border: 3px inset #11b0ea;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    font-size: 0.9rem;
-    height: 2rem;
-    width: 5.4rem;
-    word-wrap: break-word;
-    white-space: pre-wrap;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    line-height: 1.2;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-  }
-  .div57 span {
-    color: #d6e80f;
-    font-size: 0.7rem;
-  }
   .div58 {
     color: #FFFFFF;
     background: #232323;
@@ -2763,7 +2713,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -2772,11 +2722,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div58 span {
     color: #d6e80f;
@@ -2789,7 +2740,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -2798,11 +2749,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div59 span {
     color: #d6e80f;
@@ -2815,7 +2767,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -2824,11 +2776,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div61 span {
     color: #d6e80f;
@@ -2841,7 +2794,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -2850,11 +2803,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div62 span {
     color: #d6e80f;
@@ -2867,7 +2821,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -2876,11 +2830,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div63 span {
     color: #d6e80f;
@@ -2893,7 +2848,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -2902,11 +2857,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div64 span {
     color: #d6e80f;
@@ -2919,7 +2875,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -2928,11 +2884,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div65 span {
     color: #d6e80f;
@@ -2945,7 +2902,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -2954,11 +2911,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div66 span {
     color: #d6e80f;
@@ -2971,7 +2929,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -2980,11 +2938,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div67 span {
     color: #d6e80f;
@@ -2997,7 +2956,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -3006,11 +2965,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div68 span {
     color: #d6e80f;
@@ -3023,7 +2983,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -3032,11 +2992,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div69 span {
     color: #d6e80f;
@@ -3049,7 +3010,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -3058,11 +3019,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div70 span {
     color: #d6e80f;
@@ -3102,7 +3064,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -3111,11 +3073,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div72 span {
     color: #d6e80f;
@@ -3128,7 +3091,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -3137,11 +3100,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div73 span {
     color: #d6e80f;
@@ -3154,7 +3118,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -3163,11 +3127,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div74 span {
     color: #d6e80f;
@@ -3180,7 +3145,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -3189,11 +3154,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div75 span {
     color: #d6e80f;
@@ -3206,7 +3172,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -3215,11 +3181,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div76 span {
     color: #d6e80f;
@@ -3232,7 +3199,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -3241,11 +3208,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div77 span {
     color: #d6e80f;
@@ -3258,7 +3226,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -3267,11 +3235,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div78 span {
     color: #d6e80f;
@@ -3284,7 +3253,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -3293,11 +3262,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div79 span {
     color: #d6e80f;
@@ -3310,7 +3280,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -3319,11 +3289,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div80 span {
     color: #d6e80f;
@@ -3336,7 +3307,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -3345,11 +3316,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div81 span {
     color: #d6e80f;
@@ -3362,7 +3334,7 @@
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -3371,11 +3343,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1.2;
+    line-height: 0.7;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    padding-top: 0.4rem;
   }
   .div82 span {
     color: #d6e80f;
@@ -3389,12 +3362,12 @@
     background: -webkit-linear-gradient(top, rgb(254, 252, 234) 0%, rgb(241, 218, 54) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, rgb(254, 252, 234) 0%, rgb(241, 218, 54) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#fefcea", endColorstr="#f1da36",GradientType=0 ); /* IE6-9 */
-    margin-top: 1px;
+    margin-top: 2px;
     border: 3px inset #11b0ea;
     border-radius: 10px;
     display: flex;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     height: 2rem;
     width: 5.4rem;
     word-wrap: break-word;
@@ -3403,7 +3376,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 1;
+    line-height: 0.8;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
@@ -3412,6 +3385,7 @@
   .radialka span {
     color: rgb(84, 0, 239);
     font-size: 0.6rem;
+    padding: 1px;
   }
   .sm2126 {
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d2dfed+0,c8d7eb+26,bed0ea+51,a6c0e3+51,afc7e8+62,bad0ef+75,99b5db+88,799bc8+100;Grey+Blue+Gloss+%231 */
@@ -3521,7 +3495,7 @@
   }
   .div1, .div2, .div3, .div4 {
     color: #FFFFFF;
-    background: #232323;
+    background: #d80b0b;
     border: 8px inset #11b0ea;
     border-radius: 10px;
     display: flex;
@@ -3539,7 +3513,7 @@
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
     text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
-    letter-spacing: 15px;
+    letter-spacing: 5px;
   }
   .div71 {
     grid-area: 23/6/27/7;
