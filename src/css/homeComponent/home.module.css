@@ -53,7 +53,7 @@ input::-ms-clear {
 .parent {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e9f6fd+0,d3eefb+100;Blue+3D+%233 */
   width: 100%;
-  height: min-content;
+  height: 100vh;
   background: #e9f6fd; /* Old browsers */
   background: -moz-linear-gradient(top, #e9f6fd 0%, #d3eefb 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(top, #e9f6fd 0%, #d3eefb 100%); /* Chrome10-25,Safari5.1-6 */
@@ -61,9 +61,9 @@ input::-ms-clear {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#e9f6fd", endColorstr="#d3eefb",GradientType=0 ); /* IE6-9 */
   display: grid;
   grid-template-columns: repeat(10, 0.5fr); /* Исправленное значение repeat */
-  grid-template-rows: repeat(14, 1fr);
+  grid-template-rows: repeat(11, 1fr);
   /* grid-column-gap: 1px; */
-  grid-row-gap: 0.5px; /* Исправленное значение grid-row-gap */
+  grid-row-gap: 0.3px; /* Исправленное значение grid-row-gap */
 }
 
 .r {
@@ -81,7 +81,7 @@ input::-ms-clear {
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  margin: 0.3rem;
+  margin: 0.2rem;
   max-height: fit-content;
 }
 
@@ -93,7 +93,6 @@ input::-ms-clear {
 }
 
 .avm1, .avm2 {
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fcfff4+0,dfe5d7+40,b3bead+100;Wax+3D+%233 */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -236,8 +235,9 @@ input::-ms-clear {
 }
 
 .div30 {
-  grid-area: 13/4/13/7;
+  grid-area: 12/5/13/7;
   width: 4rem;
+  height: max-content;
 }
 
 .div31 {
@@ -251,6 +251,12 @@ input::-ms-clear {
 }
 
 @media only screen and (max-width: 480px) {
+  .div22 {
+    writing-mode: vertical-rl;
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: vertical-rl;
+    font-size: 16px;
+  }
   .div31 {
     width: 100%;
     display: flex;
@@ -272,7 +278,7 @@ input::-ms-clear {
     max-height: 100vh;
   }
   .connection {
-    font-size: 1.4rem;
+    font-size: 2rem;
   }
   .avm2, .avm1 {
     margin: 0px;
@@ -303,14 +309,25 @@ input::-ms-clear {
     display: flex;
     height: 125px;
     width: 100%;
+    align-items: center;
+    font-size: 1.5rem;
   }
 }
-.avm2 {
+.avm1, .avm2 {
   display: grid;
   height: 200px;
   place-items: center;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f9c667+0,f79621+100;Orange+3D+%234 */
+  background: rgb(249, 198, 103); /* Old browsers */
+  background: -moz-linear-gradient(top, rgb(249, 198, 103) 0%, rgb(247, 150, 33) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgb(249, 198, 103) 0%, rgb(247, 150, 33) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgb(249, 198, 103) 0%, rgb(247, 150, 33) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#f9c667", endColorstr="#f79621",GradientType=0 ); /* IE6-9 */
+  color: black;
+  font-weight: 700;
+  letter-spacing: 2px;
 }
-.avm2 span {
+.avm1 span, .avm2 span {
   display: flex;
 }
 
