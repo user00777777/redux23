@@ -58,14 +58,14 @@ if (hour>=7&&hour<19) {
   const currentWorker = workers1[(dayOfMonth ) % workers1.length];
   // console.log(currentWorker);
   
-  return <div className={s.container}><div className={s.twoShift}> <h2>Електрики</h2><span> На первой смене</span> {currentWorker.duty1} и {currentWorker.duty2}</div></div>
+  return <div className={s.container}><div className={s.twoShift}> <h2>Дежурные Електрики</h2> <h2 className={s.d12}>{currentWorker.duty1} и {currentWorker.duty2}</h2></div></div>
 
   
 }
 if (hour>=19&&hour<=23&&minutes<=59) {
 
   
-  return <div className={s.container}><div className={s.twoShift}><span> На второй смене</span> {currentWorker2.duty1} и {currentWorker2.duty2}</div></div>
+  return <div className={s.container}><div className={s.twoShift}><h2>Дежурные Електрики:</h2><h2 className={s.d12}> {currentWorker2.duty1} и {currentWorker2.duty2}</h2></div></div>
 
 }
 
