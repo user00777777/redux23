@@ -44,13 +44,15 @@
 @media only screen and (max-width: 480px) {
   .logContainer {
     width: max-content;
+    height: max-content;
+    min-height: 65%;
     padding: 10px;
     background-color: chartreuse;
     font-size: 14px;
-    width: 9rem;
-    margin-left: 0.5px;
-    margin-right: 0.5px;
-    padding: 1px 1px, 0.5rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
   }
   .l3 {
     color: rgb(9, 9, 245);

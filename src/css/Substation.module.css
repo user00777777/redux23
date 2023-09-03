@@ -57,7 +57,7 @@ input::-ms-clear {
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   background-color: rgb(246, 246, 246);
-  height: 100vh;
+  height: 1000vh;
   width: min-content;
   font-size: 14px;
 }
@@ -556,8 +556,8 @@ input::-ms-clear {
 }
 
 .change {
-  animation: myAnimation 2s 1s infinite linear;
-  -webkit-animation: myAnimation 4s 100ms infinite ease-out;
+  animation: myAnimation infinite linear;
+  -webkit-animation: myAnimation infinite linear;
 }
 
 .bgColor1 {

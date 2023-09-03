@@ -34,19 +34,22 @@ class Shift{
    
    
    
-    let vasj= new Shift('Малько','Бондаренко');
-    let stas= new Shift("Круглый","Гекало");
-    let sinkevich= new Shift("Синкевичь","Дяченко");
-    let paha= new Shift("Лысенко","Петриченко");
+    let vasj= new Shift('Малько','');
+    let stas= new Shift("Круглый","");
+    let sinkevich= new Shift("Синкевичь","");
+    let paha= new Shift("Гекало"/*"Лысенко"*/);
   
     const workers1 = [vasj,stas,sinkevich,paha ];
     const workers2 = [paha, vasj,stas,sinkevich] ;
    
       // const currentShift = shifts[(day ) % shifts.length];
       // console.log(currentShift);
-      // dayOfMonth-=1
+     let changeDayOfMonth =dayOfMonth
+
+
+console.log(changeDayOfMonth);
 // dayOfMonth=19
-      const currentWorker2 = workers2[(dayOfMonth ) % workers2.length];
+      const currentWorker2 = workers2[(changeDayOfMonth-=1 ) % workers2.length];
 
       
 // hour=8
@@ -55,28 +58,31 @@ class Shift{
 
 
 if (hour>=7&&hour<19) {
-  const currentWorker = workers1[(dayOfMonth ) % workers1.length];
+console.log();
+
+  const currentWorker = workers1[(changeDayOfMonth ) % workers1.length];
   // console.log(currentWorker);
   
-  return <div className={s.container}><div className={s.twoShift}> <h2>Дежурные Електрики</h2> <h2 className={s.d12}>{currentWorker.duty1} и {currentWorker.duty2}</h2></div></div>
+  return <div className={s.container}><div className={s.twoShift}> <h2>Деж-е електрик</h2> <h2 className={s.d12}>{currentWorker.duty1}  {/*{currentWorker.duty2}*/}</h2></div></div>
 
   
 }
-if (hour>=19&&hour<=23&&minutes<=59) {
-
+if (hour>=19&&hour<=23&&minutes<=59
+  ) {
+// dayOfMonth-=1
   
-  return <div className={s.container}><div className={s.twoShift}><h2>Дежурные Електрики:</h2><h2 className={s.d12}> {currentWorker2.duty1} и {currentWorker2.duty2}</h2></div></div>
+  return <div className={s.container}><div className={s.twoShift}><h2>Дежурные Електрики:</h2><h2 className={s.d12}> {currentWorker2.duty1} {/*и {currentWorker2.duty2}*/}</h2></div></div>
 
 }
 
-if (hour>=0&&hour<7) {
-  console.log('no');
-  dayOfMonth-=1
-        const currentWorker2 = workers2[(dayOfMonth ) % workers2.length];
+if ( hour>0&&hour<7) {
+
+
+        const currentWorker2 = workers2[(changeDayOfMonth ) % workers2.length];
 
 // console.log([(dayOfMonth ) % workers2.length]);
 
-  return <div className={s.container}> <div className={s.twoShift}><span> На второй смене</span> {currentWorker2?.duty1} и {currentWorker2?.duty2}</div></div>
+  return <div className={s.container}> <div className={s.twoShift}> На второй смене:<h2> {currentWorker2.duty1}</h2> {/*и {currentWorker2?.duty2}*/}</div></div>
 
   
 }

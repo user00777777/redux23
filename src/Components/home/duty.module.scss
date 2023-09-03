@@ -3,7 +3,7 @@ background-color: aliceblue;
 width: 100%;
 display: flex;
 justify-content: center;
-padding: 10px;
+padding: 5px;
 
 h2{font-size: 12px;display: inline;
     padding: 2px;
@@ -12,21 +12,27 @@ h2{font-size: 12px;display: inline;
 } 
 }
 .container{
-    animation: cont infinite ease-in 2s;
-    -webkit-animation: cont infinite ease-in 2s;
+    animation: cont infinite ease-in 3s;
+    -webkit-animation: cont infinite ease-in 3s;
     border-radius:14px;
     -webkit-border-radius:14px;
     -moz-border-radius:14px;
     -ms-border-radius:14px;
     -o-border-radius:14px;
     outline:3px red solid;
+    transition: all 2s;
+    -webkit-transition: all 2s;
+    -moz-transition: all 2s;
+    -ms-transition: all 2s;
+    -o-transition: all 2s;
 }
 @keyframes cont{
-10%{background-color: rgb(234, 189, 224);
-font-weight: 600;
-}
-20%{font-weight: 200;
-
-    background-color: rgb(203, 224, 191);
+1%{color: blue;}
+100%{ 
+    color:crimson;
 }
 }
+:is(.twoShift)>h2+h2{font-size: 1.2rem;
+font-weight: 500;letter-spacing: 2px;
+}
+.twoShift{font-size: 1rem;}

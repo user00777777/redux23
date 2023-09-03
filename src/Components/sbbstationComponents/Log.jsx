@@ -49,7 +49,7 @@ return (
           <div className={s.l3}>{el.other}</div>
 
          { el.id&&<Link to={ `tpLog/${el.id}`}>{el.type}</Link>}
-          {el.p && <div className={s.l1}>Подкл.мощ <span>{el.iNom}</span>Квт</div>}
+          {el.p && <div className={s.l1}>Подкл.мощ:  {el.p} Квт</div>}
           {el.path && <div className={s.l2}>Подключены <p><span>{el.path}</span></p></div>}
         </div>
       ))}

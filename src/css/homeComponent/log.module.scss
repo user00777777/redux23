@@ -14,11 +14,15 @@ span{ color:red;font-size: 1.1rem;}
 @media only screen and (max-width: 480px){
     .logContainer{
         width: max-content;
-        padding: 10px;
+   height: max-content;
+   min-height: 65%;
+   padding: 10px;
         background-color:chartreuse;
-    font-size: 14px;width: 9rem;margin-left: 0.5px;margin-right: 0.5px;
-     padding:1px 1px, 0.5rem   ;
-
+    font-size: 14px;
+    display: flex;
+    flex-flow: column;
+justify-content: center;
+align-items: center;
 }
     .l3{color:rgb(9, 9, 245);font-weight: 700;}
     .lType{span{font-size: 1rem;font-weight: 500;}}
