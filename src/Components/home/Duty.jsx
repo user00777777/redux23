@@ -63,7 +63,7 @@ console.log();
   const currentWorker = workers1[(changeDayOfMonth ) % workers1.length];
   // console.log(currentWorker);
   
-  return <div className={s.container}><div className={s.twoShift}> <h2>Деж-е електрик</h2> <h2 className={s.d12}>{currentWorker.duty1}  {/*{currentWorker.duty2}*/}</h2></div></div>
+  return <div className={s.container}><div className={s.twoShift}> <h2>Деж-й електрик</h2> <h2 className={s.d12}>{currentWorker.duty1}  {/*{currentWorker.duty2}*/}</h2></div></div>
 
   
 }
