@@ -3,6 +3,7 @@ import { useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import  s  from "../css/homeComponent/home/Home.module.css";
+import PlumbersDuty from '../css/homeComponent/Plambers/PlumbersDuty';
 import Duty from './home/Duty';
 
 
@@ -12,6 +13,7 @@ export  default function Homepage() {
   return (
 <div className={s.wrapDuty}>
 <div className={s.duty}><Duty/></div>
+<div className={s.duty}><PlumbersDuty/></div>
 
            
 

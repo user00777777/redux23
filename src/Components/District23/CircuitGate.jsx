@@ -12,7 +12,7 @@ function f(s) {
 let copyAr=[...arImg]
 return copyAr[0]
 }
-console.log(f(state));
+// console.log(f(state));
 const goBack=()=>navigate(-1)
     return (
     <div  className={s.container}>

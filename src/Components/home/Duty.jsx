@@ -47,18 +47,15 @@ class Shift{
      let changeDayOfMonth =dayOfMonth
 
 
-console.log(changeDayOfMonth);
-// dayOfMonth=19
+
       const currentWorker2 = workers2[(changeDayOfMonth-=1 ) % workers2.length];
+console.log(currentWorker2.duty1);
 
       
-// hour=8
 
-// console.log(dayOfMonth);
 
 
 if (hour>=7&&hour<19) {
-console.log();
 
   const currentWorker = workers1[(changeDayOfMonth ) % workers1.length];
   // console.log(currentWorker);
@@ -70,23 +67,22 @@ console.log();
 if (hour>=19&&hour<=23&&minutes<=59
   ) {
 // dayOfMonth-=1
+  console.log(1);
   
   return <div className={s.container}><div className={s.twoShift}><h2>Дежурные Електрики:</h2><h2 className={s.d12}> {currentWorker2.duty1} {/*и {currentWorker2.duty2}*/}</h2></div></div>
 
 }
-
-if ( hour>0&&hour<7) {
-
+if ( hour>=0&&hour<7) {
+changeDayOfMonth-=1;
 
         const currentWorker2 = workers2[(changeDayOfMonth ) % workers2.length];
 
 // console.log([(dayOfMonth ) % workers2.length]);
 
-  return <div className={s.container}> <div className={s.twoShift}> На второй смене:<h2> {currentWorker2.duty1}</h2> {/*и {currentWorker2?.duty2}*/}</div></div>
+  return <div className={s.container}> <div className={s.twoShift}> Дежурные електрик:<h2> {currentWorker2.duty1}</h2> {/*и {currentWorker2?.duty2}*/}</div></div>
 
   
 }
-console.log(dayOfMonth);
 
   
 
