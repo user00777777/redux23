@@ -48,7 +48,7 @@ let date=new Date(),
  hours=date.getHours(),
  minutes=date.getMinutes(),
  changeDay=day;
-const oneShift=plumb('Писареенко','Бабец','Павлюченко','Немченко',1,4)
+const oneShift=plumb('Писареенко','Бабец','Павлюченко','Немченко',hours,day)
 console.log(oneShift);
 
 
