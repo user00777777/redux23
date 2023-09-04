@@ -1,17 +1,44 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react';
 import s  from "./Plumbercss/plumber.module.css";
-function plamb1(p1,day) {
-p1;
+function plumb(one,two,three,four,hours,day) {
+day-=1
+console.log(day);
 
-  return{
-p1,
-day
-
-
-  }
+let oneShift=[one,two,three,four] 
+let twoShift=[four,one,two,three]
+  if (hours>=7&&hours<19) {
+    let plumber=oneShift[day%oneShift.length]
+  return plumber
 }
 
+
+if (hours>=19&&hours<=23) {
+ let plumber2=twoShift[day%twoShift.length]
+
+return plumber2
+
+}
+else{ 
+let  plumber2=twoShift[(--day)%twoShift.length]
+console.log(plumber2);
+
+console.log(day);
+
+return plumber2
+  
+}
+
+
+  
+
+
+
+
+
+
+}
+// 
 
 
 export default function PlumbersDuty() {
@@ -21,36 +48,10 @@ let date=new Date(),
  hours=date.getHours(),
  minutes=date.getMinutes(),
  changeDay=day;
-// changeDay
-const plumbers=[plamb1("Бабец",day),plamb1("Павлюченко",day),plamb1("Немченко",day),plamb1("Писареенко",day)]
-const plumbers2=[plamb1("Писареенко",day),plamb1("Бабец",day),plamb1("Павлюченко",day),plamb1("Немченко",day)]
-console.log(plumber1);
-// console.log(hours);
+const oneShift=plumb('Писареенко','Бабец','Павлюченко','Немченко',1,4)
+console.log(oneShift);
 
 
-useEffect(()=>{
-  
-  if (hours>=7&&hours<19) {
-    let plumber2= plumbers2[(changeDay+2)%plumbers2.length]
-  // console.log(plumber2.p1);
-  setPlumber(plumber2.p1)
-  console.log('jkhjkh');}
-  if (true) {
-    console.log(11);
-    
-    const plumber=plumbers[(changeDay-2)%plumbers.length]
-    setPlumber(plumber.p1)
-    // console.log(plumber.p1);
-  }
-  if (hours<0&&hours<7) {
-    changeDay-=1;
-    const plumber=plumbers[(changeDay-2)%plumbers.length]
-
-  }
-  
-  
-
-},[])
 
   
 
@@ -58,7 +59,7 @@ useEffect(()=>{
     <div className={s.container}>
 
 <div className={s.plumbers}>
-Дежурный сантехник: <h2>{plumber1}</h2>
+Дежурный сантехник: <h2>{oneShift}</h2>
 
 </div>
       

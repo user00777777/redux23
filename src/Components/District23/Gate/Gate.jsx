@@ -87,7 +87,7 @@ return (
   <li  data-gate='10' className={[s.gate,s.gate2].join(" ")}>Ворота <span>#10</span></li>
   <li data-gate='11' className={[s.gate,s.gate3].join(" ")}>Ворота <span>#11</span></li>
   <li data-gate='12' className={[s.gate,s.gate4].join(" ")}>Ворота <span>#12</span></li>
-  <li data-gate='13' className={[s.gate,s.gate5].join(" ")}>Ворота <span>#13</span></li>
+  <li data-gate='13' className={[s.gate,s.gate5].join(" ")}>Ворота <span>#5</span></li>
 </ul>
 <div data-gate='empty' className={s.district6}>  <span>  6-й пролет  </span></div>
 <div className={s.middle}>
@@ -98,7 +98,7 @@ return (
 </div>
 <div className={s.door}></div>
 <div className={s.door}></div>
-<div className={[s.door,s.doorNot].join(" ")}> <div>ворота <span>6-7</span></div> </div>
+<div className={[s.door,s.doorNot].join(" ")}> <div>ворота <span>#13</span></div> </div>
 
 
 </div>
@@ -106,7 +106,7 @@ return (
 <div  className={s.preend}><div className={s.seven}>7 пролет </div></div>
 
 <div className={s.wrapper67}>
-<div data-gate='14' className={[s.gate,s.gate7].join(" ")}>ворота <span>7</span> пролет</div>
+<div data-gate='14' className={[s.gate,s.gate7].join(" ")}>ворота <span>#3</span> </div>
 
 </div>
 

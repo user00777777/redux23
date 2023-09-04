@@ -17,7 +17,7 @@
 
     .mainGates{
     width: 100%;
-    height: 100vh;
+    height: calc(839px - 56px);
     @include blueB();
     color:white;
     font-family: 'Press Start 2P';
@@ -100,7 +100,7 @@ justify-content: space-between;
     justify-content: center;
     align-items: center;
 }
-.middle{width: 60px;height: calc(839px - 56px);
+.middle{min-height: calc(839px - 56px); 
 display: flex;
 flex-direction: column;
 background-color: antiquewhite;
@@ -125,6 +125,7 @@ width: 2px;
     -o-transform: rotate(180deg);
 }
 .district6{
+  min-height: calc(839px - 56px);
     //  background-color:aquamarine;
      width: 150px;
      display: flex;
@@ -152,6 +153,7 @@ span{
 }
   .preend{
     width: 100px;
+    height:  calc(839px - 56px);
     color:black;
     // background-color:chartreuse;
     transform: rotate(180deg);

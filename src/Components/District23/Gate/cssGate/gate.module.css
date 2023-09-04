@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 .mainGates {
   width: 100%;
-  height: 100vh;
+  height: 783px;
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#3f4c6b+0,3f4c6b+100;Blue+Grey+Flat */
   background: rgb(63, 76, 107); /* Old browsers */
   background: -moz-linear-gradient(top, rgb(63, 76, 107) 0%, rgb(63, 76, 107) 100%); /* FF3.6-15 */
@@ -97,8 +97,7 @@ span {
 }
 
 .middle {
-  width: 60px;
-  height: 783px;
+  min-height: 783px;
   display: flex;
   flex-direction: column;
   background-color: antiquewhite;
@@ -123,6 +122,7 @@ span {
 }
 
 .district6 {
+  min-height: 783px;
   width: 150px;
   display: flex;
   flex-flow: column;
@@ -145,6 +145,7 @@ span {
 
 .preend {
   width: 100px;
+  height: 783px;
   color: black;
   transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
