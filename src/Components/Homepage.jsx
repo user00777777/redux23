@@ -22,7 +22,7 @@ export  default function Homepage() {
 
               <main className={s.links}>
 
-<div className={[s.link1,s.link].join(' ')}><Link ><span className={s.l}>Телефоны</span></Link></div>
+<div className={[s.link1,s.link].join(' ')}><Link  to='/phones'><span className={s.l}>Телефоны</span></Link></div>
 <div className={[s.link2,s.link].join(' ')}><Link to='/district23'><span className={s.l}>Участок №23</span></Link></div>
 <div className={[s.link3,s.link].join(' ')}><Link><span></span></Link></div>
 <div className={[s.link4,s.link].join(' ')}></div>

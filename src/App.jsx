@@ -2,7 +2,6 @@ import { useState } from 'react'
 import {Routes,Route}from 'react-router-dom'
 import './App.css'
 import Employees from './Components/Employees'
- import Cranes from './Components/Сranes'
 
 import Layout from './Components/Layout'
 // import Main from './Components/Main'
@@ -26,6 +25,8 @@ import Gates9 from './Components/District23/Gate/Gates9'
 import Info from './Components/District23/Gate/Info'
 import CircuitGate from './Components/District23/CircuitGate'
 import PlumbersDuty from './css/homeComponent/Plambers/PlumbersDuty'
+import Phones from './Components/home/phones/Phones'
+import Cranes from './Components/Cranes/Cranes'
 // import First from './Components/First'
 // import OneComponent from './Components/OneComponent'
 
@@ -58,6 +59,8 @@ function App() {
 <Route path='info' element={<Info />}/>
 <Route path='circuitGate' element={<CircuitGate />}/>
 <Route path='PlumbersDuty' element={<PlumbersDuty/>}/>
+<Route path='phones' element={<Phones/>}/>
+<Route path='cran' element={<Cranes/>}/>
 
 </Route>
 

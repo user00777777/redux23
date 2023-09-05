@@ -8,7 +8,7 @@ export default function District23() {
 <li className={[s.gate,s.item].join(' ')}><Link to='/gate'><span>Ворота</span></Link></li>
 <li className={[s.heater,s.item].join(' ')}>Обогреватели</li>
 <li className={[s.documents,s.item].join(' ')}>Документы</li>
-<li className={[s.cranes,s.item].join(' ')}>Краны</li>
+<li className={[s.cranes,s.item].join(' ')}><Link to='/cran'>Краны</Link></li>
 
     </ul>
     
