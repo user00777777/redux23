@@ -96,6 +96,16 @@
   letter-spacing: 10px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-weight: 600;
+  position: relative;
+  bottom: 78px;
+}
+.abs .noOne {
+  position: absolute;
+  width: 113px;
+  height: 143px;
+  font-size: 29px;
+  margin-top: 82px;
+  bottom: 127px;
 }
 
 .cran2 {
