@@ -21,7 +21,9 @@ export default function ShowCrane({ crane }) {
 			<div className={s.wrapBut}>
 				<button onClick={handleBack}>назад</button>
 			</div>
-			<div className={s.content}></div>
+			<div className={`${s.wrapContent} ${s.w}`}>
+				<div className={s.content}>{crane.rp}</div>
+			</div>
 		</div>
 	)
 }
