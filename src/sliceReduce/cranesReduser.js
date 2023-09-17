@@ -1,24 +1,32 @@
-function f(n, path) {
-	return {
-		n,
-		path,
-	}
-}
-const mal1 = f('mal1', 'рп14')
-const mal2 = f('mal2', 'рп14')
+// function f(crane, path) {
+// 	return {
+// 		crane,
+// 		path,
+// 	}
+// }
+// const mal1 = f('mal1', 'рп14')
+// const mal2 = f('mal2', 'рп14')
 import { createSlice } from '@reduxjs/toolkit'
 import React from 'react'
-const initialState = { mal1, mal2 }
+const initialState = {
+	list: [
+		{ name: 'mal1', rp: 14 },
+		{ name: 'mal2', rp: 14 },
+	],
+	list1: [],
+}
 
 const cranes = createSlice({
 	name: 'cranes',
 	initialState,
 	reducers: {
 		craneS(state, action) {
-			let v = Object.values(state.mal1)
-			console.log(v)
-
-			let actIon = action.payload
+			let x = state.list.find(el => {
+				if (el.name == action.payload) {
+					return el
+				}
+			})
+			state.answer = x
 		},
 	},
 })

@@ -1,28 +1,21 @@
 .container {
-  background-color: aquamarine;
   width: 100%;
   height: 100vh;
+  background-color: aquamarine;
+}
+
+:is(.btnWrap, .imgWrap) {
+  margin: 10px 0px;
   display: flex;
-  flex-flow: column;
-  gap: 20px;
+  justify-content: center;
 }
 
-.btnWrap {
+.imgWrap {
   width: 100%;
-  display: grid;
-  place-items: center;
+  height: 300px;
 }
-.btnWrap button {
-  width: 200px;
-  margin-top: 20px;
-  font-size: large;
-  font-weight: 700;
-  letter-spacing: 4px;
-  background-color: crimson;
-  color: aliceblue;
-}
-
-img {
+.imgWrap img {
+  width: 100%;
   height: 100%;
-  width: 100%;
+  object-fit: contain;
 }

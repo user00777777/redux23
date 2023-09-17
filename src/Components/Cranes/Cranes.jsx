@@ -14,8 +14,8 @@ export default function Cranes() {
 		parent?.addEventListener('click', e => {
 			let data = e.target.dataset.mal
 
-			if (data == 'mal2') setComp(<ShowCrane crane='num2' />)
-			if (data == 'mal1') setComp(<ShowCrane crane='num1' />)
+			if (data == 'mal2') setComp(<ShowCrane crane={data} />)
+			if (data == 'mal1') setComp(<ShowCrane crane={data} />)
 		})
 	})
 

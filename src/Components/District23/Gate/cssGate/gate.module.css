@@ -191,18 +191,17 @@ span {
   overflow: hidden;
   word-break: break-all;
   padding: 5px;
-  transition: all 1s ease-in-out;
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -ms-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
+  transition: all 50ms ease-in-out;
+  -webkit-transition: all 50ms ease-in-out;
+  -moz-transition: all 50ms ease-in-out;
+  -ms-transition: all 50ms ease-in-out;
+  -o-transition: all 50ms ease-in-out;
 }
 
 .blinck {
   z-index: 8;
-  animation: blinck 4500ms ease-in;
-  -webkit-animation: blinck 1200ms ease-in;
-  border: 4px solid pink;
+  animation: blinck 400ms ease-in;
+  -webkit-animation: blinck 400ms ease-in;
   border-radius: 2px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
