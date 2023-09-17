@@ -23,3 +23,16 @@
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffc578+0,fb9d23+100;Orange+3D+%233 */
   background: linear-gradient(to bottom, rgb(255, 197, 120) 0%, rgb(251, 157, 35) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
+
+.wrapContent {
+  width: 400px;
+  height: 200px;
+}
+
+.thRp {
+  border: 2px black solid;
+}
+
+.thName {
+  border: 2px black solid;
+}

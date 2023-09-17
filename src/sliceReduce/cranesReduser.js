@@ -10,8 +10,8 @@ import { createSlice } from '@reduxjs/toolkit'
 import React from 'react'
 const initialState = {
 	list: [
-		{ name: 'mal1', rp: 14 },
-		{ name: 'mal2', rp: 14 },
+		{ name: 'mal1', rp: 14, id: 'Кран 5T' },
+		{ name: 'mal2', rp: 14, id: 'Кран 10T' },
 	],
 	list1: [],
 }

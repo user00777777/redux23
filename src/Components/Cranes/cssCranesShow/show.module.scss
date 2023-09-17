@@ -38,6 +38,17 @@
 		@include butBac();
 	}
 }
+.wrapContent {
+	// background-color: burlywood;
+	width: 400px;
+	height: 200px;
+}
 .content {
 	// background-color: bisque;
+}
+.thRp {
+	border: 2px black solid;
+}
+.thName {
+	border: 2px black solid;
 }
