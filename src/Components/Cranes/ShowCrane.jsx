@@ -25,9 +25,19 @@ export default function ShowCrane({ crane }) {
 			$tr = document.createElement('tr'),
 			$th = document.createElement('th'),
 			$thName = document.createElement('th')
+		if (el?.rp) {
+			$thName.innerHTML = el?.id == undefined ? ' ' : el?.id
+		} else {
+			$thName.classList.remove(s.thName)
+			$thName.innerHTML = ' '
+		}
+		if (el?.rp) {
+			$th.innerHTML = `Запитано от РП № ${el?.rp}`
+		} else {
+			$th.classList.remove(s.thRp)
+			$th.innerHTML = ''
+		}
 
-		$thName.innerHTML = `${el?.id}`
-		$th.innerHTML = `Запитано от РП № ${el?.rp}`
 		$th.classList.add(s.thRp)
 		$thName.classList.add(s.thName)
 		$tr.append($thName)
