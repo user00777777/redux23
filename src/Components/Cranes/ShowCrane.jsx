@@ -7,6 +7,7 @@ import s from './cssCranesShow/show.module.css'
 
 export default function ShowCrane({ crane }) {
 	let dispatch = useDispatch()
+	let refSel = useRef()
 	console.log(crane)
 	const refTable = useRef()
 	let state = useSelector(state => state.cranes.answer)
@@ -51,6 +52,11 @@ export default function ShowCrane({ crane }) {
 		table = null
 	}
 	// console.log(crane)
+	let sel = refSel.current
+	console.log(sel)
+	sel?.addEventListener('change', el => {
+		console.log(sel.value)
+	})
 
 	return (
 		<div className={s.container}>
@@ -60,6 +66,11 @@ export default function ShowCrane({ crane }) {
 			<div className={`${s.wrapContent} ${s.d}`}>
 				<div ref={refTable} className={s.content}></div>
 			</div>
+			<select ref={refSel} name='' id='sel'>
+				<option value='1'>11</option>
+				<option value='2'>22</option>
+				<option value='3'>33</option>
+			</select>
 		</div>
 	)
 }

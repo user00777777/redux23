@@ -28,6 +28,7 @@ import PlumbersDuty from './css/homeComponent/Plambers/PlumbersDuty'
 import Phones from './Components/home/phones/Phones'
 import Cranes from './Components/Cranes/Cranes'
 import ShowCrane from './Components/Cranes/ShowCrane'
+import Telphers from './Components/Telphers'
 // import First from './Components/First'
 // import OneComponent from './Components/OneComponent'
 
@@ -42,7 +43,7 @@ function App() {
 					<Route path='workers' element={<Employees />} />
 					<Route path='machineTools' element={<MachineTools />} />
 					{/* <Route path='/main' element={<Main/>}/> */}
-					<Route path='m' element={<Cranes />} />
+					<Route path='telphers' element={<Telphers />} />
 					<Route path='district23' element={<District23 />} />
 					<Route path='substation' element={<Substation />} />
 					<Route path='tpLog' element={<TpLog />} />
