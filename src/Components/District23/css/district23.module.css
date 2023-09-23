@@ -54,6 +54,6 @@ li:before {
 @media (prefers-color-scheme: dark) {
   .item {
     background-color: #1a1a1a;
-    color: #ffffff;
+    color: #aa1e1e;
   }
 }
