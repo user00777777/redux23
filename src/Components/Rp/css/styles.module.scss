@@ -1,1 +1,15 @@
 $border: solid black 2px;
+@mixin f() {
+	@media only screen and (max-width: 380px) {
+		.wrapGrid {
+			.rp {
+				color: brown;
+			}
+		}
+		.rp {
+			font-size: 14px;
+			font-weight: 500;
+			line-height: 0.8;
+		}
+	}
+}
