@@ -1,8 +1,11 @@
 import React from 'react'
+import { useRef } from 'react'
 import s from './css/rp.module.css'
 export default function Rp() {
+	const refRp = useRef()
+
 	return (
-		<div className={s.container}>
+		<div ref={refRp} className={s.container}>
 			<div className={s.top}>
 				<ul className={s.wrapTop}>
 					<li className={`${s.top_item}`}>ГСМ</li>
@@ -19,14 +22,18 @@ export default function Rp() {
 			</div>
 			<div>
 				<ul className={s.wrapGrid}>
-					<li className={` ${s.rp}`}>Заезд с Эстакады</li>
+					<li className={` ${s.rp}`}>
+						<h2>Заезд с Эстакады</h2>
+					</li>
 					<li className={` ${s.rp}`}>
 						<h2>РП №14</h2>
 					</li>
 					<li className={` ${s.rp}`}>
 						<h2>РП №12</h2>
 					</li>
-					<li className={` ${s.rp}`}>Телега</li>
+					<li className={` ${s.rp} ${s.tel}`}>
+						<h2>Телега инв №051973</h2>
+					</li>
 					<li className={` ${s.rp}`}>
 						{' '}
 						<h2>РП №11</h2>
@@ -61,7 +68,7 @@ export default function Rp() {
 						<h2>РП №7</h2>
 					</li>
 					<li className={` ${s.rp} ${s.tel} `} id={s.telega}>
-						Телега
+						<h2>Телега инв №051973</h2>
 					</li>
 					<li className={` ${s.rp}`}>
 						Ворота <p>№11</p>
@@ -82,11 +89,15 @@ export default function Rp() {
 						{' '}
 						<h2>РП №1</h2>
 					</li>
-					<li className={` ${s.rp}	${s.tel}`}>Телега</li>
+					<li className={` ${s.rp}	${s.tel}`}>
+						<h2>Телега №052087</h2>
+					</li>
 					<li className={` ${s.rp}`}>
 						Ворота <p>№12</p>
 					</li>
-					<li className={` ${s.rp}`}>23</li>
+					<li className={` ${s.rp}`}>
+						<h2>Дорога</h2>
+					</li>
 					<li className={` ${s.rp}`}>
 						Ворота <p>№5</p>
 					</li>
@@ -102,38 +113,18 @@ export default function Rp() {
 						<h2>РП №5</h2>
 					</li>
 					<li className={` ${s.rp}`}>
-						<div className={s.tel}>Телега</div>
+						<div className={s.tel}>
+							<h2>Телега №051656</h2>
+						</div>
 					</li>
-					<li className={` ${s.rp}`}>29</li>
+					<li className={` ${s.rp}`}>ГРП</li>
 					<li className={` ${s.rp}`}>
 						<div className={s.sh_R}>
 							{' '}
 							<h2>ШР №18</h2>
 						</div>
 					</li>
-					{/* <li className={` ${s.rp}`}></li>
-					<li className={` ${s.rp}`}></li>
-					<li className={` ${s.rp}`}></li>
-					<li className={` ${s.rp}`}></li>
-					<li className={` ${s.rp}`}></li>
-					<li className={` ${s.rp}`}></li>
-					<li className={` ${s.rp}`}></li>
-					<li className={` ${s.rp}`}></li>
-					<li className={` ${s.rp}`}></li>
-					<li className={` ${s.rp}`}></li>
-					<li className={` ${s.rp}`}></li>
-					<li className={` ${s.rp}`}></li>
-					<li className={` ${s.rp}`}></li>
-					<li className={` ${s.rp}`}></li>
-					<li className={` ${s.rp}`}></li>
-					<li className={` ${s.rp}`}></li>
-					<li className={` ${s.rp}`}></li>
-					<li className={` ${s.rp}`}></li>
-					<li className={` ${s.rp}`}></li>
-					<li className={` ${s.rp}`}></li>
-					<li className={` ${s.rp}`}></li>
-					<li className={` ${s.rp}`}></li>
-					<li className={` ${s.rp}`}></li> */}
+
 					{/* <li className={` ${s.rp}`}>Ворота</li> */}
 				</ul>
 			</div>
