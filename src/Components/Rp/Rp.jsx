@@ -33,22 +33,26 @@ export default function Rp() {
 					<li className={` ${s.rp}`}>12</li>
 					<li className={` ${s.rp}`}>13</li>
 					<li className={` ${s.rp}`}>14</li>
-					<li className={` ${s.rp}`}>Телега</li>
+					<li className={` ${s.rp} ${s.tel}`}>Телега</li>
 					<li className={` ${s.rp}`}>Ворота</li>
 					<li className={` ${s.rp}`}>17</li>
 					<li className={` ${s.rp}`}>18</li>
 					<li className={` ${s.rp}`}>19</li>
 					<li className={` ${s.rp}`}>20</li>
-					<li className={` ${s.rp}`}>Телега</li>
+					<li className={` ${s.rp}	${s.tel}`}>Телега</li>
 					<li className={` ${s.rp}`}>Ворота</li>
 					<li className={` ${s.rp}`}>23</li>
 					<li className={` ${s.rp}`}>24</li>
 					<li className={` ${s.rp}`}>25</li>
 					<li className={` ${s.rp}`}>26</li>
 					<li className={` ${s.rp}`}>27</li>
-					<li className={` ${s.rp}`}>28</li>
+					<li className={` ${s.rp}`}>
+						<div className={s.tel}>Телега</div>
+					</li>
 					<li className={` ${s.rp}`}>29</li>
-					<li className={` ${s.rp}`}>30</li>
+					<li className={` ${s.rp}`}>
+						<div className={s.sh_R}></div>
+					</li>
 					{/* <li className={` ${s.rp}`}></li>
 					<li className={` ${s.rp}`}></li>
 					<li className={` ${s.rp}`}></li>
