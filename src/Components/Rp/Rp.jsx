@@ -31,8 +31,12 @@ export default function Rp() {
 						{' '}
 						<h2>РП №11</h2>
 					</li>
-					<li className={` ${s.rp}`}>6</li>
-					<li className={` ${s.rp}`}>7</li>
+					<li className={` ${s.rp}`}>
+						<h2>ВС-300</h2>
+					</li>
+					<li className={` ${s.rp}`}>
+						<div className={s.vdu}>ВДУ</div>
+					</li>
 					<li className={` ${s.rp} ${s.gate}`}>
 						Ворота <p>№9</p>
 					</li>
@@ -47,7 +51,7 @@ export default function Rp() {
 						{' '}
 						<h2>РП №10</h2>
 					</li>
-					<li className={` ${s.rp}`}>12</li>
+					<li className={` ${s.rp}`}>112</li>
 					<li className={` ${s.rp}`}>
 						{' '}
 						<h2>РП №9</h2>
@@ -56,7 +60,9 @@ export default function Rp() {
 						{' '}
 						<h2>РП №7</h2>
 					</li>
-					<li className={` ${s.rp} ${s.tel}`}>Телега</li>
+					<li className={` ${s.rp} ${s.tel} `} id={s.telega}>
+						Телега
+					</li>
 					<li className={` ${s.rp}`}>
 						Ворота <p>№11</p>
 					</li>

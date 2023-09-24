@@ -123,7 +123,8 @@
 	background-color: inherit;
 }
 .rp:nth-child(5) {
-	grid-area: 4/3/4/4;
+	grid-area: 4/3/5/4;
+	// background-color: aqua;
 }
 .rp:nth-child(6) {
 	grid-area: 7/1/8/2;
@@ -161,7 +162,7 @@
 	grid-area: 8/3/9/4;
 }
 .rp:nth-child(15) {
-	grid-area: 9/1/11/4;
+	grid-area: 9/1/11/3;
 	background-color: inherit;
 }
 .rp:nth-child(16) {
@@ -225,6 +226,7 @@
 }
 .rp:nth-child(29) {
 	grid-area: 24/3/26/4;
+	// order: 1;
 }
 .rp:nth-child(30) {
 	display: flex;
@@ -242,5 +244,36 @@
 		background-color: rgb(211, 164, 164);
 		place-items: center;
 	}
+}
+.rp:nth-child(6) {
+	grid-area: 9/3/11/4;
+	background-color: yellow;
+}
+.rp:nth-child(7) {
+	grid-area: 12/2/15/3;
+	border: none;
+	background-color: inherit;
+	position: relative;
+	display: flex;
+	justify-content: start;
+}
+.vdu {
+	display: grid;
+	font-size: 1em;
+	font-weight: 500;
+	place-items: center;
+	position: relative;
+	border: $border;
+	width: 20%;
+	height: 50%;
+	background-color: yellow;
+	writing-mode: vertical-rl;
+	-webkit-writing-mode: vertical-rl;
+	-ms-writing-mode: vertical-rl;
+	transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
 }
 @include f();
