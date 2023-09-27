@@ -12,25 +12,30 @@ export default function Gate() {
 	let state = useSelector(state => state)
 	let main = useRef()
 	let logRef = useRef()
-	let gate = state?.gates
+	let gate = state?.gates.gates
 	const [info, setInfo] = useState()
 
-	const { g9, g10, g11, g12, g13 } = gate
+	// console.log(gate)
 
 	function gates(event) {
 		const target = event.target
+
 		// const closest=event.target.closest('li');
 		const closestEl = event.target.closest('[data-gate]')
 		let gateData = event.target.dataset.gate
 		if (closestEl) {
 			let strGate = +closestEl.dataset.gate
-			// console.log(typeof strGate );
+			console.log(gate)
 
-			for (const i in gate) {
+			for (let i = 0; i < gate.length; i++) {
+				console.log(i)
+
 				let myGate = gate[i]
+				// console.log(myGate)
+
 				if (strGate === myGate.gate) {
-					console.log('ok')
-					console.log(myGate)
+					// console.log('ok')
+					// console.log(myGate)
 
 					let reg = new RegExp(`${myGate.gate}`)
 
@@ -40,6 +45,7 @@ export default function Gate() {
 					setTimeout(() => {
 						target.classList.remove(s.blinck)
 					}, 1580)
+					// console.log(myGate.gate)
 
 					dispatch(imgGate(myGate.gate))
 

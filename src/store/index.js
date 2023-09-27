@@ -5,6 +5,7 @@ import machineReducer from '../sliceReduce/machineReduser'
 import substationReducer from '../sliceReduce/substationReducer'
 import gate from '../sliceReduce/sliceGates'
 import craneReduser from '../sliceReduce/cranesReduser'
+import rpReduser from '../sliceReduce/rpReduser'
 const store = configureStore({
 	reducer: {
 		job: employeesReducer,
@@ -13,6 +14,7 @@ const store = configureStore({
 		tp32: substationReducer,
 		gates: gate,
 		cranes: craneReduser,
+		rp: rpReduser,
 	},
 })
 export default store
