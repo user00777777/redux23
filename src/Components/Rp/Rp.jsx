@@ -1,24 +1,41 @@
 import React from 'react'
+import { useState } from 'react'
 import { useEffect } from 'react'
 import { useReducer } from 'react'
 import { useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
 import { getRp } from '../../sliceReduce/rpReduser'
 import s from './css/rp.module.css'
+import DiscrabeRp from './DiscrabeRp'
 
-export default function Rp() {
+export default function Rp(props) {
+	const [rp, setRp] = useState('')
 	const refRp = useRef()
 	let state = useSelector(state => state?.rp.res)
-	console.log(state, 'state')
+	// console.log(props)
 
+	// console.log(state, 'state')
+	const rpNumber = '1'
 	const dispatch = useDispatch()
 	useEffect(() => {
-		refRp.current.addEventListener('click', e => {
-			console.log(e.target.dataset.rp)
-			// console.log(e.target.closest('li').textContent, 'kk')
-			dispatch(getRp(e.target.dataset.rp))
-		})
+		refRp.current.addEventListener('click', gate)
+		return () => {
+			if (refRp.current) {
+				refRp.current.removeEventListener('click', gate)
+			}
+		}
 	}, [])
+
+	function gate(e) {
+		const rp = e.target.closest('h2').dataset.rp
+
+		setRp(rp)
+
+		console.log()
+
+		dispatch(getRp(rp))
+	}
 
 	return (
 		<div ref={refRp} className={s.container}>
@@ -42,7 +59,10 @@ export default function Rp() {
 						<h2>Заезд с Эстакады</h2>
 					</li>
 					<li className={` ${s.rp}`}>
-						<h2 data-rp='14'>РП №14</h2>
+						<h2 data-rp='14'>
+							{' '}
+							<Link to={`/discrabeRp/${rp}`}>РП №14</Link>{' '}
+						</h2>
 					</li>
 					<li className={` ${s.rp}`}>
 						<h2 data-rp='12'>РП №12</h2>
@@ -103,7 +123,9 @@ export default function Rp() {
 					</li>
 					<li className={` ${s.rp}`}>
 						{' '}
-						<h2 data-rp='1'>РП №1</h2>
+						<h2 data-rp='1'>
+							<Link to={`/discrabeRp/${rp}`}>РП №1</Link>{' '}
+						</h2>
 					</li>
 					<li className={` ${s.rp}	${s.tel}`}>
 						<h2>Телега №052087</h2>
@@ -140,20 +162,7 @@ export default function Rp() {
 							<h2 data-rp='18'>ШР №18</h2>
 						</div>
 					</li>
-					{state && (
-						<div className={`${s.output} ${s.rp}`}>
-							{' '}
-							{state.map((el, i) => (
-								<div key={i}>
-									<div className={s.name}> {el.name}</div>
-									<div className={s.onePost}>ток росц-{el.I}</div>
-									<div>мощность:{el.kvt}</div>
-									<div>{el.nom}</div>
-									<div>{el.inv}</div> <br />
-								</div>
-							))}
-						</div>
-					)}
+					{/* {state && <DiscrabeRp all_rp={state} />} */}
 
 					{/* <li className={` ${s.rp}`}>Ворота</li> */}
 				</ul>

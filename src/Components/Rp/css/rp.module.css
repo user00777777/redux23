@@ -339,10 +339,13 @@
   }
 }
 .output {
+  width: 100%;
+  display: grid;
+  place-items: center;
   grid-area: 1/2/26/3;
   background-color: inherit;
   z-index: 11;
-  font-size: 0.9em;
+  font-size: 1em;
   border: 3px red solid;
 }
 
@@ -352,6 +355,15 @@
 }
 
 .name {
-  font-size: 1.2em;
+  width: 100%;
+  font-size: 1em;
   color: rgb(8, 11, 224);
+  z-index: 22;
+}
+
+.last {
+  padding-bottom: 1px;
+  background-color: black;
+  height: 1px;
+  width: 100%;
 }

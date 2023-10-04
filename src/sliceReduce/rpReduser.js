@@ -67,11 +67,7 @@ const initialState = {
 		},
 		{
 			rp: '14',
-
-			name: 'одной',
-			nom: '4',
-			i: '1',
-			kvt: '',
+			ar: [{ name: 'Вводной', nom: '4', i: '1', kvt: '' }],
 		},
 	],
 }
@@ -81,13 +77,13 @@ const rpSlice = createSlice({
 	initialState,
 	reducers: {
 		getRp(state, action) {
-			console.log(action.payload)
+			// console.log(action.payload)
 
 			state.allRp.forEach(el => {
 				if (el.rp == action.payload) {
 					return (state.res = el.ar)
 				} else {
-					console.log('no')
+					// console.log('no')
 				}
 			})
 		},
