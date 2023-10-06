@@ -26,7 +26,7 @@ export default function Duty() {
 	let vasj = new Shift('Малько', '')
 	let stas = new Shift('Круглый', '')
 	let sinkevich = new Shift('Синкевичь', '')
-	let paha = new Shift('Гекало' /*"Лысенко"*/)
+	let paha = new Shift('Лысенко')
 
 	const workers1 = [vasj, stas, sinkevich, paha]
 	const workers2 = [paha, vasj, stas, sinkevich]
@@ -40,7 +40,7 @@ export default function Duty() {
 	console.log(currentWorker2.duty1)
 
 	if (hour >= 7 && hour < 19) {
-		const currentWorker = workers1[(changeDayOfMonth + 2) % workers1.length]
+		const currentWorker = workers1[changeDayOfMonth % workers1.length]
 		// console.log(currentWorker);
 
 		return (

@@ -1,5 +1,6 @@
 import React from 'react'
 import { useEffect } from 'react'
+import { useState } from 'react'
 import { useRef } from 'react'
 import { useSelector } from 'react-redux'
 import { useLocation, useNavigate, useParams } from 'react-router-dom'
@@ -11,37 +12,21 @@ export default function DiscrabeRp() {
 	const tableRef = useRef()
 	const table = tableRef.current
 	console.log(table)
+	const [el, setElement] = useState()
 
 	const $table = document.createElement('table'),
 		$tbody = document.createElement('tbody')
-	// function create_tr(itemName, itemNom) {
-	// 	console.log(itemName, itemNom)
 
-	// 	const $tr = document.createElement('tr'),
-	// 		$tr_Nom = document.createElement('tr'),
-	// 		// $th_name = (document.createElement('th').textContent = 'Наименование'),
-	// 		$th_i = (document.createElement('td').textContent = itemName),
-	// 		$th_nom = (document.createElement('td').textContent = itemNom),
-	// 		$th_kvt = document.createElement('td')
-	// 	table?.append($table)
-	// 	$table.append($tbody)
-	// 	$tbody.append($tr)
-	// 	$tbody.append($tr_Nom)
-	// 	$tr.append($th_i)
-	// 	$tr_Nom.append($th_nom)
-
-	// 	// $tr.append($th_nom)
 	// }
 	useEffect(() => {
-		state.forEach(el => {
-			console.log(el)
+		state?.forEach(el => {
+			setElement(el)
 
 			// create_tr(el.name, el.nom)
 		})
 	}, [])
-	const [name] = state
 
-	console.log(name)
+	console.log(el.name)
 
 	return (
 		<div>
@@ -52,9 +37,9 @@ export default function DiscrabeRp() {
 				<table>
 					<tbody>
 						<tr>
-							<td>1</td>
-							<td>2</td>
-							<td>3</td>
+							<th>Название</th>
+							<th>Номинальный ток</th>
+							<th>Imax</th>
 						</tr>
 						<tr>
 							<td>11</td>
