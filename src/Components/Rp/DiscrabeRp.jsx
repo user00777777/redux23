@@ -45,7 +45,7 @@ export default function DiscrabeRp() {
 					return (
 						<div className={s.wrapList}>
 							<div className={s.name}> {el.name}</div>
-							<div className={s.i}> {el.I}</div>
+							<div className={s.i}> {el.I} </div>
 							<div className={s.nom}> {el.nom}</div>
 							<div className={s.kvt}> {el.kvt}</div>
 						</div>
