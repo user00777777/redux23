@@ -35,7 +35,7 @@ export default function DiscrabeRp() {
 			<ul className={s.wrapName}>
 				<li>Наименование</li>
 				<li>
-					<span>ток</span> уставки
+					<span className={s.sp}>ток</span> уставки
 				</li>
 				<li>ном-й Ток</li>
 				<li>квт</li>

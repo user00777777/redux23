@@ -12,9 +12,9 @@ export default function District23() {
 				</li>
 				{/* <li className={[s.heater, s.item].join(' ')}>Обогреватели</li> */}
 				{/* <li className={[s.documents, s.item].join(' ')}>Документы</li> */}
-				<li className={[s.rp, s.item].join(' ')}>
+				<li className={[s.rp, s.item, s.rpSpan].join(' ')} id={s.rp}>
 					<Link to='/rp'>
-						<span>Рп</span>
+						<div className={s.d}>Рп</div>
 					</Link>
 				</li>
 				<li className={[s.cranes, s.item].join(' ')}>

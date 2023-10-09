@@ -57,3 +57,20 @@ li:before {
     color: #aa1e1e;
   }
 }
+#rp {
+  position: relative;
+  display: flex;
+  border: white solid 4px;
+}
+#rp .d {
+  position: relative;
+  transform: translate(0%, -25%);
+  color: #ffffff;
+  font-size: 30px;
+  letter-spacing: 9px;
+  font-weight: 700;
+  -webkit-transform: translate(0%, -25%);
+  -moz-transform: translate(0%, -25%);
+  -ms-transform: translate(0%, -25%);
+  -o-transform: translate(0%, -25%);
+}
