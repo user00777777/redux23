@@ -65,14 +65,20 @@ export default function Rp(props) {
 						</h2>
 					</li>
 					<li className={` ${s.rp}`}>
-						<h2 data-rp='12'>РП №12</h2>
+						<h2 data-rp='12'>
+							{' '}
+							<Link to={`/discrabeRp/${rp}`}>РП №12</Link>
+						</h2>
 					</li>
 					<li className={` ${s.rp} ${s.tel}`}>
 						<h2>Телега инв №051973</h2>
 					</li>
 					<li className={` ${s.rp}`}>
 						{' '}
-						<h2 data-rp='11'>РП №11</h2>
+						<h2 data-rp='11'>
+							{' '}
+							<Link to={`/discrabeRp/${rp}`}>РП №11</Link>
+						</h2>
 					</li>
 					<li className={` ${s.rp}`}>
 						<h2>ВС-300</h2>

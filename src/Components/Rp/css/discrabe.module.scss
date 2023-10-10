@@ -38,16 +38,17 @@
 	width: 100%;
 	height: fit-content;
 	grid-template-columns: 1fr 80px 80px 80px;
-	grid-template-rows: 100px;
+	grid-template-rows: fit-content;
 	gap: 2px;
 	margin-bottom: 1px;
-	border: red 2px solid;
+	border: black 2px solid;
+	padding: 0.5em;
 }
 .name {
 	display: grid;
 	place-items: center;
 	width: 100%;
-	border: 2px black solid;
+	// border-right: 2px black solid;
 	// margin: 10px;
 }
 .i {
@@ -80,11 +81,12 @@
 	// background-color: red;
 	// justify-content: space-between;
 	grid-template-columns: 1fr 80px 80px 80px;
-	// grid-template-rows: 100px;
+	// grid-template-rows: repeat(10, 10px);
 	border: 2px rgb(237, 6, 6) solid;
 	gap: 2px;
 }
 li {
+	height: 20px;
 	font-weight: 500;
 	height: 50px;
 	display: grid;

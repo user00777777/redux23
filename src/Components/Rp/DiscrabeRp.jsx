@@ -41,9 +41,9 @@ export default function DiscrabeRp() {
 				<li>квт</li>
 			</ul>
 			<div ref={tableRef} className={s.wrapper}>
-				{state.map(el => {
+				{state.map((el, id) => {
 					return (
-						<div className={s.wrapList}>
+						<div className={s.wrapList} key={id}>
 							<div className={s.name}> {el.name}</div>
 							<div className={s.i}> {el.I} </div>
 							<div className={s.nom}> {el.nom}</div>
