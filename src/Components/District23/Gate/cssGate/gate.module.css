@@ -87,9 +87,10 @@ span {
 }
 
 .door {
+  font-size: 1rem;
   width: fit-content;
   background: rgb(0, 0, 0);
-  height: 84px;
+  height: fit-content;
   color: rgb(255, 253, 253);
   display: flex;
   justify-content: center;
