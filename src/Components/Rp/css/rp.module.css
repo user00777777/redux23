@@ -52,7 +52,7 @@
 .top li:last-child span:last-child {
   margin-bottom: 5px;
 }
-.top .toilet {
+.top #toilet {
   display: flex;
   justify-content: space-around;
   min-width: 30%;
@@ -60,7 +60,7 @@
   height: 100%;
   gap: 1px;
 }
-.top .toilet div {
+.top #toilet div {
   width: 100%; /* Устанавливаем ширину элемента */
   display: grid;
   place-items: center;
@@ -119,6 +119,7 @@
 
 .rp:nth-child(3) {
   grid-area: 3/3/4/4;
+  width: inherit;
 }
 
 .rp:nth-child(4) {

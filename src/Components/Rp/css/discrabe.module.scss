@@ -107,26 +107,25 @@ li:nth-child(2) {
 }
 li:nth-child(2) {
 	font-size: 14px;
-	width: 97%;
+	width: 100%;
 }
 li:nth-child(1) {
 	font-size: 1rem;
 }
 li:nth-child(3) {
 	font-size: 0.8rem;
-	width: 130%;
-	position: relative;
-	right: 11px;
+	width: 100%;
+	padding-bottom: 12px;
+	// position: relative;
 }
 li:nth-child(4) {
 	font-size: 0.8rem;
-	width: 107%;
+	width: 100%;
+	// color: red;
+	padding-left: 3px;
 }
 .ii {
 	font-size: 1.4rem;
 	font-weight: 500;
 	border-right: solid black 3px;
-}
-.wrapName {
-	position: relative;
 }

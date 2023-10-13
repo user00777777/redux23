@@ -36,13 +36,13 @@ export default function DiscrabeRp() {
 				<li>№</li>
 				<li>Наименование</li>
 				<li>
-					<span className={s.sp}>ток</span> уставки
+					<span className={s.sp}>ток</span> уст.
 				</li>
 				<li>ном. Ток</li>
 				<li>квт</li>
 			</ul>
 			<div ref={tableRef} className={s.wrapper}>
-				{state.map((el, id) => {
+				{state?.map((el, id) => {
 					return (
 						<div className={s.wrapList} key={id}>
 							<div className={s.ii}> {el.ii}</div>

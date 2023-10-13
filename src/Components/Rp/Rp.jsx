@@ -43,9 +43,9 @@ export default function Rp(props) {
 				<ul className={s.wrapTop}>
 					<li className={`${s.top_item}`}>ГСМ</li>
 					<li className={`${s.top_item}`}>Кладовая</li>
-					<li className={`${s.top_item} ${s.toilet}`}>
+					<li className={`${s.top_item} ${s.toilet}`} id={s.toilet}>
 						<div>Ж</div>
-						<div>М</div>
+						<div className={s.m}>М</div>
 					</li>
 					<li className={`${s.top_item}`}>
 						<span>електрики</span>
@@ -121,7 +121,10 @@ export default function Rp(props) {
 					</li>
 					<li className={` ${s.rp}`}>
 						{' '}
-						<h2 data-rp='3'>РП №3</h2>
+						<h2 data-rp='3'>
+							{' '}
+							<Link to={`/discrabeRp/${rp}`}>РП №3</Link>{' '}
+						</h2>
 					</li>
 					<li className={` ${s.rp}`}>
 						{' '}
