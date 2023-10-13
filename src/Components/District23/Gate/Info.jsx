@@ -19,10 +19,12 @@ export default function Info({ my }) {
 		<div className={s.con}>
 			<ul ref={wrRef} className={s.wrap}>
 				<li className={[s.item, s.item1, s.blinck]}>
-					Ворота --- <b>№{my?.gate}</b>
+					Ворота <b>№{my?.gate}</b>
 				</li>
 				<li className={[s.item, s.item2]}>
-					Запитано от<b> {my.rp}</b>
+					Запитано от
+					<br />
+					<b> {my.rp}</b>
 				</li>
 				<li className={[s.item, s.item3]}>
 					Автомат <b>№{my.avt}</b>

@@ -33,17 +33,20 @@ export default function DiscrabeRp() {
 				<button onClick={() => navigate(-1)}>back</button>
 			</div>
 			<ul className={s.wrapName}>
+				<li>№</li>
 				<li>Наименование</li>
 				<li>
 					<span className={s.sp}>ток</span> уставки
 				</li>
-				<li>ном-й Ток</li>
+				<li>ном. Ток</li>
 				<li>квт</li>
 			</ul>
 			<div ref={tableRef} className={s.wrapper}>
 				{state.map((el, id) => {
 					return (
 						<div className={s.wrapList} key={id}>
+							<div className={s.ii}> {el.ii}</div>
+
 							<div className={s.name}> {el.name}</div>
 							<div className={s.i}> {el.I} </div>
 							<div className={s.nom}> {el.nom}</div>
