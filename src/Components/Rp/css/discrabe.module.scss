@@ -50,12 +50,12 @@
 	border-right: 2px black solid;
 	font-size: large;
 	font-weight: 500;
-	background-color: azure;
+	// background-color: azure;
 }
 .i {
 	border: 1px black solid;
 	width: 100%;
-	background-color: floralwhite;
+	// background-color: floralwhite;
 	// margin: 10px;
 	display: grid;
 	place-items: center;
@@ -65,14 +65,14 @@
 	border: 1px black solid;
 	display: grid;
 	place-items: center;
-	background-color: gainsboro;
+	// background-color: gainsboro;
 }
 .kvt {
 	width: 100%;
 	border: 1px black solid;
 	display: grid;
 	place-items: center;
-	background-color: cornsilk;
+	// background-color: cornsilk;
 }
 .wrapName {
 	font-size: 1.1rem;
@@ -87,7 +87,7 @@
 	border: 2px rgb(237, 6, 6) solid;
 	gap: 1px;
 	li:last-child {
-		background-color: cornsilk;
+		// background-color: cornsilk;
 	}
 }
 li {
@@ -114,7 +114,7 @@ li:nth-child(2) {
 li:nth-child(2) {
 	font-size: 14px;
 	width: 100%;
-	background-color: azure;
+	// background-color: azure;
 }
 li:nth-child(1) {
 	font-size: 1rem;
@@ -124,13 +124,13 @@ li:nth-child(3) {
 	font-size: 0.8rem;
 	width: 100%;
 	padding-bottom: 12px;
-	background-color: floralwhite;
+	// background-color: floralwhite;
 	// position: relative;
 }
 li:nth-child(4) {
 	font-size: 0.9rem;
 	width: 100%;
-	background-color: gainsboro;
+	// background-color: gainsboro;
 	padding-left: 3px;
 }
 .ii {

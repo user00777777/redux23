@@ -45,13 +45,11 @@
   border-right: 2px black solid;
   font-size: large;
   font-weight: 500;
-  background-color: azure;
 }
 
 .i {
   border: 1px black solid;
   width: 100%;
-  background-color: floralwhite;
   display: grid;
   place-items: center;
 }
@@ -61,7 +59,6 @@
   border: 1px black solid;
   display: grid;
   place-items: center;
-  background-color: gainsboro;
 }
 
 .kvt {
@@ -69,7 +66,6 @@
   border: 1px black solid;
   display: grid;
   place-items: center;
-  background-color: cornsilk;
 }
 
 .wrapName {
@@ -80,10 +76,6 @@
   border: 2px rgb(237, 6, 6) solid;
   gap: 1px;
 }
-.wrapName li:last-child {
-  background-color: cornsilk;
-}
-
 li {
   height: 20px;
   font-weight: 500;
@@ -107,7 +99,6 @@ li:nth-child(2) .sp {
 li:nth-child(2) {
   font-size: 14px;
   width: 100%;
-  background-color: azure;
 }
 
 li:nth-child(1) {
@@ -118,13 +109,11 @@ li:nth-child(3) {
   font-size: 0.8rem;
   width: 100%;
   padding-bottom: 12px;
-  background-color: floralwhite;
 }
 
 li:nth-child(4) {
   font-size: 0.9rem;
   width: 100%;
-  background-color: gainsboro;
   padding-left: 3px;
 }
 
