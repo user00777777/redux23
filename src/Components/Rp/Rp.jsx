@@ -64,7 +64,7 @@ export default function Rp(props) {
 							<Link to={`/discrabeRp/${rp}`}>РП №14</Link>{' '}
 						</h2>
 					</li>
-					<li className={` ${s.rp}`}>
+					<li className={` ${s.rp} ${s.rp_12}`} id={s.r_12}>
 						<h2 data-rp='12'>
 							{' '}
 							<Link to={`/discrabeRp/${rp}`}>РП №12</Link>
@@ -128,7 +128,10 @@ export default function Rp(props) {
 					</li>
 					<li className={` ${s.rp}`}>
 						{' '}
-						<h2 data-rp='2'>РП №2</h2>
+						<h2 data-rp='2'>
+							{' '}
+							<Link to={`/discrabeRp/${rp}`}>РП №2</Link>
+						</h2>
 					</li>
 					<li className={` ${s.rp}`}>
 						{' '}

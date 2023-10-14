@@ -35,7 +35,7 @@ export default function DiscrabeRp() {
 			<ul className={s.wrapName}>
 				<li>№</li>
 				<li>Наименование</li>
-				<li>
+				<li className={s.i_ust}>
 					<span className={s.sp}>ток</span> уст.
 				</li>
 				<li>Ном. Ток</li>

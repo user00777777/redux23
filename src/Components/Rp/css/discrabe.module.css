@@ -43,8 +43,8 @@
   place-items: center;
   width: 100%;
   border-right: 2px black solid;
-  font-size: large;
-  font-weight: 500;
+  font-weight: 600;
+  overflow: hidden;
 }
 
 .i {
@@ -105,10 +105,9 @@ li:nth-child(1) {
   font-size: 1rem;
 }
 
-li:nth-child(3) {
+.i_ust {
   font-size: 0.8rem;
   width: 100%;
-  padding-bottom: 12px;
 }
 
 li:nth-child(4) {
