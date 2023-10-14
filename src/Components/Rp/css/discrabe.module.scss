@@ -36,41 +36,43 @@
 	// background-color: burlywood;
 	display: grid;
 	width: 100%;
-	height: fit-content;
+	height: 31px;
 	grid-template-columns: 30px 1fr 40px 40px 40px;
-	grid-template-rows: fit-content;
-	gap: 2px;
-	margin-bottom: 1px;
-	border: black 2px solid;
-	padding: 0.5em;
+	grid-template-rows: 103%;
+	// gap: 1px;
+	border: black 0.1px solid;
+	// padding: 1px;
 }
 .name {
 	display: grid;
 	place-items: center;
 	width: 100%;
-	// border-right: 2px black solid;
-	// margin: 10px;
+	border-right: 2px black solid;
+	font-size: large;
+	font-weight: 500;
+	background-color: azure;
 }
 .i {
-	border: 2px black solid;
+	border: 1px black solid;
 	width: 100%;
-	// background-color: coral;
+	background-color: floralwhite;
 	// margin: 10px;
 	display: grid;
 	place-items: center;
 }
 .nom {
 	width: 100%;
-	border: 2px black solid;
+	border: 1px black solid;
 	display: grid;
 	place-items: center;
-	// background-color: darkgoldenrod;
+	background-color: gainsboro;
 }
 .kvt {
 	width: 100%;
-	border: 2px black solid;
+	border: 1px black solid;
 	display: grid;
 	place-items: center;
+	background-color: cornsilk;
 }
 .wrapName {
 	font-size: 1.1rem;
@@ -83,7 +85,10 @@
 	grid-template-columns: 30px 1fr 40px 40px 40px;
 	// grid-template-rows: repeat(10, 10px);
 	border: 2px rgb(237, 6, 6) solid;
-	gap: 2px;
+	gap: 1px;
+	li:last-child {
+		background-color: cornsilk;
+	}
 }
 li {
 	height: 20px;
@@ -100,6 +105,7 @@ li:nth-child(2) {
 	justify-content: center;
 	flex-flow: wrap;
 	font-size: 1rem;
+	// background-color: floralwhite;
 	.sp {
 		height: min-content;
 		padding: 0px;
@@ -108,24 +114,28 @@ li:nth-child(2) {
 li:nth-child(2) {
 	font-size: 14px;
 	width: 100%;
+	background-color: azure;
 }
 li:nth-child(1) {
 	font-size: 1rem;
+	// background-color: cornsilk;
 }
 li:nth-child(3) {
 	font-size: 0.8rem;
 	width: 100%;
 	padding-bottom: 12px;
+	background-color: floralwhite;
 	// position: relative;
 }
 li:nth-child(4) {
-	font-size: 0.8rem;
+	font-size: 0.9rem;
 	width: 100%;
-	// color: red;
+	background-color: gainsboro;
 	padding-left: 3px;
 }
 .ii {
 	font-size: 1.4rem;
 	font-weight: 500;
 	border-right: solid black 3px;
+	// background-color: cornsilk;
 }

@@ -32,40 +32,44 @@
 .wrapList {
   display: grid;
   width: 100%;
-  height: fit-content;
+  height: 31px;
   grid-template-columns: 30px 1fr 40px 40px 40px;
-  grid-template-rows: fit-content;
-  gap: 2px;
-  margin-bottom: 1px;
-  border: black 2px solid;
-  padding: 0.5em;
+  grid-template-rows: 103%;
+  border: black 0.1px solid;
 }
 
 .name {
   display: grid;
   place-items: center;
   width: 100%;
+  border-right: 2px black solid;
+  font-size: large;
+  font-weight: 500;
+  background-color: azure;
 }
 
 .i {
-  border: 2px black solid;
+  border: 1px black solid;
   width: 100%;
+  background-color: floralwhite;
   display: grid;
   place-items: center;
 }
 
 .nom {
   width: 100%;
-  border: 2px black solid;
+  border: 1px black solid;
   display: grid;
   place-items: center;
+  background-color: gainsboro;
 }
 
 .kvt {
   width: 100%;
-  border: 2px black solid;
+  border: 1px black solid;
   display: grid;
   place-items: center;
+  background-color: cornsilk;
 }
 
 .wrapName {
@@ -74,7 +78,10 @@
   width: 100%;
   grid-template-columns: 30px 1fr 40px 40px 40px;
   border: 2px rgb(237, 6, 6) solid;
-  gap: 2px;
+  gap: 1px;
+}
+.wrapName li:last-child {
+  background-color: cornsilk;
 }
 
 li {
@@ -100,6 +107,7 @@ li:nth-child(2) .sp {
 li:nth-child(2) {
   font-size: 14px;
   width: 100%;
+  background-color: azure;
 }
 
 li:nth-child(1) {
@@ -110,11 +118,13 @@ li:nth-child(3) {
   font-size: 0.8rem;
   width: 100%;
   padding-bottom: 12px;
+  background-color: floralwhite;
 }
 
 li:nth-child(4) {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   width: 100%;
+  background-color: gainsboro;
   padding-left: 3px;
 }
 

@@ -38,7 +38,7 @@ export default function DiscrabeRp() {
 				<li>
 					<span className={s.sp}>ток</span> уст.
 				</li>
-				<li>ном. Ток</li>
+				<li>Ном. Ток</li>
 				<li>квт</li>
 			</ul>
 			<div ref={tableRef} className={s.wrapper}>
