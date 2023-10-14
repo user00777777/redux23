@@ -94,7 +94,10 @@ export default function Rp(props) {
 					</li>
 					<li className={` ${s.rp}`}>
 						{' '}
-						<h2 data-rp='8'>РП №8</h2>
+						<h2 data-rp='8'>
+							{' '}
+							<Link to={`/discrabeRp/${rp}`}>РП №8</Link>
+						</h2>
 					</li>
 					<li className={` ${s.rp}`}>
 						{' '}
@@ -117,7 +120,9 @@ export default function Rp(props) {
 					</li>
 					<li className={` ${s.rp}`}>
 						{' '}
-						<h2 data-rp='4'>РП №4</h2>
+						<h2 data-rp='4'>
+							<Link to={`/discrabeRp/${rp}`}>РП №4</Link>{' '}
+						</h2>
 					</li>
 					<li className={` ${s.rp}`}>
 						{' '}
@@ -156,11 +161,17 @@ export default function Rp(props) {
 					</li>
 					<li className={` ${s.rp}`}>
 						{' '}
-						<h2 data-rp='6'>РП №6</h2>
+						<h2 data-rp='6'>
+							{' '}
+							<Link to={`/discrabeRp/${rp}`}>РП №6</Link>
+						</h2>
 					</li>
 					<li className={` ${s.rp}`}>
 						{' '}
-						<h2 data-rp='5'>РП №5</h2>
+						<h2 data-rp='5'>
+							{' '}
+							<Link to={`/discrabeRp/${rp}`}>РП №5</Link>
+						</h2>
 					</li>
 					<li className={` ${s.rp}`}>
 						<div className={s.tel}>

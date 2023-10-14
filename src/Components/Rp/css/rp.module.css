@@ -44,8 +44,8 @@
   place-items: center;
   width: 100%;
   border-right: 2px black solid;
-  font-size: large;
-  font-weight: 500;
+  font-weight: 600;
+  overflow: hidden;
 }
 
 .i {
@@ -230,10 +230,6 @@ li:nth-child(4) {
 .rp h2 {
   color: white;
 }
-.rp h2 a {
-  color: white;
-}
-
 .tel {
   display: flex;
   justify-content: center;
