@@ -191,7 +191,10 @@ export default function Rp(props) {
 					<li className={` ${s.rp}`}>
 						<div className={s.sh_R}>
 							{' '}
-							<h2 data-rp='18'>ШР №18</h2>
+							<h2 data-rp='18'>
+								{' '}
+								<Link to={`/discrabeRp/${rp}`}>ШР-18</Link>{' '}
+							</h2>
 						</div>
 					</li>
 					{/* {state && <DiscrabeRp all_rp={state} />} */}

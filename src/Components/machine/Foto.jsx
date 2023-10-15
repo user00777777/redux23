@@ -5,23 +5,29 @@ import React from 'react'
 // import sm2126 from '../images/mashineFoto/rad/sm2126/sm2126.jpg'
 // import sb833 from '../images/mashineFoto/sb833/sb833.jpg'
 import s from '../../css/mashineCss/foto.module.css'
-import _foto from './_foto';
+import _foto from './_foto'
 
-export default function Foto({mashine}) {
-let m=null;
-let mid=null;
-if (mashine) {
-const{machine,idMachine}=mashine
-m=machine;
-mid=idMachine;}
+export default function Foto({ mashine }) {
+	let m = null
+	let mid = null
+	console.log(mashine)
 
-  return (
-<div className={s.parent}>
-  <div className={s.text}>{m}<span>{mid}</span></div>
-<div className={s.imgwrapper}>
-   <img className={s.image} src={_foto(m,mid)}/></div>
-   <div></div>
-   
-   </div>
-  )
+	if (mashine) {
+		const { machine, idMachine } = mashine
+		m = machine
+		mid = idMachine
+	}
+
+	return (
+		<div className={s.parent}>
+			<div className={s.text}>
+				{m}
+				<span>{mid}</span>
+			</div>
+			<div className={s.imgwrapper}>
+				<img className={s.image} src={_foto(m, mid)} />
+			</div>
+			<div></div>
+		</div>
+	)
 }
