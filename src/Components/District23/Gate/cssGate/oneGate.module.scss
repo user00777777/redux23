@@ -17,22 +17,23 @@
 		rgba(241, 218, 54, 1) 100%
 	); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36',GradientType=0 ); /* IE6-9 */
-	border: 4px solid;
+	// border: 1px dotted;
 }
 
 .wrap {
 	@include bgLog();
-	width: 100%;
+	width: 101%;
 	height: 100%;
-	padding: 20px 12px;
+	// padding: 20px 12px;
 }
 .con {
-	width: 100%;
+	// width: 170px;
 	height: 100%;
+	width: 10rem;
 }
 .item {
 	span {
-		width: min-content;
+		width: max-content;
 		height: min-content;
 	}
 }

@@ -27,7 +27,7 @@ export default function Info({ my }) {
 					<b> {my.rp}</b>
 				</li>
 				<li className={[s.item, s.item3]}>
-					Автомат <b>№{my.avt}</b>
+					Автомат <b>{my.avt}</b>
 				</li>
 				<li className={[s.item, s.item4]}>
 					Двигатель: <b>{my.engine} kw</b>

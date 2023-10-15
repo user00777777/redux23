@@ -140,8 +140,8 @@ span {
 	width: 2px;
 }
 .middle > .door {
-	width: fit-content;
-	height: 100px;
+	width: max-content;
+	height: fit-content;
 	margin-bottom: 50px;
 }
 
@@ -159,7 +159,7 @@ span {
 	-moz-transform: rotate(180deg);
 	-ms-transform: rotate(180deg);
 	-o-transform: rotate(180deg);
-	// top: 100px;
+	top: 80px;
 }
 .district6 {
 	min-height: calc(839px - 56px);
@@ -217,10 +217,12 @@ span {
 }
 .log {
 	display: flex;
-	max-height: 90%;
-	max-width: 79%;
-	min-height: 25%;
-	min-width: 65%;
+	// max-height: 90%;
+	// max-width: 79%;
+	// min-height: 25%;
+	// min-width: 65%;
+	width: 100%;
+	height: 100%;
 	//background-color:rgb(0, 0, 0);
 	position: absolute;
 	font-family: 'Raleway';
@@ -254,8 +256,14 @@ span {
 	-o-border-radius: 2px;
 }
 
+// .middle.logoGate {
+// 	width: 200px;
+// 	height: 300px;
+// }
 @keyframes blinck {
 	10% {
+		// height: 100%;
+		// width: 100%;
 		background-color: red;
 		transform: scale(1.1);
 		-webkit-transform: scale(1.1);

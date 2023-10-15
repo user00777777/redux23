@@ -93,11 +93,11 @@ export default function Gate() {
 			</div>
 			<div className={s.middle}>
 				<div className={s.door}></div>
-				<div ref={logRef} className={[s.door].join(' ')}>
+				<div ref={logRef} className={[s.door, s.logoGate].join(' ')}>
 					{info}
 				</div>
-				<div className={s.door}></div>
-				<div className={s.door}></div>
+				{/* <div className={s.door}></div>
+				<div className={s.door}></div> */}
 				<div className={s.door}></div>
 				<div className={s.door}></div>
 				<div className={[s.door, s.doorNot].join(' ')}>
