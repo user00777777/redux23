@@ -87,6 +87,7 @@ span {
 }
 
 .door {
+  position: relative;
   font-size: 1rem;
   width: fit-content;
   background: rgb(0, 0, 0);
@@ -98,6 +99,7 @@ span {
 }
 
 .middle {
+  position: relative;
   min-height: 783px;
   display: flex;
   flex-direction: column;
@@ -105,10 +107,16 @@ span {
   justify-content: space-evenly;
   margin-right: 40px;
   width: 2px;
-  margin-bottom: 120px;
+}
+
+.middle > .door {
+  width: fit-content;
+  height: 100px;
+  margin-bottom: 50px;
 }
 
 .doorNot {
+  position: relative;
   width: max-content;
   height: min-content;
   font-size: 12.5px;

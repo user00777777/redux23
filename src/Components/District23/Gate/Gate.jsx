@@ -98,6 +98,8 @@ export default function Gate() {
 				</div>
 				<div className={s.door}></div>
 				<div className={s.door}></div>
+				<div className={s.door}></div>
+				<div className={s.door}></div>
 				<div className={[s.door, s.doorNot].join(' ')}>
 					{' '}
 					<div>
