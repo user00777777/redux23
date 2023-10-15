@@ -25,10 +25,10 @@ export default function Gate() {
 		let gateData = event.target.dataset.gate
 		if (closestEl) {
 			let strGate = +closestEl.dataset.gate
-			console.log(gate)
+			// console.log(gate)
 
 			for (let i = 0; i < gate.length; i++) {
-				console.log(i)
+				// console.log(i)
 
 				let myGate = gate[i]
 				// console.log(myGate)
@@ -83,7 +83,7 @@ export default function Gate() {
 				<li data-gate='12' className={[s.gate, s.gate4].join(' ')}>
 					Ворота <span>#12</span>
 				</li>
-				<li data-gate='13' className={[s.gate, s.gate5].join(' ')}>
+				<li data-gate='5' className={[s.gate, s.gate5].join(' ')}>
 					Ворота <span>#5</span>
 				</li>
 			</ul>

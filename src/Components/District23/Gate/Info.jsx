@@ -8,7 +8,7 @@ export default function Info({ my }) {
 	const [bool, setBool] = useState(false)
 	let wrRef = useRef()
 
-	console.log(my)
+	// console.log(my)
 
 	function f() {
 		if (my.gate == 11 || my.gate == 3) return 'Схема'
@@ -31,11 +31,13 @@ export default function Info({ my }) {
 				</li>
 				<li className={[s.item, s.item4]}>
 					Двигатель: <b>{my.engine} kw</b>
-				</li>
-				<li className={[s.item, s.item5]}>
-					{' '}
-					<Link to='/circuitGate'> {f()}</Link>
-				</li>
+				</li>{' '}
+				{f() && (
+					<li className={[s.item, s.item5]}>
+						{' '}
+						<Link to='/circuitGate'> {f()}</Link>
+					</li>
+				)}
 			</ul>
 		</div>
 	)

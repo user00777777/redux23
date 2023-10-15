@@ -101,16 +101,25 @@ export default function Rp(props) {
 					</li>
 					<li className={` ${s.rp}`}>
 						{' '}
-						<h2 data-rp='10'>РП №10</h2>
+						<h2 data-rp='10'>
+							{' '}
+							<Link to={`/discrabeRp/${rp}`}>РП №10</Link>{' '}
+						</h2>
 					</li>
 					<li className={` ${s.rp}`}>112</li>
 					<li className={` ${s.rp}`}>
 						{' '}
-						<h2 data-rp='9'>РП №9</h2>
+						<h2 data-rp='9'>
+							{' '}
+							<Link to={`/discrabeRp/${rp}`}>РП №9</Link>{' '}
+						</h2>
 					</li>
 					<li className={` ${s.rp}`}>
 						{' '}
-						<h2 data-rp='7'>РП №7</h2>
+						<h2 data-rp='7'>
+							{' '}
+							<Link to={`/discrabeRp/${rp}`}>РП №7</Link>
+						</h2>
 					</li>
 					<li className={` ${s.rp} ${s.tel} `} id={s.telega}>
 						<h2>Телега инв №051973</h2>

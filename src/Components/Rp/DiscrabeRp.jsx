@@ -12,7 +12,6 @@ export default function DiscrabeRp() {
 	const { rp } = useParams()
 	const tableRef = useRef()
 	const table = tableRef.current
-	console.log(table)
 	const [el, setElement] = useState({})
 
 	const $table = document.createElement('table'),
@@ -24,8 +23,6 @@ export default function DiscrabeRp() {
 			setElement(el)
 		})
 	}, [state])
-
-	console.log(state)
 
 	return (
 		<div className={s.container}>
