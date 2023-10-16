@@ -5,17 +5,18 @@ import s from './css/discrabe.module.css'
 import { useRef } from 'react'
 import { useSelector } from 'react-redux'
 import { useLocation, useNavigate, useParams } from 'react-router-dom'
+import fotoRp from './fotoRp'
 
 export default function DiscrabeRp() {
 	const state = useSelector(state => state?.rp.res)
+	const stateRp = useSelector(state => state?.rp)
+	console.log(stateRp)
+
 	let navigate = useNavigate()
 	const { rp } = useParams()
 	const tableRef = useRef()
 	const table = tableRef.current
 	const [el, setElement] = useState({})
-
-	const $table = document.createElement('table'),
-		$tbody = document.createElement('tbody')
 
 	// }
 	useEffect(() => {
@@ -27,8 +28,9 @@ export default function DiscrabeRp() {
 	return (
 		<div className={s.container}>
 			<div className={s.btnWrap}>
-				<button onClick={() => navigate(-1)}>back</button>
+				<button onClick={() => navigate(-1)}>Назад</button>
 			</div>
+
 			<ul className={s.wrapName}>
 				<li>№</li>
 				<li>Наименование</li>
@@ -51,6 +53,9 @@ export default function DiscrabeRp() {
 						</div>
 					)
 				})}
+			</div>
+			<div className={s.wrapImg}>
+				<img src={fotoRp(stateRp)} alt='' />
 			</div>
 		</div>
 	)

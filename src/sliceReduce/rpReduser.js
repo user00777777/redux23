@@ -1126,7 +1126,8 @@ const rpSlice = createSlice({
 
 			state.allRp.forEach(el => {
 				if (el.rp == action.payload) {
-					return (state.res = el.ar)
+					state.res = el.ar
+					state.rp = el.rp
 				} else {
 					// console.log('no')
 				}
