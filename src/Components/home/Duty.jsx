@@ -15,13 +15,13 @@ export default function Duty() {
 	const dayOfWeek = currentDate.getDay()
 	let hour = currentDate.getHours()
 	const minutes = currentDate.getMinutes()
-
 	class Shift {
 		constructor(duty1, duty2) {
 			this.duty1 = duty1
 			this.duty2 = duty2
 		}
 	}
+	console.log(dayOfMonth)
 
 	let vasj = new Shift('Малько', '')
 	let stas = new Shift('Круглый', '')

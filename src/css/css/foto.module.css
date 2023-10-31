@@ -1,11 +1,16 @@
 .parent {
+  height: -webkit-max-content;
+  height: -moz-max-content;
   height: max-content;
   width: 100%;
-  justify-content: center;
-  align-items: center;
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e5799+20,2989d8+50,1e5799+80&0+0,0.8+15,1+19,1+81,0.8+85,0+100;Blue+Two+Sided+Transparent */
-  background: -moz-linear-gradient(top, rgba(30, 87, 153, 0) 0%, rgba(30, 87, 153, 0.8) 15%, rgb(30, 87, 153) 19%, rgb(30, 87, 153) 20%, rgb(41, 137, 216) 50%, rgb(30, 87, 153) 80%, rgb(30, 87, 153) 81%, rgba(30, 87, 153, 0.8) 85%, rgba(30, 87, 153, 0) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgba(30, 87, 153, 0) 0%, rgba(30, 87, 153, 0.8) 15%, rgb(30, 87, 153) 19%, rgb(30, 87, 153) 20%, rgb(41, 137, 216) 50%, rgb(30, 87, 153) 80%, rgb(30, 87, 153) 81%, rgba(30, 87, 153, 0.8) 85%, rgba(30, 87, 153, 0) 100%); /* Chrome10-25,Safari5.1-6 */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e5799+20,2989d8+50,1e5799+80&0+0,0.8+15,1+19,1+81,0.8+85,0+100;Blue+Two+Sided+Transparent */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(30, 87, 153, 0)), color-stop(15%, rgba(30, 87, 153, 0.8)), color-stop(19%, rgb(30, 87, 153)), color-stop(20%, rgb(30, 87, 153)), color-stop(50%, rgb(41, 137, 216)), color-stop(80%, rgb(30, 87, 153)), color-stop(81%, rgb(30, 87, 153)), color-stop(85%, rgba(30, 87, 153, 0.8)), to(rgba(30, 87, 153, 0)));
   background: linear-gradient(to bottom, rgba(30, 87, 153, 0) 0%, rgba(30, 87, 153, 0.8) 15%, rgb(30, 87, 153) 19%, rgb(30, 87, 153) 20%, rgb(41, 137, 216) 50%, rgb(30, 87, 153) 80%, rgb(30, 87, 153) 81%, rgba(30, 87, 153, 0.8) 85%, rgba(30, 87, 153, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#001e5799", endColorstr="#001e5799",GradientType=0 ); /* IE6-9 */
 }
@@ -14,8 +19,12 @@
   max-width: 480px;
   text-shadow: #e0e0e0 1px 1px 0;
   animation: border 11s linear infinite normal running 0s none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   font-size: 25px;
   letter-spacing: 5px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -27,8 +36,12 @@
   border: 5px ridge #1C6EA4;
 }
 .text span {
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 25px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
@@ -44,6 +57,14 @@
   padding: 1px auto;
   height: 90%;
   width: 100%;
+}
+
+@-webkit-keyframes border {
+  0% {
+    color: #FFFFFF;
+    text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+    color: #FFFFFF;
+  }
 }
 
 @keyframes border {

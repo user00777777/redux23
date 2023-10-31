@@ -43,12 +43,29 @@
 
 @media only screen and (max-width: 480px) {
   .logContainer {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    min-height: 65%;
+    padding: 10px;
     background-color: chartreuse;
     font-size: 14px;
-    width: 9rem;
-    margin-left: 0.5px;
-    margin-right: 0.5px;
-    padding: 1px 1px, 0.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .l3 {
     color: rgb(9, 9, 245);

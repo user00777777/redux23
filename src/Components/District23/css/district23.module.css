@@ -13,22 +13,39 @@ li:before {
   background-image: url(".././foto/heavyFactory.jpg");
   background-position: 100% 10px;
   background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
   background-position: center;
 }
 
 .item {
   margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 10px;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
   max-height: fit-content;
   min-width: 200px;
   border: 5px ridge rgba(28, 110, 164, 0.53);
@@ -59,6 +76,8 @@ li:before {
 }
 #rp {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   border: white solid 4px;
 }

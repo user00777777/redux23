@@ -7,7 +7,6 @@
 }
 .wrapper .select {
   font-size: 1.1rem;
-  background-color: rgb(197, 209, 186);
 }
 .wrapper b {
   font-size: 1.5rem;
@@ -29,5 +28,11 @@
   }
   .select {
     font-size: 0.9rem;
+  }
+  .miniLog {
+    width: 100%;
+  }
+  .miniLog span {
+    display: inline;
   }
 }

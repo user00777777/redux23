@@ -24,8 +24,8 @@ function plumb(pis, pawluch, golovch, nemch, hours, day) {
 	if (hours >= 19 && hours <= 23) {
 		console.log('oo')
 
-		let plumber2 = twoShift[day % twoShift.length]
-		console.log(plumber2)
+		let plumber2 = twoShift[(day = day - 2) % twoShift.length]
+		console.log(plumber2, day)
 
 		return plumber2
 	} else {

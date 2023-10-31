@@ -1,0 +1,57 @@
+.container {
+  width: 100%;
+  background-color: aqua;
+}
+
+table {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  display: table;
+}
+
+:is(th, td) {
+  color: black;
+  text-align: center;
+  font-size: larger;
+}
+
+.myButton {
+  width: 50%;
+  margin: 10px;
+  margin-left: 10px;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  line-height: 16px;
+  padding: 6px;
+  border-radius: 10px;
+  font-family: Georgia, serif;
+  font-weight: normal;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgb(28, 110, 164)), color-stop(50%, rgb(35, 136, 203)), to(rgb(20, 78, 117)));
+  background-image: linear-gradient(to right, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 50%, rgb(20, 78, 117) 100%);
+  -webkit-box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px;
+          box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px;
+  border: 2px solid rgb(28, 110, 164);
+  display: inline-block;
+}
+
+.myButton:hover {
+  background: #1C6EA4;
+}
+
+.myButton:active {
+  background: #144E75;
+}
+
+.wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
