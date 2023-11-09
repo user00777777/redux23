@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
 import s from './Plumbercss/plumber.module.css'
-function plumb(pis, pawluch, golovch, nemch, hours, day) {
-	console.log((day -= 1))
-	// hours = 9
-	let oneShift = [pis, pawluch, golovch, nemch]
-	let twoShift = [nemch, pis, pawluch, golovch]
-	console.log(day % oneShift.length)
-	console.log(oneShift[day % oneShift.length])
+function plumb(pis, babec, golovch, nemch, hours, day) {
+	// console.log((day -= 1))
+	// hours = 19
+	let oneShift = [pis, babec, golovch, nemch]
+	let twoShift = [nemch, pis, babec, golovch]
+	// console.log(day % oneShift.length)
+	// console.log(oneShift[day % oneShift.length])
 	// console.log(twoShift)
 	// console.log(hours >= 7 && hours < 19)
-	// console.log((day -= 1))
+	// console.log((day += 1))
 
 	if (hours >= 7 && hours < 19) {
 		console.log(1)
@@ -24,7 +24,7 @@ function plumb(pis, pawluch, golovch, nemch, hours, day) {
 	if (hours >= 19 && hours <= 23) {
 		console.log('oo')
 
-		let plumber2 = twoShift[(day = day - 2) % twoShift.length]
+		let plumber2 = twoShift[day % twoShift.length]
 		console.log(plumber2, day)
 
 		return plumber2
@@ -44,11 +44,11 @@ export default function PlumbersDuty() {
 	let date = new Date(),
 		day = date.getDate(),
 		hours = date.getHours(),
-		minutes = date.getMinutes(),
-		changeDay = day
+		minutes = date.getMinutes()
+
 	const oneShift = plumb(
 		'Писареенко',
-		'Павлюченко',
+		'Бабец',
 		'Головченко',
 
 		'Немченко',

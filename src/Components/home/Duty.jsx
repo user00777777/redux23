@@ -15,18 +15,20 @@ export default function Duty() {
 	const dayOfWeek = currentDate.getDay()
 	let hour = currentDate.getHours()
 	const minutes = currentDate.getMinutes()
+	// console.log((hour = 22))
+
 	class Shift {
 		constructor(duty1, duty2) {
 			this.duty1 = duty1
 			this.duty2 = duty2
 		}
 	}
-	console.log(dayOfMonth)
+	// console.log(dayOfMonth)
 
-	let vasj = new Shift('Малько', '')
-	let stas = new Shift('Круглый', '')
-	let sinkevich = new Shift('Синкевичь', '')
-	let paha = new Shift('Лысенко')
+	let vasj = new Shift('Гекало', 'Мисюра')
+	let stas = new Shift('Круглый', 'Дяченко')
+	let sinkevich = new Shift('Синкевичь', 'Самбур')
+	let paha = new Shift('Лысенко', 'Яременко')
 
 	const workers1 = [vasj, stas, sinkevich, paha]
 	const workers2 = [paha, vasj, stas, sinkevich]
@@ -36,12 +38,14 @@ export default function Duty() {
 	let changeDayOfMonth = dayOfMonth
 	// changeDayOfMonth = changeDayOfMonth + 2
 
-	const currentWorker2 = workers2[(changeDayOfMonth += 1) % workers2.length]
-	console.log(currentWorker2.duty1)
+	const currentWorker2 = workers2[changeDayOfMonth % workers2.length]
+	// console.log(currentWorker2.duty1)
 
 	if (hour >= 7 && hour < 19) {
+		// console.log(1)
+
 		const currentWorker = workers1[changeDayOfMonth % workers1.length]
-		// console.log(currentWorker);
+		// console.log(currentWorker)
 
 		return (
 			<div className={s.container}>
@@ -49,7 +53,7 @@ export default function Duty() {
 					{' '}
 					<h2>Деж-й електрик</h2>{' '}
 					<h2 className={s.d12}>
-						{currentWorker.duty1} {/*{currentWorker.duty2}*/}
+						{currentWorker.duty1} || {currentWorker.duty2}
 					</h2>
 				</div>
 			</div>
