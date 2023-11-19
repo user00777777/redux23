@@ -12,12 +12,14 @@
 .wrapBut {
   display: grid;
   width: 100%;
+  height: -moz-fit-content;
   height: fit-content;
   padding: 10px;
   place-items: center;
 }
 .wrapBut button {
   width: 200px;
+  height: -moz-fit-content;
   height: fit-content;
   padding: 10px;
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffc578+0,fb9d23+100;Orange+3D+%233 */

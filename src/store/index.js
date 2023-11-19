@@ -6,6 +6,8 @@ import substationReducer from '../sliceReduce/substationReducer'
 import gate from '../sliceReduce/sliceGates'
 import craneReduser from '../sliceReduce/cranesReduser'
 import rpReduser from '../sliceReduce/rpReduser'
+import engineREduser from '../sliceReduce/engineREduser'
+
 const store = configureStore({
 	reducer: {
 		job: employeesReducer,
@@ -15,6 +17,7 @@ const store = configureStore({
 		gates: gate,
 		cranes: craneReduser,
 		rp: rpReduser,
+		engine: engineREduser,
 	},
 })
 export default store

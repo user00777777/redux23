@@ -45,10 +45,10 @@ export default function Radialka() {
 					{/* <li><Link to='circuitDiagram'> Схема</Link></li> */}
 					<button onClick={() => setS(() => !ss)}>Схема</button>
 					<li>
-						<Link to='engine'> Двигателя</Link>
+						<Link to='/engine'> Двигателя</Link>
 					</li>
 					<li>
-						<Link to='different'> Разное</Link>
+						<Link to='/different'> Разное</Link>
 					</li>
 					{/* <div><h1>{nameMachine&&nameMachine}</h1><span>{myNumber}</span></div> */}
 				</ul>

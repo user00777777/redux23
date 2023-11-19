@@ -1,9 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat&family=Edu+SA+Beginner:wght@700&family=Handjet:wght@100&display=swap");
 .wrapDuty {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d5cea6+0,c9c190+40,b7ad70+100;Brown+3D */
-  background: rgb(213, 206, 166); /* Old browsers */
-  background: -moz-linear-gradient(top, rgb(213, 206, 166) 0%, rgb(201, 193, 144) 40%, rgb(183, 173, 112) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgb(213, 206, 166) 0%, rgb(201, 193, 144) 40%, rgb(183, 173, 112) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: rgb(213, 206, 166); /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, rgb(213, 206, 166) 0%, rgb(201, 193, 144) 40%, rgb(183, 173, 112) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#d5cea6", endColorstr="#b7ad70",GradientType=0 ); /* IE6-9 */
   width: 100%;

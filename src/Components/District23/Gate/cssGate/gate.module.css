@@ -4,9 +4,7 @@
   width: 100%;
   height: 783px;
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#3f4c6b+0,3f4c6b+100;Blue+Grey+Flat */
-  background: rgb(63, 76, 107); /* Old browsers */
-  background: -moz-linear-gradient(top, rgb(63, 76, 107) 0%, rgb(63, 76, 107) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgb(63, 76, 107) 0%, rgb(63, 76, 107) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: rgb(63, 76, 107); /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, rgb(63, 76, 107) 0%, rgb(63, 76, 107) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#3f4c6b", endColorstr="#3f4c6b",GradientType=0 ); /* IE6-9 */
   color: white;
@@ -19,12 +17,11 @@
 }
 
 .container {
+  width: -moz-fit-content;
   width: fit-content;
   height: 783px;
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#3f4c6b+0,3f4c6b+100;Blue+Grey+Flat */
-  background: rgb(63, 76, 107); /* Old browsers */
-  background: -moz-linear-gradient(top, rgb(63, 76, 107) 0%, rgb(63, 76, 107) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgb(63, 76, 107) 0%, rgb(63, 76, 107) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: rgb(63, 76, 107); /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, rgb(63, 76, 107) 0%, rgb(63, 76, 107) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#3f4c6b", endColorstr="#3f4c6b",GradientType=0 ); /* IE6-9 */
   display: flex;
@@ -45,6 +42,7 @@
   display: flex;
   flex-flow: wrap;
   width: 50px;
+  height: -moz-min-content;
   height: min-content;
   background-color: rgb(0, 0, 0);
 }
@@ -76,6 +74,7 @@ span {
   min-width: 100%;
 }
 .gate7 span {
+  width: -moz-max-content;
   width: max-content;
   height: 100%;
   font-size: 19px;
@@ -89,8 +88,10 @@ span {
 .door {
   position: relative;
   font-size: 1rem;
+  width: -moz-fit-content;
   width: fit-content;
   background: rgb(0, 0, 0);
+  height: -moz-fit-content;
   height: fit-content;
   color: rgb(255, 253, 253);
   display: flex;
@@ -110,14 +111,18 @@ span {
 }
 
 .middle > .door {
+  width: -moz-max-content;
   width: max-content;
+  height: -moz-fit-content;
   height: fit-content;
   margin-bottom: 50px;
 }
 
 .doorNot {
   position: relative;
+  width: -moz-max-content;
   width: max-content;
+  height: -moz-min-content;
   height: min-content;
   font-size: 12.5px;
   padding: 10px 4px;
@@ -175,7 +180,9 @@ span {
   color: yellow;
   font-size: 39px;
   letter-spacing: 30px;
+  width: -moz-fit-content;
   width: fit-content;
+  height: -moz-fit-content;
   height: fit-content;
 }
 

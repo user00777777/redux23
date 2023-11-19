@@ -31,6 +31,7 @@ import ShowCrane from './Components/Cranes/ShowCrane'
 import Telphers from './Components/Telphers'
 import Rp from './Components/Rp/Rp'
 import DiscrabeRp from './Components/Rp/DiscrabeRp'
+import Engine from './Components/machine/Engine'
 // import First from './Components/First'
 // import OneComponent from './Components/OneComponent'
 
@@ -64,6 +65,7 @@ function App() {
 					<Route path='/showCrane' element={<ShowCrane />} />
 
 					<Route path='cran' element={<Cranes />} />
+					<Route path='engine' element={<Engine />} />
 					<Route path='rp' element={<Rp />} />
 					<Route path='/discrabeRp/:rp' element={<DiscrabeRp />} />
 				</Route>

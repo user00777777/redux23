@@ -87,6 +87,7 @@
 
 .imgContainer {
   width: 100%; /* Set the desired width of your image container */
+  height: -moz-max-content;
   height: max-content; /* Set the desired height of your image container */
 }
 

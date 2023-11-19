@@ -1,8 +1,6 @@
 .wrap {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fefcea+0,f1da36+100;Gold+3D */
-  background: rgb(254, 252, 234); /* Old browsers */
-  background: -moz-linear-gradient(top, rgb(254, 252, 234) 0%, rgb(241, 218, 54) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgb(254, 252, 234) 0%, rgb(241, 218, 54) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: rgb(254, 252, 234); /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, rgb(254, 252, 234) 0%, rgb(241, 218, 54) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#fefcea", endColorstr="#f1da36",GradientType=0 ); /* IE6-9 */
   width: 101%;
@@ -15,7 +13,9 @@
 }
 
 .item span {
+  width: -moz-max-content;
   width: max-content;
+  height: -moz-min-content;
   height: min-content;
 }
 
