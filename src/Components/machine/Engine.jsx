@@ -23,7 +23,7 @@ export default function Engine() {
 						<li className={`${s.Motor_starterA1} ${s.f}`}>пускателя</li>
 						<li className={`${s.power} ${s.f}`}>мощность</li>
 						<li className={`${s.rpm} ${s.f}`}>оброты</li>
-						{/* <li className={s.protection}>Автомат</li> */}
+						<li className={`${s.protection} ${s.f}`}>Автомат</li>
 						{/* <div className={s.second} key={i}> */}
 						{/* <li className={s.power1}> {li.mainEngine.power}</li> */}
 						<li className={s.mainEngine_power}> {li.mainEngine.power}</li>
@@ -33,10 +33,10 @@ export default function Engine() {
 						</li>
 						<li className={s.engineName}> {li.mainEngine.engineName}</li>
 						<li className={s.mainEngine_rpm}> {li.mainEngine.Engine_rpm}</li>
-						{/* <li className={s.CircuitBreaker}>
+						<li className={s.CircuitBreaker}>
 							{' '}
 							{li.mainEngine.CircuitBreaker}
-						</li> */}
+						</li>
 						{/* </div> */}
 					</ul>
 				)
