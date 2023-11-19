@@ -32,7 +32,7 @@ export default function Engine() {
 						<li className={s.engineName}> {li.mainEngine.engineName}</li>
 						<li className={s.mainEngine_rpm}> {li.mainEngine.Engine_rpm}</li>
 						<li className={s.CircuitBreaker}> {li.mainEngine.weight}</li>
-						{/* <li className={s.shaftDiameter}> {li.mainEngine.shaftDiameter}</li> */}
+						<li className={s.shaftDiameter}> {li.mainEngine.shaftDiameter}</li>
 						<li className={s.electricCurrent}>
 							{' '}
 							{li.mainEngine.electricCurrent}
