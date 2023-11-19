@@ -3,7 +3,7 @@ const initialState = {
 	data833: [
 		{
 			mainEngine: {
-				engineName: 'вращение фрез',
+				engineName: 'вращение фрез( 4АМ180М6)',
 				Engine_rpm: '975 Об',
 				power: '18,5kw',
 				Motor_starterA1: 'A1:KM4,A2:KM5',
