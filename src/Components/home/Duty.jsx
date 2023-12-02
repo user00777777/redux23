@@ -2,19 +2,28 @@ import React, { useEffect, useState } from 'react'
 import s from './duty.module.css'
 
 export default function Duty() {
-	//     let nowDate=new Date();
-	//     let date=nowDate.getDate();
-	//     let oldDate=nowDate.getDate()
-	//     let hour=nowDate.getHours();
-	//     let minutes=nowDate.getMinutes();
-
-	//     const[newDate,setDate]=useState(date)
-
 	const currentDate = new Date()
 	let dayOfMonth = currentDate.getDate()
 	const dayOfWeek = currentDate.getDay()
 	let hour = currentDate.getHours()
 	const minutes = currentDate.getMinutes()
+	//     let nowDate=new Date();
+	//     let date=nowDate.getDate();
+	//     let oldDate=nowDate.getDate()
+	//     let hour=nowDate.getHours();
+	//     let minutes=nowDate.getMinutes();
+	let d = 1
+	let [newDate, setDate] = useState()
+	let [ddate, setDdate] = useState(1)
+	let arr = [1, 2, 3, 4]
+	function changeDuty() {
+		setDdate(() => ++ddate)
+		setDate(() => arr[ddate % arr.length])
+	}
+
+	localStorage.setItem('duty', ddate)
+	let change_Day = Number(localStorage.getItem('duty'))
+
 	// console.log((hour = 22))
 
 	class Shift {
@@ -25,18 +34,19 @@ export default function Duty() {
 	}
 	// console.log(dayOfMonth)
 
-	let vasj = new Shift('Гекало', 'Мисюра')
+	let vasj = new Shift('Гекало', 'Малько')
 	let stas = new Shift('Круглый', 'Дяченко')
 	let sinkevich = new Shift('Синкевичь', 'Самбур')
-	let paha = new Shift('Лысенко', 'Яременко')
+	let paha = new Shift('Лысенко', 'Мисюра')
 
 	const workers1 = [vasj, stas, sinkevich, paha]
 	const workers2 = [paha, vasj, stas, sinkevich]
 
 	// const currentShift = shifts[(day ) % shifts.length];
-	// console.log(currentShift);
+	console.log(change_Day)
 	let changeDayOfMonth = dayOfMonth
-	// changeDayOfMonth = changeDayOfMonth + 2
+	changeDayOfMonth = changeDayOfMonth += change_Day
+	// hour = 18
 
 	const currentWorker2 = workers2[changeDayOfMonth % workers2.length]
 	// console.log(currentWorker2.duty1)
@@ -51,7 +61,7 @@ export default function Duty() {
 			<div className={s.container}>
 				<div className={s.twoShift}>
 					{' '}
-					<h2>Деж-й електрик</h2>{' '}
+					<h2>Дежурные електрики</h2>{' '}
 					<h2 className={s.d12}>
 						{currentWorker.duty1} || {currentWorker.duty2}
 					</h2>
@@ -65,11 +75,11 @@ export default function Duty() {
 
 		return (
 			<div className={s.container}>
-				<div className={s.twoShift}>
+				<div onClick={changeDuty} className={s.twoShift}>
 					<h2>Дежурные Електрики:</h2>
 					<h2 className={s.d12}>
 						{' '}
-						{currentWorker2.duty1} {/*и {currentWorker2.duty2}*/}
+						{currentWorker2.duty1} и {currentWorker2.duty2}
 					</h2>
 				</div>
 			</div>
@@ -84,11 +94,12 @@ export default function Duty() {
 
 		return (
 			<div className={s.container}>
-				{' '}
-				<div className={s.twoShift}>
-					{' '}
-					Дежурные електрик:<h2> {currentWorker2.duty1}</h2>{' '}
-					{/*и {currentWorker2?.duty2}*/}
+				<div onClick={changeDuty} className={s.twoShift}>
+					<h2>Дежурные Електрики:</h2>
+					<h2 className={s.d12}>
+						{' '}
+						{currentWorker2.duty1} и {currentWorker2.duty2}
+					</h2>
 				</div>
 			</div>
 		)

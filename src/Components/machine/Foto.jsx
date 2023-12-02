@@ -10,7 +10,7 @@ import _foto from './_foto'
 export default function Foto({ mashine }) {
 	let m = null
 	let mid = null
-	console.log(mashine)
+	// console.log(mashine)
 
 	if (mashine) {
 		const { machine, idMachine } = mashine

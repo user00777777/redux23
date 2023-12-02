@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .father {
   width: 100%;
   display: flex;
@@ -91,26 +90,28 @@
   height: max-content; /* Set the desired height of your image container */
 }
 
-.list {
-  display: flex;
+.circuitWrap {
   width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+#circuit {
+  background: rgb(0, 0, 0);
+  height: -moz-max-content;
+  height: max-content;
+  width: 87%;
+  padding: 17px 20px;
+  color: wheat;
+  border-radius: 29px;
+  -webkit-border-radius: 29px;
+  -moz-border-radius: 29px;
+  -ms-border-radius: 29px;
+  -o-border-radius: 29px;
 }
 
-li:before {
-  content: "•";
-  margin-right: 0.5em;
-}
-
-.circuit {
-  background: burlywood;
-  height: 100vh;
+.engines > li {
+  border: none;
 }

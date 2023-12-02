@@ -1,38 +1,55 @@
-.container{
-background-color: aliceblue;
-width: 100%;
-display: flex;
-justify-content: center;
-padding: 5px;
-
-h2{font-size: 12px;display: inline;
-    padding: 2px;
-    width: 150px;
-    font-size: 1.1rem;
-} 
+.container {
+	background-color: aliceblue;
+	width: 100%;
+	display: flex;
+	justify-content: center; // padding: 4px;
+	h2 {
+		font-size: 12px;
+		display: inline;
+		padding: 2px;
+		// width: 150px;
+		font-size: 1.1rem;
+	}
 }
-.container{
-    animation: cont infinite ease-in 3s;
-    -webkit-animation: cont infinite ease-in 3s;
-    border-radius:14px;
-    -webkit-border-radius:14px;
-    -moz-border-radius:14px;
-    -ms-border-radius:14px;
-    -o-border-radius:14px;
-    outline:3px red solid;
-    transition: all 2s;
-    -webkit-transition: all 2s;
-    -moz-transition: all 2s;
-    -ms-transition: all 2s;
-    -o-transition: all 2s;
+.container {
+	animation: cont infinite ease-in 3s;
+	-webkit-animation: cont infinite ease-in 3s;
+	border-radius: 14px;
+	-webkit-border-radius: 14px;
+	-moz-border-radius: 14px;
+	-ms-border-radius: 14px;
+	-o-border-radius: 14px;
+	outline: 3px red solid;
+	transition: all 2s;
+	-webkit-transition: all 2s;
+	-moz-transition: all 2s;
+	-ms-transition: all 2s;
+	-o-transition: all 2s;
 }
-@keyframes cont{
-1%{color: blue;}
-100%{ 
-    color:crimson;
+@keyframes cont {
+	1% {
+		color: blue;
+	}
+	100% {
+		color: crimson;
+	}
 }
+:is(.twoShift) > h2 {
+	display: flex;
+	justify-content: center;
+	font-size: 1.1rem;
+	font-weight: 500;
+	letter-spacing: 2px;
 }
-:is(.twoShift)>h2+h2{font-size: 1.2rem;
-font-weight: 500;letter-spacing: 2px;
+// .twoShift:nth-c(1) {
+// 	width: 100%;
+// }
+.twoShift {
+	width: 100%;
+	display: flex;
+	flex-flow: column;
 }
-.twoShift{font-size: 1rem;}
+.twoShift:nth-child(1) {
+	padding: 0px;
+	line-height: 18px;
+}

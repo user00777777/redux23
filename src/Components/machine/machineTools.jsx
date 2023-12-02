@@ -373,24 +373,14 @@ const MachineTools = props => {
 					<span>№51855</span>
 				</Link>
 			</div>
-			{/* <div className={[s.div73].join(' ')}>  <Link to='/radialka'>  111  </Link> </div> */}
-			{/* <div className={[s.div74].join(' ')}>10<span></span></div>
-      <div className={[s.div75].join(' ')}>11<span></span></div> */}
+
 			<div className={[s.div76].join(' ')}>
 				6Р82
 				<Link to='/radialka'>
 					<span>№1419</span>
 				</Link>
 			</div>
-			{/* <div className={[s.div77].join('')}>13<span></span></div>
-      <div className={[s.div78].join('')}><span></span></div>
-      <div className={[s.div79].join('')}><span></span></div>
-      <div className={[s.div80].join('')}><span></span></div>
-      <div className={[s.div81].join('')}><span></span></div>
-      <div className={[s.div82].join('')}><span></span></div>
-      <div className={[s.div83].join('')}><span></span></div>
-      <div className={[s.div84].join('')}><span></span></div>
-      <div className={[s.div85].join('')}><span></span></div> */}
+
 		</div>
 	)
 }

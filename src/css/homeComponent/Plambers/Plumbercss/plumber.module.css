@@ -6,7 +6,7 @@
   font-size: 1.1rem;
   display: flex;
   justify-content: center;
-  padding: 5px;
+  padding: 10px;
   border: 3px red solid;
 }
 .container h2 {

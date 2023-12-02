@@ -65,7 +65,7 @@ function App() {
 					<Route path='/showCrane' element={<ShowCrane />} />
 
 					<Route path='cran' element={<Cranes />} />
-					<Route path='engine' element={<Engine />} />
+					<Route path='/engine/:cosFStr' element={<Engine />} />
 					<Route path='rp' element={<Rp />} />
 					<Route path='/discrabeRp/:rp' element={<DiscrabeRp />} />
 				</Route>
