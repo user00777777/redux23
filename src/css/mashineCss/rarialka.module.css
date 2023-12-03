@@ -90,10 +90,18 @@
   height: max-content; /* Set the desired height of your image container */
 }
 
+.list {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .circuitWrap {
   width: 100%;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: -moz-min-content;
+  height: min-content;
   display: flex;
   justify-content: center;
 }
@@ -114,4 +122,36 @@
 
 .engines > li {
   border: none;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-bottom: 4px;
+}
+.engines > li a {
+  color: blue;
+}
+
+.wrapEngines {
+  display: block;
+  display: grid;
+  width: 100%;
+  height: 400px;
+  justify-items: center;
+}
+
+.engines {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  transition: all 2s ease-in-out;
+  -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  -ms-transition: all 2s ease-in-out;
+  -o-transition: all 2s ease-in-out;
+}
+
+.engines {
+  height: -moz-fit-content;
+  height: fit-content;
 }

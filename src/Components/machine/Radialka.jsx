@@ -68,13 +68,9 @@ export default function Radialka() {
 				</button>
 			</div>
 			<div className={s.list}>
-				<ul>
-					{/* <li><Link to='circuitDiagram'> Схема</Link></li> */}
-
-					{/* <li><Link to='/engine'> Двигателя</Link></li> */}
-				</ul>
 				<section>
-					<details>
+				
+					<details className={s.wrapEngines}>
 						<summary>Двигателя</summary>
 						<ul className={s.engines}>
 							<li>
@@ -84,8 +80,7 @@ export default function Radialka() {
 							<li>
 								<Link to={`/engine/${cosFStr}`}>Вращение инструмента</Link>
 							</li>
-							<li></li>
-							<li></li>
+					
 						</ul>
 					</details>
 				</section>
