@@ -59,7 +59,7 @@ export default function Duty() {
 
 		return (
 			<div className={s.container}>
-				<div className={s.twoShift}>
+				<div className={s.twoShift} onClick={changeDuty}>
 					{' '}
 					<h2>Дежурные електрики</h2>{' '}
 					<h2 className={s.d12}>
