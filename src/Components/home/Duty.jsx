@@ -14,14 +14,14 @@ export default function Duty() {
 	//     let minutes=nowDate.getMinutes();
 	let d = 1
 	let [newDate, setDate] = useState()
-	let [ddate, setDdate] = useState(1)
+	let [ddate, setDdate] = useState(0)
 	let arr = [1, 2, 3, 4]
 	function changeDuty() {
 		setDdate(() => ++ddate)
 		setDate(() => arr[ddate % arr.length])
+		localStorage.setItem('duty', ddate)
 	}
 
-	localStorage.setItem('duty', ddate)
 	let change_Day = Number(localStorage.getItem('duty'))
 
 	// console.log((hour = 22))

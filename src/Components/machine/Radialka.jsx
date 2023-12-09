@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { createElement } from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
 import s from '../../css/mashineCss/rarialka.module.css'
 import ss from '../../Components/machine/a.module.css'
@@ -11,11 +11,17 @@ import MachineTools from './machineTools'
 import Foto from './Foto'
 import Mashine from './Mashine'
 import Engine from './Engine'
+import { engine833 } from '../../sliceReduce/engineREduser'
 
 export default function Radialka() {
+	const dispatch = useDispatch()
 	let [selector833] = useSelector(state => state.engine.data833)
 	const { mainEngine } = selector833
 	let cosF = mainEngine
+	console.log(mainEngine)
+	let y = useSelector(state => state.engine)
+	console.log(y)
+
 	console.log(selector833.hydroelectricStation)
 
 	const cosFStr = encodeURIComponent(JSON.stringify(cosF))
@@ -30,19 +36,22 @@ export default function Radialka() {
 	let ref = useRef()
 	let [ss, setS] = useState(!false)
 
-	function handleSelectChange() {
-		const selectedIndex = selectRef.current.selectedIndex
-		setSelectedValue(selectRef.current.value)
-		setSelectedText(selectRef.current.options[selectedIndex].textContent)
-		console.log(selectRef.current)
-	}
+	// function handleSelectChange() {
+	// 	const selectedIndex = selectRef.current.selectedIndex
+	// 	setSelectedValue(selectRef.current.value)
+	// 	setSelectedText(selectRef.current.options[selectedIndex].textContent)
+	// 	console.log(selectRef.current)
+	// }
 
 	let selector = useSelector(state => state.mashine.result)
-	// console.log(selector)  ;
+	// console.log(selector)
 	let numArr = selector?.length - 1
 	const mashine = selector[numArr]
 	// const cosFStr = encodeURIComponent(JSON.stringify(soF))
+	const name = mashine.el.machine
+	console.log(name)
 
+	dispatch(engine833(name))
 	let goBack = () => navigate(-1)
 
 	return (
@@ -69,7 +78,6 @@ export default function Radialka() {
 			</div>
 			<div className={s.list}>
 				<section>
-				
 					<details className={s.wrapEngines}>
 						<summary>Двигателя</summary>
 						<ul className={s.engines}>
@@ -80,7 +88,6 @@ export default function Radialka() {
 							<li>
 								<Link to={`/engine/${cosFStr}`}>Вращение инструмента</Link>
 							</li>
-					
 						</ul>
 					</details>
 				</section>

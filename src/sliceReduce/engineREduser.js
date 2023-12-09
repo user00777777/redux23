@@ -2,6 +2,9 @@ import { createSlice } from '@reduxjs/toolkit'
 const initialState = {
 	data833: [
 		{
+			name: {
+				name: 'СБ833',
+			},
 			mainEngine: {
 				engineName: 'вращение фрез( 4АМ180М6)',
 				Engine_rpm: '975 Об',
@@ -33,8 +36,20 @@ const initialState = {
 const engine = createSlice({
 	name: 'engine',
 	initialState,
-	redusers: {
-		engine833(state, action) {},
+	reducers: {
+		engine833(state, action) {
+			state.data833.forEach(el => {
+				if (el.name.name == action.payload) {
+					console.log(el.name.name)
+
+				
+				} else {
+					return state
+				}
+			})
+
+			action.payload
+		},
 	},
 })
 export const { engine833 } = engine.actions

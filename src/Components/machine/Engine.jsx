@@ -2,7 +2,9 @@ import React from 'react'
 import s from './css/Engine/engine.module.css'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-export default function Engine() {
+export default function Engine(props) {
+	console.log(props)
+
 	const { cosFStr } = useParams()
 	const sb833 = JSON.parse(decodeURIComponent(cosFStr))
 	console.log(sb833.power)
