@@ -11,6 +11,7 @@ function plumb(pis, babec, golovch, nemch, hours, day) {
 	// console.log(twoShift)
 	// console.log(hours >= 7 && hours < 19)
 	// console.log(hours=8)
+	console.log(day)
 	day += 2
 	if (hours >= 7 && hours < 19) {
 		// console.log(1)
@@ -22,10 +23,10 @@ function plumb(pis, babec, golovch, nemch, hours, day) {
 	}
 
 	if (hours >= 19 && hours <= 23) {
-		// console.log('oo')
+		console.log('oo')
 
 		let plumber2 = twoShift[day % twoShift.length]
-		console.log(plumber2, day)
+		console.log(day)
 
 		return plumber2
 	} else {
@@ -51,19 +52,20 @@ export default function PlumbersDuty() {
 	let arrDay = [1, 2, 3, 4]
 
 	const ChangeDay = () => {
-		set_Day(() => (new_Day += 1))
+
 		let x = arrDay[new_Day % arrDay.length]
-		// console.log(x)
+		
+
 
 		localStorage.setItem('plumber', x)
 
-	
 		let strNum = Number(localStorage.getItem('plumber'))
-		setDay(strNum)	
-		 console.log(strNum)
+		setDay(strNum)
+		console.log('s',strNum);
+		
 	}
 
-	day += newDay
+
 	console.log(newDay)
 
 	const oneShift = plumb(
@@ -75,7 +77,7 @@ export default function PlumbersDuty() {
 		hours,
 		day
 	)
-	// console.log(oneShift)
+	console.log(oneShift)
 
 	return (
 		<div className={s.container}>

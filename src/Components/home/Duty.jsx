@@ -35,7 +35,7 @@ export default function Duty() {
 	// console.log(dayOfMonth)
 
 	let vasj = new Shift('Гекало', 'Малько')
-	let stas = new Shift('Круглый', 'Дяченко')
+	let stas = new Shift('Круглый', 'Мисюра')
 	let sinkevich = new Shift('Бондаренко', 'Самбур')
 	let paha = new Shift('Лысенко', 'Мисюра')
 
