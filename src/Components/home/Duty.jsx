@@ -36,7 +36,7 @@ export default function Duty() {
 
 	let vasj = new Shift('Гекало', 'Малько')
 	let stas = new Shift('Круглый', 'Дяченко')
-	let sinkevich = new Shift('Синкевичь', 'Самбур')
+	let sinkevich = new Shift('Бондаренко', 'Самбур')
 	let paha = new Shift('Лысенко', 'Мисюра')
 
 	const workers1 = [vasj, stas, sinkevich, paha]
