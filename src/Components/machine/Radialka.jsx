@@ -95,16 +95,3 @@ export default function Radialka() {
 		</div>
 	)
 }
-// ;<select
-// 	name=''
-// 	id=''
-// 	className={s.select}
-// 	ref={selectRef}
-// 	onChange={handleSelectChange}
-// >
-// 	<option value='eee'>Петриченко</option>
-// 	<option value='edffcf'>Шевченко</option>
-// 	<option value={true}>Андриенко</option>
-// 	<option value={false}>Тригуб</option>
-// 	<option value={3}>Дидусь</option>
-// </select>

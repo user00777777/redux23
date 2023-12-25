@@ -28,7 +28,7 @@ export default function DiscrabeRp() {
 	return (
 		<div className={s.container}>
 			<div className={s.btnWrap}>
-				<button onClick={() => navigate(-1)}>Назад</button>
+				<button  onClick={() => navigate(-1)}>Назад</button>
 			</div>
 
 			<ul className={s.wrapName}>
@@ -49,7 +49,7 @@ export default function DiscrabeRp() {
 							<div className={s.name}> {el.name}</div>
 							<div className={s.i}> {el.I} </div>
 							<div className={s.nom}> {el.nom}</div>
-							<div className={s.kvt}> {el.kvt}</div>
+							<div  className={s.kvt}> {el.kvt}</div>
 						</div>
 					)
 				})}

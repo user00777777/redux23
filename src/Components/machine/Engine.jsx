@@ -7,7 +7,7 @@ export default function Engine(props) {
 
 	const { cosFStr } = useParams()
 	const sb833 = JSON.parse(decodeURIComponent(cosFStr))
-	console.log(sb833.power)
+	console.log(sb833)
 
 	let selector = useSelector(state => state.engine.data833)
 

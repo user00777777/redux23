@@ -52,24 +52,19 @@ export default function PlumbersDuty() {
 	let arrDay = [1, 2, 3, 4]
 
 	const ChangeDay = () => {
-
 		let x = arrDay[new_Day % arrDay.length]
-		
-
 
 		localStorage.setItem('plumber', x)
 
 		let strNum = Number(localStorage.getItem('plumber'))
 		setDay(strNum)
-		console.log('s',strNum);
-		
+		console.log('s', strNum)
 	}
-
 
 	console.log(newDay)
 
 	const oneShift = plumb(
-		'Дубовык',
+		'Писаренко',
 		'Бабец',
 		'Головченко',
 

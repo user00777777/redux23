@@ -139,3 +139,20 @@ li:nth-child(4) {
   -o-object-fit: cover;
      object-fit: cover;
 }
+
+.wrapList {
+  font-size: 1rem;
+}
+.wrapList .nom {
+  font-size: clamp(2px, 0.8rem, 40px);
+  font-weight: 600;
+  color: red;
+  text-transform: lowercase;
+}
+
+.wrapList:first-child {
+  font-size: 12px;
+}
+.wrapList:first-child .name {
+  font-size: initial;
+}
