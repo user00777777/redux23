@@ -12,6 +12,8 @@ export default function Duty() {
 	//     let oldDate=nowDate.getDate()
 	//     let hour=nowDate.getHours();
 	//     let minutes=nowDate.getMinutes();
+	console.log((dayOfMonth = 1))
+
 	let d = 1
 	let [newDate, setDate] = useState()
 	let [ddate, setDdate] = useState(0)
@@ -24,7 +26,7 @@ export default function Duty() {
 
 	let change_Day = Number(localStorage.getItem('duty'))
 
-	// console.log((hour = 22))
+	// console.log((hour ))
 
 	class Shift {
 		constructor(duty1, duty2) {
@@ -63,7 +65,8 @@ export default function Duty() {
 					{' '}
 					<h2>Дежурные електрики</h2>{' '}
 					<h2 className={s.d12}>
-						{currentWorker.duty1} || {currentWorker.duty2}
+						{currentWorker.duty1} 
+						{/* || {currentWorker.duty2} */}
 					</h2>
 				</div>
 			</div>
@@ -79,7 +82,8 @@ export default function Duty() {
 					<h2>Дежурные Електрики:</h2>
 					<h2 className={s.d12}>
 						{' '}
-						{currentWorker2.duty1} и {currentWorker2.duty2}
+						{currentWorker2.duty1} 
+						{/* и {currentWorker2.duty2} */}
 					</h2>
 				</div>
 			</div>
@@ -98,7 +102,8 @@ export default function Duty() {
 					<h2>Дежурные Електрики:</h2>
 					<h2 className={s.d12}>
 						{' '}
-						{currentWorker2.duty1} и {currentWorker2.duty2}
+						{currentWorker2.duty1}
+						 {/* и {currentWorker2.duty2} */}
 					</h2>
 				</div>
 			</div>

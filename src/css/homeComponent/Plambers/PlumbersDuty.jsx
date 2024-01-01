@@ -12,7 +12,7 @@ function plumb(pis, babec, golovch, nemch, hours, day) {
 	// console.log(hours >= 7 && hours < 19)
 	// console.log(hours=8)
 	console.log(day)
-	day += 2
+	day += 1
 	if (hours >= 7 && hours < 19) {
 		// console.log(1)
 

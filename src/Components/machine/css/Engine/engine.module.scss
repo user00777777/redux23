@@ -4,6 +4,7 @@
 	display: flex;
 	height: 100vh;
 	width: 100%;
+	// background-color: red;
 
 	// justify-content: center;
 	flex-direction: column;
@@ -90,4 +91,23 @@
 		background-color: rgb(255, 255, 255);
 		color: rgb(0, 0, 0);
 	}
+}
+
+.accordion {
+	border: 1px solid #ccc;
+}
+
+.accordion_item {
+	border-bottom: 1px solid #ccc;
+}
+
+.accordion_header {
+	background-color: #f4f4f4;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.accordion_content {
+	display: none;
+	padding: 10px;
 }

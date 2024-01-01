@@ -36,23 +36,27 @@ export default function Radialka() {
 	let ref = useRef()
 	let [ss, setS] = useState(!false)
 
-	// function handleSelectChange() {
-	// 	const selectedIndex = selectRef.current.selectedIndex
-	// 	setSelectedValue(selectRef.current.value)
-	// 	setSelectedText(selectRef.current.options[selectedIndex].textContent)
-	// 	console.log(selectRef.current)
-	// }
-
 	let selector = useSelector(state => state.mashine.result)
-	// console.log(selector)
+	console.log(selector)
 	let numArr = selector?.length - 1
 	const mashine = selector[numArr]
 	// const cosFStr = encodeURIComponent(JSON.stringify(soF))
 	const name = mashine.el.machine
 	console.log(name)
+	   
+	 
+	 
+	 
+
+	  
+		 
+		 
 
 	dispatch(engine833(name))
 	let goBack = () => navigate(-1)
+
+
+
 
 	return (
 		<div className={s.father}>
@@ -77,20 +81,7 @@ export default function Radialka() {
 				</button>
 			</div>
 			<div className={s.list}>
-				<section>
-					<details className={s.wrapEngines}>
-						<summary>Двигателя</summary>
-						<ul className={s.engines}>
-							<li>
-								{' '}
-								<Link to={`/engine/${hydroStr}`}> Двигатель гидростанции</Link>
-							</li>
-							<li>
-								<Link to={`/engine/${cosFStr}`}>Вращение инструмента</Link>
-							</li>
-						</ul>
-					</details>
-				</section>
+				<Engine />
 			</div>
 		</div>
 	)

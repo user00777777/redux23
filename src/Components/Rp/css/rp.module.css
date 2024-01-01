@@ -142,7 +142,20 @@ li:nth-child(4) {
 }
 
 .wrapList {
-  font-size: 300px;
+  font-size: 1rem;
+}
+.wrapList .nom {
+  font-size: clamp(2px, 0.8rem, 40px);
+  font-weight: 600;
+  color: red;
+  text-transform: lowercase;
+}
+
+.wrapList:first-child {
+  font-size: 12px;
+}
+.wrapList:first-child .name {
+  font-size: initial;
 }
 
 .container {

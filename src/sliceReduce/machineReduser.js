@@ -212,7 +212,7 @@ const machine = createSlice({
       // console.log(action.payload == "ВС-300");
       state.data.find((el) => {
         let regexp = new RegExp(`${el.idMachine}$`);
-        // console.log(action.payload);
+        console.log(action.payload);
 
         if (regexp.test(action.payload)) {
           // console.log("yes");

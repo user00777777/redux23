@@ -38,12 +38,14 @@ const engine = createSlice({
 	initialState,
 	reducers: {
 		engine833(state, action) {
-			state.data833.forEach(el => {
+			state.data833.filter(el => {
 				if (el.name.name == action.payload) {
-					console.log(el.name.name)
+					console.log('el')
 
-				
+					return el
 				} else {
+					console.log('state')
+
 					return state
 				}
 			})
