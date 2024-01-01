@@ -54,6 +54,8 @@ export default function Radialka() {
 
 	dispatch(engine833(name))
 	let goBack = () => navigate(-1)
+	const yourMashine=useSelector((state)=>state.engine.data833  )
+console.log(yourMashine);
 
 
 
@@ -81,7 +83,7 @@ export default function Radialka() {
 				</button>
 			</div>
 			<div className={s.list}>
-				<Engine />
+				<Engine m={yourMashine}/>
 			</div>
 		</div>
 	)

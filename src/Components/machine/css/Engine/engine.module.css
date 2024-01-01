@@ -34,10 +34,11 @@
 
 .wrapMap {
   width: 100%;
-  height: 100vh;
+  height: -moz-min-content;
+  height: min-content;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(20, 40px);
+  grid-template-rows: repeat(7, 40px);
   background-color: ghostwhite;
   gap: 0.1px;
 }
