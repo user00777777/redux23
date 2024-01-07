@@ -37,6 +37,10 @@ export default function Radialka() {
 	let [ss, setS] = useState(!false)
 
 	let selector = useSelector(state => state.mashine.result)
+  	let goBack = () => {
+			navigate(-1)
+			dispatch(engine833('empty'))
+		}
 	console.log(selector)
 	let numArr = selector?.length - 1
 	const mashine = selector[numArr]
@@ -50,9 +54,10 @@ export default function Radialka() {
 
   },[name]  )
 
-	let goBack = () => navigate(-1)
+
 	const yourMashine = useSelector(state => state.engine.result)
 	console.log(yourMashine)
+ 
 
 	return (
 		<div className={s.father}>

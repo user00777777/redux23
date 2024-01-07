@@ -66,6 +66,9 @@ const engine = createSlice({
 	reducers: {
 		engine833(state, action) {
 			console.log(action.payload)
+      if (action.payload=='empty') {
+        return state
+      }
 
 			const filteredResults = state.data833.filter(
 				el => el.name === action.payload
