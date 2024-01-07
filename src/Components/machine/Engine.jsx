@@ -6,13 +6,13 @@ import { useSelector } from 'react-redux'
 export default function Engine({ m }) {
 	const [sb833, setName] = useState('')
 	const [mainEngine, SetmainEngine] = useState('')
-	console.log(m)
-console.log(sb833.power)
-console.log(mainEngine.power)
+	// console.log(m)
+// console.log(sb833.power)
+// console.log(mainEngine.power)
 
 
 	let ss = useSelector(state => state.engine.result)
-	console.log(ss)
+	// console.log(ss)
 useEffect(()=>{
 
 if (ss) {

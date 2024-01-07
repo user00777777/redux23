@@ -66,28 +66,30 @@ const engine = createSlice({
 	reducers: {
 		engine833(state, action) {
 			console.log(action.payload)
-      if (action.payload=='empty') {
-        return state
-      }
+      state.result=null
+ if (state.result==null) {
+  
+ 
+     
+        console.log(111);
+        
+  const filteredResults = state.data833.filter((el)=>{
+  if( el.name === action.payload)
+         {return  state.result = el}}
+  )
+  state.result=filteredResults
+  
+}
+// else{state}
+}
 
-			const filteredResults = state.data833.filter(
-				el => el.name === action.payload
-			)
       
       
-			if (state.result) {
-    state.result=null
-			}
-      else{if (state.result==null) {
-            console.log('yes')
+    
 
-						console.log(filteredResults)
-						state.result = filteredResults
-      }
-      }
-			// console.log(Array.isArray( filteredResults))
+      
 		},
 	},
-})
+)
 export const { engine833 } = engine.actions
 export default engine.reducer

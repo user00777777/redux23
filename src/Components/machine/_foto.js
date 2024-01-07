@@ -20,7 +20,7 @@ import fp from "../images/mashineFoto/fpSavelovo/Fp.jpg";
 import m3048 from "../images/mashineFoto/m3048/m30_48.jpg";
 import r682 from "../images/mashineFoto/6r82/6r.jpg";
 export default function _foto(name, mid) {
-  console.log(name);
+  // console.log(name);
 
   switch (name) {
     case "2А554":
