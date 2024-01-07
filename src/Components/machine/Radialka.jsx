@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { createElement } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
@@ -43,22 +43,16 @@ export default function Radialka() {
 	// const cosFStr = encodeURIComponent(JSON.stringify(soF))
 	const name = mashine.el.machine
 	console.log(name)
-	   
-	 
-	 
-	 
+  useEffect(()=>{
 
-	  
-		 
-		 
 
-	dispatch(engine833(name))
+    dispatch(engine833(name))
+
+  },[name]  )
+
 	let goBack = () => navigate(-1)
-	const yourMashine=useSelector((state)=>state.engine.data833  )
-console.log(yourMashine);
-
-
-
+	const yourMashine = useSelector(state => state.engine.result)
+	console.log(yourMashine)
 
 	return (
 		<div className={s.father}>
@@ -83,7 +77,7 @@ console.log(yourMashine);
 				</button>
 			</div>
 			<div className={s.list}>
-				<Engine m={yourMashine}/>
+				<Engine m={yourMashine} />
 			</div>
 		</div>
 	)

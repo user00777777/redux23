@@ -12,14 +12,14 @@ export default function Duty() {
 	//     let oldDate=nowDate.getDate()
 	//     let hour=nowDate.getHours();
 	//     let minutes=nowDate.getMinutes();
-	console.log((dayOfMonth = 1))
+	// console.log((dayOfMonth ))
 
 	let d = 1
 	let [newDate, setDate] = useState()
 	let [ddate, setDdate] = useState(0)
 	let arr = [1, 2, 3, 4]
 	function changeDuty() {
-		setDdate(() => ++ddate)
+		setDdate(() => (ddate += 1))
 		setDate(() => arr[ddate % arr.length])
 		localStorage.setItem('duty', ddate)
 	}
@@ -36,9 +36,9 @@ export default function Duty() {
 	}
 	// console.log(dayOfMonth)
 
-	let vasj = new Shift('Гекало', 'Малько')
+	let vasj = new Shift('Малько','Гекало' )
 	let stas = new Shift('Круглый', 'Мисюра')
-	let sinkevich = new Shift('Бондаренко', 'Самбур')
+	let sinkevich = new Shift('Самбур', 'Бондаренко')
 	let paha = new Shift('Лысенко', 'Мисюра')
 
 	const workers1 = [vasj, stas, sinkevich, paha]
@@ -48,7 +48,7 @@ export default function Duty() {
 	console.log(change_Day)
 	let changeDayOfMonth = dayOfMonth
 	changeDayOfMonth = changeDayOfMonth += change_Day
-	// hour = 18
+	hour = 8
 
 	const currentWorker2 = workers2[changeDayOfMonth % workers2.length]
 	// console.log(currentWorker2.duty1)
@@ -65,7 +65,7 @@ export default function Duty() {
 					{' '}
 					<h2>Дежурные електрики</h2>{' '}
 					<h2 className={s.d12}>
-						{currentWorker.duty1} 
+						{currentWorker.duty1}
 						{/* || {currentWorker.duty2} */}
 					</h2>
 				</div>
@@ -82,7 +82,7 @@ export default function Duty() {
 					<h2>Дежурные Електрики:</h2>
 					<h2 className={s.d12}>
 						{' '}
-						{currentWorker2.duty1} 
+						{currentWorker2.duty1}
 						{/* и {currentWorker2.duty2} */}
 					</h2>
 				</div>
@@ -103,12 +103,12 @@ export default function Duty() {
 					<h2 className={s.d12}>
 						{' '}
 						{currentWorker2.duty1}
-						 {/* и {currentWorker2.duty2} */}
+						{/* и {currentWorker2.duty2} */}
 					</h2>
 				</div>
 			</div>
 		)
 	}
 
-	return <div></div>
+
 }

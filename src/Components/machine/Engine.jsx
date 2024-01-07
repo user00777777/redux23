@@ -4,12 +4,27 @@ import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
 export default function Engine({ m }) {
+	const [sb833, setName] = useState('')
+	const [mainEngine, SetmainEngine] = useState('')
 	console.log(m)
+console.log(sb833.power)
+console.log(mainEngine.power)
 
-	// let selector = useSelector(state => state.engine.data833)
-	const [name] = m
-	const sb833 = name.hydroelectricStation
-	const mainEngine = name.mainEngine
+
+	let ss = useSelector(state => state.engine.result)
+	console.log(ss)
+useEffect(()=>{
+
+if (ss) {
+  	ss.forEach(el => {
+			setName( el.mainEngine)
+		SetmainEngine(	el.hydroelectricStation)
+		})
+  
+}
+
+},[ss]  )
+
 
 	const navigate = useNavigate()
 	let goBack = () => navigate(-1)
@@ -80,13 +95,19 @@ export default function Engine({ m }) {
 							{mainEngine.cosF ? (
 								<li className={s.mainEngine_starterA1}> {mainEngine.cosF}</li>
 							) : (
-								<li className={s.mainEngine_starterA1}> {mainEngine.bearing}</li>
+								<li className={s.mainEngine_starterA1}>
+									{' '}
+									{mainEngine.bearing}
+								</li>
 							)}
 							<li className={s.mainEngine_rpm}> {mainEngine.Engine_rpm}</li>
 							<li className={s.CircuitBreaker}> {mainEngine.weight}</li>
 							<li className={s.shaftDiameter}> {mainEngine.shaftDiameter}</li>
 							<li className={s.engineName}> {mainEngine.engineName}</li>{' '}
-							<li className={s.electricCurrent}> {mainEngine.electricCurrent}</li>
+							<li className={s.electricCurrent}>
+								{' '}
+								{mainEngine.electricCurrent}
+							</li>
 						</ul>
 					</div>
 				</div>
