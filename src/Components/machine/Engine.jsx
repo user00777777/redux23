@@ -43,6 +43,8 @@ if (ss) {
 				content.style.display =
 					content.style.display === 'block' ? 'none' : 'block'
 			}
+      console.log(item);
+      
 			return item
 		})
 		setAccordionItems(newAccordionItems)
@@ -55,7 +57,7 @@ if (ss) {
 					className={s.accordion_item}
 					onClick={() => handleAccordionClick(0)}
 				>
-					<div className={s.accordion_header}>Заголовок 1</div>
+					<div className={s.accordion_header}>{sb833.nameEng||'Внести данные'}</div>
 					<div className={s.accordion_content}>
 						<ul className={s.wrapMap}>
 							<li className={`${s.engineCurrent} ${s.f}`}>Номинальный Ток</li>
@@ -73,7 +75,10 @@ if (ss) {
 							<li className={s.mainEngine_rpm}> {sb833.Engine_rpm}</li>
 							<li className={s.CircuitBreaker}> {sb833.weight}</li>
 							<li className={s.shaftDiameter}> {sb833.shaftDiameter}</li>
-							<li className={s.engineName}> {sb833.engineName}</li>{' '}
+							<li className={s.engineName}>
+								{' '}
+								{sb833.engineName || 'Нужно забить базу данных'}
+							</li>{' '}
 							<li className={s.electricCurrent}> {sb833.electricCurrent}</li>
 						</ul>
 					</div>
@@ -82,7 +87,7 @@ if (ss) {
 					className={s.accordion_item}
 					onClick={() => handleAccordionClick(1)}
 				>
-					<div className={s.accordion_header}>Заголовок 2</div>
+					<div className={s.accordion_header}>{mainEngine.nameEng||'Вбить данные нужно'}</div>
 					<div className={s.accordion_content}>
 						<ul className={s.wrapMap}>
 							<li className={`${s.engineCurrent} ${s.f}`}>Номинальный Ток</li>
@@ -103,7 +108,10 @@ if (ss) {
 							<li className={s.mainEngine_rpm}> {mainEngine.Engine_rpm}</li>
 							<li className={s.CircuitBreaker}> {mainEngine.weight}</li>
 							<li className={s.shaftDiameter}> {mainEngine.shaftDiameter}</li>
-							<li className={s.engineName}> {mainEngine.engineName}</li>{' '}
+							<li className={s.engineName}>
+								{' '}
+								{mainEngine.engineName || 'Нужно набрать данные'}
+							</li>{' '}
 							<li className={s.electricCurrent}>
 								{' '}
 								{mainEngine.electricCurrent}
@@ -115,24 +123,4 @@ if (ss) {
 		</div>
 	)
 
-	// return (
-	// 	<div className={s.wrapperE}>
-	// 		<div className={s.accordion}>
-	// 			<div
-	// 				className={s.accordion_item}
-	// 				onClick={() => handleAccordionClick(0)}
-	// 			>
-	// 				<div className={s.accordion_header}>Заголовок 1</div>
-	// 				<div className={s.accordion_content}>Содержание 1</div>
-	// 			</div>
-	// 			<div
-	// 				className={s.accordion_item}
-	// 				onClick={() => handleAccordionClick(1)}
-	// 			>
-	// 				<div className={s.accordion_header}>Заголовок 2</div>
-	// 				<div className={s.accordion_content}>Содержание 2</div>
-	// 			</div>
-	// 		</div>
-	// 	</div>
-	// )
-}
+              }

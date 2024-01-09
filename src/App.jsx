@@ -68,6 +68,7 @@ function App() {
 					<Route path='/engine/:cosFStr' element={<Engine />} />
 					<Route path='rp' element={<Rp />} />
 					<Route path='/discrabeRp/:rp' element={<DiscrabeRp />} />
+
 				</Route>
 			</Routes>
 		</div>
