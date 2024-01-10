@@ -26,7 +26,7 @@ import s8333_0 from '../images/mashineFoto/sb833/circuit833/sb8334.jpg'
 import _rad2A554 from './2A554/_rad2A554'
 
 export default function _fotoSliderArr({ machine, idMachine }) {
-	console.log(machine)
+	// console.log(machine)
 	const arrFoto = []
 
 	function createObj(ar, n) {
@@ -82,7 +82,7 @@ export default function _fotoSliderArr({ machine, idMachine }) {
 			)
 			return sb833_52055
 		case '2А554':
-			console.log(1111111111)
+			// console.log(1111111111)
 			
 			const rad2a554 = createObj(
 				_rad2A554(),

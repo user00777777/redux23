@@ -5,26 +5,23 @@ import { useSelector } from 'react-redux'
 
 export default function Engine({ m }) {
 	const [sb833, setName] = useState('')
+	const [PrivodRukava, setPrivodRukava] = useState('')
 	const [mainEngine, SetmainEngine] = useState('')
 	// console.log(m)
-// console.log(sb833.power)
-// console.log(mainEngine.power)
-
+	// console.log(sb833.power)
+	// console.log(mainEngine.power)
 
 	let ss = useSelector(state => state.engine.result)
 	// console.log(ss)
-useEffect(()=>{
-
-if (ss) {
-  	ss.forEach(el => {
-			setName( el.mainEngine)
-		SetmainEngine(	el.hydroelectricStation)
-		})
-  
-}
-
-},[ss]  )
-
+	useEffect(() => {
+		if (ss) {
+			ss.forEach(el => {
+				setName(el.mainEngine)
+				SetmainEngine(el.hydroelectricStation)
+				setPrivodRukava(el.PrivodRukava)
+			})
+		}
+	}, [ss])
 
 	const navigate = useNavigate()
 	let goBack = () => navigate(-1)
@@ -43,8 +40,8 @@ if (ss) {
 				content.style.display =
 					content.style.display === 'block' ? 'none' : 'block'
 			}
-      console.log(item);
-      
+			console.log(item)
+
 			return item
 		})
 		setAccordionItems(newAccordionItems)
@@ -57,7 +54,9 @@ if (ss) {
 					className={s.accordion_item}
 					onClick={() => handleAccordionClick(0)}
 				>
-					<div className={s.accordion_header}>{sb833.nameEng||'Внести данные'}</div>
+					<div className={s.accordion_header}>
+						{sb833.nameEng || 'Внести данные'}
+					</div>
 					<div className={s.accordion_content}>
 						<ul className={s.wrapMap}>
 							<li className={`${s.engineCurrent} ${s.f}`}>Номинальный Ток</li>
@@ -87,7 +86,9 @@ if (ss) {
 					className={s.accordion_item}
 					onClick={() => handleAccordionClick(1)}
 				>
-					<div className={s.accordion_header}>{mainEngine.nameEng||'Вбить данные нужно'}</div>
+					<div className={s.accordion_header}>
+						{mainEngine.nameEng || 'Вбить данные нужно'}
+					</div>
 					<div className={s.accordion_content}>
 						<ul className={s.wrapMap}>
 							<li className={`${s.engineCurrent} ${s.f}`}>Номинальный Ток</li>
@@ -119,8 +120,39 @@ if (ss) {
 						</ul>
 					</div>
 				</div>
+				<div
+					className={s.accordion_item}
+					onClick={() => handleAccordionClick(2)}
+				>
+					<div className={s.accordion_header}>
+						{PrivodRukava.nameEng || 'Внести данные'}
+					</div>
+					<div className={s.accordion_content}>
+						<ul className={s.wrapMap}>
+							<li className={`${s.engineCurrent} ${s.f}`}>Номинальный Ток</li>
+							<li className={`${s.power} ${s.f}`}>Подшипники</li>
+							<li className={`${s.rpm} ${s.f}`}>оброты</li>
+							<li className={`${s.Motor_starterA1} ${s.f}`}>Мощность</li>
+							<li className={`${s.cosF} ${s.f}`}>вес двигателя</li>
+							<li className={`${s.shaftDiameter1} ${s.f}`}>диаметр вала</li>
+							<li className={s.mainEngine_power}> {PrivodRukava.power}</li>
+							{sb833.cosF ? (
+								<li className={s.mainEngine_starterA1}> {PrivodRukava.cosF}</li>
+							) : (
+								<li className={s.mainEngine_starterA1}> {PrivodRukava.bearing}</li>
+							)}
+							<li className={s.mainEngine_rpm}> {PrivodRukava.Engine_rpm}</li>
+							<li className={s.CircuitBreaker}> {PrivodRukava.weight}</li>
+							<li className={s.shaftDiameter}> {PrivodRukava.shaftDiameter}</li>
+							<li className={s.engineName}>
+								{' '}
+								{PrivodRukava.engineName || 'Нужно забить базу данных'}
+							</li>{' '}
+							<li className={s.electricCurrent}> {PrivodRukava.electricCurrent}</li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</div>
 	)
-
-              }
+}

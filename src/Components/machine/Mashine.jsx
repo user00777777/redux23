@@ -8,6 +8,7 @@ import foto_PlusText from './foto_PlusText'
 const Mashine = ({ mashine }) => {
 	// console.log(_fotoSliderArr(mashine).n);
 	const ref = useRef(null)
+	const refDots = useRef(null)
 	let [test, setTest] = useState(null)
 	const [currentIndex, setCurrentIndex] = useState(0)
 	const slides = _fotoSliderArr(mashine).ar
@@ -30,8 +31,15 @@ const Mashine = ({ mashine }) => {
 		setCurrentIndex(newIndex)
 	}
 
-	const goToSlide = slideIndex => {
+	const goToSlide = (slideIndex, slide) => {
 		setCurrentIndex(slideIndex)
+
+
+
+
+
+
+		
 	}
 
 	return (
@@ -53,9 +61,10 @@ const Mashine = ({ mashine }) => {
 				{slides.map((slide, slideIndex) => (
 					<div
 						className={s.dotStyle}
+						ref={refDots}
 						// style={dotStyle}
 						key={slideIndex}
-						onClick={() => goToSlide(slideIndex)}
+						onClick={() => goToSlide(slideIndex, slide)}
 					>
 						●
 					</div>
