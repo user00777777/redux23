@@ -1,11 +1,4 @@
-// function f(crane, path) {
-// 	return {
-// 		crane,
-// 		path,
-// 	}
-// }
-// const mal1 = f('mal1', 'рп14')
-// const mal2 = f('mal2', 'рп14')
+
 import { createSlice } from '@reduxjs/toolkit'
 import React from 'react'
 const initialState = {
@@ -13,7 +6,7 @@ const initialState = {
 		{ name: 'mal1', rp: 14, id: 'Кран 5T' },
 		{ name: 'mal2', rp: 14, id: 'Кран 10T' },
 	],
-	list1: [],
+	craneObj:{},
 }
 
 const cranes = createSlice({
@@ -21,12 +14,24 @@ const cranes = createSlice({
 	initialState,
 	reducers: {
 		craneS(state, action) {
-			let x = state.list.find(el => {
-				if (el.name == action.payload) {
-					return el
-				}
-			})
-			state.answer = x
+	// console.log(action.payload);
+  console.log(JSON.stringify(state))
+const crane=state.list.find((el)=>{
+if (el.name==action.payload)return el;  
+
+
+}  )  
+
+  console.log(JSON.stringify(crane))
+
+  state.craneObj=crane
+
+
+
+
+
+
+  
 		},
 	},
 })

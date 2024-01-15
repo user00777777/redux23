@@ -6,13 +6,10 @@ function plumb(pis, babec, golovch, nemch, hours, day) {
 	// hours = 19
 	let oneShift = [pis, babec, golovch, nemch]
 	let twoShift = [nemch, pis, babec, golovch]
-	// console.log(day % oneShift.length)
-	// console.log(oneShift[day % oneShift.length])
-	// console.log(twoShift)
-	// console.log(hours >= 7 && hours < 19)
-	// console.log(hours=8)
+	
+	// console.log(hours=22)
 	console.log(day)
-	day += 1
+	day +=1
 	if (hours >= 7 && hours < 19) {
 		// console.log(1)
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import s from './css/Engine/engine.module.css'
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
@@ -7,6 +7,7 @@ export default function Engine({ m }) {
 	const [sb833, setName] = useState('')
 	const [PrivodRukava, setPrivodRukava] = useState('')
 	const [mainEngine, SetmainEngine] = useState('')
+	const hideLine = useRef(null)
 	// console.log(m)
 	// console.log(sb833.power)
 	// console.log(mainEngine.power)
@@ -40,12 +41,32 @@ export default function Engine({ m }) {
 				content.style.display =
 					content.style.display === 'block' ? 'none' : 'block'
 			}
-			console.log(item)
+			// console.log(item)
 
 			return item
 		})
 		setAccordionItems(newAccordionItems)
 	}
+
+	const [shaft, setShaft] = useState()
+	useEffect(() => {
+		const items = Array.from(document.querySelectorAll(`.${s.f}`))
+		setShaft(items)
+	}, [])
+
+	// function hide() {
+	// 	shaft.forEach((el, index) => {
+	// 		console.log(el.textContent)
+
+	// 		// if (el.textContent) {
+	// 		// 	console.log(el)
+	// 		// 	el.style.background = 'yellow'
+	// 		// 	el.textContent = ''
+	// 		// 	el.style.border = 'none'
+	// 		// 	el.style.with = '1px'
+	// 		// }
+	// 	})
+	// }
 
 	return (
 		<div className={s.wrapperE}>
@@ -96,7 +117,7 @@ export default function Engine({ m }) {
 							<li className={`${s.rpm} ${s.f}`}>оброты</li>
 							<li className={`${s.Motor_starterA1} ${s.f}`}>Мощность</li>
 							<li className={`${s.cosF} ${s.f}`}>вес двигателя</li>
-							<li className={`${s.shaftDiameter1} ${s.f}`}>диаметр вала</li>
+							<li className={`${s.shaftDiameter1} ${s.f} `}>диаметр вала</li>
 							<li className={s.mainEngine_power}> {mainEngine.power}</li>
 							{mainEngine.cosF ? (
 								<li className={s.mainEngine_starterA1}> {mainEngine.cosF}</li>
@@ -123,9 +144,10 @@ export default function Engine({ m }) {
 				<div
 					className={s.accordion_item}
 					onClick={() => handleAccordionClick(2)}
+					ref={hideLine}
 				>
 					<div className={s.accordion_header}>
-						{PrivodRukava.nameEng || 'Внести данные'}
+						{PrivodRukava?.nameEng || 'Внести данные'}
 					</div>
 					<div className={s.accordion_content}>
 						<ul className={s.wrapMap}>
@@ -135,20 +157,38 @@ export default function Engine({ m }) {
 							<li className={`${s.Motor_starterA1} ${s.f}`}>Мощность</li>
 							<li className={`${s.cosF} ${s.f}`}>вес двигателя</li>
 							<li className={`${s.shaftDiameter1} ${s.f}`}>диаметр вала</li>
-							<li className={s.mainEngine_power}> {PrivodRukava.power}</li>
+							<li className={s.mainEngine_power}> {PrivodRukava?.power}</li>
 							{sb833.cosF ? (
-								<li className={s.mainEngine_starterA1}> {PrivodRukava.cosF}</li>
+								<li className={s.mainEngine_starterA1}>
+									{' '}
+									{PrivodRukava?.cosF}
+								</li>
 							) : (
-								<li className={s.mainEngine_starterA1}> {PrivodRukava.bearing}</li>
+								<li className={s.mainEngine_starterA1}>
+									{' '}
+									{PrivodRukava?.bearing}
+								</li>
 							)}
-							<li className={s.mainEngine_rpm}> {PrivodRukava.Engine_rpm}</li>
-							<li className={s.CircuitBreaker}> {PrivodRukava.weight}</li>
-							<li className={s.shaftDiameter}> {PrivodRukava.shaftDiameter}</li>
+							<li className={`${s.mainEngine_rpm} `}>
+								{' '}
+								{PrivodRukava?.Engine_rpm}
+							</li>
+							<li className={`${s.CircuitBreaker} `}>
+								{' '}
+								{PrivodRukava?.weight}
+							</li>
+							<li className={`${s.shaftDiameter}${s.ss}`}>
+								{' '}
+								{PrivodRukava?.shaftDiameter}
+							</li>
 							<li className={s.engineName}>
 								{' '}
-								{PrivodRukava.engineName || 'Нужно забить базу данных'}
+								{PrivodRukava?.engineName || 'Нужно забить базу данных'}
 							</li>{' '}
-							<li className={s.electricCurrent}> {PrivodRukava.electricCurrent}</li>
+							<li className={s.electricCurrent}>
+								{' '}
+								{PrivodRukava?.electricCurrent}
+							</li>
 						</ul>
 					</div>
 				</div>

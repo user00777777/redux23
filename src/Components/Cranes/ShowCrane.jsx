@@ -10,58 +10,14 @@ export default function ShowCrane({ crane }) {
 	let refSel = useRef()
 	console.log(crane)
 	const refTable = useRef()
-	let state = useSelector(state => state.cranes.answer)
-	console.log(state)
 	const navigate = useNavigate()
 
-	useEffect(() => {
-		dispatch(craneS(crane))
-		f(state)
-	}, [crane, state])
-	function f(el) {
-		let table = refTable.current
-		const $table = document.createElement('table'),
-			$tbody = document.createElement('tbody'),
-			$thead = document.createElement('thead'),
-			$tr = document.createElement('tr'),
-			$th = document.createElement('th'),
-			$thName = document.createElement('th')
-		if (el?.rp) {
-			$thName.innerHTML = el?.id == undefined ? ' ' : el?.id
-		} else {
-			$thName.classList.remove(s.thName)
-			$thName.innerHTML = ' '
-		}
-		if (el?.rp) {
-			$th.innerHTML = `Запитано от РП № ${el?.rp}`
-		} else {
-			$th.classList.remove(s.thRp)
-			$th.innerHTML = ''
-		}
 
-		$th.classList.add(s.thRp)
-		$thName.classList.add(s.thName)
-		$tr.append($thName)
-		$tr.append($th)
-		$tbody.append($tr)
-		$table.append($tbody)
-		table.append($table)
-	}
-	let handleBack = () => {
-		navigate(-1)
-		table = null
-	}
-	// console.log(crane)
-	let sel = refSel.current
-	console.log(sel)
-	sel?.addEventListener('change', el => {
-		console.log(sel.value)
-	})
 
 	return (
 		<div className={s.container}>
 			<div className={s.wrapBut}>
-				<button onClick={handleBack}>назад</button>
+				<button >назад</button>
 			</div>
 			<div className={`${s.wrapContent} ${s.d}`}>
 				<div ref={refTable} className={s.content}></div>

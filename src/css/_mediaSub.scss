@@ -1,88 +1,114 @@
-
 @media only screen and (max-width: 480px) {
-.div22{ writing-mode:vertical-rl ; -webkit-writing-mode:vertical-rl ; -ms-writing-mode:vertical-rl ;
-font-size: 16px;
+	.div22 {
+		writing-mode: vertical-rl;
+		-webkit-writing-mode: vertical-rl;
+		-ms-writing-mode: vertical-rl;
+		font-size: 16px;
+	}
+	.div31 {
+		// background-color: rgb(184, 202, 202);
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+
+	.r {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0.3rem;
+		margin: 0.1rem;
+		max-height: max-content;
+	}
+	.thinks {
+		writing-mode: vertical-rl;
+		-webkit-writing-mode: vertical-rl;
+		-ms-writing-mode: vertical-rl;
+		font-size: 0.8rem;
+		max-height: 100vh;
+	}
+	.connection {
+		font-size: 2rem;
+	}
+
+	.avm2,
+	.avm1 {
+		margin: 0px;
+		position: relative;
+		span {
+			position: relative;
+			width: fit-content;
+			height: 125px;
+			padding: 0px;
+		}
+    justify-content: center;
+    transition:all 2s ;
+    -webkit-transition:all 2s ;
+    -moz-transition:all 2s ;
+    -ms-transition:all 2s ;
+    -o-transition:all 2s ;
 }
-.div31{
-  // background-color: rgb(184, 202, 202);
-  width: 100%;
-display: flex;
-justify-content: center;
-}
-
-  .r {
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.3rem;
-  margin: 0.1rem;
-  max-height: max-content;
-
-
-  }
-  .thinks{  
-    writing-mode: vertical-rl;
-    -webkit-writing-mode: vertical-rl;
-    -ms-writing-mode: vertical-rl;
+	.avmBlinc {
+		display: flex;
+		justify-content: center;
+		writing-mode: vertical-rl;
+		-webkit-writing-mode: vertical-rl;
+		-ms-writing-mode: vertical-rl;
+		// align-items: center;
+		align-items: center;
+		height: 100vh;
+		span {
+			display: flex;
+			height: 125px;
+			width: 100%;
+			align-items: center;
+			font-size: 1.5rem;
+		}
+    color: aliceblue;
     font-size: 0.8rem;
-    max-height: 100vh
-  }
-  .connection{font-size: 2rem;}
-
-
-  .avm2 ,.avm1 {
-    margin: 0px;
-position: relative;
-span{position: relative;
-  width:fit-content;
-  height:125px;
-  padding:0px;
-  ;}
-justify-content: center;
-
+    //writing-mode: vertical-rl;
+    //-webkit-writing-mode: vertical-rl;
+    //-ms-writing-mode: vertical-rl;
+    background-color: rgb(234, 231, 236);
+    animation: my;
+    -webkit-animation: my 20ms ease-out 1ms;
+    transition:all 5s ;
+    -webkit-transition:all 5s ;
+    -moz-transition:all 5s ;
+    -ms-transition:all 5s ;
+    -o-transition:all 5s ;
 }
-  .avmBlinc {
-    display: flex;
-    justify-content:center;
-    writing-mode: vertical-rl;
-    -webkit-writing-mode: vertical-rl;
-    -ms-writing-mode: vertical-rl;
-    // align-items: center;
-   align-items: center;
-    height :100vh;
-    span{ 
-display: flex;
-height:125px ;
-width: 100%;
-align-items: center;
-font-size: 1.5rem;
-    }
-    color:aliceblue;
-    font-size: 0.8rem;
-    // writing-mode: vertical-rl;
-    // -webkit-writing-mode: vertical-rl;
-    // -ms-writing-mode: vertical-rl;
-  background-color: rgb(234, 231, 236);
-  animation:my ;
-  -webkit-animation:my 1s 900ms  ease-in infinite;
 }
+.avm1,
+.avm2 {
+	display: grid;
+	height: 200px;
+	place-items: center;
 
+	span {
+		color: rgb(227, 227, 227);
+		display: flex;
+		width: min-content;
+	}
+  color: red;
+  transition: all 4s;
+  /*Permalink-usetoeditandsharethisgradient:;
+  https://colorzilla.com/gradient-editor/#f9c667+0,f79621+100;
+  Orange+3D+%234*/background: rgb(249, 103, 103);
+  /*Oldbrowsers*/background: -moz-linear-gradient(		top,		rgb(225, 19, 19) 0%,		rgb(244, 147, 192) 100%	);
+  /*FF3.6-15*/background: -webkit-linear-gradient(		top,		rgb(237, 147, 179) 0%,		rgb(247, 33, 33) 100%	);
+  /*Chrome10-25,Safari5.1-6*/background: linear-gradient(		to bottom,		rgb(161, 95, 120) 0%,		rgb(223, 49, 49) 100%	);
+  /*W3C,IE10+,FF16+,Chrome26+,Opera12+,Safari7+*/filter: ;
+  progid: DXImageTransform.Microsoft.gradient(		startColorstr= '#f9c667',		endColorstr= '#f79621',		GradientType=0	);
+  /*IE6-9*/color: black;
+  font-weight: 600;
+  letter-spacing: 2px;
+  //width: 20px;
+  //margin-left: 12px;
+  transition: 12s;
+  -webkit-transition: all 4s;
+  -moz-transition: all 4s;
+  -ms-transition: all 4s;
+  -o-transition: all 4s;
 }
-.avm1,.avm2{display: grid;
-  height:200px ;
-place-items: center;
-
-span{display: flex;}
-
-/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f9c667+0,f79621+100;Orange+3D+%234 */
-background: rgb(249,198,103); /* Old browsers */
-background: -moz-linear-gradient(top,  rgba(249,198,103,1) 0%, rgba(247,150,33,1) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  rgba(249,198,103,1) 0%,rgba(247,150,33,1) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  rgba(249,198,103,1) 0%,rgba(247,150,33,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9c667', endColorstr='#f79621',GradientType=0 ); /* IE6-9 */
-color:black;
-font-weight: 700;
-letter-spacing: 2px;
-}
-
+.avm1:hover{color: green;}

@@ -34,19 +34,15 @@ const initialState = {
 		{
 			name: '2А554',
 			mainEngine: {
-        nameEng:'Привод охлаждения',
+				nameEng: 'Привод охлаждения',
 				engineName: 'привод охлаждения',
 				Engine_rpm: '2800 об',
 				power: '0.125',
-				// Motor_starterA1: 'A1:KM4,A2:KM5',
-				// cosF: 0.87,
 				CircuitBreaker: 'Q2',
 				motorShaft: '180mm',
-				// weight: '160кг',
-				// electricCurrent: '36A',
-				// shaftDiameter: '55mm',
 			},
 			hydroelectricStation: {
+				nameEng: 'Привод гидронасоса',
 				engineName: 'Привод гидронасоса',
 				Engine_rpm: '1500 Об',
 				power: '0.55',
@@ -60,7 +56,7 @@ const initialState = {
 				// bearing: '6206 ZZ-C3',
 			},
 			PrivodRukava: {
-        nameEng:'Привод рукава',
+				nameEng: 'Привод рукава',
 				engineName: 'Привод рукава',
 				Engine_rpm: '1500 Об',
 				power: '2.2',

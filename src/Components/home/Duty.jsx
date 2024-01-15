@@ -7,26 +7,19 @@ export default function Duty() {
 	const dayOfWeek = currentDate.getDay()
 	let hour = currentDate.getHours()
 	const minutes = currentDate.getMinutes()
-	//     let nowDate=new Date();
-	//     let date=nowDate.getDate();
-	//     let oldDate=nowDate.getDate()
-	//     let hour=nowDate.getHours();
-	//     let minutes=nowDate.getMinutes();
-	// console.log((dayOfMonth ))
 
-	let d = 1
 	let [newDate, setDate] = useState()
 	let [ddate, setDdate] = useState(0)
 	let arr = [1, 2, 3, 4]
-	function changeDuty() {
-		setDdate(() => (ddate += 1))
-		setDate(() => arr[ddate % arr.length])
-		localStorage.setItem('duty', ddate)
-	}
+	// function changeDuty() {
+	// 	setDdate(() => (ddate += 1))
+	// 	setDate(() => arr[ddate % arr.length])
+	// 	localStorage.setItem('duty', ddate)
+	// }
 
 	let change_Day = Number(localStorage.getItem('duty'))
 
-	// console.log((hour ))
+	// console.log((hour=22 ))
 
 	class Shift {
 		constructor(duty1, duty2) {
@@ -34,11 +27,13 @@ export default function Duty() {
 			this.duty2 = duty2
 		}
 	}
-	// console.log(dayOfMonth)
+	console.log(dayOfMonth)
 
-	let vasj = new Shift('Малько','Гекало' )
+	let vasj = new Shift('Малько', 'Гекало')
 	let stas = new Shift('Круглый', 'Мисюра')
-	let sinkevich = new Shift('Самбур', 'Бондаренко')
+	let sinkevich = new Shift( 'Синькевичь',
+		'Бондаренко'
+	)
 	let paha = new Shift('Лысенко', 'Мисюра')
 
 	const workers1 = [vasj, stas, sinkevich, paha]
@@ -46,9 +41,10 @@ export default function Duty() {
 
 	// const currentShift = shifts[(day ) % shifts.length];
 	console.log(change_Day)
-	let changeDayOfMonth = dayOfMonth
-	changeDayOfMonth = changeDayOfMonth += change_Day
-	hour = 8
+	let changeDayOfMonth = dayOfMonth + 1
+	changeDayOfMonth = changeDayOfMonth
+	// hour = 22
+	console.log(changeDayOfMonth)
 
 	const currentWorker2 = workers2[changeDayOfMonth % workers2.length]
 	// console.log(currentWorker2.duty1)
@@ -61,7 +57,7 @@ export default function Duty() {
 
 		return (
 			<div className={s.container}>
-				<div className={s.twoShift} onClick={changeDuty}>
+				<div className={s.twoShift}>
 					{' '}
 					<h2>Дежурные електрики</h2>{' '}
 					<h2 className={s.d12}>
@@ -78,7 +74,7 @@ export default function Duty() {
 
 		return (
 			<div className={s.container}>
-				<div onClick={changeDuty} className={s.twoShift}>
+				<div className={s.twoShift}>
 					<h2>Дежурные Електрики:</h2>
 					<h2 className={s.d12}>
 						{' '}
@@ -109,6 +105,4 @@ export default function Duty() {
 			</div>
 		)
 	}
-
-
 }

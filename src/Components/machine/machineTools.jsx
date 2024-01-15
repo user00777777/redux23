@@ -380,7 +380,6 @@ const MachineTools = props => {
 					<span>№1419</span>
 				</Link>
 			</div>
-
 		</div>
 	)
 }

@@ -3451,8 +3451,11 @@
     color: #e80f0f;
     font-size: 1rem;
   }
-  .div1, .div2, .div3, .div4 {
-    color: #FFFFFF;
+  .div1,
+  .div2,
+  .div3,
+  .div4 {
+    color: #ffffff;
     background: #d80b0b;
     border: 8px inset #11b0ea;
     border-radius: 10px;
@@ -3470,14 +3473,15 @@
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
-    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #49ff18, 0 0 30px #49ff18, 0 0 40px #49ff18, 0 0 55px #49ff18, 0 0 75px #49ff18;
     letter-spacing: 5px;
   }
   .div71 {
     grid-area: 23/6/27/7;
   }
 }
-.div6, .div9 {
+.div6,
+.div9 {
   padding-top: 0.2rem;
   line-height: 0.73rem;
 }
