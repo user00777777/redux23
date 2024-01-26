@@ -31,9 +31,7 @@ export default function Duty() {
 
 	let vasj = new Shift('Малько', 'Гекало')
 	let stas = new Shift('Круглый', 'Мисюра')
-	let sinkevich = new Shift( 'Синькевичь',
-		'Бондаренко'
-	)
+	let sinkevich = new Shift('Синькевичь', 'Бондаренко')
 	let paha = new Shift('Лысенко', 'Мисюра')
 
 	const workers1 = [vasj, stas, sinkevich, paha]
@@ -86,7 +84,10 @@ export default function Duty() {
 		)
 	}
 	if (hour >= 0 && hour < 7) {
+		console.log('ok')
+
 		changeDayOfMonth -= 1
+		console.log(changeDayOfMonth)
 
 		const currentWorker2 = workers2[changeDayOfMonth % workers2.length]
 
@@ -94,7 +95,7 @@ export default function Duty() {
 
 		return (
 			<div className={s.container}>
-				<div onClick={changeDuty} className={s.twoShift}>
+				<div className={s.twoShift}>
 					<h2>Дежурные Електрики:</h2>
 					<h2 className={s.d12}>
 						{' '}

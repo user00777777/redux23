@@ -1,12 +1,14 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import cK from '../images/klepka/circuitKlupka.jpg'
 import s from '../../css/mashineCss/mashineFoto.module.css'
 import _fotoSliderArr from './_fotoSliderArr'
 import foto_PlusText from './foto_PlusText'
+import Contexst from '../../App'
 // Импортируйте другие изображения, если они есть
 
 const Mashine = ({ mashine }) => {
-	// console.log(_fotoSliderArr(mashine).n);
+	const myContexst1 = useContext(Contexst)
+	console.log(myContexst1)
 	const ref = useRef(null)
 	const refDots = useRef(null)
 	let [test, setTest] = useState(null)
@@ -33,13 +35,6 @@ const Mashine = ({ mashine }) => {
 
 	const goToSlide = (slideIndex, slide) => {
 		setCurrentIndex(slideIndex)
-
-
-
-
-
-
-		
 	}
 
 	return (

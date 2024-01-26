@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { createContext, useEffect, useRef, useState } from 'react'
 import { createElement } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
@@ -12,8 +12,10 @@ import Foto from './Foto'
 import Mashine from './Mashine'
 import Engine from './Engine'
 import { engine833 } from '../../sliceReduce/engineREduser'
+const MyContexst = createContext()
 
 export default function Radialka() {
+	const contexst = 'my contexst'
 	const dispatch = useDispatch()
 	let [selector833] = useSelector(state => state.engine.data833)
 	const { mainEngine } = selector833
@@ -63,7 +65,9 @@ export default function Radialka() {
 					{ss ? (
 						<Foto mashine={mashine?.el} />
 					) : (
-						<Mashine mashine={mashine?.el} />
+						
+							<Mashine mashine={mashine?.el} />
+						
 					)}
 				</div>
 				<button className={s.button} onClick={goBack}>

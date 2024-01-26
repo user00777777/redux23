@@ -23,6 +23,8 @@
 	grid-template-columns: 1fr;
 	grid-template-rows: 70px 200px;
 	grid-auto-rows: 100px;
+  
+  
 }
 .wrapBut {
 	display: grid;
@@ -43,12 +45,25 @@
 	width: 400px;
 	height: 200px;
 }
-.content {
-	// background-color: bisque;
+.crane {
+	height: 400px;
+	width: 100%;
+	border: black solid 3px;
+	li {
+		border: 2px red solid;
+	}
+	display: grid;
+	// grid-template-columns: 20px 1fr;
+	// grid-template-rows: repeat(13,1fr);
+
+	// gap: 1px;
+	grid-auto-flow: row;
+  .craneName{
+    
+
+
+
+  }
 }
-.thRp {
-	border: 2px rgb(212, 0, 0) solid;
-}
-.thName {
-	border: 2px black solid;
-}
+.f{width: 100%;
+height: auto;}

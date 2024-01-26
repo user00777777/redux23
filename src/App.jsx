@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import './App.css'
 import Employees from './Components/Employees'
@@ -27,13 +26,12 @@ import CircuitGate from './Components/District23/CircuitGate'
 import PlumbersDuty from './css/homeComponent/Plambers/PlumbersDuty'
 import Phones from './Components/home/phones/Phones'
 import Cranes from './Components/Cranes/Cranes'
-import ShowCrane from './Components/Cranes/ShowCrane'
+
 import Telphers from './Components/Telphers'
 import Rp from './Components/Rp/Rp'
 import DiscrabeRp from './Components/Rp/DiscrabeRp'
 import Engine from './Components/machine/Engine'
-// import First from './Components/First'
-// import OneComponent from './Components/OneComponent'
+import ShowCrane from './Components/Cranes/ShowCranes/ShowCrane'
 
 function App() {
 	return (
@@ -62,13 +60,11 @@ function App() {
 					<Route path='circuitGate' element={<CircuitGate />} />
 					<Route path='PlumbersDuty' element={<PlumbersDuty />} />
 					<Route path='phones' element={<Phones />} />
-					<Route path='/showCrane' element={<ShowCrane />} />
-
-					<Route path='cran' element={<Cranes />} />
+					<Route path='cranes' element={<Cranes />} />
+					<Route path='/show' element={<ShowCrane />} />
 					<Route path='/engine/:cosFStr' element={<Engine />} />
 					<Route path='rp' element={<Rp />} />
 					<Route path='/discrabeRp/:rp' element={<DiscrabeRp />} />
-
 				</Route>
 			</Routes>
 		</div>

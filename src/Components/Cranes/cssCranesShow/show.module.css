@@ -31,10 +31,17 @@
   height: 200px;
 }
 
-.thRp {
-  border: 2px rgb(212, 0, 0) solid;
+.crane {
+  height: 400px;
+  width: 100%;
+  border: black solid 3px;
+  display: grid;
+  grid-auto-flow: row;
 }
-
-.thName {
-  border: 2px black solid;
+.crane li {
+  border: 2px red solid;
+}
+.f {
+  width: 100%;
+  height: auto;
 }

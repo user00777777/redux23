@@ -18,7 +18,7 @@ export default function District23() {
 					</Link>
 				</li>
 				<li className={[s.cranes, s.item].join(' ')}>
-					<Link to='/cran'>
+					<Link to='/cranes'>
 						<span>Краны</span>
 					</Link>
 				</li>
