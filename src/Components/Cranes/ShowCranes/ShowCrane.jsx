@@ -3,7 +3,8 @@ import { useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import s from '../cssCranesShow/show.module.css'
-export const Context = createContext(null)
+import Slider from './Slider'
+// export const Context = createContext(null)
 export default function ShowCrane({ crane }) {
 
 	let dispatch = useDispatch()
@@ -27,7 +28,10 @@ export default function ShowCrane({ crane }) {
 						</li>
 					</ul>
 				</div>
-				<img className={s.f} src={crane.f?crane.f[1]:null} alt='' />
+
+				<div className={s.slider}>
+					<Slider foto={crane.f} />{' '}
+				</div>
 			</div>
 		</div>
 	)
