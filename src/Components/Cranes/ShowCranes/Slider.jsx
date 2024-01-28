@@ -27,7 +27,7 @@ function Slider({ foto }) {
 					<div className={s.goToPrevious} onClick={goToPrevious}>
 						❰
 					</div>
-					<div onClick={s.goToNext} className={s.goToNext}>
+					<div onClick={goToNext} className={s.goToNext}>
 						❱
 					</div>
 				</div>
@@ -37,14 +37,17 @@ function Slider({ foto }) {
 					className={s.slide}
 				/>
 			</div>
-			<div>
+			<div className={s.dotWrapper}  >
 				{foto.map((slide, slideIndex) => (
 					<div
+						className={`${s.dot} ${
+							currentIndex == slideIndex ? s.active : ''
+						}`}
 						// style={dotStyle}
 						key={slideIndex}
 						onClick={() => goToSlide(slideIndex)}
 					>
-						●
+		
 					</div>
 				))}
 			</div>
