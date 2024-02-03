@@ -190,7 +190,7 @@ const Cranes = () => {
 						</span>
 					</div>
 					<div className={[s.cran3, s.mal].join(' ')} data-mal='6_1'>
-						<span data-crane='6/1'>
+						<span data-crane='1/6'>
 							Кран<b>1/6</b>{' '}
 						</span>
 					</div>
@@ -206,7 +206,7 @@ const Cranes = () => {
 						</span>
 					</div>
 					<div className={[s.cran3, s.mal, s.cran3_1].join(' ')}>
-						<span data-crane='1_7'>
+						<span data-crane='1/7'>
 							Кран <b>№1/7</b>{' '}
 						</span>
 					</div>

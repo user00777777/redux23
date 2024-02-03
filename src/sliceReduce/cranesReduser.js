@@ -8,6 +8,7 @@ import crane_Mal5_3 from '../Components/Cranes/FotoCrane/3CraneD6.jpg'
 import crane_Mal5_5 from '../Components/Cranes/FotoCrane/3CraneD6___.jpg'
 import React from 'react'
 import crane1_6 from './fotoCranes/foto1_6'
+import foto2_6 from './fotoCranes/foto2_6'
 const initialState = {
 	list: [
 		{
@@ -17,9 +18,15 @@ const initialState = {
 			f: [crane_Mal5, crane_Mal5_1, crane_Mal5_2, crane_Mal5_3, crane_Mal5_5],
 		},
 
-		{ cranName: '6/1', rp: 'Главный рубильник', id: 'Кран 5T',      f:crane1_6()
- },
-		{ cranName: '1_7', rp: 14, id: 'Кран 10T', f: crane7 },
+		{ cranName: '1/6', rp: 'Главный рубильник', id: 'Кран 5T', f: crane1_6() },
+		{ cranName: '1/7', rp: 14, id: 'Кран 10T', f: crane7 },
+		{ cranName: '2/6', rp: 14, id: 'Кран 10T', f: foto2_6() },
+		{
+			cranName: '3/6',
+			rp: 14,
+			id: 'Кран 10T',
+			f: [crane_Mal5, crane_Mal5_1, crane_Mal5_2, crane_Mal5_3, crane_Mal5_5],
+		},
 	],
 	craneObj: {},
 }

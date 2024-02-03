@@ -27,33 +27,41 @@ function Slider({ foto }) {
 			? (arrow.current.style.opacity = '0')
 			: (arrow.current.style.opacity = '1')
 	}
-
+let isFoto=Array.isArray(foto)
 	return (
 		<div className={s.mainWrapper}>
 			<div className={s.imgContainer}>
-				<div ref={arrow}>
+			{	Array.isArray(foto)&&<div ref={arrow}>
+				
 					<div className={s.goToPrevious} onClick={goToPrevious}>
 						❰
 					</div>
 					<div onClick={goToNext} className={s.goToNext}>
 						❱
 					</div>
-				</div>
-				<img
-					src={foto[currentIndex]}
-					alt={`Slide ${currentIndex + 1}`}
-					className={s.slide}
-				/>
+				</div>}
+				{Array.isArray(foto) ? (
+					<img
+						src={foto[currentIndex]}
+						alt={`Slide ${currentIndex + 1}`}
+						className={s.slide}
+					/>
+				) : (
+					<img src={foto} alt='oneFoto' className={s.oneFoto} />
+				)}
 			</div>
 			<div className={s.dotWrapper}>
-				{foto.map((slide, slideIndex) => (
-					<div
-						className={`${s.dot} ${currentIndex == slideIndex ? s.active : ''}`}
-						// style={dotStyle}
-						key={slideIndex}
-						onClick={() => goToSlide(slideIndex)}
-					></div>
-				))}
+				{isFoto &&
+					foto.map((slide, slideIndex) => (
+						<div
+							className={`${s.dot} ${
+								currentIndex == slideIndex ? s.active : ''
+							}`}
+							// style={dotStyle}
+							key={slideIndex}
+							onClick={() => goToSlide(slideIndex)}
+						></div>
+					))}
 			</div>
 			{/* <img src={test}></img> */}
 			<ol></ol>
