@@ -7,6 +7,7 @@ import crane_Mal5_3 from '../Components/Cranes/FotoCrane/3CraneD6.jpg'
 // import crane_Mal5_4 from '../Components/Cranes/FotoCrane/3CraneD6___'
 import crane_Mal5_5 from '../Components/Cranes/FotoCrane/3CraneD6___.jpg'
 import React from 'react'
+import crane1_6 from './fotoCranes/foto1_6'
 const initialState = {
 	list: [
 		{
@@ -16,8 +17,9 @@ const initialState = {
 			f: [crane_Mal5, crane_Mal5_1, crane_Mal5_2, crane_Mal5_3, crane_Mal5_5],
 		},
 
-		{ cranName: '6_1', rp: 14, id: 'Кран 5T', f: '' },
-		{ name: '1_7', rp: 14, id: 'Кран 10T', f: crane7 },
+		{ cranName: '6/1', rp: 'Главный рубильник', id: 'Кран 5T',      f:crane1_6()
+ },
+		{ cranName: '1_7', rp: 14, id: 'Кран 10T', f: crane7 },
 	],
 	craneObj: {},
 }
@@ -27,13 +29,15 @@ const cranes = createSlice({
 	initialState,
 	reducers: {
 		craneS(state, action) {
-			// console.log(action.payload);
-			console.log(JSON.stringify(state))
+			console.log(action.payload);
+			// console.log(JSON.stringify(state))
 			const crane = state.list.find(el => {
 				if (el.cranName == action.payload) return el
 			})
 
 			console.log(JSON.stringify(crane))
+  // console.log(crane);
+  
 
 			state.craneObj = crane
 		},

@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import s from './showCrane.module.css'
 function Slider({ foto }) {
-	console.log(foto)
+	const arrow = useRef(null)
 	const [currentIndex, setCurrentIndex] = useState(0)
+	const [arrows, setArrows] = useState(false)
 
 	const goToPrevious = () => {
 		const isFirstSlide = currentIndex === 0
@@ -18,12 +19,19 @@ function Slider({ foto }) {
 
 	const goToSlide = slideIndex => {
 		setCurrentIndex(slideIndex)
+	
+		setArrows(() => !arrows)
+    console.log(arrows);
+    
+		arrows
+			? (arrow.current.style.opacity = '0')
+			: (arrow.current.style.opacity = '1')
 	}
 
 	return (
 		<div className={s.mainWrapper}>
 			<div className={s.imgContainer}>
-				<div>
+				<div ref={arrow}>
 					<div className={s.goToPrevious} onClick={goToPrevious}>
 						❰
 					</div>
@@ -37,18 +45,14 @@ function Slider({ foto }) {
 					className={s.slide}
 				/>
 			</div>
-			<div className={s.dotWrapper}  >
+			<div className={s.dotWrapper}>
 				{foto.map((slide, slideIndex) => (
 					<div
-						className={`${s.dot} ${
-							currentIndex == slideIndex ? s.active : ''
-						}`}
+						className={`${s.dot} ${currentIndex == slideIndex ? s.active : ''}`}
 						// style={dotStyle}
 						key={slideIndex}
 						onClick={() => goToSlide(slideIndex)}
-					>
-		
-					</div>
+					></div>
 				))}
 			</div>
 			{/* <img src={test}></img> */}

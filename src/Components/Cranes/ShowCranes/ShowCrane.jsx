@@ -6,13 +6,12 @@ import s from '../cssCranesShow/show.module.css'
 import Slider from './Slider'
 // export const Context = createContext(null)
 export default function ShowCrane({ crane }) {
-
 	let dispatch = useDispatch()
 	let refSel = useRef()
-	console.log(crane)
+	// console.log(crane)
 	const refTable = useRef()
 	const navigate = useNavigate()
-	console.log(crane.f)
+	// console.log(crane.f)
 	return (
 		<div className={s.container}>
 			<div className={s.wrapBut}>
@@ -23,7 +22,7 @@ export default function ShowCrane({ crane }) {
 					<ul className={s.crane}>
 						<li className={s.craneName}>Кран Малярки № {crane.name}</li>
 						<li>
-							Заитан от РП
+							Заитан от {' '}
 							{crane.rp}
 						</li>
 					</ul>
