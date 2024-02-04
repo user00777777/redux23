@@ -1,9 +1,12 @@
 import React, { useRef, useState } from 'react'
 import s from './showCrane.module.css'
-function Slider({ foto }) {
+import style from './sliderNotes.module.css'
+function Slider({ foto, repair }) {
 	const arrow = useRef(null)
 	const [currentIndex, setCurrentIndex] = useState(0)
 	const [arrows, setArrows] = useState(false)
+	// console.log(foto);
+	console.log(repair)
 
 	const goToPrevious = () => {
 		const isFirstSlide = currentIndex === 0
@@ -19,27 +22,28 @@ function Slider({ foto }) {
 
 	const goToSlide = slideIndex => {
 		setCurrentIndex(slideIndex)
-	
+
 		setArrows(() => !arrows)
-    console.log(arrows);
-    
+		// console.log(arrows);
+
 		arrows
 			? (arrow.current.style.opacity = '0')
 			: (arrow.current.style.opacity = '1')
 	}
-let isFoto=Array.isArray(foto)
+	let isFoto = Array.isArray(foto)
 	return (
 		<div className={s.mainWrapper}>
 			<div className={s.imgContainer}>
-			{	Array.isArray(foto)&&<div ref={arrow}>
-				
-					<div className={s.goToPrevious} onClick={goToPrevious}>
-						❰
+				{Array.isArray(foto) && (
+					<div ref={arrow}>
+						<div className={s.goToPrevious} onClick={goToPrevious}>
+							❰
+						</div>
+						<div onClick={goToNext} className={s.goToNext}>
+							❱
+						</div>
 					</div>
-					<div onClick={goToNext} className={s.goToNext}>
-						❱
-					</div>
-				</div>}
+				)}
 				{Array.isArray(foto) ? (
 					<img
 						src={foto[currentIndex]}
@@ -63,8 +67,28 @@ let isFoto=Array.isArray(foto)
 						></div>
 					))}
 			</div>
-			{/* <img src={test}></img> */}
-			<ol></ol>
+			{repair.travelMotor_Cabin &&
+				repair.travelMotor_Cabin.map((el, index) => {
+					return (
+						<ul className={style.notesWrap} key={index}>
+							{el.motorStarters && (
+								<li className={`${style.repair}${s.one}`}>
+									{el.motorStarters}
+								</li>
+							)}
+							{el.repairMotorsCabin && (
+								<li className={style.repair}>{el.repairMotorsCabin}</li>
+							)}
+							{el.cables && <li className={style.repair}>{el.cables}</li>}
+						</ul>
+					)
+				})}
+
+			{/* 
+    <li className={s.repair}></li>
+    <li className={s.repair}></li>
+    <li className={s.repair}></li> */}
+
 			<div></div>
 		</div>
 	)

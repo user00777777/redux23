@@ -11,8 +11,9 @@ export default function ShowCrane({ crane }) {
 	// console.log(crane)
 	const refTable = useRef()
 	const navigate = useNavigate()
-	// console.log(crane.f)
-	return (
+	// console.log(crane.repair)
+let repair=crane.repair
+  return (
 		<div className={s.container}>
 			<div className={s.wrapBut}>
 				<button onClick={() => navigate(-1)}>назад</button>
@@ -25,11 +26,12 @@ export default function ShowCrane({ crane }) {
 							Заитан от {' '}
 							{crane.rp}
 						</li>
+
 					</ul>
 				</div>
 
 				<div className={s.slider}>
-					<Slider foto={crane.f} />{' '}
+					<Slider foto={crane.f} repair={repair}  />{' '}
 				</div>
 			</div>
 		</div>
