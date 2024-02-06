@@ -38,9 +38,11 @@
   background-color: rgb(245, 209, 0);
   z-index: 1;
   display: flex;
-  justify-content: center;
-  font-size: 17px;
+  justify-content: space-evenly;
+  font-size: 1rem;
   flex-flow: wrap column;
+  margin: 0px;
+  padding: 0px;
 }
 
 .district6 {
@@ -61,11 +63,6 @@
   height: 100vh;
   justify-content: space-between;
   padding: 100px 0px;
-}
-
-:is(.mal) > span {
-  width: 100%;
-  display: inline-block;
 }
 
 .newEstakada {
@@ -117,20 +114,19 @@ img {
   z-index: 3;
 }
 
-:has([data-crane=mal1]) > span {
-  display: inline-block;
-  font-size: 3px;
-  width: 100%;
-  height: 100%;
+:is(.mal2) > span {
+  display: flex;
   justify-content: center;
-  align-items: center;
-  font-size: 0.7rem;
-}
-:has([data-crane=mal1]) > span span {
-  display: inline-block;
-  width: -moz-min-content;
-  width: min-content;
+  padding: 0;
   height: -moz-min-content;
   height: min-content;
-  font-size: 0.8rem;
+}
+
+:is(.mal2) > span + span {
+  width: 100%;
+  height: -moz-min-content;
+  height: min-content;
+  display: inline-block;
+  font-size: 80%;
+  display: grid;
 }
