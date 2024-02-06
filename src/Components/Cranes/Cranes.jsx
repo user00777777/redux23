@@ -167,7 +167,7 @@ const Cranes = () => {
 					</div>
 					<div className={[s.mal, s.mal2].join(' ')}>
 						<span data-crane='mal1'>
-							Кран <b>1</b>
+							Кран1{' '}<span className={s.inv}> <b>инв№5028</b></span>
 						</span>
 					</div>
 				</div>

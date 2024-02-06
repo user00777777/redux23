@@ -116,3 +116,21 @@ img {
   width: 112px;
   z-index: 3;
 }
+
+:has([data-crane=mal1]) > span {
+  display: inline-block;
+  font-size: 3px;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7rem;
+}
+:has([data-crane=mal1]) > span span {
+  display: inline-block;
+  width: -moz-min-content;
+  width: min-content;
+  height: -moz-min-content;
+  height: min-content;
+  font-size: 0.8rem;
+}

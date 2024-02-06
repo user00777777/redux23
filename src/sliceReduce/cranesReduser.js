@@ -1,21 +1,23 @@
 import { createSlice } from '@reduxjs/toolkit'
 import crane7 from '../Components/Cranes/FotoCrane/Crane1_D7.jpgNew.jpg'
-import crane_Mal5 from '../Components/Cranes/FotoCrane/3cD6__.jpg'
-import crane_Mal5_1 from '../Components/Cranes/FotoCrane/3c6di.jpg'
-import crane_Mal5_2 from '../Components/Cranes/FotoCrane/3Cr6d.jpg'
-import crane_Mal5_3 from '../Components/Cranes/FotoCrane/3CraneD6.jpg'
+// import crane_Mal5 from '../Components/Cranes/FotoCrane/3cD6__.jpg'
+// import crane_Mal5_1 from '../Components/Cranes/FotoCrane/3c6di.jpg'
+// import crane_Mal5_2 from '../Components/Cranes/FotoCrane/3Cr6d.jpg'
+// import crane_Mal5_3 from '../Components/Cranes/FotoCrane/3CraneD6.jpg'
 // import crane_Mal5_4 from '../Components/Cranes/FotoCrane/3CraneD6___'
-import crane_Mal5_5 from '../Components/Cranes/FotoCrane/3CraneD6___.jpg'
+// import crane_Mal5_5 from '../Components/Cranes/FotoCrane/3CraneD6___.jpg'
 import React from 'react'
 import crane1_6 from './fotoCranes/foto1_6'
 import foto2_6 from './fotoCranes/foto2_6'
+import  foto3_6 from './fotoCranes/foto3_6'
+
 const initialState = {
 	list: [
 		{
 			cranName: 'mal1',
 			rp: 14,
 			id: 'Кран 5T',
-			f: [crane_Mal5, crane_Mal5_1, crane_Mal5_2, crane_Mal5_3, crane_Mal5_5],
+			f: foto3_6(),
             repair:{liftMotor:'',
             travelMotor_Cabin:[{repairMotorsCabin:'',
             motorStarters:''
@@ -67,7 +69,7 @@ cabin:[''],
 			cranName: '3/6',
 			rp: 14,
 			id: 'Кран 10T',
-			f: [crane_Mal5, crane_Mal5_1, crane_Mal5_2, crane_Mal5_3, crane_Mal5_5],
+			f:foto3_6(),
             repair:{liftMotor:'',
             travelMotor_Cabin:[{repairMotorsCabin:'Замена шестерни 2023 г.лето, двигателя над кабиной',
         motorStarters:'Замена двух пускателей хода моста 2023г лето',
