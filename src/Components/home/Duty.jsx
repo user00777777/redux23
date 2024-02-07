@@ -17,7 +17,7 @@ export default function Duty() {
 	// 	localStorage.setItem('duty', ddate)
 	// }
 
-	let change_Day = Number(localStorage.getItem('duty'))
+	// let change_Day = Number(localStorage.getItem('duty'))
 
 	// console.log((hour=22 ))
 
@@ -38,9 +38,9 @@ export default function Duty() {
 	const workers2 = [paha, vasj, stas, sinkevich]
 
 	// const currentShift = shifts[(day ) % shifts.length];
-	console.log(change_Day)
-	let changeDayOfMonth = dayOfMonth + 1
-	changeDayOfMonth = changeDayOfMonth
+	// console.log(change_Day)
+	let changeDayOfMonth = dayOfMonth 
+	// changeDayOfMonth = changeDayOfMonth
 	// hour = 22
 	console.log(changeDayOfMonth)
 
