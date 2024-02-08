@@ -33,7 +33,7 @@ function Slider({ foto, repair }) {
 	let isFoto = Array.isArray(foto)
 	return (
 		<div className={s.mainWrapper}>
-			<div className={s.imgContainer}>
+			<div className={s.imgContainer} onDoubleClick={()=>console.log('double')}>
 				{Array.isArray(foto) && (
 					<div ref={arrow}>
 						<div className={s.goToPrevious} onClick={goToPrevious}>
