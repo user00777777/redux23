@@ -1,15 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit'
 import crane7 from '../Components/Cranes/FotoCrane/Crane1_D7.jpgNew.jpg'
-// import crane_Mal5 from '../Components/Cranes/FotoCrane/3cD6__.jpg'
-// import crane_Mal5_1 from '../Components/Cranes/FotoCrane/3c6di.jpg'
-// import crane_Mal5_2 from '../Components/Cranes/FotoCrane/3Cr6d.jpg'
-// import crane_Mal5_3 from '../Components/Cranes/FotoCrane/3CraneD6.jpg'
-// import crane_Mal5_4 from '../Components/Cranes/FotoCrane/3CraneD6___'
-// import crane_Mal5_5 from '../Components/Cranes/FotoCrane/3CraneD6___.jpg'
+
 import React from 'react'
 import crane1_6 from './fotoCranes/foto1_6'
-import foto2_6 from './fotoCranes/foto2_6'
+// import foto2_6 from './fotoCranes/foto2_6'
 import  foto3_6 from './fotoCranes/foto3_6'
+import  foto2_6 from './fotoCranes/foto2_6'
 
 const initialState = {
 	list: [
