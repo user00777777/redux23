@@ -9,6 +9,7 @@ import crane1_6_trip from '../../Components/Cranes/FotoCrane/one_Crane/tripEngin
 import crane1_6Half from '../../Components/Cranes/FotoCrane/one_Crane/1_6.jpg'
 import crane1_6HalLift from '../../Components/Cranes/FotoCrane/one_Crane/1_6m.jpg'
 
+
 function crane1_6 () {
 return [ crane1_6full, crane1_6_manage, crane1_6_trip, crane1_6Lift,crane1_6Half,crane1_6HalLift]
 
