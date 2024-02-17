@@ -1,9 +1,14 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Russo+One&display=swap");
+/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 .notesWrap {
+  height: 100vh;
   padding-left: 10px;
   background-color: azure;
+  border: tomato 2px solid;
+  margin-top: 10px;
 }
-.notesWrap li:nth-child(-n+5) {
+.notesWrap li {
   margin-top: 10px;
   display: flex;
   width: 100%;
@@ -14,5 +19,73 @@
   font-weight: 600;
   font-style: normal;
   border: none;
-  border-bottom: double;
+}
+
+.wrapInput {
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+}
+
+.inpLocalStorage {
+  width: 200px;
+  height: 23.59px;
+  border: 2px solid;
+  animation: input-focus-animation 0.3s ease-in-out;
+  -webkit-animation: input-focus-animation 0.4s ease-out;
+}
+
+.btn_input {
+  margin-left: 20px;
+  background-color: rgba(12, 13, 13, 0.1882352941);
+  color: #d9dddc;
+  border: 2px solid #2b0606;
+  padding: 10px;
+  width: -moz-max-content;
+  width: max-content;
+  display: inline-block;
+  padding: 5px;
+  font-size: 0.9rem;
+}
+
+input:focus {
+  border: 2px solid rgba(64, 133, 157, 0.7294117647);
+  background-color: #eae2e2;
+}
+
+@keyframes input-focus-animation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50px;
+  }
+}
+#notesWrap {
+  border: 2px red solid;
+  display: grid;
+  width: 100%;
+  height: -moz-min-content;
+  height: min-content;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr clamp(1fr, 2fr, 90%); /* Первая строка автоматически увеличивается под содержимое, вторая занимает оставшуюся высоту */
+  list-style-type: none;
+  margin-bottom: 1rem;
+}
+#notesWrap li:nth-child(1) {
+  background-color: #d93333;
+  grid-area: 1/2/2/4;
+  border-left: none;
+}
+#notesWrap .repair {
+  grid-area: 1/1/2/2;
+  border-right: none;
+  border-bottom: none;
+  background-color: #f6e2a9;
+}
+#notesWrap li:nth-child(2) {
+  height: -moz-min-content;
+  height: min-content;
+  background-color: #f2f2f2;
+  grid-area: 2/1/4/3;
 }

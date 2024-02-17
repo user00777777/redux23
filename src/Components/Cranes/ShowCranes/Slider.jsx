@@ -3,10 +3,28 @@ import s from './showCrane.module.css'
 import style from './sliderNotes.module.css'
 function Slider({ foto, repair }) {
 	const arrow = useRef(null)
+	const [input, setInputValue] = useState('')
+	const [target, setInputTarget] = useState()
 	const [currentIndex, setCurrentIndex] = useState(0)
 	const [arrows, setArrows] = useState(false)
 	// console.log(foto);
-	console.log(repair)
+	repair.forEach(el => {
+		let r=el.data
+console.log(Number( r));
+
+
+	})
+	console.log(repair[0])
+	function handleInfo(el) {
+		let inputData = el.target.value
+		setInputValue(inputData)
+		setInputTarget(inputData)
+	}
+	const addLocalstorage = () => {
+		localStorage.setItem('inputSliderCrane', input)
+		setInputValue('') // Очищаем input
+		// setInputTarget('') // Очищаем target
+	}
 
 	const goToPrevious = () => {
 		const isFirstSlide = currentIndex === 0
@@ -33,7 +51,10 @@ function Slider({ foto, repair }) {
 	let isFoto = Array.isArray(foto)
 	return (
 		<div className={s.mainWrapper}>
-			<div className={s.imgContainer} onDoubleClick={()=>console.log('double')}>
+			<div
+				className={s.imgContainer}
+				onDoubleClick={() => console.log('double')}
+			>
 				{Array.isArray(foto) && (
 					<div ref={arrow}>
 						<div className={s.goToPrevious} onClick={goToPrevious}>
@@ -67,29 +88,34 @@ function Slider({ foto, repair }) {
 						></div>
 					))}
 			</div>
-			{repair.travelMotor_Cabin &&
-				repair.travelMotor_Cabin.map((el, index) => {
+			{repair &&
+				repair.map((el, index) => {
 					return (
-						<ul className={style.notesWrap} key={index}>
-							{el.motorStarters && (
-								<li className={`${style.repair}${s.one}`}>
-									{el.motorStarters}
-								</li>
+						<ul id={style.notesWrap} key={index}>
+							{el.data && (
+								<li className={`${style.repair}${style.data}`}>{el.data}</li>
 							)}
-							{el.repairMotorsCabin && (
-								<li className={style.repair}>{el.repairMotorsCabin}</li>
-							)}
-							{el.cables && <li className={style.repair}>{el.cables}</li>}
+							{el.notes && <li className={`${style.repair}${style.notes}`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quo sapiente modi, obcaecati officiis ipsa voluptate velit quae accusamus, sunt similique quisquam amet tempore excepturi, beatae inventore perspiciatis! Eligendi voluptatem alias perferendis aperiam sint dignissimos dolor inventore sit illo blanditiis.{el.notes}</li>}
+							{el.title && <li className={`${style.repair} ${style.title}`}>{el.title}</li>}
+				
 						</ul>
 					)
 				})}
 
 			{/* 
     <li className={s.repair}></li>
-    <li className={s.repair}></li>
     <li className={s.repair}></li> */}
-
-			<div></div>
+			<div className={style.wrapInput}>
+				<input
+					type='text'
+					value={input}
+					className={style.inpLocalStorage}
+					onChange={handleInfo}
+				/>
+				<button className={style.btn_input} onClick={addLocalstorage}>
+					Добавить заметку
+				</button>
+			</div>
 		</div>
 	)
 }

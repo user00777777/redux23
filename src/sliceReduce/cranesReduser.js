@@ -6,6 +6,7 @@ import crane1_6 from './fotoCranes/foto1_6'
 // import foto2_6 from './fotoCranes/foto2_6'
 import foto3_6 from './fotoCranes/foto3_6'
 import foto2_6 from './fotoCranes/foto2_6'
+import craneRepair from './ObjCranes/objCranes'
 
 const initialState = {
 	list: [
@@ -14,88 +15,64 @@ const initialState = {
 			rp: 14,
 			id: 'Кран 5T',
 			f: foto3_6(),
-			repair: {
-				liftMotor: '',
-				travelMotor_Cabin: [{ repairMotorsCabin: '', motorStarters: '' }],
-				craneLighting: [''],
-				travelMotor_notCabin: [''],
-				cabin: [''],
-				cables: '',
-			},
-		},
+			repair: [
+				craneRepair('Замена счеток','2-12-23','Заменили счетки над кабиной')
+			,
+            ]},
 
 		{
 			cranName: '1/6',
 			rp: 'Главный рубильник',
 			id: 'Кран 5T',
 			f: crane1_6(),
-			repair: {
-				liftMotor: '',
-				travelMotor_Cabin: [
-					{ repairMotorsCabin: '', motorStarters: '', cables: '' },
-				],
-				craneLighting: [''],
-				travelMotor_notCabin: [''],
-				cabin: [''],
-			},
+			repair: [
+				[
+                    craneRepair()
+                ,
+                ],
+            ],
 		},
 		{
 			cranName: '1/7',
 			rp: 'гл рубильник 7 пр.',
 			id: 'Кран 10T',
 			f: crane7,
-			repair: {
-				liftMotor: '',
-				travelMotor_Cabin: [
-					{
-						repairMotorsCabin: '',
-						motorStarters: '',
-						cables: 'Замена кабельной подвески 2023г декабрь',
-					},
-				],
-				craneLighting: [''],
-				travelMotor_notCabin: [''],
-				cabin: [''],
-			},
+			repair: [
+				craneRepair('Пускатели','1/09/23','Замена всех пускателей'),
+				craneRepair('Подвеска','00/12/23','Замена кабельной подвески'),
+            ],
 		},
 		{
 			cranName: '2/6',
 			rp: 'гл.Рубильник',
+
+            
 			id: 'Кран 10T',
 			f: foto2_6(),
-			repair: {
-				liftMotor: '',
-				travelMotor_Cabin: [
-					{
-						repairMotorsCabin: 'Замена двигателя над кабиной  2023 г.лето',
-						motorStarters: '',
-						cables: '',
-					},
-				],
-				craneLighting: [''],
-				travelMotor_notCabin: [''],
-				cabin: [''],
-			},
+            repair: [
+				
+                    craneRepair("Пускатели","21/02/23","Ход моста 1 штуки"),
+                    craneRepair("Двигатель","00/лето/23","Замена двигателя х-моста")
+                
+                ,
+            ],
 		},
 		{
 			cranName: '3/6',
 			rp: 'Гл рубильник',
 			id: 'Кран 10T',
 			f: foto3_6(),
-			repair: {
-				liftMotor: '',
-				travelMotor_Cabin: [
-					{
-						repairMotorsCabin:
-							'Замена шестерни 2023 г.лето, двигателя над кабиной',
-						motorStarters: 'Замена двух пускателей хода моста 2023г лето',
-						cables: '',
-					},
-				],
-				craneLighting: [''],
-				travelMotor_notCabin: [''],
-				cabin: [{ travelStarters: ['Замена обоих лето 2023'] }],
-			},
+            repair: [
+				
+                    craneRepair("Пускатели","26/07/23","Замена пускателя моста"),
+                    craneRepair("Пускатели","10/08/23","Замена пускателя моста"),
+                    craneRepair("Пускатели","18/10/23","Замена пускателя моста 2 Шт"),
+                    craneRepair("Двигателя","18/10/23","Замена шестерни хода моста над кабиной Шт"),
+                    craneRepair("Щетки","00/02/24","Замена щеток двигателя подьема 2 шт"),
+                    craneRepair("Подкрановое","00/12/24","Замена щеток двигателя подьема 2 шт"),
+                
+        
+            ],
 		},
 	],
 	craneObj: {},

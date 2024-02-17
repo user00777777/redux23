@@ -1,19 +1,98 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Russo+One&display=swap');
+$ipMargin: 20px;
+$btnBack: linear-gradient(
+	to bottom,
+	#c14a13 0%,
+	#6d88b7 100%
+); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 .notesWrap {
-  padding-left: 10px;
-	background-color:azure;
-	li:nth-child(-n + 5) {
-  margin-top: 10px;
-  display: flex;
-  width: 100%;
-  height: auto;
-  flex-flow: wrap;
-  font-size: 16px;
-  font-family: "Montserrat Alternates", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  border:none;
-  border-bottom:double;
+	height: 100vh;
+	padding-left: 10px;
+	background-color: azure;
+	border: tomato 2px solid;
+	margin-top: 10px;
 
+	li {
+		margin-top: 10px;
+		display: flex;
+		width: 100%;
+		height: auto;
+		flex-flow: wrap;
+		font-size: 16px;
+		font-family: 'Montserrat Alternates', sans-serif;
+		font-weight: 600;
+		font-style: normal;
+		border: none;
+	}
 }
+.wrapInput {
+	width: 100%;
+	// background-color: rgb(189, 118, 18);
+	display: flex;
+	margin-top: $ipMargin;
+}
+.inpLocalStorage {
+	width: 200px;
+	height: 23.59px;
+	border: 2px solid;
+	animation: input-focus-animation 0.3s ease-in-out;
+	-webkit-animation: input-focus-animation 0.4s ease-out;
+}
+.btn_input {
+	margin-left: $ipMargin;
+	//   width: 50px;margin-left: $ipMargin;
+	// background: $btnBack;
+	background-color: #0c0d0d30;
+	color: #d9dddc;
+	border: 2px solid #2b0606;
+	padding: 10px;
+	width: max-content;
+	display: inline-block;
+	padding: 5px;
+	font-size: 0.9rem;
+}
+input:focus {
+	border: 2px solid #40859dba;
+	background-color: #eae2e2;
+}
+
+@keyframes input-focus-animation {
+	from {
+		width: 0;
+	}
+	to {
+		width: 50px;
+	}
+}
+
+#notesWrap {
+	//   display: flex;
+	// min-height: fit-content;
+  border: 2px red solid;
+	display: grid;
+	width: 100%;
+	height:min-content;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows:1fr clamp(1fr,2fr,90%); /* Первая строка автоматически увеличивается под содержимое, вторая занимает оставшуюся высоту */
+	list-style-type: none;
+	margin-bottom: 1rem;
+	li:nth-child(1) {
+		background-color: #d93333;
+
+		grid-area: 1/2/2/4;
+		border-left: none;
+	}
+	.repair {
+    grid-area: 1/1/2/2;
+		border-right: none;
+		border-bottom: none;
+    
+		background-color: #f6e2a9;
+	}
+  li:nth-child(2) {
+    height: min-content;
+    background-color: #f2f2f2;
+    // border-top: none;
+    grid-area: 2/1/4/3;
+  }
 }

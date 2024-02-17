@@ -24,7 +24,6 @@
 	// grid-template-rows: 20px 40px 50px 40px 100px;
 	// grid-auto-rows: 100px;
 	// background-color: red;
-  overflow: hidden;
 }
 .wrapBut {
 	display: grid;
@@ -53,8 +52,8 @@
 		border: 2px #ff0000 solid;
 	}
 	display: grid;
-	grid-template-columns:  1fr;
-	grid-template-rows: repeat(2,1fr);
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(2, 1fr);
 
 	// gap: 1px;
 	grid-auto-flow: row;
@@ -68,11 +67,4 @@
 .slider {
 	width: 100%;
 	height: fit-content;
-
 }
-
-
-
-
-
-
