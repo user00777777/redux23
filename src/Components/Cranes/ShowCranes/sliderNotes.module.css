@@ -1,26 +1,6 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Russo+One&display=swap");
 /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-.notesWrap {
-  height: 100vh;
-  padding-left: 10px;
-  background-color: azure;
-  border: tomato 2px solid;
-  margin-top: 10px;
-}
-.notesWrap li {
-  margin-top: 10px;
-  display: flex;
-  width: 100%;
-  height: auto;
-  flex-flow: wrap;
-  font-size: 16px;
-  font-family: "Montserrat Alternates", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  border: none;
-}
-
+/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 .wrapInput {
   width: 100%;
   display: flex;
@@ -62,30 +42,41 @@ input:focus {
   }
 }
 #notesWrap {
-  border: 2px red solid;
-  display: grid;
+  display: flex;
   width: 100%;
-  height: -moz-min-content;
-  height: min-content;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr clamp(1fr, 2fr, 90%); /* Первая строка автоматически увеличивается под содержимое, вторая занимает оставшуюся высоту */
-  list-style-type: none;
-  margin-bottom: 1rem;
-}
-#notesWrap li:nth-child(1) {
-  background-color: #d93333;
-  grid-area: 1/2/2/4;
-  border-left: none;
-}
-#notesWrap .repair {
-  grid-area: 1/1/2/2;
-  border-right: none;
-  border-bottom: none;
-  background-color: #f6e2a9;
+  height: auto;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  border: 2px solid black;
+  background: linear-gradient(to bottom, #e1ffff 0%, #e1ffff 7%, #e1ffff 12%, #fdffff 12%, #e6f8fd 30%, #c8eefb 54%, #bee4f8 75%, #b1d8f5 100%);
+  margin: 1rem 1rem;
+  word-break: break-all;
 }
 #notesWrap li:nth-child(2) {
-  height: -moz-min-content;
-  height: min-content;
-  background-color: #f2f2f2;
-  grid-area: 2/1/4/3;
+  color: red;
+  background-color: rgb(219, 235, 200);
+  height: auto;
+  max-height: 300px;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+#notesWrap li:nth-child(1) {
+  color: red;
+  display: flex;
+  width: 100%;
+  background-color: rgb(219, 235, 200);
+}
+#notesWrap li:nth-child(1) :is(span) {
+  display: inline-flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  padding: 0;
+}
+#notesWrap li:nth-child(3) {
+  background-image: url("https://freesvg.org/storage/img/thumb/1707625313Toilet-paper-roll-2c.png");
+  width: 100%;
+  background-size: contain;
 }

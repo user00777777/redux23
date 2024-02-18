@@ -8,13 +8,17 @@ function Slider({ foto, repair }) {
 	const [currentIndex, setCurrentIndex] = useState(0)
 	const [arrows, setArrows] = useState(false)
 	// console.log(foto);
-	repair.forEach(el => {
-		let r=el.data
-console.log(Number( r));
+	let rep2=repair.map(el =>el
+	)
+
+	rep2.sort((a,b)=> {
+		let dateA = new Date(a.data.split('/').reverse().join('/'))
+		let dateB = new Date(b.data.split('/').reverse().join('/'))
+		return dateB - dateA
+	} )
+console.log(rep2.reverse());
 
 
-	})
-	console.log(repair[0])
 	function handleInfo(el) {
 		let inputData = el.target.value
 		setInputValue(inputData)
@@ -49,6 +53,8 @@ console.log(Number( r));
 			: (arrow.current.style.opacity = '1')
 	}
 	let isFoto = Array.isArray(foto)
+  console.log(rep2);
+  
 	return (
 		<div className={s.mainWrapper}>
 			<div
@@ -88,16 +94,26 @@ console.log(Number( r));
 						></div>
 					))}
 			</div>
-			{repair &&
-				repair.map((el, index) => {
+			{rep2 &&
+				rep2.map((el, index) => {
 					return (
 						<ul id={style.notesWrap} key={index}>
 							{el.data && (
-								<li className={`${style.repair}${style.data}`}>{el.data}</li>
+								<li className={`${style.repair}${style.data}`}>
+									<span>{el.title}</span>
+									<span>{el.data}</span>
+								</li>
 							)}
-							{el.notes && <li className={`${style.repair}${style.notes}`}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quo sapiente modi, obcaecati officiis ipsa voluptate velit quae accusamus, sunt similique quisquam amet tempore excepturi, beatae inventore perspiciatis! Eligendi voluptatem alias perferendis aperiam sint dignissimos dolor inventore sit illo blanditiis.{el.notes}</li>}
-							{el.title && <li className={`${style.repair} ${style.title}`}>{el.title}</li>}
-				
+							{el.notes && (
+								<li className={`${style.repair}${style.notes}`}>
+									lorem30{el.notes}{' '}
+								</li>
+							)}
+							{el.title && (
+								<li className={`${style.repair} ${style.title}`}>
+						
+								</li>
+							)}
 						</ul>
 					)
 				})}
@@ -115,7 +131,14 @@ console.log(Number( r));
 				<button className={style.btn_input} onClick={addLocalstorage}>
 					Добавить заметку
 				</button>
-			</div>
+			</div  >
+      <div className={style.w2}>
+      {rep2&&rep2.map((el,i)=>{
+        return(<div key={i} className={style.r2} >
+      <div>{el.notes}</div>
+
+
+      </div>)})}</div>
 		</div>
 	)
 }

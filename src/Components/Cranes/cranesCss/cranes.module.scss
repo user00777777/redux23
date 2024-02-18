@@ -1,7 +1,7 @@
 .container {
 	background-color: rgb(244, 195, 0);
 	width: 100%;
-	height: 100vh;
+	height: 100dvh;
 	color: rgb(0, 0, 0);
 }
 .wrapper {
@@ -39,12 +39,12 @@
 	z-index: 1;
 	// width: 100%
 	display: flex;
-	justify-content:space-evenly;
+	justify-content: space-evenly;
 	font-size: 1rem;
 	flex-flow: wrap column;
-  // row-gap: 5px;
-  margin: 0px;
-  padding: 0px;
+	// row-gap: 5px;
+	margin: 0px;
+	padding: 0px;
 }
 .district6 {
 	position: relative;
@@ -119,22 +119,18 @@ img {
 	z-index: 3;
 }
 
-
 // }
 
-:is(.mal2)>span{
-  display: flex;
-  justify-content:center;
-  padding: 0;
-height: min-content;
-
-
-
+:is(.mal2) > span {
+	display: flex;
+	justify-content: center;
+	padding: 0;
+	height: min-content;
 }
-:is(.mal2)>span+span{
-  width: 100%;
-  height: min-content;
-display: inline-block;
-font-size: 80%;
-display: grid;  
+:is(.mal2) > span + span {
+	width: 100%;
+	height: min-content;
+	display: inline-block;
+	font-size: 80%;
+	display: grid;
 }
