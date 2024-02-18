@@ -106,7 +106,7 @@ console.log(rep2.reverse());
 							)}
 							{el.notes && (
 								<li className={`${style.repair}${style.notes}`}>
-									lorem30{el.notes}{' '}
+									{el.notes}{' '}
 								</li>
 							)}
 							{el.title && (
@@ -132,13 +132,7 @@ console.log(rep2.reverse());
 					Добавить заметку
 				</button>
 			</div  >
-      <div className={style.w2}>
-      {rep2&&rep2.map((el,i)=>{
-        return(<div key={i} className={style.r2} >
-      <div>{el.notes}</div>
-
-
-      </div>)})}</div>
+    
 		</div>
 	)
 }

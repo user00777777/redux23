@@ -61,14 +61,14 @@ input:focus {
 }
 #notesWrap {
 	display: flex;
-	width: 100%;
+max-width: 384;
 	height: auto;
 	justify-content: start;
 	align-items: start;
 	flex-direction: column;
 	border: 2px solid black;
 	background: $backNotes;
-	margin: 1rem 1rem;
+	margin: 1rem 0rem;
 	word-break: break-all;
 	li:nth-child(2) {
 		color: red;
