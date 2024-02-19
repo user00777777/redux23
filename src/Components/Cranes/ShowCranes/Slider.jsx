@@ -109,11 +109,11 @@ console.log(rep2.reverse());
 									{el.notes}{' '}
 								</li>
 							)}
-							{el.title && (
+							{/* {el.title && (
 								<li className={`${style.repair} ${style.title}`}>
 						
 								</li>
-							)}
+							)} */}
 						</ul>
 					)
 				})}
