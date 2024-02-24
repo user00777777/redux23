@@ -1,7 +1,9 @@
+$main_bg: linear-gradient(to bottom, #a9e4f7 0%,#0fb4e7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */;
+
 .mainWrapper {
 	width: 100%;
 	height: 100%;
-	// background-color: yellow;
+	background-color:#c0d9de;
 	// overflow: hidden;
 }
 .slide {
@@ -72,9 +74,3 @@
 	width: 100%;
 	height: auto;
 }
-
-
-
-
-
-    

@@ -1,6 +1,8 @@
+/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 .mainWrapper {
   width: 100%;
   height: 100%;
+  background-color: #c0d9de;
 }
 
 .slide {

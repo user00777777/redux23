@@ -11,30 +11,35 @@ export  default function Homepage() {
  
  
   return (
-<div className={s.wrapDuty}>
-<div className={s.duty}><Duty/></div>
-<div className={s.duty}><PlumbersDuty/></div>
+		<div className={s.wrapDuty}>
+			<div className={s.duty}>
+				<Duty />
+			</div>
+			<div className={s.duty}>
+				<PlumbersDuty />
+			</div>
 
-           
-
-
-
-
-              <main className={s.links}>
-
-<div className={[s.link1,s.link].join(' ')}><Link  to='/phones'><span className={s.l}>Телефоны</span></Link></div>
-<div className={[s.link2,s.link].join(' ')}><Link to='/district23'><span className={s.l}>Участок №23</span></Link></div>
-<div className={[s.link3,s.link].join(' ')}><Link><span></span></Link></div>
-<div className={[s.link4,s.link].join(' ')}></div>
-<div className={[s.link5,s.link].join(' ')}></div>
-
-
-
-              </main>
-          </div>
-
-
-  );
+			<main className={s.links}>
+				<div className={[s.link1, s.link].join(' ')}>
+					<Link to='/phones'>
+						<span className={s.l}>Телефоны</span>
+					</Link>
+				</div>
+				<div className={[s.link2, s.link].join(' ')}>
+					<Link to='/district23'>
+						<span className={s.l}>Участок №23</span>
+					</Link>
+				</div>
+				<div className={[s.link3, s.link].join(' ')}>
+					<Link to='Painting'>
+						<span className={s.l}>Малярка</span>
+					</Link>
+				</div>
+				<div className={[s.link4, s.link].join(' ')}></div>
+				<div className={[s.link5, s.link].join(' ')}></div>
+			</main>
+		</div>
+	)
 }
 
 

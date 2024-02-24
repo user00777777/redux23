@@ -1,0 +1,33 @@
+@import '../mediaPaint/media';
+.item {
+	position: relative;
+  perspective:200px;
+}
+.paintbrush {
+  position: absolute;
+  animation:brush ease-in 4s infinite;
+  -webkit-animation:brush ease-in 7s infinite;
+}
+@keyframes brush{
+0%{
+  transform: rotateY(80deg);
+  -webkit-transform: rotateY(80deg);
+  -moz-transform: rotateY(80deg);
+  -ms-transform: rotateY(80deg);
+  -o-transform: rotateY(80deg);
+}
+// 1%{ transform:scale(0.5) ; -webkit-transform:scale(0.5) ; -moz-transform:scale(0.5) ; -ms-transform:scale(0.5) ; -o-transform:scale(0.5) ;
+// }
+// 30%{ transform:scale(1) ; -webkit-transform:scale(1) ; -moz-transform:scale(1) ; -ms-transform:scale(1) ; -o-transform:scale(1) ; }
+70%{ transform:rotateY(60px) ; -webkit-transform:rotateY(60px) ; -moz-transform:rotateY(60px) ; -ms-transform:rotateY(60px) ; -o-transform:rotateY(60px) ;
+}
+// 100%{
+//   transform: rotateY(90deg);
+//   -webkit-transform: rotateY(90deg);
+//   -moz-transform: rotateY(90deg);
+//   -ms-transform: rotateY(90deg);
+//   -o-transform: rotateY(90deg);
+// }
+
+
+}

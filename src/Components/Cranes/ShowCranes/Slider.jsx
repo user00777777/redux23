@@ -113,7 +113,7 @@ console.log(rep2.reverse());
 								<li className={`${style.repair} ${style.title}`}>
 						
 								</li>
-							)} */}
+							)} */}          
 						</ul>
 					)
 				})}
