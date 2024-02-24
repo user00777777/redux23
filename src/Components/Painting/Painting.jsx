@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import s from './Painting_css_Scss/Paint_css/mainPainting.module.css'
 import { Link } from 'react-router-dom'
 import data from '../data/data'
-import { GiLargePaintBrush } from 'react-icons/gi';
+import { GiLargePaintBrush } from 'react-icons/gi'
 export default function Painting() {
 	const [myClass, setClass] = useState(false)
 
@@ -23,14 +23,20 @@ export default function Painting() {
 				<ul className={s.list}>
 					<li className={s.item}>
 						<GiLargePaintBrush className={s.paintbrush} />{' '}
-						<Link to='aton'>
-							<span >Aton150</span>
+						<Link to='/aton'>
+							<span>Aton150</span>
 						</Link>
 					</li>
 					<li className={s.item}>
 						<GiLargePaintBrush className={s.paintbrush} />{' '}
-						<Link to='aton'>
-							<span >Aton150</span>
+						<Link to='/pumps'>
+							<span>Насосы</span>
+						</Link>
+					</li>
+					<li className={s.item}>
+						<GiLargePaintBrush className={s.paintbrush} />{' '}
+						<Link to='/krons'>
+							<span>Кроны</span>
 						</Link>
 					</li>
 					{/* Добавьте остальные элементы списка здесь */}

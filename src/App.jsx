@@ -34,6 +34,8 @@ import Engine from './Components/machine/Engine'
 import ShowCrane from './Components/Cranes/ShowCranes/ShowCrane'
 import Slider from './Components/Cranes/ShowCranes/Slider'
 import Painting from './Components/Painting/Painting'
+import Crons from './Components/Painting/Crons'
+import Aton from './Components/Painting/Aton'
 
 function App() {
 	return (
@@ -69,6 +71,8 @@ function App() {
 					<Route path='/discrabeRp/:rp' element={<DiscrabeRp />} />
 					<Route path='slider' element={<Slider />} />
 					<Route path='Painting' element={<Painting />} />
+					<Route path='krons' element={<Crons />} />
+					<Route path='aton' element={<Aton />} />
 				</Route>
 			</Routes>
 		</div>
