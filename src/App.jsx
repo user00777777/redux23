@@ -36,6 +36,9 @@ import Slider from './Components/Cranes/ShowCranes/Slider'
 import Painting from './Components/Painting/Painting'
 import Crons from './Components/Painting/Crons'
 import Aton from './Components/Painting/Aton'
+import Conveyor from './Conveyor'
+import sb_972 from './Components/machine/SB_972/Sb_972'
+import Sb_972 from './Components/machine/SB_972/Sb_972'
 
 function App() {
 	return (
@@ -73,6 +76,8 @@ function App() {
 					<Route path='Painting' element={<Painting />} />
 					<Route path='krons' element={<Crons />} />
 					<Route path='aton' element={<Aton />} />
+					<Route path='conveyor' element={<Conveyor />} />
+					<Route path='sb972' element={<Sb_972 />} />
 				</Route>
 			</Routes>
 		</div>

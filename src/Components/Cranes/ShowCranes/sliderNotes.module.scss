@@ -100,6 +100,7 @@ input:focus {
 	}
 }
 #notesWrap li:nth-child(even) {
+  min-width: 100%;
 	min-height: 50px;
 	color: #c11c13;
 	border-color: indigo;
@@ -108,7 +109,10 @@ input:focus {
   font-weight: 400;
   font-style: normal;
   font-size: clamp(0.75rem, -0.25rem + 5vw, 1rem);
-  text-align: center;
-
+  // text-align: center;
+  // margin: 0 auto;
+  display: flex;
+  justify-content: center;
+align-items: center;
 	;
 }

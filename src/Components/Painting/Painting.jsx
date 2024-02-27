@@ -39,6 +39,12 @@ export default function Painting() {
 							<span>Кроны</span>
 						</Link>
 					</li>
+					<li className={s.item}>
+						<GiLargePaintBrush className={s.paintbrush} />{' '}
+						<Link to='/conveyor'>
+							<span>Конвеер</span>
+						</Link>
+					</li>
 					{/* Добавьте остальные элементы списка здесь */}
 				</ul>
 			</div>

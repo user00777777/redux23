@@ -59,7 +59,7 @@ console.log(rep2.reverse());
 		<div className={s.mainWrapper}>
 			<div
 				className={s.imgContainer}
-				onDoubleClick={() => console.log('double')}
+
 			>
 				{Array.isArray(foto) && (
 					<div ref={arrow}>

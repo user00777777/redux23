@@ -24,9 +24,10 @@ import s833_8 from '../images/mashineFoto/sb833/circuit833/circuitdiagram833.jpg
 import s833_9 from '../images/mashineFoto/sb833/circuit833/photo8336.jpg'
 import s8333_0 from '../images/mashineFoto/sb833/circuit833/sb8334.jpg'
 import _rad2A554 from './2A554/_rad2A554'
+import _arFotoCirkuit972 from './SB_972/foto_972/_arFotoCirkuit972'
 
 export default function _fotoSliderArr({ machine, idMachine }) {
-	// console.log(machine)
+	console.log(machine,idMachine)
 	const arrFoto = []
 
 	function createObj(ar, n) {
@@ -83,13 +84,21 @@ export default function _fotoSliderArr({ machine, idMachine }) {
 			return sb833_52055
 		case '2А554':
 			// console.log(1111111111)
-			
+
 			const rad2a554 = createObj(
 				_rad2A554(),
 				` <li> 'jhjhjh'</li>
-          `)
-          return rad2a554
-			
+          `
+			)
+			return rad2a554
+		case 'СБ972':
+		if (idMachine=='№52911') {
+let obj=createObj(_arFotoCirkuit972(),idMachine)
+return obj
+		}
+    else{console.log('false');
+    }
+
 		// console.log(Array.isArray( _rad2A554))
 
 		default:

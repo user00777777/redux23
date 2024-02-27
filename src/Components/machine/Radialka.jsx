@@ -36,21 +36,30 @@ export default function Radialka() {
 	let selectRef = useRef()
 	let navigate = useNavigate()
 	let ref = useRef()
-	let [ss, setS] = useState(!false)
+	let [ss, setS] = useState(true)
 
 	let selector = useSelector(state => state.mashine.result)
 	let goBack = () => {
 		navigate(-1)
 		dispatch(engine833('empty'))
 	}
-	console.log(selector)
+  
+  // let x=selector.find((el)=>el  )
+  // console.log(x.el.machine);
+  let lastNum = selector.length -4
+  console.log( selector);
+  
+// let x=selector.find((el) =>el  );
+// console.log(x.el);
+
+
 	let numArr = selector?.length - 1
 	const mashine = selector[numArr]
 	console.log(mashine)
 
 	// const cosFStr = encodeURIComponent(JSON.stringify(soF))
 	const name = mashine.el.machine
-	console.log(name)
+	// console.log(name)
 	useEffect(() => {
 		dispatch(engine833(name))
 	}, [name])

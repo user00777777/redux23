@@ -12,7 +12,8 @@ const initialState = {
 	list: [
 		{
 			cranName: 'mal1',
-			rp: 14,
+            craneId:'5028',
+			rp: 'РП_14',
 			id: 'Кран 5T',
 			f: foto3_6(),
 			repair: [
@@ -22,15 +23,17 @@ const initialState = {
 
 		{
 			cranName: '1/6',
-			rp: 'Главный рубильник',
+            craneId:'4613',
+			rp: 'Шинный мост',
 			id: 'Кран 5T',
 			f: crane1_6(),
 			repair: [[craneRepair()]],
 		},
 		{
 			cranName: '1/7',
-			rp: 'гл рубильник 7 пр.',
-			id: 'Кран 10T',
+            craneId:'2349',
+            rp: 'Шинный мост',
+            			id: 'Кран 10T',
 			f: crane7,
 			repair: [
 				craneRepair('Пускатели', '1/09/23', 'Замена всех пускателей'),
@@ -39,8 +42,9 @@ const initialState = {
 		},
 		{
 			cranName: '2/6',
-			rp: 'гл.Рубильник',
-			id: 'Кран 10T',
+            craneId:'4964',
+            rp: 'Шинный мост',
+id: 'Кран 10T',
 			f: foto2_6(),
 			repair: [
 				craneRepair('Пускатели', '21/02/23', 'Ход моста 1 штуки'),
@@ -49,8 +53,9 @@ const initialState = {
 		},
 		{
 			cranName: '3/6',
-			rp: 'Гл рубильник',
-			id: 'Кран 10T',
+            craneId:'8238',		
+            rp: 'Шинный мост',
+id: 'Кран 10T',
 			f: foto3_6(),
 			repair: [
 				craneRepair('Пускатели', '26/07/23', 'Замена пускателя моста'),
@@ -62,11 +67,7 @@ const initialState = {
 					'Замена шестерни хода моста над кабиной'
 				),
 				craneRepair('Щетки', '00/02/24', 'Замена щеток двигателя подьема 2 шт'),
-				craneRepair(
-					'Подкрановое',
-					'00/12/24',
-					'Замена щеток двигателя подьема 2 шт'
-				),
+	
 			],
 		},
 	],

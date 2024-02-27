@@ -219,7 +219,7 @@ const machine = createSlice({
           let lentH = state.result.length;
 
           if (state.result.length >= 1) {
-            state.result.shift();
+            state.result.length=0;
           }
 
           return state.result.push({ el });

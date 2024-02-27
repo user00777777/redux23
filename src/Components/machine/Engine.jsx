@@ -54,19 +54,7 @@ export default function Engine({ m }) {
 		setShaft(items)
 	}, [])
 
-	// function hide() {
-	// 	shaft.forEach((el, index) => {
-	// 		console.log(el.textContent)
 
-	// 		// if (el.textContent) {
-	// 		// 	console.log(el)
-	// 		// 	el.style.background = 'yellow'
-	// 		// 	el.textContent = ''
-	// 		// 	el.style.border = 'none'
-	// 		// 	el.style.with = '1px'
-	// 		// }
-	// 	})
-	// }
 
 	return (
 		<div className={s.wrapperE}>

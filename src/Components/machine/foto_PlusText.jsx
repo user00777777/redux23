@@ -36,7 +36,7 @@ a1Z(){
 
 }
 let oneSlide=props;
-console.log(oneSlide);
+// console.log(oneSlide);
 
 let x=null;
 oneSlide&&console.log('прошло');
@@ -53,12 +53,12 @@ oneSlide&&console.log('прошло');
   // 
     if (oneSlide) {
       
-    console.log(oneSlide);
+    // console.log(oneSlide);
     
 if (regexp.test(oneSlide)){
   x=true
-  console.log('yes');
-  console.log('');
+  // console.log('yes');
+  // console.log('');
   
   
 
@@ -66,7 +66,7 @@ if (regexp.test(oneSlide)){
   
   }}
   else{
-    console.log('не попал');
+    // console.log('не попал');
     
   x=false
   
