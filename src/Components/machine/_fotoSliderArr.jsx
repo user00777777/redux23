@@ -25,9 +25,11 @@ import s833_9 from '../images/mashineFoto/sb833/circuit833/photo8336.jpg'
 import s8333_0 from '../images/mashineFoto/sb833/circuit833/sb8334.jpg'
 import _rad2A554 from './2A554/_rad2A554'
 import _arFotoCirkuit972 from './SB_972/foto_972/_arFotoCirkuit972'
+import _fotoAr2126 from './Sm2126/_fotoAr2126'
+// import _fotoAr2126 from './Sm2126/_fotoAr2126'
 
 export default function _fotoSliderArr({ machine, idMachine }) {
-	console.log(machine,idMachine)
+	console.log(machine, idMachine)
 	const arrFoto = []
 
 	function createObj(ar, n) {
@@ -37,7 +39,7 @@ export default function _fotoSliderArr({ machine, idMachine }) {
 		}
 	}
 	let rp = ''
-	switch (machine) {
+	switch (machine || 1) {
 		case 'Клепка':
 			if (idMachine == '№51791') {
 				rp = '14'
@@ -92,16 +94,32 @@ export default function _fotoSliderArr({ machine, idMachine }) {
 			)
 			return rad2a554
 		case 'СБ972':
-		if (idMachine=='№52911') {
-let obj=createObj(_arFotoCirkuit972(),idMachine)
-return obj
-		}
-    else{console.log('false');
-    }
+			if (idMachine == '№52911') {
+				console.log('3')
 
-		// console.log(Array.isArray( _rad2A554))
+				let obj = createObj(_arFotoCirkuit972(), idMachine)
+				return obj
+			} else {
+				console.log('false')
+			}
+		case 'СМ2126':
+      console.log('ddd');
+      
+			if (idMachine == '52049') {
+				console.log('okc')
+
+				let sm2126 = createObj(_fotoAr2126(), idMachine)
+				return sm2126
+			} else {
+				console.log('nooKs')
+			};
+
+		
+		case '1':
+			console.log('one');
 
 		default:
+			// console.log('def')
 			arrFoto.splice(0, arrFoto.length)
 			arrFoto.push(
 				'https://www.vectorstock.com/royalty-free-vector/cute-electrician-pear-cartoon-vector-42127729'
@@ -110,6 +128,7 @@ return obj
 				arrFoto,
 				`Схема участка Другой информации не найдено`
 			)
+
 			return objdef
 			break
 	}

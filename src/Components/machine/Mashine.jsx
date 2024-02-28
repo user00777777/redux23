@@ -8,13 +8,13 @@ import Contexst from '../../App'
 
 const Mashine = ({ mashine }) => {
 	const myContexst1 = useContext(Contexst)
-	// console.log(mashine)
+	console.log(mashine)
 	const ref = useRef(null)
 	const refDots = useRef(null)
 	let [test, setTest] = useState(null)
 	const [currentIndex, setCurrentIndex] = useState(0)
 	const slides = _fotoSliderArr(mashine).ar
-	// console.log(slides);
+	console.log(slides);
 
 	useEffect(() => {
 		if (ref) {
