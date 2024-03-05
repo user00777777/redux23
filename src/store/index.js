@@ -7,6 +7,7 @@ import gate from '../sliceReduce/sliceGates'
 import craneReduser from '../sliceReduce/cranesReduser'
 import rpReduser from '../sliceReduce/rpReduser'
 import engineREduser from '../sliceReduce/engineREduser'
+import dutyReducer from '../sliceReduce/dutyReducer'
 
 const store = configureStore({
 	reducer: {
@@ -18,6 +19,7 @@ const store = configureStore({
 		cranes: craneReduser,
 		rp: rpReduser,
 		engine: engineREduser,
+		duty: dutyReducer,
 	},
 })
 export default store

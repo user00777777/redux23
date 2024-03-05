@@ -2,13 +2,13 @@ import React, { useEffect } from 'react'
 import { useState } from 'react'
 import s from './Plumbercss/plumber.module.css'
 function plumb(pis, babec, golovch, nemch, hours, day) {
-	// console.log((day -= 1))
+	console.log((day ++))
 	// hours = 19
 	let oneShift = [pis, babec, golovch, nemch]
 	let twoShift = [nemch, pis, babec, golovch]
 	
 	// console.log(hours=22)
-	console.log(day)
+	// console.log(++day)
 	day 
 	if (hours >= 7 && hours < 19) {
 		// console.log(1)
@@ -20,15 +20,15 @@ function plumb(pis, babec, golovch, nemch, hours, day) {
 	}
 
 	if (hours >= 19 && hours <= 23) {
-		console.log('oo')
+		// console.log('oo')
 
 		let plumber2 = twoShift[day % twoShift.length]
-		console.log(day)
+		// console.log(day)
 
 		return plumber2
 	} else {
 		let plumber2 = twoShift[--day % twoShift.length]
-		console.log(plumber2)
+		// console.log(plumber2)
 
 		// console.log(day)
 		// day += 1
@@ -44,7 +44,7 @@ export default function PlumbersDuty() {
 		minutes = date.getMinutes()
 	const [newDay, setDay] = useState()
 	let [new_Day, set_Day] = useState(day)
-	console.log(day)
+	// console.log(day)
 
 	let arrDay = [1, 2, 3, 4]
 
@@ -55,10 +55,10 @@ export default function PlumbersDuty() {
 
 		let strNum = Number(localStorage.getItem('plumber'))
 		setDay(strNum)
-		console.log('s', strNum)
+		// console.log('s', strNum)
 	}
 
-	console.log(newDay)
+	// console.log(newDay)
 
 	const oneShift = plumb(
 		'Писаренко',
@@ -69,7 +69,7 @@ export default function PlumbersDuty() {
 		hours,
 		day
 	)
-	console.log(oneShift)
+	// console.log(oneShift)
 
 	return (
 		<div className={s.container}>

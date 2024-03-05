@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat&family=Edu+SA+Beginner:wght@700&family=Handjet:wght@100&display=swap");
-.wrapDuty {
+.containerHome {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d5cea6+0,c9c190+40,b7ad70+100;Brown+3D */
   background: rgb(213, 206, 166); /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, rgb(213, 206, 166) 0%, rgb(201, 193, 144) 40%, rgb(183, 173, 112) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -11,10 +11,16 @@
 }
 
 .duty {
+  display: flex;
+  justify-content: center;
+  border-radius: 15px;
   font-size: 12px;
   display: flex;
   width: 100%;
   justify-content: center;
+}
+.duty h2 {
+  font-size: clamp(1rem, -0.92rem + 9.6vw, 1.6rem);
 }
 
 .links {
@@ -26,4 +32,15 @@
 .l {
   color: rgb(1, 0, 0);
   font-size: 20px;
+}
+
+.dutyGas {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  border: 3px red solid;
 }

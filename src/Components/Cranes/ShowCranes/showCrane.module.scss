@@ -1,9 +1,13 @@
-$main_bg: linear-gradient(to bottom, #a9e4f7 0%,#0fb4e7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */;
+$main_bg: linear-gradient(
+	to bottom,
+	#a9e4f7 0%,
+	#0fb4e7 100%
+); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 
 .mainWrapper {
 	width: 100%;
 	height: 100%;
-	background-color:#c0d9de;
+	background-color: #c0d9de;
 	// overflow: hidden;
 }
 .slide {
@@ -57,6 +61,7 @@ $main_bg: linear-gradient(to bottom, #a9e4f7 0%,#0fb4e7 100%); /* W3C, IE10+, FF
 	-moz-transition: opasity transform 0.2s;
 	-ms-transition: opasity transform 0.2s;
 	-o-transition: opasity transform 0.2s;
+	// background-color: red;
 }
 .active {
 	transform: scale(1.5);
@@ -64,9 +69,10 @@ $main_bg: linear-gradient(to bottom, #a9e4f7 0%,#0fb4e7 100%); /* W3C, IE10+, FF
 }
 .dotWrapper {
 	display: flex;
-	width: 100%;
+	width: 10px;
 	margin-top: 10px;
 	height: 15px;
+	background-color: #0fb4e7;
 
 	justify-content: space-evenly;
 }

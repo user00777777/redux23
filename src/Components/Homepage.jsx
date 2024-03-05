@@ -1,22 +1,22 @@
-import React, { useEffect, useState } from 'react';
-import { useRef } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
-import  s  from "../css/homeComponent/home/Home.module.css";
-import PlumbersDuty from '../css/homeComponent/Plambers/PlumbersDuty';
-import Duty from './home/Duty';
+import React, { useEffect, useState } from 'react'
+import { useRef } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
+import s from '../css/homeComponent/home/Home.module.css'
+import PlumbersDuty from '../css/homeComponent/Plambers/PlumbersDuty'
+import Duty from './home/Duty'
+import GasDuty from './home/gasDuty/GasDuty'
 
+export default function Homepage() {
+	const state = useSelector(state => state.duty.duty)
+	console.log(state)
+	// const[e ]=
+	// console.log(el,plumb)
 
-export  default function Homepage() {
- 
- 
-  return (
-		<div className={s.wrapDuty}>
-			<div className={s.duty}>
-				<Duty />
-			</div>
-			<div className={s.duty}>
-				<PlumbersDuty />
+	return (
+		<div className={s.containerHome}>
+			<div className={s.dutyContainer}>
+				<Duty duty={state} />
 			</div>
 
 			<main className={s.links}>
@@ -41,7 +41,13 @@ export  default function Homepage() {
 		</div>
 	)
 }
-
-
-
-
+// <div className={s.duty}>
+// 	<Duty />
+// </div>
+// <div className={s.duty}>
+// 	<PlumbersDuty />
+// </div>
+// <div className= {` ${s.duty} ${s.dutyGas}`}><GasDuty/></div>
+// <li className={`${s.duty1} ${s.duty}`}>1</li>
+// 				<li className={`${s.duty2} ${s.duty}`}>2</li>
+// 				<li className={`${s.duty3} ${s.duty}`}>3</li>

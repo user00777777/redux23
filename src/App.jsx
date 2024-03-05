@@ -39,6 +39,7 @@ import Aton from './Components/Painting/Aton'
 import Conveyor from './Conveyor'
 import sb_972 from './Components/machine/SB_972/Sb_972'
 import Sb_972 from './Components/machine/SB_972/Sb_972'
+import GasDuty from './Components/home/gasDuty/GasDuty'
 
 function App() {
 	return (
@@ -78,6 +79,7 @@ function App() {
 					<Route path='aton' element={<Aton />} />
 					<Route path='conveyor' element={<Conveyor />} />
 					<Route path='sb972' element={<Sb_972 />} />
+					<Route path='sb972' element={<GasDuty />} />
 				</Route>
 			</Routes>
 		</div>

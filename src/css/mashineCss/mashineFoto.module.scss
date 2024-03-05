@@ -39,13 +39,16 @@
 	cursor: pointer;
 }
 .dotsContainerStyles {
+	max-width: 100%;
+	// overflow: hidden;
 	display: flex;
 	justify-content: center;
 }
 .dotStyle {
-	margin: 0px 3px;
+	margin: 0px 1.8px;
 	cursor: pointer;
-	font-size: 32px;
+	font-size: clamp(0.75rem, -0.313rem + 5vw, 1rem);
+  // color: red;
 }
 ol {
 	display: flex;
@@ -65,3 +68,4 @@ ol :nth-child(1) {
 	// color: chartreuse;
 	// width: 300px;
 }
+.activ{color:red}

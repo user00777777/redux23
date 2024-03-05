@@ -41,14 +41,15 @@
 }
 
 .dotsContainerStyles {
+  max-width: 100%;
   display: flex;
   justify-content: center;
 }
 
 .dotStyle {
-  margin: 0px 3px;
+  margin: 0px 1.8px;
   cursor: pointer;
-  font-size: 32px;
+  font-size: clamp(0.75rem, -0.313rem + 5vw, 1rem);
 }
 
 ol {
@@ -66,4 +67,8 @@ ol :nth-child(1) {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.activ {
+  color: red;
 }

@@ -39,16 +39,17 @@ export default function _fotoSliderArr({ machine, idMachine }) {
 		}
 	}
 	let rp = ''
-	switch (machine || 1) {
-		case 'Клепка':
+	switch (machine) {
+		case 'Клепка':{
 			if (idMachine == '№51791') {
 				rp = '14'
 			}
 			if (idMachine == '№52131') {
 				rp = '14'
-			} else if (idMachine == '№52131') {
-				rp = '11'
 			}
+      //  else if (idMachine == '№52131') {
+			// 	rp = '11'
+			// }
 			arrFoto.length = 0
 			arrFoto.push(cK)
 			const obj = createObj(
@@ -57,7 +58,7 @@ export default function _fotoSliderArr({ machine, idMachine }) {
        <li>запитан от ${rp}</li>
         `
 			)
-			return obj
+			return obj;}
 		case 'СБ833':
 			arrFoto.length = 0
 			arrFoto.push(
@@ -95,28 +96,24 @@ export default function _fotoSliderArr({ machine, idMachine }) {
 			return rad2a554
 		case 'СБ972':
 			if (idMachine == '№52911') {
-				console.log('3')
+				// console.log('3')
 
 				let obj = createObj(_arFotoCirkuit972(), idMachine)
 				return obj
 			} else {
-				console.log('false')
+				// console.log('false')
 			}
 		case 'СМ2126':
-      console.log('ddd');
-      
+			// console.log('ddd');
+
 			if (idMachine == '52049') {
-				console.log('okc')
+				// console.log('okc')
 
 				let sm2126 = createObj(_fotoAr2126(), idMachine)
 				return sm2126
 			} else {
-				console.log('nooKs')
-			};
-
-		
-		case '1':
-			console.log('one');
+				// console.log('nooKs')
+			}
 
 		default:
 			// console.log('def')

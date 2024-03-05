@@ -13,8 +13,10 @@ const Mashine = ({ mashine }) => {
 	const refDots = useRef(null)
 	let [test, setTest] = useState(null)
 	const [currentIndex, setCurrentIndex] = useState(0)
+	const [currentIndexClass, setCurrentIndexClass] = useState(0)
+	// const [currentClass, setClass] = useState()
 	const slides = _fotoSliderArr(mashine).ar
-	console.log(slides);
+	console.log(currentIndex)
 
 	useEffect(() => {
 		if (ref) {
@@ -34,10 +36,12 @@ const Mashine = ({ mashine }) => {
 		setCurrentIndex(newIndex)
 	}
 
-	const goToSlide = (slideIndex, slide) => {
-		setCurrentIndex(slideIndex)
+	const goToSlide = (slideIndex, slide, ar) => {
+
+      setCurrentIndex(slideIndex)
+
 	}
-// console.log(slides[currentIndex])
+	// console.log(slides[currentIndex])
 
 	return (
 		<div className={s.sliderStyles}>
@@ -55,13 +59,17 @@ const Mashine = ({ mashine }) => {
 				className={s.slideStyles}
 			/>
 			<div className={s.dotsContainerStyles}>
-				{slides.map((slide, slideIndex) => (
+				{slides.map((slide, slideIndex, ar) => (
+          
+          
 					<div
-						className={s.dotStyle}
+						className={`${s.dotStyle} ${
+							currentIndex === slideIndex ? s.activ : ''
+						}`}
 						ref={refDots}
 						// style={dotStyle}
 						key={slideIndex}
-						onClick={() => goToSlide(slideIndex, slide)}
+						onClick={() => goToSlide(slideIndex, slide, ar)}
 					>
 						●
 					</div>
