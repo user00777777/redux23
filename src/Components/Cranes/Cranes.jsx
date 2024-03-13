@@ -18,12 +18,12 @@ const Cranes = () => {
 			const data = e.target.closest('[data-crane]')?.dataset.crane
 
 			if (data) {
-				console.log(craneData)
+				// console.log(craneData)
 
 				const selected = craneData.find(crane => crane.cranName === data)
 				setSelectedCrane(selected)
 				dispatch(craneS(data))
-				console.log('if', selected, data)
+				// console.log('if', selected, data)
 			}
 		}
 

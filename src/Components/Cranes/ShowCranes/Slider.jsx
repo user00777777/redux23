@@ -7,7 +7,7 @@ function Slider({ foto, repair }) {
 	const [target, setInputTarget] = useState()
 	const [currentIndex, setCurrentIndex] = useState(0)
 	const [arrows, setArrows] = useState(false)
-	// console.log(foto);
+	console.log(foto);
 	let rep2=repair.map(el =>el
 	)
 
