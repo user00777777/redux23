@@ -58,7 +58,7 @@ const MachineTools = props => {
 
 	return (
 		<div className={s.parent} ref={fatherRef}>
-			<div className={[s.div1].join('')}> Майстерня</div>
+			<div className={[s.div1].join('')} id={s.ma} > <span>Майстерня</span></div>
 			<div className={[s.div2].join('')}>Туалет</div>
 			<div className={[s.div3].join('')}>Кладова</div>
 			<div className={[s.div4].join(' ')}>ГСM</div>

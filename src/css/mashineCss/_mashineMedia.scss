@@ -14,6 +14,13 @@
 	.div1 {
 		@include b();
 		// color: red;
+    
+  span{color:red;
+  
+  font-size: 1em;
+  }
+        //list-style:none;
+    
 	}
 
 	.div2 {
@@ -472,6 +479,21 @@
 		); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7400', endColorstr='#ff7400',GradientType=0 ); /* IE6-9 */
 	}
+//  .div1{
+//   // width: 86.39px;
+//   // height: 32px;
+//    grid-area: 1 / 5 / 2 / 7;
+//       display: flex;
+//       justify-content:center ;
+//       align-items:center ;
+//       //list-style:none;
+//       font-size: 2rem;
+//     span{color:red;
+//     font-size:14.08px ;
+//     }
+//   }
+
+
 }
 
 //  Style 980 px
