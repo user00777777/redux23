@@ -8,22 +8,50 @@ export default function getDuty(electr, plumb, gas) {
 
 	const currentDate = new Date()
 	let dayOfMonth = currentDate.getDate()
-	// console.log(dayOfMonth=22);
+	console.log(dayOfMonth);
 
 	// const dayOfWeek = currentDate.getDay()
 	let hour = currentDate.getHours()
 	const minutes = currentDate.getMinutes()
+	const month = currentDate.getMonth()+1
 
 	let dayOfYear = Math.floor(
 		(currentDate - new Date(currentDate.getFullYear(), 0, 0)) / 86400000
 	)
+  // console.log(month);
+  
+	// console.log((dayOfYear+=2 ))
+  // console.log(dayOfMonth=31);
+  
+  
 
-	// hour = 2
+	// hour = 1
 
 	let duty = (one, two, three, four) => {
-		console.log(one)
 
-		let oneShift = [one, two, three, four]
+
+
+
+		let firstOneShift = [one, two, three, four]
+
+
+let oneShift = firstOneShift.map(el => {
+
+  
+
+	if (el.toLowerCase() == 'круглый' && dayOfMonth >= 9 && dayOfMonth <= 31&&month==4) {
+		console.log('ok')
+
+		return (el = 'Гекало')
+	} else {
+    console.log('no');
+    
+		return el
+	}
+})
+
+
+
 		const twoShift = [...oneShift.slice(3), ...oneShift.slice(0, 3)]
 		// console.log('two', twoShift)
 		// console.log(dayOfMonth)
@@ -39,34 +67,47 @@ export default function getDuty(electr, plumb, gas) {
 			return { shift: twoShift, bool: true }
 		} else {
 			console.log('night')
+      let twoChangeShift = [...oneShift.slice(2), ...oneShift.slice(0, 2)]
+      // console.log(twoChangeShift);
+      
 
-			return { shift: twoShift, bool: false }
+			return { shift: twoChangeShift, bool: false }
 		}
 	}
 
 	let dutyGas = duty(...gas.gas)
 	let dutyPlumb = duty(...plumb.plumb)
 	let dutyEl = duty(...electr.el)
-	const handleDuty = el => {
+	const handleDuty = (el, elBool = true) => {
+    // console.log(el);
+    
+		// console.log(elBool)
+// dayOfYear=dayOfYear-1
+
+
 		let duty = el[dayOfYear % el.length]
-		// console.log(duty);
+
+		// console.log(duty)
 
 		return duty
 	}
 
-	const manGas = handleDuty(dutyGas.shift)
-	const manPlumb = handleDuty(dutyPlumb.shift)
-	const manEl = handleDuty(dutyEl.shift)
+	const manGas = handleDuty(dutyGas.shift, dutyGas.bool)
+	const manPlumb = handleDuty(dutyPlumb.shift, dutyPlumb.bool)
+	const manEl = handleDuty(dutyEl.shift, dutyEl.bool)
 	console.log(manEl, manGas, manPlumb)
 
 	return (
 		<ul>
 			<li>
-				Дежурный електрик <span> {manEl} 
-     </span>
+				Дежурный електрик <span> {manEl}</span>
 			</li>
-			<li>Дежурный сантехник<span>{manPlumb}</span></li>
-			<li>Дежурный газовщик<span>{manGas}</span></li>
+			<li>
+				Дежурный сантехник<span>{manPlumb}</span>
+			</li>
+			<li>
+				Дежурный газовщик<span>{manGas}</span>
+			</li>
 		</ul>
 	)
 }

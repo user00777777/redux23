@@ -239,7 +239,7 @@ const substation = createSlice({
 			if (x && Array.isArray(x.description)) {
 				state.list = [...x?.description]
 			} else {
-				console.log(...x?.description)
+				// console.log(...x?.description)
 			}
 		},
 

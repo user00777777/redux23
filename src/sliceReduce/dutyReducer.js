@@ -5,6 +5,7 @@ const initialState = {
 		{plumb: ['Бабец', 'Головченко', 'Немченко', 'Писаренко']},
 		{gas:['Выходец', 'Стасюк', 'Чеча', 'Колабин']},
 	],
+
 }
 const duty = createSlice({
 	name: 'duty',

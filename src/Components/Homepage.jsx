@@ -9,7 +9,7 @@ import GasDuty from './home/gasDuty/GasDuty'
 
 export default function Homepage() {
 	const state = useSelector(state => state.duty.duty)
-	console.log(state)
+	// console.log(state)
 	// const[e ]=
 	// console.log(el,plumb)
 

@@ -88,7 +88,7 @@ const cranes = createSlice({
 	initialState,
 	reducers: {
 		craneS(state, action) {
-			console.log(action.payload)
+			// console.log(action.payload)
 			// console.log(JSON.stringify(state))
 			const crane = state.list.find(el => {
 				if (el.cranName == action.payload) return el
