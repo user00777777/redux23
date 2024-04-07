@@ -20,8 +20,9 @@ export default function getDuty(electr, plumb, gas) {
 	)
   // console.log(month);
   
-	// console.log((dayOfYear+=2 ))
+	// console.log((dayOfYear ))
   // console.log(dayOfMonth=31);
+  // console.log(hour=24);
   
   
 
@@ -61,7 +62,7 @@ let oneShift = firstOneShift.map(el => {
 
 			return { shift: oneShift, bool: true }
 		}
-		if (hour > 19 && hour <= 23) {
+		if (hour >= 19 && hour <= 23) {
 			console.log('evening')
 
 			return { shift: twoShift, bool: true }
