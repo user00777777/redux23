@@ -65,6 +65,7 @@
 	background-color: lightsteelblue;
 	color: brown;
 	font-weight: 600;
+  font-size:clamp(0.5rem, -1.1rem + 8vw, 1rem);
 }
 .storeroom {
 	background-color: darkslategray;

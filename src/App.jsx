@@ -40,6 +40,8 @@ import Conveyor from './Conveyor'
 import sb_972 from './Components/machine/SB_972/Sb_972'
 import Sb_972 from './Components/machine/SB_972/Sb_972'
 import GasDuty from './Components/home/gasDuty/GasDuty'
+import RepairTel from './sliceReduce/Telphers/RepairTel'
+import InfoTel from './sliceReduce/Telphers/InfoTel'
 
 function App() {
 	return (
@@ -80,6 +82,8 @@ function App() {
 					<Route path='conveyor' element={<Conveyor />} />
 					<Route path='sb972' element={<Sb_972 />} />
 					<Route path='sb972' element={<GasDuty />} />
+					<Route path='repairTel' element={<RepairTel />} />
+					<Route path='infoTel' element={<InfoTel />} />
 				</Route>
 			</Routes>
 		</div>

@@ -4,8 +4,10 @@ import { createElement } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
 import s from '../css/Cranes.module.css'
-import { addNumb, setData } from '../sliceReduce/tableSlice'
+import {  setData } from '../sliceReduce/tableSlice'
 import Telega from './Telega'
+
+// import infoTelpher from './Telpher/infoTelpher'
 
 function Telphers() {
 	const refP = useRef(null)
@@ -17,10 +19,20 @@ function Telphers() {
 	const dispatch = useDispatch()
 	let navigate = useNavigate()
 	let [isOpen, SetOpen] = useState(true)
+	let [isNum, SetNum] = useState(0)
+	let [isDataset, setData] = useState()
 
 	const state = useSelector(state => state.hoist)
 
-	// console.log(state);
+
+
+	// console.log(isDataset)
+
+	function infoTelpher(e) {
+		setData(e.target.dataset.hoist)
+		// console.log(isNum)
+		SetNum((isNum += e.detail))
+	}
 
 	function f() {
 		let monorail = document.querySelectorAll('[data-monorail]')
@@ -67,6 +79,9 @@ function Telphers() {
 		for (let i = 0; i < t.length; i++) {
 			let a = t[i].dataset.machine
 			let _hoist = t[i].dataset.hoist
+			// console.log(_hoist);
+
+			// SetData(_hoist)
 			t[i].addEventListener('click', event => {
 				if (t[i].dataset.hoist) {
 					event.target.innerHTML = a
@@ -78,11 +93,11 @@ function Telphers() {
 			// console.log(_hoist);
 
 			const regexp = new RegExp(`${text}$`)
-			console.log(regexp)
+			// console.log(regexp)
 
 			if (regexp.test(_hoist)) {
 				// console.log(t[i]);
-				console.log(regexp.test(_hoist))
+				// console.log(regexp.test(_hoist))
 
 				t[i].style.background = 'aqua'
 				t[i].classList.add(s.plus)
@@ -117,14 +132,14 @@ function Telphers() {
 						}
 					})
 
-					console.log('test2')
+					// console.log('test2')
 
 					t.classList.toggle(s.test2, false)
 				} else {
-					console.log('test2>false')
+					// console.log('test2>false')
 					t.classList.add(s.test)
 
-					console.log(el.info)
+					// console.log(el.info)
 
 					setRp(() => {
 						return {
@@ -328,6 +343,7 @@ function Telphers() {
 					data-rp=''
 					data-machine='SB972 <br><span>№052911<span/>'
 					className={[s.div26, s.t, 't'].join(' ')}
+					onClick={infoTelpher}
 				>
 					{' '}
 					51792
@@ -478,7 +494,7 @@ function Telphers() {
 				</div>
 				<div className={[s.div51, s.t].join(' ')} ref={telRef}>
 					{' '}
-					<Telega {...rp} />
+					<Telega {...rp} data={isDataset} />
 				</div>
 				<div
 					data-hoist='52045'
