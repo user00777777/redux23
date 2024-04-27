@@ -1,8 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
-function Mashin(machine, idMachine) {
+function Mashin(machine, idMachine,id) {
   return {
     machine,
     idMachine,
+    id
   };
 }
 const initialState = {
@@ -193,13 +194,14 @@ const initialState = {
 
       id: 3,
     },
-    {
-      machine: "",
-      idMachine: "",
+    // {
+    //   machine: "",
+    //   idMachine: "",
 
-      id: 3,
-    },
-    new Mashin("nameMashine", 1111111111),
+    //   id: 3,
+    // },
+    new Mashin("СМ2414","№52800",3),
+    new Mashin("СБ890","№52944",3),
   ],
   result: [],
 };
@@ -209,18 +211,24 @@ const machine = createSlice({
   initialState,
   reducers: {
     mashineGet(state, action) {
-      // console.log(action.payload == "ВС-300");
+      let s=   JSON.stringify(state)
+      let ss=JSON.parse( s)
+    
+      
+      
       state.data.find((el) => {
         let regexp = new RegExp(`${el.idMachine}$`);
-        console.log(action.payload);
+        // console.log(action.payload);
 
-        if (regexp.test(action.payload)) {
+        if (regexp.test(action.payload.trim())) {
           // console.log("yes");
+          // console.log(el.idMachine);
           let lentH = state.result.length;
 
           if (state.result.length >= 1) {
             state.result.length=0;
           }
+// console.log(ss);
 
           return state.result.push({ el });
 

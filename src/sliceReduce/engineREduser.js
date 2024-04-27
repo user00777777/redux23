@@ -78,7 +78,7 @@ const engine = createSlice({
 	initialState,
 	reducers: {
 		engine833(state, action) {
-			console.log(action.payload)
+			// console.log(action.payload)
 			state.result = null
 			if (state.result == null) {
 				const filteredResults = state.data833.filter(el => {
@@ -86,6 +86,8 @@ const engine = createSlice({
 						return el
 					}
 				})
+				// console.log(filteredResults)
+
 				state.result = filteredResults
 			}
 			// else{state}

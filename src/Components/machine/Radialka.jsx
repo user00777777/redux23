@@ -16,15 +16,15 @@ const MyContexst = createContext()
 
 export default function Radialka() {
 	const contexst = 'my contexst'
-	const dispatch = useDispatch() 
+	const dispatch = useDispatch()
 	let [selector833] = useSelector(state => state.engine.data833)
 	const { mainEngine } = selector833
 	let cosF = mainEngine
-	console.log(mainEngine)
+	// console.log(mainEngine)
 	let y = useSelector(state => state.engine)
-	console.log(y)
+	// console.log(y)
 
-	console.log(selector833.hydroelectricStation)
+	// console.log(selector833.hydroelectricStation)
 
 	const cosFStr = encodeURIComponent(JSON.stringify(cosF))
 	const hydroStr = encodeURIComponent(
@@ -43,29 +43,28 @@ export default function Radialka() {
 		navigate(-1)
 		dispatch(engine833('empty'))
 	}
-  
-  // let x=selector.find((el)=>el  )
-  // console.log(x.el.machine);
-  let lastNum = selector.length -4
-  console.log( selector);
-  
-// let x=selector.find((el) =>el  );
-// console.log(x.el);
 
+	// let x=selector.find((el)=>el  )
+	// console.log(x.el.machine);
+	let lastNum = selector.length - 4
+	// console.log(selector)
+
+	// let x=selector.find((el) =>el  );
+	// console.log(x.el);
 
 	let numArr = selector?.length - 1
 	const mashine = selector[numArr]
-	console.log(mashine)
+	// console.log(mashine)
 
 	// const cosFStr = encodeURIComponent(JSON.stringify(soF))
-	const name = mashine.el.machine
+	const name = mashine?.el.machine
 	// console.log(name)
 	useEffect(() => {
 		dispatch(engine833(name))
 	}, [name])
 
 	const yourMashine = useSelector(state => state.engine.result)
-	console.log(yourMashine)
+	// console.log(yourMashine)
 
 	return (
 		<div className={s.father}>
@@ -74,9 +73,7 @@ export default function Radialka() {
 					{ss ? (
 						<Foto mashine={mashine?.el} />
 					) : (
-						
-							<Mashine mashine={mashine?.el} />
-						
+						<Mashine mashine={mashine?.el} />
 					)}
 				</div>
 				<button className={s.button} onClick={goBack}>

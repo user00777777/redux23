@@ -8,15 +8,18 @@ import Contexst from '../../App'
 
 const Mashine = ({ mashine }) => {
 	const myContexst1 = useContext(Contexst)
-	console.log(mashine)
+	// console.log(mashine)
 	const ref = useRef(null)
 	const refDots = useRef(null)
 	let [test, setTest] = useState(null)
 	const [currentIndex, setCurrentIndex] = useState(0)
 	const [currentIndexClass, setCurrentIndexClass] = useState(0)
+	const [ind, setIndex] = useState('')
 	// const [currentClass, setClass] = useState()
-	const slides = _fotoSliderArr(mashine).ar
-	console.log(currentIndex)
+	const slides = _fotoSliderArr(mashine)?.ar
+	// console.log(currentIndex)
+  console.log(_fotoSliderArr(mashine))
+  
 
 	useEffect(() => {
 		if (ref) {
@@ -41,7 +44,11 @@ const Mashine = ({ mashine }) => {
       setCurrentIndex(slideIndex)
 
 	}
+  // console.log(_fotoSliderArr(mashine).def)
+  
 	// console.log(slides[currentIndex])
+
+  
 
 	return (
 		<div className={s.sliderStyles}>
@@ -60,8 +67,6 @@ const Mashine = ({ mashine }) => {
 			/>
 			<div className={s.dotsContainerStyles}>
 				{slides.map((slide, slideIndex, ar) => (
-          
-          
 					<div
 						className={`${s.dotStyle} ${
 							currentIndex === slideIndex ? s.activ : ''
@@ -77,6 +82,8 @@ const Mashine = ({ mashine }) => {
 			</div>
 			<ol ref={ref}></ol>
 			<div className={s.oneFoto}>{foto_PlusText(slides[currentIndex])}</div>
+
+
 		</div>
 	)
 }

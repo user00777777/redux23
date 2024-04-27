@@ -26,16 +26,20 @@ import s8333_0 from '../images/mashineFoto/sb833/circuit833/sb8334.jpg'
 import _rad2A554 from './2A554/_rad2A554'
 import _arFotoCirkuit972 from './SB_972/foto_972/_arFotoCirkuit972'
 import _fotoAr2126 from './Sm2126/_fotoAr2126'
+import f_2414 from './MashineFoto/CM2414/f_2414'
+import f_800 from './MashineFoto/CM800/f_800'
 // import _fotoAr2126 from './Sm2126/_fotoAr2126'
 
 export default function _fotoSliderArr({ machine, idMachine }) {
 	console.log(machine, idMachine)
 	const arrFoto = []
-
-	function createObj(ar, n) {
+  let defOrigin =
+		'https://previews.123rf.com/images/alonastep/alonastep1601/alonastep160100178/49947561-%D0%BD%D0%B5%D1%82-%D0%BE%D0%B1%D1%83%D0%B2%D1%8C-%D0%BD%D0%B5-%D0%BF%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D1%8B%D0%B2%D0%B0%D1%82%D1%8C-%D0%BF%D1%80%D0%B5%D0%B4%D1%83%D0%BF%D1%80%D0%B5%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BD%D0%B5-%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%B0%D0%B9%D1%81%D1%8F-%D0%B7%D0%B0%D0%BF%D1%80%D0%B5%D1%89%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5-%D0%BE%D0%B1%D1%89%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B9-%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D0%B8-%D0%B7%D0%BD%D0%B0%D1%87%D0%BE%D0%BA.jpg'
+	function createObj(ar, n,def=defOrigin) {
 		return {
 			ar,
 			n,
+      def
 		}
 	}
 	let rp = ''
@@ -79,18 +83,21 @@ export default function _fotoSliderArr({ machine, idMachine }) {
 				s833_8,
 				s833_9
 			)
+			// eslint-disable-next-line no-case-declarations
 			const sb833_52055 = createObj(
 				arrFoto,
 				` <li>${machine} ${idMachine}</li>
           `
 			)
 			return sb833_52055
+   
 		case '2А554':
 			// console.log(1111111111)
 
+			// eslint-disable-next-line no-case-declarations
 			const rad2a554 = createObj(
 				_rad2A554(),
-				` <li> 'jhjhjh'</li>
+				` <li> '2A554'</li>
           `
 			)
 			return rad2a554
@@ -103,6 +110,7 @@ export default function _fotoSliderArr({ machine, idMachine }) {
 			} else {
 				// console.log('false')
 			}
+      break
 		case 'СМ2126':
 			// console.log('ddd');
 
@@ -114,19 +122,32 @@ export default function _fotoSliderArr({ machine, idMachine }) {
 			} else {
 				// console.log('nooKs')
 			}
+      break
+      // eslint-disable-next-line no-case-declarations
+      case 'СМ2414': let obj2414= createObj(f_2414(),idMachine)
+      return obj2414
+    // eslint-disable-next-line no-case-declarations
+    case "СБ890":let obj890=createObj(f_800(),idMachine)
+    return obj890
+   
+      
 
+		// eslint-disable-next-line no-fallthrough
 		default:
-			// console.log('def')
-			arrFoto.splice(0, arrFoto.length)
+			console.log('def')
+			// arrFoto.splice(0, arrFoto.length)
 			arrFoto.push(
-				'https://www.vectorstock.com/royalty-free-vector/cute-electrician-pear-cartoon-vector-42127729'
+				'https://previews.123rf.com/images/alonastep/alonastep1601/alonastep160100178/49947561-%D0%BD%D0%B5%D1%82-%D0%BE%D0%B1%D1%83%D0%B2%D1%8C-%D0%BD%D0%B5-%D0%BF%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D1%8B%D0%B2%D0%B0%D1%82%D1%8C-%D0%BF%D1%80%D0%B5%D0%B4%D1%83%D0%BF%D1%80%D0%B5%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BD%D0%B5-%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%B0%D0%B9%D1%81%D1%8F-%D0%B7%D0%B0%D0%BF%D1%80%D0%B5%D1%89%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5-%D0%BE%D0%B1%D1%89%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B9-%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D0%B8-%D0%B7%D0%BD%D0%B0%D1%87%D0%BE%D0%BA.jpg'
 			)
+  // eslint-disable-next-line no-case-declarations
+
+			// eslint-disable-next-line no-case-declarations
 			const objdef = createObj(
 				arrFoto,
-				`Схема участка Другой информации не найдено`
+				`Схема участка Другой информации не найдено`,defOrigin
 			)
 
 			return objdef
-			break
+		
 	}
 }

@@ -13,7 +13,7 @@ console.log( telfer);
 					</li>
 				</ul>
 			)
-		case '52806':	return (
+		case '52805':	return (
 			<ul className={s.telf}>
 				<li>
 					{' '}
