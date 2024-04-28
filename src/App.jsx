@@ -42,6 +42,8 @@ import Sb_972 from './Components/machine/SB_972/Sb_972'
 import GasDuty from './Components/home/gasDuty/GasDuty'
 import RepairTel from './sliceReduce/Telphers/RepairTel'
 import InfoTel from './sliceReduce/Telphers/InfoTel'
+import Atons from './Components/Painting/Aton/Atons'
+import Pumps from './Components/Painting/Pumps'
 
 function App() {
 	return (
@@ -84,6 +86,8 @@ function App() {
 					<Route path='sb972' element={<GasDuty />} />
 					<Route path='repairTel' element={<RepairTel />} />
 					<Route path='infoTel' element={<InfoTel />} />
+					<Route path='atons' element={<Atons />} />
+					<Route path='pumps' element={<Pumps />} />
 				</Route>
 			</Routes>
 		</div>

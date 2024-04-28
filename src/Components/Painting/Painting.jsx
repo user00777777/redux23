@@ -13,7 +13,10 @@ export default function Painting() {
 			<div className={s.nav}>
 				<ul className={s.list}>
 					<li className={s.item}>
-						<GiLargePaintBrush className={s.paintbrush} />{' '}
+						<GiLargePaintBrush
+							className={s.paintbrush}
+					
+						/>{' '}
 						<Link to='/aton'>
 							<span>Aton150</span>
 						</Link>
