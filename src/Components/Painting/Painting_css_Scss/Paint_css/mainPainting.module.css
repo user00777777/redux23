@@ -29,7 +29,7 @@
   }
 }
 .paintbrush {
-  width: 1rem;
+  width: clamp(0.8rem, -0.4rem + 6vw, 1.1rem);
   color: rgb(96, 3, 3);
   font-size: 1px;
   left: 10%;

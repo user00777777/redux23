@@ -1,0 +1,17 @@
+.container {
+  background-color: aqua;
+  min-width: 100%;
+  min-height: 100dvh;
+}
+
+.navAton ul {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navAton li {
+  border: none;
+  font-size: 1rem;
+  width: 50%;
+}
