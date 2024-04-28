@@ -15,12 +15,13 @@
     max-width: 400px;
   }
   .nav .item {
+    border: none;
+    position: relative;
     max-width: 300px;
     min-width: 200px;
     width: 300px;
     max-height: -moz-max-content;
     max-height: max-content;
-    border: none;
   }
   .nav .item span {
     color: rgb(8, 7, 7);
@@ -28,14 +29,15 @@
   }
 }
 .paintbrush {
+  width: 1rem;
   color: rgb(96, 3, 3);
-  font-size: 1rem;
+  font-size: 1px;
   left: 10%;
-  top: 50%;
+  top: 12%;
+  position: absolute;
 }
 
 .item {
-  position: relative;
   perspective: 200px;
 }
 
@@ -46,39 +48,38 @@
 }
 
 .paintbrush {
-  transform: translate(20px) rotate(-42deg) scale(1.4);
-  transition: all 2000ms linear;
-  position: absolute;
-  -moz-transform: translate(20px) rotate(-42deg) scale(1.4);
-  -ms-transform: translate(20px) rotate(-42deg) scale(1.4);
-  -o-transform: translate(20px) rotate(-42deg) scale(1.4);
-  -webkit-transition: all 2000ms linear;
-  -moz-transition: all 2000ms linear;
-  -ms-transition: all 2000ms linear;
-  -o-transition: all 2000ms linear;
-  -webkit-transform: translate(20px) rotate(-42deg) scale(1.4);
+  transform: translate(2px) rotate(-42deg) scale(2);
+  transition: transform 1400ms both;
+  animation: brush ease-in 3s both;
+  -moz-transform: translate(2px) rotate(-42deg) scale(2);
+  -ms-transform: translate(2px) rotate(-42deg) scale(2);
+  -o-transform: translate(2px) rotate(-42deg) scale(2);
+  -webkit-transition: transform 1400ms both;
+  -moz-transition: transform 1400ms both;
+  -ms-transition: transform 1400ms both;
+  -o-transition: transform 1400ms both;
+  -webkit-transform: translate(2px) rotate(-42deg) scale(2);
+  -webkit-animation: brush ease-in 3s both;
 }
 
 @keyframes brush {
   0% {
-    transform: rotateY(80deg);
-    -webkit-transform: rotateY(80deg);
-    -moz-transform: rotateY(80deg);
-    -ms-transform: rotateY(80deg);
-    -o-transform: rotateY(80deg);
+    transition: rotate 2s;
+    transform: rotateY(18deg);
+    -webkit-transform: rotateY(18deg);
+    -moz-transform: rotateY(18deg);
+    -ms-transform: rotateY(18deg);
+    -o-transform: rotateY(18deg);
+    -webkit-transition: rotate 2s;
+    -moz-transition: rotate 2s;
+    -ms-transition: rotate 2s;
+    -o-transition: rotate 2s;
   }
   70% {
-    transform: rotateY(60px);
-    -webkit-transform: rotateY(60px);
-    -moz-transform: rotateY(60px);
-    -ms-transform: rotateY(60px);
-    -o-transform: rotateY(60px);
-  }
-  80% {
-    transform: rotateX(-50deg);
-    -webkit-transform: rotateX(-50deg);
-    -moz-transform: rotateX(-50deg);
-    -ms-transform: rotateX(-50deg);
-    -o-transform: rotateX(-50deg);
+    transform: rotateY(-116deg);
+    -webkit-transform: rotateY(-116deg);
+    -moz-transform: rotateY(-116deg);
+    -ms-transform: rotateY(-116deg);
+    -o-transform: rotateY(-116deg);
   }
 }

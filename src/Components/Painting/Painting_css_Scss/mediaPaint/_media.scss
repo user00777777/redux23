@@ -1,41 +1,48 @@
 @media screen and (max-width: 420px) {
 	.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		min-width: 100%;
-    min-height: 100dvh;
-    background:url('../../Foto/Painter.jpg')
+		min-height: 100dvh;
+		background: url('../../Foto/Painter.jpg');
 	}
 	.nav {
     // margin-top: 20px;
-    min-height: fit-content;
-
+		min-height: fit-content;
+    
 		.list {
-			max-width: 400px;
+      max-width: 400px;
 		}
 		.item {
-      // margin: 10px;
-      max-width: 300px;
-      min-width: 200px;
-      width: 300px;
-max-height:max-content ;
       border: none;
-// background: linear-gradient(to bottom, #45484d 0%,#000000 100%);       border-radius:20px ;
-//       -webkit-border-radius:20px ;
-//       -moz-border-radius:20px ;
-//       -ms-border-radius:20px ;
-//       -o-border-radius:20px ;
-//       margin-bottom: 10px;
+      // border:2px rgb(227, 15, 15) solid;
+			position: relative;
+			max-width: 300px;
+			min-width: 200px;
+			width: 300px;
+			max-height: max-content;
+			// border: none;
 
-span{color: rgb(8, 7, 7);
-font-size: clamp(2rem, 1.111rem + 4.44vw, 2.5rem);}
+			span {
+				color: rgb(8, 7, 7);
+				font-size: clamp(2rem, 1.111rem + 4.44vw, 2.5rem);
+			}
 		}
 	}
 }
 .paintbrush {
-  color: rgb(96, 3, 3);
-font-size: 1rem;
-	left: 10%;
-  top: 50%;
+// border:2px rgb(2, 252, 81) solid;
+width: 1rem;
+color: rgb(96, 3, 3);
+font-size: 1px;
+left: 10%;
+top: 12%;
+position: absolute;
 }
+// svg{background-color: inherit;
+//   border:2px black solid;
+//   // width: 100%;
+//   position: absolute;
+//   left :100px
+// }
