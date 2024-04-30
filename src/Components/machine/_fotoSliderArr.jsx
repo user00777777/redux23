@@ -28,6 +28,7 @@ import _arFotoCirkuit972 from './SB_972/foto_972/_arFotoCirkuit972'
 import _fotoAr2126 from './Sm2126/_fotoAr2126'
 import f_2414 from './MashineFoto/CM2414/f_2414'
 import f_800 from './MashineFoto/CM800/f_800'
+import rad2H55 from './2A554/fotoRad/2A554_Picture/2h55.jpg';
 // import _fotoAr2126 from './Sm2126/_fotoAr2126'
 
 export default function _fotoSliderArr({ machine, idMachine }) {
@@ -42,7 +43,9 @@ export default function _fotoSliderArr({ machine, idMachine }) {
       def
 		}
 	}
-	let rp = ''
+	let rp = '';
+  // console.log(machine=='2Н55');
+  
 	switch (machine) {
 		case 'Клепка':{
 			if (idMachine == '№51791') {
@@ -100,7 +103,13 @@ export default function _fotoSliderArr({ machine, idMachine }) {
 				` <li> '2A554'</li>
           `
 			)
-			return rad2a554
+			return rad2a554;
+      // eslint-disable-next-line no-case-declarations
+      case '2Н55':	
+      
+      // eslint-disable-next-line no-case-declarations
+      let obj = createObj([rad2H55], idMachine)
+      return obj
 		case 'СБ972':
 			if (idMachine == '№52911') {
 				// console.log('3')
@@ -112,9 +121,9 @@ export default function _fotoSliderArr({ machine, idMachine }) {
 			}
       break
 		case 'СМ2126':
-			// console.log('ddd');
+			console.log(idMachine);
 
-			if (idMachine == '52049') {
+			if (idMachine == '52049'||idMachine=='№52050') {
 				// console.log('okc')
 
 				let sm2126 = createObj(_fotoAr2126(), idMachine)

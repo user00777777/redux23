@@ -18,7 +18,7 @@ const Mashine = ({ mashine }) => {
 	// const [currentClass, setClass] = useState()
 	const slides = _fotoSliderArr(mashine)?.ar
 	// console.log(currentIndex)
-  console.log(_fotoSliderArr(mashine))
+  // console.log(_fotoSliderArr(mashine))
   
 
 	useEffect(() => {
