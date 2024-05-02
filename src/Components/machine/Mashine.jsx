@@ -7,8 +7,8 @@ import Contexst from '../../App'
 // Импортируйте другие изображения, если они есть
 
 const Mashine = ({ mashine }) => {
-  console.log(mashine);
-  
+	console.log(mashine)
+
 	const myContexst1 = useContext(Contexst)
 	// console.log(mashine)
 	const ref = useRef(null)
@@ -19,9 +19,6 @@ const Mashine = ({ mashine }) => {
 	const [ind, setIndex] = useState('')
 	// const [currentClass, setClass] = useState()
 	const slides = _fotoSliderArr(mashine)?.ar
-	console.log(mashine)
-  // console.log(_fotoSliderArr(mashine))
-  
 
 	useEffect(() => {
 		if (ref) {
@@ -42,15 +39,11 @@ const Mashine = ({ mashine }) => {
 	}
 
 	const goToSlide = (slideIndex, slide, ar) => {
-
-      setCurrentIndex(slideIndex)
-
+		setCurrentIndex(slideIndex)
 	}
-  // console.log(_fotoSliderArr(mashine).def)
-  
-	// console.log(slides[currentIndex])
+	// console.log(_fotoSliderArr(mashine).def)
 
-  
+	// console.log(slides[currentIndex])
 
 	return (
 		<div className={s.sliderStyles}>
@@ -84,8 +77,6 @@ const Mashine = ({ mashine }) => {
 			</div>
 			<ol ref={ref}></ol>
 			<div className={s.oneFoto}>{foto_PlusText(slides[currentIndex])}</div>
-
-
 		</div>
 	)
 }

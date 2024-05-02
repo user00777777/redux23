@@ -29,7 +29,12 @@ import _fotoAr2126 from './Sm2126/_fotoAr2126'
 import f_2414 from './MashineFoto/CM2414/f_2414'
 import f_800 from './MashineFoto/CM800/f_800'
 import rad2H55 from './2A554/fotoRad/2A554_Picture/2h55.jpg';
+// <<<<<<< HEAD
 import samTelega from './MashineFoto/Telega/telSam.jpg';
+
+//  import _fotoAr2126 from './Sm2126/_fotoAr2126'
+
+// >>>>>>> 47e0b640fc535284ba17dd3157e0c9f0dc41be4b
 export default function _fotoSliderArr({ machine, idMachine }) {
 	console.log(machine, idMachine)
 	const arrFoto = [] 
