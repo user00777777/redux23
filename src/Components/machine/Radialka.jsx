@@ -43,37 +43,39 @@ export default function Radialka() {
 		navigate(-1)
 		dispatch(engine833('empty'))
 	}
+  // console.log(selector);
+  
+const[objMachine]=selector;
+const{machine}=objMachine
 
-	// let x=selector.find((el)=>el  )
-	// console.log(x.el.machine);
-	let lastNum = selector.length - 4
-	// console.log(selector)
 
-	// let x=selector.find((el) =>el  );
-	// console.log(x.el);
 
-	let numArr = selector?.length - 1
-	const mashine = selector[numArr]
+	// let lastNum = selector.length - 4
+
+
+	// let numArr = selector?.length - 1
+	// const mashine = selector[numArr]
 	// console.log(mashine)
 
 	// const cosFStr = encodeURIComponent(JSON.stringify(soF))
-	const name = mashine?.el.machine
+	// const name = mashine?.el.machine
 	// console.log(name)
 	useEffect(() => {
-		dispatch(engine833(name))
-	}, [name])
+		dispatch(engine833(machine))
+	// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [machine])
 
 	const yourMashine = useSelector(state => state.engine.result)
-	// console.log(yourMashine)
+	// console.log(machine)
 
 	return (
 		<div className={s.father}>
 			<div className={s.fatherTwo}>
 				<div className={s.imgContainer}>
 					{ss ? (
-						<Foto mashine={mashine?.el} />
+						<Foto mashine={objMachine} />
 					) : (
-						<Mashine mashine={mashine?.el} />
+						<Mashine mashine={objMachine} />
 					)}
 				</div>
 				<button className={s.button} onClick={goBack}>
