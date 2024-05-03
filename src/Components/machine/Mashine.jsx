@@ -7,7 +7,7 @@ import Contexst from '../../App'
 // Импортируйте другие изображения, если они есть
 
 const Mashine = ({ mashine }) => {
-	console.log(mashine)
+	// console.log(mashine)
 
 	const myContexst1 = useContext(Contexst)
 	// console.log(mashine)

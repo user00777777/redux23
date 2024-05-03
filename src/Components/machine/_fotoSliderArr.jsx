@@ -28,37 +28,39 @@ import _arFotoCirkuit972 from './SB_972/foto_972/_arFotoCirkuit972'
 import _fotoAr2126 from './Sm2126/_fotoAr2126'
 import f_2414 from './MashineFoto/CM2414/f_2414'
 import f_800 from './MashineFoto/CM800/f_800'
-import rad2H55 from './2A554/fotoRad/2A554_Picture/2h55.jpg';
+import rad2H55 from './2A554/fotoRad/2A554_Picture/2h55.jpg'
 // <<<<<<< HEAD
-import samTelega from './MashineFoto/Telega/telSam.jpg';
+import samTelega from './MashineFoto/Telega/telSam.jpg'
+import vs300 from '../images/vs300.jpg'
+import poluavtomat from '../images/poluavtomat.jpg'
 
 //  import _fotoAr2126 from './Sm2126/_fotoAr2126'
 
 // >>>>>>> 47e0b640fc535284ba17dd3157e0c9f0dc41be4b
 export default function _fotoSliderArr({ machine, idMachine }) {
 	console.log(machine, idMachine)
-	const arrFoto = [] 
-  let defOrigin =
+	const arrFoto = []
+	let defOrigin =
 		'https://previews.123rf.com/images/alonastep/alonastep1601/alonastep160100178/49947561-%D0%BD%D0%B5%D1%82-%D0%BE%D0%B1%D1%83%D0%B2%D1%8C-%D0%BD%D0%B5-%D0%BF%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D1%8B%D0%B2%D0%B0%D1%82%D1%8C-%D0%BF%D1%80%D0%B5%D0%B4%D1%83%D0%BF%D1%80%D0%B5%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BD%D0%B5-%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%B0%D0%B9%D1%81%D1%8F-%D0%B7%D0%B0%D0%BF%D1%80%D0%B5%D1%89%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5-%D0%BE%D0%B1%D1%89%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B9-%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D0%B8-%D0%B7%D0%BD%D0%B0%D1%87%D0%BE%D0%BA.jpg'
-	function createObj(ar, n,def=defOrigin) {
+	function createObj(ar, n, def = defOrigin) {
 		return {
 			ar,
 			n,
-      def
+			def,
 		}
 	}
-	let rp = '';
-  // console.log(machine=='2Н55');
-  
+	let rp = ''
+	// console.log(machine=='2Н55');
+
 	switch (machine) {
-		case 'Клепка':{
+		case 'Клепка': {
 			if (idMachine == '№51791') {
 				rp = '14'
 			}
 			if (idMachine == '№52131') {
 				rp = '14'
 			}
-      //  else if (idMachine == '№52131') {
+			//  else if (idMachine == '№52131') {
 			// 	rp = '11'
 			// }
 			arrFoto.length = 0
@@ -69,7 +71,8 @@ export default function _fotoSliderArr({ machine, idMachine }) {
        <li>запитан от ${rp}</li>
         `
 			)
-			return obj;}
+			return obj
+		}
 		case 'СБ833':
 			arrFoto.length = 0
 			arrFoto.push(
@@ -97,7 +100,7 @@ export default function _fotoSliderArr({ machine, idMachine }) {
           `
 			)
 			return sb833_52055
-   
+
 		case '2А554':
 			// console.log(1111111111)
 
@@ -107,13 +110,12 @@ export default function _fotoSliderArr({ machine, idMachine }) {
 				` <li> '2A554'</li>
           `
 			)
-			return rad2a554;
-      // eslint-disable-next-line no-case-declarations
-      case '2Н55':	
-      
-      // eslint-disable-next-line no-case-declarations
-      let obj = createObj([rad2H55], idMachine)
-      return obj
+			return rad2a554
+		// eslint-disable-next-line no-case-declarations
+		case '2Н55':
+			// eslint-disable-next-line no-case-declarations
+			let obj = createObj([rad2H55], idMachine)
+			return obj
 		case 'СБ972':
 			if (idMachine == '№52911') {
 				// console.log('3')
@@ -123,11 +125,11 @@ export default function _fotoSliderArr({ machine, idMachine }) {
 			} else {
 				// console.log('false')
 			}
-      break
+			break
 		case 'СМ2126':
-			console.log(idMachine);
+			console.log(idMachine)
 
-			if (idMachine == '52049'||idMachine=='№52050') {
+			if (idMachine == '52049' || idMachine == '№52050') {
 				// console.log('okc')
 
 				let sm2126 = createObj(_fotoAr2126(), idMachine)
@@ -135,19 +137,25 @@ export default function _fotoSliderArr({ machine, idMachine }) {
 			} else {
 				// console.log('nooKs')
 			}
-      break
-      // eslint-disable-next-line no-case-declarations
-      case 'СМ2414': let obj2414= createObj(f_2414(),idMachine)
-      return obj2414
-    // eslint-disable-next-line no-case-declarations
-    case "СБ890":let obj890=createObj(f_800(),idMachine)
-    return obj890
-    // eslint-disable-next-line no-case-declarations
-    case"телега":let objTelega = createObj([samTelega],idMachine)
-    return objTelega
-    
-   
-      
+			break
+		// eslint-disable-next-line no-case-declarations
+		case 'СМ2414':
+			// eslint-disable-next-line no-case-declarations
+			let obj2414 = createObj(f_2414(), idMachine)
+			return obj2414
+		// eslint-disable-next-line no-case-declarations
+		case 'СБ890':
+			let obj890 = createObj(f_800(), idMachine)
+			return obj890
+		// eslint-disable-next-line no-case-declarations
+		case 'телега':
+			let objTelega = createObj([samTelega], idMachine)
+			return objTelega
+		// eslint-disable-next-line no-case-declarations
+		case 'ВС-300':
+			// eslint-disable-next-line no-case-declarations
+			let objVs300 = createObj([vs300,poluavtomat], idMachine)
+			return objVs300
 
 		// eslint-disable-next-line no-fallthrough
 		default:
@@ -156,15 +164,15 @@ export default function _fotoSliderArr({ machine, idMachine }) {
 			arrFoto.push(
 				'https://previews.123rf.com/images/alonastep/alonastep1601/alonastep160100178/49947561-%D0%BD%D0%B5%D1%82-%D0%BE%D0%B1%D1%83%D0%B2%D1%8C-%D0%BD%D0%B5-%D0%BF%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D1%8B%D0%B2%D0%B0%D1%82%D1%8C-%D0%BF%D1%80%D0%B5%D0%B4%D1%83%D0%BF%D1%80%D0%B5%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BD%D0%B5-%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%B0%D0%B9%D1%81%D1%8F-%D0%B7%D0%B0%D0%BF%D1%80%D0%B5%D1%89%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5-%D0%BE%D0%B1%D1%89%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B9-%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D0%B8-%D0%B7%D0%BD%D0%B0%D1%87%D0%BE%D0%BA.jpg'
 			)
-  // eslint-disable-next-line no-case-declarations
+			// eslint-disable-next-line no-case-declarations
 
 			// eslint-disable-next-line no-case-declarations
 			const objdef = createObj(
 				arrFoto,
-				`Схема участка Другой информации не найдено`,defOrigin
+				`Схема участка Другой информации не найдено`,
+				defOrigin
 			)
 
 			return objdef
-		
 	}
 }
