@@ -33,6 +33,7 @@ import rad2H55 from './2A554/fotoRad/2A554_Picture/2h55.jpg'
 import samTelega from './MashineFoto/Telega/telSam.jpg'
 import vs300 from '../images/vs300.jpg'
 import poluavtomat from '../images/poluavtomat.jpg'
+import vent1 from '../../fotoMaljrka/vent.jpg';
 
 //  import _fotoAr2126 from './Sm2126/_fotoAr2126'
 
@@ -156,6 +157,10 @@ export default function _fotoSliderArr({ machine, idMachine }) {
 			// eslint-disable-next-line no-case-declarations
 			let objVs300 = createObj([vs300,poluavtomat], idMachine)
 			return objVs300
+		case 'vent':
+			// eslint-disable-next-line no-case-declarations
+			let ventil = createObj([vent1], '')
+			return ventil
 
 		// eslint-disable-next-line no-fallthrough
 		default:

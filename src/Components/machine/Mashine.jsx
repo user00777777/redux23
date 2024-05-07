@@ -22,7 +22,7 @@ const Mashine = ({ mashine }) => {
 
 	useEffect(() => {
 		if (ref) {
-			ref.current.innerHTML = _fotoSliderArr(mashine).n
+			ref.current.innerHTML = _fotoSliderArr(mashine)?.n
 		}
 	})
 

@@ -45,6 +45,7 @@ import InfoTel from './sliceReduce/Telphers/InfoTel'
 import Atons from './Components/Painting/Aton/Atons'
 import Pumps from './Components/Painting/Pumps'
 
+
 function App() {
 	return (
 		<div>

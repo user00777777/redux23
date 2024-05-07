@@ -39,7 +39,7 @@ let oneSlide=props;
 // console.log(oneSlide);
 
 let x=null;
-oneSlide&&console.log('прошло');
+// oneSlide&&console.log('прошло');
 
 
   const a1 = new Table (31,32,33)
@@ -71,7 +71,7 @@ if (regexp.test(oneSlide)){
   x=false
   
   }
-  console.log('boolean',x);
+  // console.log('boolean',x);
   
   
   return <div>
