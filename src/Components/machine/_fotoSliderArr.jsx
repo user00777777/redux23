@@ -34,6 +34,8 @@ import samTelega from './MashineFoto/Telega/telSam.jpg'
 import vs300 from '../images/vs300.jpg'
 import poluavtomat from '../images/poluavtomat.jpg'
 import vent1 from '../../fotoMaljrka/vent.jpg';
+import conv1 from '../../fotoMaljrka/konveer.jpg';
+import conv2 from '../../fotoMaljrka/Konveer2.jpg';
 
 //  import _fotoAr2126 from './Sm2126/_fotoAr2126'
 
@@ -161,6 +163,10 @@ export default function _fotoSliderArr({ machine, idMachine }) {
 			// eslint-disable-next-line no-case-declarations
 			let ventil = createObj([vent1], '')
 			return ventil
+		case 'conv':
+			// eslint-disable-next-line no-case-declarations
+			let conveer = createObj([conv1,conv2], '')
+			return conveer
 
 		// eslint-disable-next-line no-fallthrough
 		default:

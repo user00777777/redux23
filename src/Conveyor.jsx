@@ -9,9 +9,10 @@ const loc_State=useLocation()
 	const goBack = () => {
 		navigate(-1)
 	}
-let res=1+1==2
+console.log(loc_State.state);
+
 useEffect(()=>{
-	if (loc_State.state=='vent') {
+	if (loc_State.state) {
 		setInfo(<Mashine mashine={{machine:loc_State.state}} />)
 	} else {
 		setInfo('no')

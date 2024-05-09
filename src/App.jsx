@@ -87,7 +87,7 @@ function App() {
 					<Route path='sb972' element={<GasDuty />} />
 					<Route path='repairTel' element={<RepairTel />} />
 					<Route path='infoTel' element={<InfoTel />} />
-					<Route path='atons' element={<Atons />} />
+					<Route path='atons/:id' element={<Atons />} />
 					<Route path='pumps' element={<Pumps />} />
 				</Route>
 			</Routes>

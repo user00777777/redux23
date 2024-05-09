@@ -32,7 +32,7 @@ useParams()
 					</li>
 					<li className={s.item}>
 						<GiLargePaintBrush className={s.paintbrush} />{' '}
-						<Link to='/conveyor'>
+						<Link to='/conveyor' state='conv' >
 							<span>Конвеер</span>
 						</Link>
 					</li>
