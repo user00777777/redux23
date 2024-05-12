@@ -44,6 +44,7 @@ import RepairTel from './sliceReduce/Telphers/RepairTel'
 import InfoTel from './sliceReduce/Telphers/InfoTel'
 import Atons from './Components/Painting/Aton/Atons'
 import Pumps from './Components/Painting/Pumps'
+import BackPage from './Components/BackPage/BackPage'
 
 
 function App() {
@@ -89,6 +90,7 @@ function App() {
 					<Route path='infoTel' element={<InfoTel />} />
 					<Route path='atons/:id' element={<Atons />} />
 					<Route path='pumps' element={<Pumps />} />
+					{/* <Route path='pumps' element={<BackPage />} /> */}
 				</Route>
 			</Routes>
 		</div>

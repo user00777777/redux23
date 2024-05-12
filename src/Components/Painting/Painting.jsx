@@ -26,7 +26,7 @@ useParams()
 					</li>
 					<li className={s.item}>
 						<GiLargePaintBrush className={s.paintbrush} />{' '}
-						<Link to='/krons'>
+						<Link to='/krons' >
 							<span>Кроны</span>
 						</Link>
 					</li>

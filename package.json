@@ -11,11 +11,13 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
+    "@szhsin/react-accordion": "^1.2.4",
     "accordion-js": "^3.3.4",
     "bootstrap": "^5.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
+    "react-light-accordion": "^0.1.4",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.18.0",
     "react-slick": "^0.29.0",

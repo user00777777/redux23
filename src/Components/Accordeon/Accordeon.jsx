@@ -1,9 +1,10 @@
+/* eslint-disable react/prop-types */
 import React, { useState, useEffect, useRef } from 'react'
-import s from './css/Engine/engine.module.css'
+import s from './../../Components/machine/css/Engine/engine.module.css'
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
-export default function Engine({ m }) {
+export default function Accordion({ name, p, rpm, a, weight, describe }) {
 	const [sb833, setName] = useState('')
 	const [PrivodRukava, setPrivodRukava] = useState('')
 	const [mainEngine, SetmainEngine] = useState('')
@@ -12,22 +13,7 @@ export default function Engine({ m }) {
 	// console.log(sb833.power)
 	// console.log(mainEngine.power)
 
-	let ss = useSelector(state => state.engine.result)
-	console.log(ss)
-	useEffect(() => {
-		if (ss) {
-			ss.forEach(el => {
-				setName(el.mainEngine)
-				SetmainEngine(el.hydroelectricStation)
-				setPrivodRukava(el.PrivodRukava)
-			})
-		}
-	}, [ss])
- 
-
-  
-	const navigate = useNavigate()
-	let goBack = () => navigate(-1)
+	console.log(name, p, a, rpm, weight)
 
 	const [accordionItems, setAccordionItems] = useState([])
 
@@ -38,14 +24,12 @@ export default function Engine({ m }) {
 
 	const handleAccordionClick = index => {
 		const newAccordionItems = accordionItems.map((item, i) => {
-      console.log(i,'index',index)
-      
-      
-      
+			// console.log(i, 'index', index)
+
 			if (i === index) {
 				const content = item.querySelector(`.${s.accordion_content}`)
-        console.log(content);
-        
+				console.log(content)
+
 				content.style.display =
 					content.style.display === 'block' ? 'none' : 'block'
 			}
@@ -62,8 +46,6 @@ export default function Engine({ m }) {
 		setShaft(items)
 	}, [])
 
-
-
 	return (
 		<div className={s.wrapperE}>
 			<div className={s.accordion}>
@@ -72,7 +54,7 @@ export default function Engine({ m }) {
 					onClick={() => handleAccordionClick(0)}
 				>
 					<div className={s.accordion_header}>
-						{sb833.nameEng || 'Внести данные'}
+						{describe || 'Внести данные'}
 					</div>
 					<div className={s.accordion_content}>
 						<ul className={s.wrapMap}>
@@ -82,20 +64,34 @@ export default function Engine({ m }) {
 							<li className={`${s.Motor_starterA1} ${s.f}`}>Мощность</li>
 							<li className={`${s.cosF} ${s.f}`}>вес двигателя</li>
 							<li className={`${s.shaftDiameter1} ${s.f}`}>диаметр вала</li>
-							<li className={s.mainEngine_power}> {sb833.power}</li>
+							<li className={s.mainEngine_power}>
+								{p} {sb833.power}
+							</li>
 							{sb833.cosF ? (
 								<li className={s.mainEngine_starterA1}> {sb833.cosF}</li>
 							) : (
-								<li className={s.mainEngine_starterA1}> {sb833.bearing}</li>
+								<li className={s.mainEngine_starterA1}>
+									{' '}
+									подшипники
+								</li>
 							)}
-							<li className={s.mainEngine_rpm}> {sb833.Engine_rpm}</li>
-							<li className={s.CircuitBreaker}> {sb833.weight}</li>
-							<li className={s.shaftDiameter}> {sb833.shaftDiameter}</li>
+							<li className={s.mainEngine_rpm}>
+								{rpm} 
+							</li>
+							<li className={s.CircuitBreaker}>
+								{weight}
+							</li>
+							<li className={s.shaftDiameter}>
+								{' '}
+								диаметр вала
+							</li>
 							<li className={s.engineName}>
 								{' '}
-								{sb833.engineName || 'Нужно забить базу данных'}
+								{name || 'Нужно забить базу данных'}
 							</li>{' '}
-							<li className={s.electricCurrent}> {sb833.electricCurrent}</li>
+							<li className={s.electricCurrent}>
+								{a} 
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -192,3 +188,10 @@ export default function Engine({ m }) {
 		</div>
 	)
 }
+
+
+
+
+
+
+

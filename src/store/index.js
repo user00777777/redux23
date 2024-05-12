@@ -8,6 +8,7 @@ import craneReduser from '../sliceReduce/cranesReduser'
 import rpReduser from '../sliceReduce/rpReduser'
 import engineREduser from '../sliceReduce/engineREduser'
 import dutyReducer from '../sliceReduce/dutyReducer'
+import paintReducer from '../sliceReduce/paintingReducer'
 
 const store = configureStore({
 	reducer: {
@@ -20,6 +21,7 @@ const store = configureStore({
 		rp: rpReduser,
 		engine: engineREduser,
 		duty: dutyReducer,
+		paint: paintReducer,
 	},
 })
 export default store

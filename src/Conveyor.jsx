@@ -1,34 +1,37 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import Mashine from './Components/machine/Mashine'
+import s from '../src/css/conv.module.css'
+import BackPage from './Components/BackPage/BackPage'
 
 export default function Conveyor() {
+	const btnRef = useRef()
+
 	const [info, setInfo] = useState('22')
-const loc_State=useLocation()
+	const loc_State = useLocation()
 	const navigate = useNavigate()
 	const goBack = () => {
-		navigate(-1)
-	}
-console.log(loc_State.state);
-
-useEffect(()=>{
-	if (loc_State.state) {
-		setInfo(<Mashine mashine={{machine:loc_State.state}} />)
-	} else {
-		setInfo('no')
+		setTimeout(() => {
+			navigate(-1)
+		}, 300)
+		btnRef.current.classList.add(s.animate)
 	}
 
-} ,[loc_State.state] )
-
+	useEffect(() => {
+		if (loc_State.state) {
+			setInfo(<Mashine mashine={{ machine: loc_State.state }} />)
+		} else {
+			setInfo('no')
+		}
+	}, [loc_State.state])
 
 	return (
 		<>
-			<div>
-				{' '}
-	<div onClick={goBack}>Назд</div>
+			<div className={s.wraper}>
+	
+        <BackPage/>
+				<span>{info}</span>
 			</div>
-
-			<span>{info}</span>
 		</>
 	)
 }
