@@ -13,7 +13,7 @@ export default function Accordion({ name, p, rpm, a, weight, describe }) {
 	// console.log(sb833.power)
 	// console.log(mainEngine.power)
 
-	console.log(name, p, a, rpm, weight)
+	// console.log(name, p, a, rpm, weight)
 
 	const [accordionItems, setAccordionItems] = useState([])
 

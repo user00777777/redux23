@@ -30,6 +30,7 @@ export default function Conveyor() {
 			<div className={s.wraper}>
 	
         <BackPage/>
+      
 				<span>{info}</span>
 			</div>
 		</>

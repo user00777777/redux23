@@ -55,7 +55,6 @@ const{machine}=objMachine
 
 	// let numArr = selector?.length - 1
 	// const mashine = selector[numArr]
-	// console.log(mashine)
 
 	// const cosFStr = encodeURIComponent(JSON.stringify(soF))
 	// const name = mashine?.el.machine
@@ -66,7 +65,7 @@ const{machine}=objMachine
 	}, [machine])
 
 	const yourMashine = useSelector(state => state.engine.result)
-	// console.log(machine)
+	console.log(objMachine)
 
 	return (
 		<div className={s.father}>

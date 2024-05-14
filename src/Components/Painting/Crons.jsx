@@ -4,6 +4,7 @@ import s from './Crons/cron.module.css';
 import cronFoto from './Crons/cronsFoto/kronn.jpg';
 import Accordeon from '../Accordeon/Accordeon';
 import { useSelector } from 'react-redux';
+import BackPage from '../BackPage/BackPage';
 
 
 export default function Crons() {
@@ -11,6 +12,7 @@ const state=useSelector((state)=>state.paint.crons )
 console.log(state);
 
 	return <div className={s.container}><div className={s.wrapImg}>
+  <BackPage/>
 
 <img src={cronFoto} alt="Крон"  />
 

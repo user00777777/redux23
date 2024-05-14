@@ -33,15 +33,18 @@ import rad2H55 from './2A554/fotoRad/2A554_Picture/2h55.jpg'
 import samTelega from './MashineFoto/Telega/telSam.jpg'
 import vs300 from '../images/vs300.jpg'
 import poluavtomat from '../images/poluavtomat.jpg'
-import vent1 from '../../fotoMaljrka/vent.jpg';
-import conv1 from '../../fotoMaljrka/konveer.jpg';
-import conv2 from '../../fotoMaljrka/Konveer2.jpg';
+import vent1 from '../../fotoMaljrka/vent.jpg'
+import conv1 from '../../fotoMaljrka/konveer.jpg'
+import conv2 from '../../fotoMaljrka/Konveer2.jpg'
+import sb832ArFoto from '../images/mashineFoto/sb832/sb832ArrFoto'
 
 //  import _fotoAr2126 from './Sm2126/_fotoAr2126'
 
 // >>>>>>> 47e0b640fc535284ba17dd3157e0c9f0dc41be4b
 export default function _fotoSliderArr({ machine, idMachine }) {
-	console.log(machine, idMachine)
+	let machine1 = String(machine).trim()
+
+	// console.log( machine,'сonv'.trim())
 	const arrFoto = []
 	let defOrigin =
 		'https://previews.123rf.com/images/alonastep/alonastep1601/alonastep160100178/49947561-%D0%BD%D0%B5%D1%82-%D0%BE%D0%B1%D1%83%D0%B2%D1%8C-%D0%BD%D0%B5-%D0%BF%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D1%8B%D0%B2%D0%B0%D1%82%D1%8C-%D0%BF%D1%80%D0%B5%D0%B4%D1%83%D0%BF%D1%80%D0%B5%D0%B6%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BD%D0%B5-%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%B0%D0%B9%D1%81%D1%8F-%D0%B7%D0%B0%D0%BF%D1%80%D0%B5%D1%89%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5-%D0%BE%D0%B1%D1%89%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B9-%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D0%B8-%D0%B7%D0%BD%D0%B0%D1%87%D0%BE%D0%BA.jpg'
@@ -53,9 +56,9 @@ export default function _fotoSliderArr({ machine, idMachine }) {
 		}
 	}
 	let rp = ''
-	// console.log(machine=='2Н55');
+	console.log(machine1 )
 
-	switch (machine) {
+	switch (machine1) {
 		case 'Клепка': {
 			if (idMachine == '№51791') {
 				rp = '14'
@@ -157,7 +160,7 @@ export default function _fotoSliderArr({ machine, idMachine }) {
 		// eslint-disable-next-line no-case-declarations
 		case 'ВС-300':
 			// eslint-disable-next-line no-case-declarations
-			let objVs300 = createObj([vs300,poluavtomat], idMachine)
+			let objVs300 = createObj([vs300, poluavtomat], idMachine)
 			return objVs300
 		case 'vent':
 			// eslint-disable-next-line no-case-declarations
@@ -165,8 +168,12 @@ export default function _fotoSliderArr({ machine, idMachine }) {
 			return ventil
 		case 'conv':
 			// eslint-disable-next-line no-case-declarations
-			let conveer = createObj([conv1,conv2], '')
+			let conveer = createObj([conv1, conv2], '')
 			return conveer
+		case 'СБ832':
+			// eslint-disable-next-line no-case-declarations
+			let sb832 = createObj(sb832ArFoto(), '')
+			return sb832
 
 		// eslint-disable-next-line no-fallthrough
 		default:
