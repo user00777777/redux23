@@ -7,7 +7,7 @@ import Contexst from '../../App'
 // Импортируйте другие изображения, если они есть
 
 const Mashine = ({ mashine }) => {
-	console.log(mashine)
+	// console.log(mashine)
 
 	const myContexst1 = useContext(Contexst)
 	// console.log(mashine)
@@ -20,6 +20,8 @@ const Mashine = ({ mashine }) => {
 	// const [currentClass, setClass] = useState()
 	const slides = _fotoSliderArr(mashine)?.ar
 
+  // console.log(slides);
+  
 	useEffect(() => {
 		if (ref) {
 			ref.current.innerHTML = _fotoSliderArr(mashine)?.n

@@ -4,16 +4,13 @@ import s from './../../Components/machine/css/Engine/engine.module.css'
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
-export default function Accordion({ name, p, rpm, a, weight, describe }) {
+export default function Accordion({ name, p, rpm, a, weight, describe,bearing }) {
 	const [sb833, setName] = useState('')
 	const [PrivodRukava, setPrivodRukava] = useState('')
 	const [mainEngine, SetmainEngine] = useState('')
 	const hideLine = useRef(null)
-	// console.log(m)
-	// console.log(sb833.power)
-	// console.log(mainEngine.power)
 
-	// console.log(name, p, a, rpm, weight)
+console.log(name);
 
 	const [accordionItems, setAccordionItems] = useState([])
 
@@ -72,7 +69,7 @@ export default function Accordion({ name, p, rpm, a, weight, describe }) {
 							) : (
 								<li className={s.mainEngine_starterA1}>
 									{' '}
-									подшипники
+									{bearing}
 								</li>
 							)}
 							<li className={s.mainEngine_rpm}>
@@ -92,6 +89,7 @@ export default function Accordion({ name, p, rpm, a, weight, describe }) {
 							<li className={s.electricCurrent}>
 								{a} 
 							</li>
+					
 						</ul>
 					</div>
 				</div>

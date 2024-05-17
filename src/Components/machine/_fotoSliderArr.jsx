@@ -167,6 +167,7 @@ export default function _fotoSliderArr({ machine, idMachine }) {
 			let ventil = createObj([vent1], '')
 			return ventil
 		case 'conv':
+    
 			// eslint-disable-next-line no-case-declarations
 			let conveer = createObj([conv1, conv2], '')
 			return conveer

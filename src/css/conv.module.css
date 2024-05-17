@@ -78,3 +78,6 @@
     background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
   }
 }
+.wrapBtn {
+  margin-bottom: 0.5rem;
+}

@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom'
 import Mashine from './Components/machine/Mashine'
 import s from '../src/css/conv.module.css'
 import BackPage from './Components/BackPage/BackPage'
+import Accordion from './Components/Accordeon/Accordeon'
 
 export default function Conveyor() {
 	const btnRef = useRef()
@@ -16,7 +17,6 @@ export default function Conveyor() {
 		}, 300)
 		btnRef.current.classList.add(s.animate)
 	}
-
 	useEffect(() => {
 		if (loc_State.state) {
 			setInfo(<Mashine mashine={{ machine: loc_State.state }} />)
@@ -28,11 +28,21 @@ export default function Conveyor() {
 	return (
 		<>
 			<div className={s.wraper}>
-	
-        <BackPage/>
-      
-				<span>{info}</span>
+				<div className={s.wrapBtn}>
+					<BackPage />
+				</div>
+				<div>{info}</div>
+
+				<div>
+					<Accordion {...conv} />
+				</div>
 			</div>
 		</>
 	)
+}
+
+let conv = {
+	name: 'Двигатель конвеера',
+	p: '7,5kv',
+	bearing: '62309 2Rs',
 }
