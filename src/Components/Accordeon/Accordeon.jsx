@@ -97,10 +97,10 @@ console.log(name);
 					className={s.accordion_item}
 					onClick={() => handleAccordionClick(1)}
 				>
-					<div className={s.accordion_header}>
+	{mainEngine.Engine_rpm&&						<div className={s.accordion_header}>
 						{mainEngine.nameEng || 'Вбить данные нужно'}
-					</div>
-					<div className={s.accordion_content}>
+					</div>}
+			<div className={s.accordion_content}>
 						<ul className={s.wrapMap}>
 							<li className={`${s.engineCurrent} ${s.f}`}>Номинальный Ток</li>
 							<li className={`${s.power} ${s.f}`}>Подшипники</li>
@@ -136,9 +136,9 @@ console.log(name);
 					onClick={() => handleAccordionClick(2)}
 					ref={hideLine}
 				>
-					<div className={s.accordion_header}>
+		{PrivodRukava?.nameEng&&			<div className={s.accordion_header}>
 						{PrivodRukava?.nameEng || 'Внести данные'}
-					</div>
+					</div>}
 					<div className={s.accordion_content}>
 						<ul className={s.wrapMap}>
 							<li className={`${s.engineCurrent} ${s.f}`}>Номинальный Ток</li>

@@ -84,7 +84,7 @@ input:focus {
 	}
 	li:nth-child(1) {
     font-family: "Rubik Bubbles", system-ui;
-    font-size:  clamp(0.75rem, -1.75rem + 12.5vw, 1.375rem);
+   
 		border: none;
 		color: rgb(0, 0, 0);
 		display: flex;
@@ -116,3 +116,4 @@ input:focus {
 align-items: center;
 	;
 }
+li{ font-size:  clamp(0.75rem, -1.75rem + 12.5vw, 1.375rem)}

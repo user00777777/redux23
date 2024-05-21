@@ -11,6 +11,7 @@ export default function Conveyor() {
 	const [info, setInfo] = useState('22')
 	const loc_State = useLocation()
 	const navigate = useNavigate()
+	const [param, setParam] = useState({})
 	const goBack = () => {
 		setTimeout(() => {
 			navigate(-1)
@@ -19,6 +20,9 @@ export default function Conveyor() {
 	}
 	useEffect(() => {
 		if (loc_State.state) {
+			if (loc_State.state == 'conv') {
+				setParam(conv)
+			}
 			setInfo(<Mashine mashine={{ machine: loc_State.state }} />)
 		} else {
 			setInfo('no')
@@ -34,7 +38,7 @@ export default function Conveyor() {
 				<div>{info}</div>
 
 				<div>
-					<Accordion {...conv} />
+					<Accordion {...param} />
 				</div>
 			</div>
 		</>
@@ -42,7 +46,15 @@ export default function Conveyor() {
 }
 
 let conv = {
+
+
+    
+   
+    
+   
+  
 	name: 'Двигатель конвеера',
 	p: '7,5kv',
 	bearing: '62309 2Rs',
+  describe:'Двигатель конвеера'
 }
