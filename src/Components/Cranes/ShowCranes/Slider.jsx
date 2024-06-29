@@ -1,4 +1,8 @@
-import React, { useRef, useState } from 'react'
+ 
+ 
+  
+  
+  import React, { useRef, useState } from 'react'
 import s from './showCrane.module.css'
 import style from './sliderNotes.module.css'
 function Slider({ foto, repair }) {
@@ -94,7 +98,8 @@ console.log(rep2.reverse());
 						></div>
 					))}
 			</div>
-			{rep2 &&
+		  
+      	{rep2 &&
 				rep2.map((el, index) => {
 					return (
 						<ul id={style.notesWrap} key={index}>

@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import s from '../cssCranesShow/show.module.css'
 import Slider from './Slider'
+import Hide from '../../Hide'
 // export const Context = createContext(null)
 export default function ShowCrane({ crane }) {
 	let dispatch = useDispatch()
@@ -27,9 +28,11 @@ export default function ShowCrane({ crane }) {
 				</div>
 
 				<div className={s.slider}>
+        <Hide/>
 					<Slider foto={crane.f} repair={repair} />{' '}
 				</div>
 			</div>
+      
 		</div>
 	)
 }

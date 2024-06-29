@@ -10,7 +10,7 @@ export default function Accordion({ name, p, rpm, a, weight, describe,bearing })
 	const [mainEngine, SetmainEngine] = useState('')
 	const hideLine = useRef(null)
 
-console.log(name);
+console.log('acccccc');
 
 	const [accordionItems, setAccordionItems] = useState([])
 
@@ -21,7 +21,7 @@ console.log(name);
 
 	const handleAccordionClick = index => {
 		const newAccordionItems = accordionItems.map((item, i) => {
-			// console.log(i, 'index', index)
+			console.log(  index.className,'oooo')
 
 			if (i === index) {
 				const content = item.querySelector(`.${s.accordion_content}`)

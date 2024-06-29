@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@media screen and (min-width: 370px) {
+	.parent .notes {
+		color: rgb(231, 30, 150);
+	}
+}
+.parent {
+	min-width: 100%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+
+	// justify-content:space-around ;
+	align-items: auto;
+	//list-style:none;
+}
+.btns {
+	display: flex;
+	margin: 10px 0px;
+	justify-content: space-between;
+	.btn {
+		margin: 0px 70px;
+	}
+	// margin-bottom: 10px;
+}
+#idCrane {
+	margin-bottom: 20px;
+	display: grid;
+	li {
+		background: linear-gradient(to bottom, #e9f6fd 0%, #d3eefb 100%);
+	}
+}
+
+:is(#idCrane).ac {
+	color: rgb(238, 14, 14);
+	font-size: clamp(0.75rem, -0.25rem + 5vw, 1rem);
+}
+.header {
+	background-color: #d3eefb;
+
+		font-family: 'Lobster', sans-serif;
+		font-weight: 600;
+		font-style: normal;
+    font-size: 1.3rem;
+	
+}
