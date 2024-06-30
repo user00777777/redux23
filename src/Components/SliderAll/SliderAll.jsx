@@ -15,7 +15,7 @@ export default function SliderAll(props) {
 		const isLastSlide = currentSlide == f.length - 1
 		const newIndex = isLastSlide ? 0 : currentSlide + 1
 		setCurrentSlide(newIndex)
-		// console.log(newIndex);
+		console.log(newIndex);
 	}
 
 	useEffect(() => {
@@ -43,10 +43,17 @@ export default function SliderAll(props) {
 			</div>
 			<div className={s.btns}>
 				<button onClick={prewSlide} className={s.btn}>
-					1
+					<img
+						src='https://cdn.icon-icons.com/icons2/81/PNG/96/arrow_left_15601.png'
+						alt=''
+					
+					/>
 				</button>
 				<button onClick={nextSlide} className={s.btn}>
-					2
+					<img className={s.arrowRight}
+						src='https://cdn.icon-icons.com/icons2/81/PNG/96/arrow_right_15600.png'
+						alt=''
+					/>
 				</button>
 			</div>
 			{repair &&

@@ -124,7 +124,7 @@ const Cranes = () => {
         </div>
 			</div>
 			<div className={s.accordion}>
-				{isBool && (
+				{isBool &&(
 					<AccordionCrane
 						{...obj}
 						t={isBool}

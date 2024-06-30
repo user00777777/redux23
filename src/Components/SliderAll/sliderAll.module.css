@@ -41,3 +41,8 @@
   font-style: normal;
   font-size: 1.3rem;
 }
+
+.btn {
+  width: 80px;
+  color: red;
+}
