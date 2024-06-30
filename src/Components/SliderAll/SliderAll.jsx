@@ -5,8 +5,10 @@ export default function SliderAll(props) {
 	const [currentSlide, setCurrentSlide] = useState(0)
 	// console.log(props)
 	const { craneId, cranName, f, repair } = props
-	console.log(repair)
-	function prewSlide() {
+	// console.log(repair)
+	function prewSlide(el) {
+    // console.log(el);
+    
 		const isFirstSlide = currentSlide == 0
 		const newIndex = isFirstSlide ? currentSlide + 1 : f.length - 1
 		setCurrentSlide(newIndex)
@@ -23,9 +25,11 @@ export default function SliderAll(props) {
 
 		function p(e) {
 			let btn = e.target.className
+      // console.log(btn);
 			if (btn == s.btn) {
-				// console.log('yes');
-			}
+			// console.log();
+      }
+
 			// console.log(btn);
 
 			return () => {
@@ -42,14 +46,14 @@ export default function SliderAll(props) {
 				<img src={f[currentSlide]} />
 			</div>
 			<div className={s.btns}>
-				<button onClick={prewSlide} className={s.btn}>
+				<button data-button='butPrev' onClick={prewSlide} className={s.btn}>
 					<img
 						src='https://cdn.icon-icons.com/icons2/81/PNG/96/arrow_left_15601.png'
 						alt=''
 					
 					/>
 				</button>
-				<button onClick={nextSlide} className={s.btn}>
+				<button data-button='butNext' onClick={nextSlide} className={s.btn}>
 					<img className={s.arrowRight}
 						src='https://cdn.icon-icons.com/icons2/81/PNG/96/arrow_right_15600.png'
 						alt=''

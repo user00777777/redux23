@@ -22,19 +22,23 @@ export default function AccordionCrane(props) {
 				const content = item.querySelector(`.${style.accordion_content}`)
 				// console.log(content);
 
-				const c = item.querySelectorAll(`button`)
-				let cc = Array.from(c)
-				console.log(
-					cc.forEach(el => {
-						y = el.textContent
+				const c = item.querySelector(`button`)
+        console.log(c.dataset.button);
+        y=c.dataset.button
+        
+				// let cc = Array.from(c)
+				// console.log( 
+				// 	cc.forEach(el => {
+				// 		y = el.textContent
+        //     let dataSet=el.dataset.button
+        //     console.log(dataSet)
 
-						console.log(y)
-					})
-				)
-				if (y == 1 || y == 2) {
+				// 		console.log(y)
+				// 	})
+				// )
+				if (y == 'butPrev' || y == 2) {
 					content.style.display === 'block'
-				}
-         else if (content) {
+				} else if (content) {
 					console.log('33')
 					content.style.display =
 						content.style.display === 'block' ? 'none' : 'block'
