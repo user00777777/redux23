@@ -12,13 +12,12 @@ import { useDispatch, useSelector } from 'react-redux'
 import { inpGet, mashineGet } from '../../sliceReduce/machineReduser'
 
 const MachineTools = props => {
-  const [isBool, setBool] = useState(false)
+	const [isBool, setBool] = useState(false)
 	let fatherRef = useRef(null)
 	const [inp, setInput] = useState()
 	let res = useSelector(state => state.mashine.result)
 	res.forEach(el => {
 		// console.log(el)
-
 		// console.log(fatherRef.current.classList)
 	})
 
@@ -28,18 +27,17 @@ const MachineTools = props => {
 			// Iterate over all children of the ref element
 			const children = fatherRef.current.children
 			Array.from(children).forEach(child => {
-				const regex = new RegExp(`${inp}$`,'i')
-// console.log('1');
+				const regex = new RegExp(`${inp}$`, 'i')
+				// console.log('1');
 
 				if (regex.test(child.textContent)) {
 					child.classList.add(s.plus)
-          console.log(child.className);
-          child.closest('div').classList.add(s.plus)
-          
-
+					console.log(child.className)
+					child.closest('div').classList.add(s.plus)
+					setInput('')
 				}
-        // else{console.log('no');
-        // }
+				// else{console.log('no');
+				// }
 			})
 		}
 	}, [isBool])
@@ -51,7 +49,7 @@ const MachineTools = props => {
 	let handleClickInp = () => {
 		if (inp) {
 			dispatch(inpGet(inp))
-      setBool(!isBool)
+			setBool(!isBool)
 		}
 	}
 
@@ -412,11 +410,11 @@ const MachineTools = props => {
 			<input
 				type='text'
 				className={s.inp77}
-				name=''
+				value={inp}
 				onChange={e => setInput(e.target.value)}
 			/>
 			<button onClick={handleClickInp} className={s.btnInp}>
-				11
+				поиск
 			</button>
 		</div>
 	)
