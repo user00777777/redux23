@@ -216,13 +216,11 @@ const machine = createSlice({
       let ss=JSON.parse( s)
     
       
-      console.log(ss.data);
+      // console.log(ss.data);
       
       state.data.find((el) => {
         let regexp = new RegExp(`${el.idMachine}$`,'i');
-        // let regexpTel = new RegExp(`${el.idMachine}$`,'i');
-        console.log(action.payload.trim());
-// console.log(regexpTel.test(action.payload));
+    
 
         if (regexp.test(action.payload.trim())) {
           console.log("yes");
@@ -240,23 +238,46 @@ const machine = createSlice({
            
 state.result.push(el)
           }
-// console.log(ss);
 
-      // state.result.push({ el });
 
-          // state.result.myMachine.push(el.machine);
-        } else {
-          // state.result.push(null);
-          // console.log("no");
-        }
+        } 
+      
       });
      let s1= JSON.stringify(state)
    let ss2=JSON.parse( s1)
-   console.log(ss2);
    
       
     },
+    inpGet(state, action) {
+      console.log(action.payload);
+      
+      let s=   JSON.stringify(state)
+      let ss=JSON.parse( s)
+      ss.data.find((el) => {
+        // console.log(el.idMachine);
+        
+        let regexp = new RegExp(`${action.payload}$`,'i');
+      
+        
+        if (regexp.test(el.idMachine)) {
+          state.result = []
+        console.log(el.idMachine);
+        
+			state.result.push(el.idMachine)
+				} else {
+          // console.log('no');
+          
+				}
+      }
+    );
+      
+    }
+  
   },
+
+
+
 });
 export const { mashineGet } = machine.actions;
+export const { inpGet } = machine.actions;
 export default machine.reducer;

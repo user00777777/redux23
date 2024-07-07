@@ -14,9 +14,9 @@
 .div1 {
   grid-area: 1/5/2/7;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -29,9 +29,9 @@
 .div2 {
   grid-area: 1/4/2/5;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -44,9 +44,9 @@
 .div3 {
   grid-area: 1/3/2/4;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -59,9 +59,9 @@
 .div4 {
   grid-area: 1/1/2/3;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -96,9 +96,9 @@
 .div6 {
   grid-area: 3/1/4/2;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -111,9 +111,9 @@
 .div7 {
   grid-area: 3/3/4/4;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -126,9 +126,9 @@
 .div8 {
   grid-area: 3/4/4/5;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -141,9 +141,9 @@
 .div9 {
   grid-area: 3/6/4/7;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -156,9 +156,9 @@
 .div10 {
   grid-area: 4/1/5/2;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -171,9 +171,9 @@
 .div11 {
   grid-area: 5/1/6/2;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -186,9 +186,9 @@
 .div12 {
   grid-area: 6/1/7/2;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -201,9 +201,9 @@
 .div13 {
   grid-area: 4/6/5/7;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -216,9 +216,9 @@
 .div14 {
   grid-area: 5/6/6/7;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -231,9 +231,9 @@
 .div15 {
   grid-area: 6/6/7/7;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -246,9 +246,9 @@
 .div16 {
   grid-area: 4/3/5/4;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -261,9 +261,9 @@
 .div17 {
   grid-area: 4/4/5/5;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -276,9 +276,9 @@
 .div18 {
   grid-area: 5/3/6/4;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -291,9 +291,9 @@
 .div19 {
   grid-area: 5/4/6/5;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -306,9 +306,9 @@
 .div20 {
   grid-area: 6/3/7/4;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -321,9 +321,9 @@
 .div21 {
   grid-area: 6/4/7/5;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -361,9 +361,9 @@
 .div23 {
   grid-area: 7/6/8/7;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -376,9 +376,9 @@
 .div24 {
   grid-area: 8/1/9/2;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -391,9 +391,9 @@
 .div25 {
   grid-area: 9/1/10/2;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -406,9 +406,9 @@
 .div26 {
   grid-area: 10/1/11/2;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -421,9 +421,9 @@
 .div27 {
   grid-area: 8/3/9/4;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -436,9 +436,9 @@
 .div28 {
   grid-area: 9/3/10/4;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -451,9 +451,9 @@
 .div29 {
   grid-area: 10/3/11/4;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -466,9 +466,9 @@
 .div30 {
   grid-area: 8/4/9/5;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -481,9 +481,9 @@
 .div31 {
   grid-area: 9/4/10/5;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -496,9 +496,9 @@
 .div32 {
   grid-area: 10/4/11/5;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -511,9 +511,9 @@
 .div33 {
   grid-area: 8/6/9/7;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -526,9 +526,9 @@
 .div34 {
   grid-area: 9/6/10/7;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -541,9 +541,9 @@
 .div35 {
   grid-area: 10/6/11/7;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -556,9 +556,9 @@
 .div36 {
   grid-area: 11/6/12/7;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -596,9 +596,9 @@
 .div38 {
   grid-area: 13/6/14/7;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -611,9 +611,9 @@
 .div39 {
   grid-area: 12/6/13/7;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -626,9 +626,9 @@
 .div40 {
   grid-area: 14/1/15/2;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -641,9 +641,9 @@
 .div41 {
   grid-area: 15/1/16/2;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -656,9 +656,9 @@
 .div42 {
   grid-area: 16/1/17/2;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -671,9 +671,9 @@
 .div43 {
   grid-area: 14/6/15/7;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -686,9 +686,9 @@
 .div44 {
   grid-area: 15/6/16/7;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -701,9 +701,9 @@
 .div45 {
   grid-area: 16/4/17/5;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -716,9 +716,9 @@
 .div46 {
   grid-area: 16/6/17/7;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -731,9 +731,9 @@
 .div47 {
   grid-area: 17/4/18/5;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -746,9 +746,9 @@
 .div48 {
   grid-area: 18/4/19/5;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -761,9 +761,9 @@
 .div49 {
   grid-area: 19/4/20/5;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -776,9 +776,9 @@
 .div50 {
   grid-area: 17/1/18/2;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -816,9 +816,9 @@
 .div52 {
   grid-area: 19/1/20/2;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -831,9 +831,9 @@
 .div53 {
   grid-area: 17/6/18/7;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -846,9 +846,9 @@
 .div54 {
   grid-area: 18/6/19/7;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -861,9 +861,9 @@
 .div55 {
   grid-area: 19/6/20/7;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -898,9 +898,9 @@
 .div57 {
   grid-area: 21/1/22/2;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -913,9 +913,9 @@
 .div58 {
   grid-area: 22/1/23/2;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -928,9 +928,9 @@
 .div59 {
   grid-area: 23/1/24/2;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -943,9 +943,9 @@
 .div60 {
   grid-area: 24/1/25/2;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -958,9 +958,9 @@
 .div61 {
   grid-area: 25/1/26/2;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -973,9 +973,9 @@
 .div62 {
   grid-area: 26/1/27/2;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -988,9 +988,9 @@
 .div63 {
   grid-area: 21/3/22/5;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -1003,9 +1003,9 @@
 .div64 {
   grid-area: 22/3/23/4;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -1018,9 +1018,9 @@
 .div65 {
   grid-area: 22/4/23/5;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -1033,9 +1033,9 @@
 .div66 {
   grid-area: 23/4/24/5;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -1048,9 +1048,9 @@
 .div67 {
   grid-area: 24/3/24/4;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -1063,9 +1063,9 @@
 .div68 {
   grid-area: 25/3/25/4;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -1078,9 +1078,9 @@
 .div69 {
   grid-area: 24/4/25/5;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -1093,9 +1093,9 @@
 .div70 {
   grid-area: 22/6/21/7;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -1133,9 +1133,9 @@
 .div72 {
   grid-area: 24/6/25/7;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -1148,9 +1148,9 @@
 .div74 {
   grid-area: 26/6/27/7;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -1163,9 +1163,9 @@
 .div75 {
   grid-area: 27/6/28/7;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -1178,9 +1178,9 @@
 .div76 {
   grid-area: 27/1/28/2;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -1193,9 +1193,9 @@
 .div77 {
   grid-area: 28/6/29/7;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -1208,9 +1208,9 @@
 .div78 {
   grid-area: 29/6/30/7;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -1223,9 +1223,9 @@
 .div79 {
   grid-area: 28/4/29/5;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -1238,9 +1238,9 @@
 .div80 {
   grid-area: 29/4/30/5;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -1253,9 +1253,9 @@
 .div81 {
   grid-area: 28/3/29/4;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -1268,9 +1268,9 @@
 .div82 {
   grid-area: 29/3/30/4;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -1283,9 +1283,9 @@
 .div83 {
   grid-area: 29/1/30/2;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -1298,9 +1298,9 @@
 .div84 {
   grid-area: 28/1/29/2;
   background: #232323;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #232323;
-  border: 0.2rem inset #1C6EA4;
+  border: 0.2rem inset #1c6ea4;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -1310,12 +1310,47 @@
   -o-border-radius: 5px;
 }
 
+.inp77 {
+  grid-area: 28/1/29/4;
+  width: 80%;
+  height: 80%;
+}
+
+.btnInp {
+  grid-area: 28/4/29/6;
+  width: 80%;
+  height: 80%;
+}
+
 .t {
   font-style: 55px;
   background-color: aquamarine;
 }
 
 @media only screen and (max-width: 480px) {
+  .parent .plus {
+    color: red;
+    background: red;
+    animation: plusAnimatin 1s linear infinite;
+    -webkit-animation: plusAnimatin 1s linear infinite;
+  }
+  @keyframes plusAnimatin {
+    0% {
+      background: #49ff18;
+      width: 110%;
+      height: 105%;
+      font-size: 1.1rem;
+      color: #232323;
+    }
+    50% {
+      background: #ffae00;
+      height: 90%;
+      width: 95%;
+    }
+    100% {
+      background: transparent;
+    }
+  }
   .div1 {
     color: #FFFFFF;
     background: #232323;

@@ -1,8 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @media screen and (min-width: 370px) {
-	.parent .notes {
-		color: rgb(231, 30, 150);
+	.parent {
+    .data{ font-size:clamp(1rem, -1rem + 10vw, 1.5rem)}
+		.notes {
+			height: auto;
+      color:red
+      
+		}
+    :is(#idCrane) .notes {
+      background:rgb(255, 255, 255)
+    }
 	}
+
 }
 .parent {
 	min-width: 100%;
@@ -38,14 +47,14 @@
 .header {
 	background-color: #d3eefb;
 
-		font-family: 'Lobster', sans-serif;
-		font-weight: 600;
-		font-style: normal;
-    font-size: 1.3rem;
-	
+	font-family: 'Lobster', sans-serif;
+	font-weight: 600;
+	font-style: normal;
+	font-size: 1.3rem;
 }
 // .arrowRight{ width:20px;}
-.btn{width: 80px;
-color: red;
-// background-color: none;
+.btn {
+	width: 80px;
+	color: red;
+	// background-color: none;
 }

@@ -9,14 +9,51 @@ import { useRef } from 'react'
 import Radialka from './Radialka'
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { mashineGet } from '../../sliceReduce/machineReduser'
+import { inpGet, mashineGet } from '../../sliceReduce/machineReduser'
 
 const MachineTools = props => {
+  const [isBool, setBool] = useState(false)
 	let fatherRef = useRef(null)
+	const [inp, setInput] = useState()
+	let res = useSelector(state => state.mashine.result)
+	res.forEach(el => {
+		// console.log(el)
+
+		// console.log(fatherRef.current.classList)
+	})
+
+	useEffect(() => {
+		// console.dir(fatherRef.current)
+		if (fatherRef.current) {
+			// Iterate over all children of the ref element
+			const children = fatherRef.current.children
+			Array.from(children).forEach(child => {
+				const regex = new RegExp(`${inp}$`,'i')
+// console.log('1');
+
+				if (regex.test(child.textContent)) {
+					child.classList.add(s.plus)
+          console.log(child.className);
+          child.closest('div').classList.add(s.plus)
+          
+
+				}
+        // else{console.log('no');
+        // }
+			})
+		}
+	}, [isBool])
 
 	let dispatch = useDispatch()
 	let stateMashine = useSelector(state => state.mashine.data)
 	// console.log(stateMashine);
+
+	let handleClickInp = () => {
+		if (inp) {
+			dispatch(inpGet(inp))
+      setBool(!isBool)
+		}
+	}
 
 	const father = event => {
 		let currentElement = event.target
@@ -29,19 +66,6 @@ const MachineTools = props => {
 
 			dispatch(mashineGet(mashine))
 		}
-
-		if (currentElement) {
-			// console.log(el.textContent);
-			//   console.log(previousElement);
-			// dispatch( mashineGet({text:el.textContent,src:}))
-		}
-
-		// if (el.classList.contains(s.div9)) {
-		//   el.classList.remove(s.div9);
-		//   el.classList.add(s.radialka);
-		// } else {
-		//   console.log('no');
-		// }
 	}
 
 	useEffect(() => {
@@ -385,6 +409,15 @@ const MachineTools = props => {
 					<span>№1419</span>
 				</Link>
 			</div>
+			<input
+				type='text'
+				className={s.inp77}
+				name=''
+				onChange={e => setInput(e.target.value)}
+			/>
+			<button onClick={handleClickInp} className={s.btnInp}>
+				11
+			</button>
 		</div>
 	)
 }

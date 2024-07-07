@@ -1,7 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 @media screen and (min-width: 370px) {
+  .parent .data {
+    font-size: clamp(1rem, -1rem + 10vw, 1.5rem);
+  }
   .parent .notes {
-    color: rgb(231, 30, 150);
+    height: auto;
+    color: red;
+  }
+  .parent :is(#idCrane) .notes {
+    background: rgb(255, 255, 255);
   }
 }
 .parent {
