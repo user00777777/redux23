@@ -1331,8 +1331,8 @@
   .parent .plus {
     color: red;
     background: red;
-    animation: plusAnimatin 1s linear infinite;
-    -webkit-animation: plusAnimatin 1s linear infinite;
+    animation: plusAnimatin 4s linear infinite;
+    -webkit-animation: plusAnimatin 1500ms ease-in-out infinite;
   }
   @keyframes plusAnimatin {
     0% {
@@ -1341,14 +1341,19 @@
       height: 105%;
       font-size: 1.1rem;
       color: #232323;
+      box-shadow: 7px 5px 5px 2px red;
     }
     50% {
       background: #ffae00;
       height: 90%;
       width: 95%;
+      box-shadow: 3px 3px 5px 2px rgb(192, 127, 127);
     }
     100% {
+      width: 92%;
+      height: 102%;
       background: transparent;
+      box-shadow: 3px 2px 2px 2px rgb(0, 0, 0);
     }
   }
   .div1 {

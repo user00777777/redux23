@@ -1,12 +1,13 @@
 @import './mixinM';
 
+
 @media only screen and (max-width: 480px) {
 	.parent {
 		.plus {
 			color: red;
 			background: red;
-			animation: plusAnimatin 1s linear infinite;
-			-webkit-animation: plusAnimatin 1s linear infinite;
+			animation: plusAnimatin 4s linear infinite;
+			-webkit-animation: plusAnimatin 1500ms ease-in-out infinite;
 		}
 	}
 	@keyframes plusAnimatin {
@@ -14,17 +15,25 @@
 			background: #49ff18;
 			width: 110%;
 			height: 105%;
-      font-size: 1.1rem;
-      color: #232323;
+			font-size: 1.1rem;
+			color: #232323;
+			box-shadow: 7px 5px 5px 2px red;
 		}
 		50% {
 			background: #ffae00;
 			height: 90%;
 			width: 95%;
+			box-shadow: 3px 3px 5px 2px rgb(192, 127, 127);
 		}
 		100% {
+			width: 92%;
+			height: 102%;
 			background: transparent;
-
+			box-shadow: 3px 2px 2px 2px rgb(0, 0, 0);
+			.parent span {
+				color: rgb(255, 0, 0);
+				font-size: 1.5rem;
+			}
 		}
 	}
 	.div1 {
@@ -495,19 +504,6 @@
 		); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7400', endColorstr='#ff7400',GradientType=0 ); /* IE6-9 */
 	}
-	//  .div1{
-	//   // width: 86.39px;
-	//   // height: 32px;
-	//    grid-area: 1 / 5 / 2 / 7;
-	//       display: flex;
-	//       justify-content:center ;
-	//       align-items:center ;
-	//       //list-style:none;
-	//       font-size: 2rem;
-	//     span{color:red;
-	//     font-size:14.08px ;
-	//     }
-	//   }
 }
 
 //  Style 980 px
