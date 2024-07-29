@@ -12,34 +12,46 @@ import { useDispatch, useSelector } from 'react-redux'
 import { inpGet, mashineGet } from '../../sliceReduce/machineReduser'
 
 const MachineTools = props => {
-  const [isBool, setBool] = useState(false)
+	const [isBool, setBool] = useState(false)
 	let fatherRef = useRef(null)
 	const [inp, setInput] = useState()
 	let res = useSelector(state => state.mashine.result)
 	res.forEach(el => {
 		// console.log(el)
-
 		// console.log(fatherRef.current.classList)
 	})
 
 	useEffect(() => {
 		// console.dir(fatherRef.current)
+		const data = document.querySelectorAll('[data-scoba]')
+console.log(data);
+
+		Array.from(data).forEach(el => {
+			const scoba = el.dataset.scoba
+			let regex = new RegExp(`${inp}$`, 'i')
+			if (regex.test(scoba)) {
+				el.classList.add(s.plus)
+			}
+
+			if (scoba == inp) {
+				console.log('okk')
+				el.classList.add(s.plus)
+			}
+		})
 		if (fatherRef.current) {
 			// Iterate over all children of the ref element
 			const children = fatherRef.current.children
 			Array.from(children).forEach(child => {
-				const regex = new RegExp(`${inp}$`,'i')
-// console.log('1');
+				const regex = new RegExp(`${inp}$`, 'i')
+				// console.log('1');
 
 				if (regex.test(child.textContent)) {
 					child.classList.add(s.plus)
-          console.log(child.className);
-          child.closest('div').classList.add(s.plus)
-          
-
+					console.log(child.className)
+					child.closest('div').classList.add(s.plus)
 				}
-        // else{console.log('no');
-        // }
+				// else{console.log('no');
+				// }
 			})
 		}
 	}, [isBool])
@@ -51,7 +63,7 @@ const MachineTools = props => {
 	let handleClickInp = () => {
 		if (inp) {
 			dispatch(inpGet(inp))
-      setBool(!isBool)
+			setBool(!isBool)
 		}
 	}
 
@@ -143,13 +155,13 @@ const MachineTools = props => {
 					<span>№52911</span>
 				</Link>
 			</div>
-			<div className={[s.div16, s.klepka].join(' ')}>
+			<div data-scoba='052116' className={[s.div16, s.klepka].join(' ')}>
 				Клепка
 				<Link to='/radialka'>
 					<span>№52131</span>
 				</Link>
 			</div>
-			<div className={[s.div17, s.klepka].join(' ')}>
+			<div data-scoba='052115' className={[s.div17, s.klepka].join(' ')}>
 				Клепка
 				<Link to='/radialka'>
 					<span>№52155</span>
@@ -167,13 +179,13 @@ const MachineTools = props => {
 					<span>№1705</span>
 				</Link>
 			</div>
-			<div className={[s.div20, s.klepka].join(' ')}>
+			<div data-scoba='051723' className={[s.div20, s.klepka].join(' ')}>
 				Клепка
 				<Link to='/radialka'>
 					<span>№51791</span>
 				</Link>
 			</div>
-			<div className={[s.div21, s.klepka].join(' ')}>
+			<div data-scoba='051651' className={[s.div21, s.klepka].join(' ')}>
 				Клепка
 				<Link to='/radialka'>
 					<span>№51814</span>
@@ -211,10 +223,10 @@ const MachineTools = props => {
 				</Link>
 			</div>
 			{/* <div className={[s.div27].join('')}><Link to='/radialka'><span></span></Link></div> */}
-			<div className={[s.div28, s.klepka].join(' ')}>
+			<div data-scoba='051761' className={[s.div28, s.klepka].join(' ')}>
 				клепка
 				<Link to='/radialka'>
-					<span>№51910</span>
+					<span>№051807</span>
 				</Link>
 			</div>
 			{/* <div className={[s.div30].join('')}>empty<Link to='/radialka'><span></span></Link></div> */}
@@ -296,7 +308,7 @@ const MachineTools = props => {
 					<span>№51748</span>
 				</Link>
 			</div>
-			<div className={[s.div47, s.klepka].join(' ')}>
+			<div data-scoba='051812' className={[s.div47, s.klepka].join(' ')}>
 				клепка
 				<Link to='/radialka'>
 					<span>№51110</span>
@@ -322,7 +334,7 @@ const MachineTools = props => {
 				</Link>
 			</div>
 			{/* <div className={[s.div52].join('')}>3<Link to='/radialka'><span></span></Link></div> */}
-			<div className={[s.div53, s.klepka].join(' ')}>
+			<div data-scoba='051650' className={[s.div53, s.klepka].join(' ')}>
 				клепка
 				<Link to='/radialka'>
 					<span>№51109</span>

@@ -1,10 +1,10 @@
-import { createSlice } from "@reduxjs/toolkit";
-function Mashin(machine, idMachine,id) {
-  return {
-    machine,
-    idMachine,
-    id
-  };
+import { createSlice } from '@reduxjs/toolkit'
+function Mashin(machine, idMachine, id) {
+	return {
+		machine,
+		idMachine,
+		id,
+	}
 }
 const initialState = {
 	data: [
@@ -12,43 +12,43 @@ const initialState = {
 			machine: 'Клепка',
 			idMachine: '№52131',
 
-			id: 7,
+			id: '052116',
 		},
 		{
 			machine: 'Клепка',
 			idMachine: '№52155',
 
-			id: 1,
+			id: '052115',
 		},
 		{
 			machine: 'Клепка',
 			idMachine: '№51791',
 
-			id: 1,
+			id: '051723',
 		},
 		{
 			machine: 'Клепка',
 			idMachine: '№51814',
 
-			id: 1,
+			id: '051651',
 		},
 		{
 			machine: 'Клепка',
 			idMachine: '№51910',
 
-			id: 1,
+			id: '051847',
 		},
 		{
 			machine: 'Клепка',
 			idMachine: '№51110',
 
-			id: 1,
+			id: '051812',
 		},
 		{
 			machine: 'Клепка',
 			idMachine: '№51109',
 
-			id: 1,
+			id: '051650',
 		},
 		{
 			machine: '2А554',
@@ -203,81 +203,66 @@ const initialState = {
 		new Mashin('СМ2414', '№52800', 3),
 		new Mashin('СБ890', '№52944', 3),
 		new Mashin('телега', '№051973---', 3),
+		new Mashin('клепка', '051807', '051651'),
 	],
 	result: [],
 }
 
 const machine = createSlice({
-  name: "machine",
-  initialState,
-  reducers: {
-    mashineGet(state, action) {
-      let s=   JSON.stringify(state)
-      let ss=JSON.parse( s)
-    
-      
-      // console.log(ss.data);
-      
-      state.data.find((el) => {
-        let regexp = new RegExp(`${el.idMachine}$`,'i');
-    
+	name: 'machine',
+	initialState,
+	reducers: {
+		mashineGet(state, action) {
+			let s = JSON.stringify(state)
+			let ss = JSON.parse(s)
 
-        if (regexp.test(action.payload.trim())) {
-          console.log("yes");
-     state.result.length = 0
-        //   let s= JSON.stringify(el)
-        // let ss=JSON.parse( s)
-          // console.log(el.idMachine);
-          // let lentH = state.result.length;
-          // console.log(lentH);
-          
+			// console.log(ss.data);
 
-          if (state.result.length == 0) {
-           state.result.length=0;
-           console.log("00");
-           
-state.result.push(el)
-          }
+			state.data.find(el => {
+				let regexp = new RegExp(`${el.idMachine}$`, 'i')
 
+				if (regexp.test(action.payload.trim())) {
+					console.log('yes')
+					state.result.length = 0
+					//   let s= JSON.stringify(el)
+					// let ss=JSON.parse( s)
+					// console.log(el.idMachine);
+					// let lentH = state.result.length;
+					// console.log(lentH);
 
-        } 
-      
-      });
-     let s1= JSON.stringify(state)
-   let ss2=JSON.parse( s1)
-   
-      
-    },
-    inpGet(state, action) {
-      console.log(action.payload);
-      
-      let s=   JSON.stringify(state)
-      let ss=JSON.parse( s)
-      ss.data.find((el) => {
-        // console.log(el.idMachine);
-        
-        let regexp = new RegExp(`${action.payload}$`,'i');
-      
-        
-        if (regexp.test(el.idMachine)) {
-          state.result = []
-        console.log(el.idMachine);
-        
-			state.result.push(el.idMachine)
-				} else {
-          // console.log('no');
-          
+					if (state.result.length == 0) {
+						state.result.length = 0
+						console.log('00')
+
+						state.result.push(el)
+					}
 				}
-      }
-    );
-      
-    }
-  
-  },
+			})
+			let s1 = JSON.stringify(state)
+			let ss2 = JSON.parse(s1)
+		},
+		inpGet(state, action) {
+			console.log(action.payload)
 
+			let s = JSON.stringify(state)
+			let ss = JSON.parse(s)
+			ss.data.find(el => {
+				// console.log(el.idMachine);
 
+				let regexp = new RegExp(`${action.payload}$`, 'i')
 
-});
-export const { mashineGet } = machine.actions;
-export const { inpGet } = machine.actions;
-export default machine.reducer;
+				if (regexp.test(el.idMachine)) {
+					state.result = []
+					console.log(el.idMachine)
+
+					state.result.push(el.idMachine)
+				} else {
+					// console.log('no');
+				}
+			})
+		},
+	},
+})
+export const { mashineGet } = machine.actions
+export const { inpGet } = machine.actions
+export default machine.reducer
