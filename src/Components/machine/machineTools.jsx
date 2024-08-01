@@ -14,7 +14,7 @@ import { inpGet, mashineGet } from '../../sliceReduce/machineReduser'
 const MachineTools = props => {
 	const [isBool, setBool] = useState(false)
 	let fatherRef = useRef(null)
-	const [inp, setInput] = useState()
+	const [inp, setInput] = useState('поиск тут')
 	let res = useSelector(state => state.mashine.result)
 	res.forEach(el => {
 		// console.log(el)
@@ -24,18 +24,21 @@ const MachineTools = props => {
 	useEffect(() => {
 		// console.dir(fatherRef.current)
 		const data = document.querySelectorAll('[data-scoba]')
-console.log(data);
+		// console.log(data);
 
 		Array.from(data).forEach(el => {
 			const scoba = el.dataset.scoba
 			let regex = new RegExp(`${inp}$`, 'i')
+			// if (isBool)
+			// if (inp && inp.length >= 3) {
+			// 	console.log(1)
+
 			if (regex.test(scoba)) {
 				el.classList.add(s.plus)
-			}
+				el.textContent = `${scoba}`
+				console.log(el.closest('a'))
 
-			if (scoba == inp) {
-				console.log('okk')
-				el.classList.add(s.plus)
+				setInput('')
 			}
 		})
 		if (fatherRef.current) {
@@ -47,13 +50,15 @@ console.log(data);
 
 				if (regex.test(child.textContent)) {
 					child.classList.add(s.plus)
-					console.log(child.className)
+					// console.log(child.className)
 					child.closest('div').classList.add(s.plus)
+					setInput('')
 				}
 				// else{console.log('no');
 				// }
 			})
 		}
+		setInput('')
 	}, [isBool])
 
 	let dispatch = useDispatch()
@@ -64,6 +69,7 @@ console.log(data);
 		if (inp) {
 			dispatch(inpGet(inp))
 			setBool(!isBool)
+			// setInput('')
 		}
 	}
 
@@ -425,10 +431,11 @@ console.log(data);
 				type='text'
 				className={s.inp77}
 				name=''
+				value={inp}
 				onChange={e => setInput(e.target.value)}
 			/>
-			<button onClick={handleClickInp} className={s.btnInp}>
-				11
+			<button onClick={handleClickInp} className={s.btnInp} id={s.btnId}>
+				поиск
 			</button>
 		</div>
 	)

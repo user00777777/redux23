@@ -1,8 +1,8 @@
 @import './mixinM';
 
-
 @media only screen and (max-width: 480px) {
 	.parent {
+		background-color: #11b0ea;
 		.plus {
 			color: red;
 			background: red;
@@ -504,6 +504,7 @@
 		); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7400', endColorstr='#ff7400',GradientType=0 ); /* IE6-9 */
 	}
+  
 }
 
 //  Style 980 px
