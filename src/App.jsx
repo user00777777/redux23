@@ -46,6 +46,7 @@ import Atons from './Components/Painting/Aton/Atons'
 import Pumps from './Components/Painting/Pumps'
 import BackPage from './Components/BackPage/BackPage'
 import SliderAll from './Components/SliderAll/SliderAll'
+import CranesAll from './Components/Cranes/CranesAll'
 
 
 function App() {
@@ -92,6 +93,7 @@ function App() {
 					<Route path='atons/:id' element={<Atons />} />
 					<Route path='pumps' element={<Pumps />} />
 					<Route path='sliderAll' element={<SliderAll />} />
+					<Route path='cranesAll' element={<CranesAll />} />
 					{/* <Route path='pumps' element={<BackPage />} /> */}
 				</Route>
 			</Routes>

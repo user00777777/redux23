@@ -43,7 +43,7 @@ export default function Radialka() {
 		navigate(-1)
 		dispatch(engine833('empty'))
 	}
-  // console.log(selector);
+  console.log(selector);
   
 const[objMachine]=selector;
 const{machine}=objMachine

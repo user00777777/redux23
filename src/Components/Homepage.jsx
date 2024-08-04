@@ -35,7 +35,13 @@ export default function Homepage() {
 						<span className={s.l}>Малярка</span>
 					</Link>
 				</div>
-				<div className={[s.link4, s.link].join(' ')}></div>
+				<div className={[s.link4, s.link].join(' ')}>
+					{' '}
+					<Link to='/cranesAll'>
+						<span className={s.l}>Краны ОЦЛП</span>
+					</Link>{' '}
+					
+				</div>
 				<div className={[s.link5, s.link].join(' ')}></div>
 			</main>
 		</div>
