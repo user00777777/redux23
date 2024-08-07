@@ -7,6 +7,9 @@ import crane1_6 from './fotoCranes/foto1_6'
 import foto3_6 from './fotoCranes/foto3_6'
 import foto2_6 from './fotoCranes/foto2_6'
 import craneRepair from './ObjCranes/objCranes'
+import newCrane from './ObjCranes/newCrane'
+
+
 
 const initialState = {
 	list: [
@@ -33,6 +36,8 @@ const initialState = {
 			repair: [[craneRepair()]],
 		},
 		{
+      inv:'11850',
+      Q:'20/5T',
 			cranName: '1/7',
 			craneId: '2349',
 			rp: 'Шинный мост',
@@ -82,6 +87,7 @@ const initialState = {
 				craneRepair('Щетки', '00/02/24', 'Замена щеток двигателя подьема 2 шт'),
 			],
 		},
+    newCrane('2/7','5','7343')
 	],
 	craneObj: {},
 }
@@ -91,8 +97,8 @@ const cranes = createSlice({
 	initialState,
 	reducers: {
 		craneS(state, action) {
-			// console.log(action.payload)
-			// console.log(JSON.stringify(state))
+			console.log(action.payload)
+			console.log(JSON.stringify(state))
 			const crane = state.list.find(el => {
 				if (el.cranName == action.payload) return el
 			})
