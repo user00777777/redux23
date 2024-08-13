@@ -66,13 +66,13 @@ export default function getDuty(electr, plumb, gas) {
 			return { shift: oneShift, bool: true }
 		}
 		if (hour >= 19 && hour <= 23) {
-			console.log('evening')
+			// console.log('evening')
 
 			return { shift: twoShift, bool: true }
 		} else {
-			console.log('night')
+			// console.log('night')
 			let twoChangeShift = [...oneShift.slice(2), ...oneShift.slice(0, 2)]
-			console.log(twoChangeShift)
+			// console.log(twoChangeShift)
 
 			return { shift: twoChangeShift, bool: false }
 		}
@@ -81,7 +81,7 @@ export default function getDuty(electr, plumb, gas) {
 	let dutyGas = duty(...gas.gas)
 	let dutyPlumb = duty(...plumb.plumb)
 	let dutyEl = duty(...electr.el)
-  console.log(dutyPlumb);
+  // console.log(dutyPlumb);
   
 	const handleDuty = (el, elBool = true) => {
 		// console.log(el);
@@ -89,11 +89,11 @@ export default function getDuty(electr, plumb, gas) {
 
 		// console.log(elBool)
 		// dayOfYear=dayOfYear-1
-console.log([dayOfYear % el.length])
+// console.log([dayOfYear % el.length])
 
 		let duty = el[dayOfYear % el.length]
 
-		console.log(duty)
+		// console.log(duty)
 
 		return duty
 	}
