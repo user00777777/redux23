@@ -103,8 +103,8 @@ const initialState = {
 		newCrane('2/5', '5', '52273', '8210'),
 		newCrane('3/5', '5', '52382', '7166'),
 		newCrane('4/5', '5', '52803', '7317'),
-		newCrane('estOld1', '10', '52316', '8249'),
-		newCrane('estOld2', '10', '52327', '8251'),
+		newCrane('1/estOld', '10', '52316', '8249'),
+		newCrane('2/estOld', '10', '52327', '8251'),
 		// newCrane()
 	],
 	craneObj: {},
