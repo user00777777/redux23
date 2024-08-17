@@ -13,9 +13,9 @@ export default function CranesAll() {
 	const cranes = useSelector(state => state.cranes.craneObj)
 	console.log(cranes)
 	// console.log(activeCrane)
-	let { Q = '', inv } = cranes || {}
+	let { Q = '', craneId } = cranes || {}
 	console.log(Q) // ''
-	console.log(inv) // undefined
+	console.log(craneId) // undefined
 
 	useEffect(() => {
 		if (fatherRef.current) {
@@ -74,15 +74,15 @@ export default function CranesAll() {
 				<li className={`${s.crane} ${s.crane3}`}>
 					{' '}
 					<ChildCrane
-						crane1={{ crane: 'mal2', reg: 5028 }}
-						crane2={{ crane: 'mal1', reg: 5054 }}
+						crane1={{ crane: 'mal1', reg: 5028 }}
+						crane2={{ crane: 'mal2', reg: 5054 }}
 					/>
 				</li>
 				<li className={`${s.crane} ${s.crane4}`}>
 					<ChildCrane
 						crane1={{ crane: '1/1', reg: 7336 }}
 						crane2={{ crane: '2/1', reg: 7329 }}
-						crane3={{ crane: '3/1 ', reg: 456 }}
+						crane3={{ crane: '3/1', reg: 456 }}
 					/>
 				</li>
 				<li className={`${s.crane} ${s.crane2}`}>

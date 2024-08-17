@@ -9,8 +9,6 @@ import foto2_6 from './fotoCranes/foto2_6'
 import craneRepair from './ObjCranes/objCranes'
 import newCrane from './ObjCranes/newCrane'
 
-
-
 const initialState = {
 	list: [
 		{
@@ -36,8 +34,8 @@ const initialState = {
 			repair: [[craneRepair()]],
 		},
 		{
-      inv:'11850',
-      Q:'20/5T',
+			inv: '11850',
+			Q: '20/5T',
 			cranName: '1/7',
 			craneId: '2349',
 			rp: 'Шинный мост',
@@ -87,7 +85,27 @@ const initialState = {
 				craneRepair('Щетки', '00/02/24', 'Замена щеток двигателя подьема 2 шт'),
 			],
 		},
-    newCrane('2/7','5','7343')
+		newCrane('2/7', '5', '52828', '7343'),
+		newCrane('1/1', '5', '5283', '7336'),
+		newCrane('2/1', '5', '52818', '7329'),
+		newCrane('3/1', '5', '3433', '456'),
+		newCrane('mal2', '10', '52154', '5054'),
+		newCrane('1/2', '5', '11076', '1471'),
+		newCrane('2/2', '5', '52390', '7194'),
+		newCrane('3/2', '5', '50677', '4062'),
+		newCrane('1/3', '5', '52421', '7213'),
+		newCrane('2/3', '5', '52809', '7326'),
+		newCrane('3/3', '5', '50003', '2231'),
+		newCrane('1/4', '5', '1861', '377'),
+		newCrane('2/4', '5', '52267', '8205'),
+		newCrane('3/4', '5', '52303', '8244'),
+		newCrane('1/5', '5', '52316', '4061'),
+		newCrane('2/5', '5', '52273', '8210'),
+		newCrane('3/5', '5', '52382', '7166'),
+		newCrane('4/5', '5', '52803', '7317'),
+		newCrane('estOld1', '10', '52316', '8249'),
+		newCrane('estOld2', '10', '52327', '8251'),
+		// newCrane()
 	],
 	craneObj: {},
 }
