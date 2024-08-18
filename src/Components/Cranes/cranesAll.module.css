@@ -42,28 +42,21 @@
   background: rgb(238, 174, 202);
   background: radial-gradient(circle, rgb(238, 174, 202) 0%, rgb(217, 210, 214) 0%, rgb(148, 187, 233) 100%);
 }
-.containerCrane .active {
-  color: rgb(38, 0, 255);
-  background-color: azure;
-  border: 2px black solid;
-  width: -moz-max-content;
-  width: max-content;
-  height: -moz-max-content;
-  height: max-content;
-  font-size: clamp(1rem, -1rem + 9vw, 1.4rem);
-  transition: font-size 500ms ease-in;
-  -webkit-transition: font-size 500ms ease-in;
-  -moz-transition: font-size 500ms ease-in;
-  -ms-transition: font-size 500ms ease-in;
-  -o-transition: font-size 500ms ease-in;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-  box-shadow: 3px 4px 5px rgb(217, 186, 186);
-}
 .containerCrane .craneMin {
   width: -moz-max-content;
   width: max-content;
+}
+.containerCrane .copyLi9 {
+  right: 100px;
+  font-size: clamp(0.7rem, -0.393rem + 5.1vw, 0.8rem);
+  width: 40px;
+}
+
+.containerCrane .active {
+  display: block;
+  width: 100%;
+  width: 100%;
+  background: red;
+  color: forestgreen;
+  background: burlywood;
 }

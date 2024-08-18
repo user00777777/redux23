@@ -14,6 +14,7 @@ const initialState = {
 		{
 			cranName: 'mal1',
 			craneId: '5028',
+			Q: '5',
 			rp: 'РП_14',
 			id: 'Кран 5T',
 			f: foto3_6(),
@@ -27,6 +28,8 @@ const initialState = {
 
 		{
 			cranName: '1/6',
+			inv: '51250',
+			Q: '5',
 			craneId: '4613',
 			rp: 'Шинный мост',
 			id: 'Кран 5T',
@@ -48,6 +51,8 @@ const initialState = {
 		},
 		{
 			cranName: '2/6',
+			inv: '51902',
+			Q: '5',
 			craneId: '4964',
 			rp: 'Шинный мост',
 			id: 'Кран 10T',
@@ -69,6 +74,8 @@ const initialState = {
 		},
 		{
 			cranName: '3/6',
+			inv: '52306',
+			Q: '5',
 			craneId: '8238',
 			rp: 'Шинный мост',
 			id: 'Кран 10T',

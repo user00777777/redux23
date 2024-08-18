@@ -1,12 +1,23 @@
 import React from 'react'
+import s from './reg.module.css'
+import { useSelector } from 'react-redux'
+export default function RegCrane({onClick}) {
+	const cranes = useSelector(state => state.cranes.craneObj)
+	// console.log(cranes)
 
-export default function RegCrane({reg}) {
-  console.log(reg);
-  
-  return (
-<>
+	let { Q = '', craneId,inv } = cranes || {}
+	// console.log(Q) // ''
+	// console.log(craneId) // 
 
-<h2>№1</h2>
-  
-</>  )
+  // console.log(inv,'inv')
+
+	return (
+		<div onClick={onClick} className={s.container}>
+			<ul className={s.wrapper}>
+				<li className={`${s.item} ${s.item1}`}>Q={Q}</li>{' '}
+				<li className={`${s.item} ${s.item2}`}>инв№{inv}</li>{' '}
+				<li className={`${s.item} ${s.item3}`}>рег№{craneId}</li>{' '}
+			</ul>
+		</div>
+	)
 }

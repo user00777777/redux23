@@ -1,0 +1,28 @@
+*{
+  margin: 0;
+  padding: 0;
+box-sizing: border-box;
+}
+.container{min-width: 100%;
+// border:none;
+li{
+  // border-bottom:none;
+}
+}
+.wrapper {
+	display: grid;
+min-width:100%;
+	 min-height: 100%;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(1, 1fr);
+	// grid-auto-rows: ;
+	background-color: aquamarine;
+	list-style: none;
+}
+.item1 {
+}
+.item2 {
+	grid-area: 1/3/2/4;
+
+	background-color: blanchedalmond;
+}
