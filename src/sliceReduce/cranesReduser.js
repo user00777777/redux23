@@ -15,6 +15,7 @@ const initialState = {
 			cranName: 'mal1',
 			craneId: '5028',
 			Q: '5',
+      inv:'51122',
 			rp: 'РП_14',
 			id: 'Кран 5T',
 			f: foto3_6(),

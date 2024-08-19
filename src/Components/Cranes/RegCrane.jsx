@@ -14,7 +14,7 @@ export default function RegCrane({ onClick }) {
 	return (
 		<div onClick={onClick} className={s.container}>
 			<ul className={s.wrapper}>
-				<li className={`${s.item} ${s.item1}`}> Q={Q} </li>{' '}
+				<li className={`${s.item} ${s.item1}`}> Q= {Q} </li>{' '}
 				<li className={`${s.item} ${s.item2}`}> инв№ {inv} </li>{' '}
 				<li className={`${s.item} ${s.item3}`}> рег№{craneId} </li>{' '}
 			</ul>
