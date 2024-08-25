@@ -19,15 +19,15 @@ export default function Warning() {
 		if (state && cont) {
 			state.forEach(el => {
 				const value = Number(el)
-				if (value === 7) {
+				if (value === 10) {
 					// console.log(1)
 					cont.classList.add(s.ones)
 					// console.log(cont.className)
-				} else if (value === 14) {
+				} else if (value === 30) {
 					console.log('ok')
 					cont.classList.add(s.active)
 					console.log(cont.className)
-				} else if (value === 30) {
+				} else if (value === 60) {
 					console.log(30)
 					cont.classList.add(s.thirty)
 				}

@@ -28,7 +28,7 @@ export default function Person(props) {
 							const daysDifference = Math.floor(
 								(licenceDate - currentDate) / (1000 * 60 * 60 * 24)
 							)
-							if (daysDifference < 7) {
+							if (daysDifference < 14) {
 								return (
 									<ul
 										className={s.listWorkers}
@@ -37,7 +37,7 @@ export default function Person(props) {
 										<li className={`${s.name} ${s.item}`}>{employee.name}</li>
 										<li className={`${s.licence} ${s.item}`}>{licence.name}</li>
 										<li className={`${s.difference} ${s.item}`}>
-											{daysDifference} дней
+											<b>{daysDifference}</b> <span>{licence.date}.</span>
 										</li>
 									</ul>
 								)
@@ -55,6 +55,7 @@ export default function Person(props) {
 					</div>
 					{state.map(employee =>
 						employee.licences.map(licence => {
+							console.log(licence.date)
 							const licenceDate = new Date(licence.date)
 							const daysDifference = Math.floor(
 								(licenceDate - currentDate) / (1000 * 60 * 60 * 24)
@@ -68,7 +69,7 @@ export default function Person(props) {
 										<li className={`${s.name} ${s.item}`}>{employee.name}</li>
 										<li className={`${s.licence} ${s.item}`}>{licence.name}</li>
 										<li className={`${s.difference} ${s.item}`}>
-											{daysDifference} 
+											{daysDifference} <span>{licence.date}.</span>
 										</li>
 									</ul>
 								)
@@ -102,7 +103,7 @@ export default function Person(props) {
 												{licence.name}
 											</li>
 											<li className={`${s.difference} ${s.item}`}>
-												{daysDifference} 
+												{daysDifference} <span>{licence.date}.</span>
 											</li>
 										</ul>
 									)

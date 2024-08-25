@@ -77,17 +77,17 @@ const employeesSlice = createSlice({
 						currentDate
 					)
 
-					if (daysDifference <= 7) {
+					if (daysDifference <= 10) {
 						state.resNum.length = 0
-						state.resNum.push(7)
+						state.resNum.push(10)
 						return true
-					} else if (daysDifference < 14) {
-						state.resNum.length = 0
-						state.resNum.push(14)
-						return true
-					} else if (daysDifference < 30) {
+					} else if (daysDifference <= 30) {
 						state.resNum.length = 0
 						state.resNum.push(30)
+						return true
+					} else if (daysDifference < 60) {
+						state.resNum.length = 0
+						state.resNum.push(60)
 						return true
 					}
 					return false

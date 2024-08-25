@@ -25,6 +25,7 @@
   grid-template-columns: 35% 35% 30%;
   grid-template-rows: repeat(1, 1fr);
   list-style: none;
+  border: 1px rgb(66, 60, 108) solid;
   place-items: center;
 }
 .container .listWorkers .item {
@@ -36,9 +37,18 @@
   width: 100%;
   text-align: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%; /* Убедитесь, что родительский элемент имеет заданную высоту */
+}
+.container .listWorkers .difference span {
+  font-size: 10px;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-width: -moz-min-content;
+  min-width: min-content;
+  padding: 0;
 }
 .container .listWorkers .licence {
   text-align: center;
