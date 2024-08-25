@@ -12,7 +12,7 @@
 .container .wrapper {
   min-width: 100%;
   min-height: 100vh;
-  margin-top: 1rem;
+  margin-top: 4rem;
 }
 .container li {
   min-width: 100%;
@@ -20,10 +20,11 @@
 }
 .container .listWorkers {
   min-width: 100%;
-  min-height: 100px;
+  min-height: -moz-max-content;
+  min-height: max-content;
   display: grid;
   grid-template-columns: 35% 35% 30%;
-  grid-template-rows: repeat(1, 1fr);
+  grid-template-rows: minmax(max-content, 1fr);
   list-style: none;
   border: 1px rgb(66, 60, 108) solid;
   place-items: center;
@@ -43,7 +44,7 @@
   height: 100%; /* Убедитесь, что родительский элемент имеет заданную высоту */
 }
 .container .listWorkers .difference span {
-  font-size: 10px;
+  font-size: clamp(0.625rem, -5.818rem + 27.27vw, 1rem);
   height: -moz-fit-content;
   height: fit-content;
   min-width: -moz-min-content;

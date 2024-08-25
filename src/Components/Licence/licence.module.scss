@@ -11,7 +11,7 @@
 		min-width: 100%;
 		min-height: 100vh;
 		// background-color: red;
-		margin-top: 1rem;
+		margin-top: 4rem;
 	}
 	li {
 		min-width: 100%;
@@ -20,14 +20,13 @@
 
 	.listWorkers {
 		min-width: 100%;
-		min-height: 100px;
+		min-height:max-content;
 		display: grid;
 		grid-template-columns: 35% 35% 30%;
-		grid-template-rows: repeat(1, 1fr);
+		grid-template-rows:minmax(max-content, 1fr);
 		list-style: none;
 border:1px rgb(66, 60, 108) solid;
 		place-items: center;
-    // gap: 1px;
 		.item {
 			background-color: cornsilk;
 			width: 100%;
@@ -44,7 +43,7 @@ border:1px rgb(66, 60, 108) solid;
 			justify-content: center;
 			align-items: center;
 			height: 100%; /* Убедитесь, что родительский элемент имеет заданную высоту */
-    span{font-size: 10px;
+    span{font-size: clamp(0.625rem, -5.818rem + 27.27vw, 1rem);
     height: fit-content;
     min-width: min-content;
     padding: 0;
@@ -83,3 +82,4 @@ border:1px rgb(66, 60, 108) solid;
 	}
 }
 
+// .accordion{margin-bottom: 1rem;}

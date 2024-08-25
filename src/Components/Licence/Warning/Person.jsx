@@ -14,7 +14,7 @@ export default function Person(props) {
 		<div>
 			{' '}
 			<Accordion>
-				<AccordionItem header='Осталось 10 дней'>
+				<AccordionItem header='Осталось 10 дней' className={s.accordion}>
 					<div className={s.head}>
 						<div className={s.insideNameHead}>Фамилии</div>
 						<div className={s.insideNameHead}>удостоверения</div>
