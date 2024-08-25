@@ -49,6 +49,9 @@ import SliderAll from './Components/SliderAll/SliderAll'
 import CranesAll from './Components/Cranes/CranesAll'
 import ChildCrane from './Components/Cranes/ChildCrane'
 import RegCrane from './Components/Cranes/RegCrane'
+import Licence from './Components/Licence/Licence'
+import Warning from './Components/Licence/Warning/Warning'
+import Person from './Components/Licence/Warning/Person'
 
 function App() {
 	return (
@@ -97,6 +100,9 @@ function App() {
 					<Route path='cranesAll' element={<CranesAll />} />
 					<Route path='childCrane' element={<ChildCrane />} />
 					<Route path='regCrane' element={<RegCrane />} />
+					<Route path='licence' element={<Licence />} />
+					<Route path='warning' element={<Warning />} />
+					<Route path='person' element={<Person />} />
 					{/* <Route path='pumps' element={<BackPage />} /> */}
 				</Route>
 			</Routes>

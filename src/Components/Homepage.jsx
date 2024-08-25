@@ -6,6 +6,7 @@ import s from '../css/homeComponent/home/Home.module.css'
 import PlumbersDuty from '../css/homeComponent/Plambers/PlumbersDuty'
 import Duty from './home/Duty'
 import GasDuty from './home/gasDuty/GasDuty'
+import Warning from './Licence/Warning/Warning'
 
 export default function Homepage() {
 	const state = useSelector(state => state.duty.duty)
@@ -40,9 +41,17 @@ export default function Homepage() {
 					<Link to='/cranesAll'>
 						<span className={s.l}>Краны ОЦЛП</span>
 					</Link>{' '}
-					
 				</div>
-				<div className={[s.link5, s.link].join(' ')}></div>
+				<div className={[s.link5, s.link].join(' ')}>
+					{' '}
+					<Link to='licence'>
+						<span className={[s.link6, s.link, s.l].join(' ')}>
+							Удостоверения
+						</span>
+					</Link>{' '}
+						<Warning />
+				</div>
+				<div className={[s.link6, s.link].join(' ')}></div>
 			</main>
 		</div>
 	)

@@ -1,0 +1,70 @@
+@charset "UTF-8";
+.container {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 23%;
+  top: 25%;
+}
+
+.active {
+  animation: blink 2s infinite ease-in;
+  -webkit-animation: blink 2s infinite ease-in;
+  visibility: visible;
+}
+
+@keyframes blink {
+  0% {
+    background-color: inherit;
+    visibility: visible;
+  }
+  50% {
+    background-color: red;
+  }
+}
+.thirty {
+  animation: thirty 2s infinite ease-in;
+  -webkit-animation: thirty 2s infinite ease-in;
+  visibility: visible;
+}
+
+@keyframes thirty {
+  0% {
+    background-color: inherit;
+    visibility: visible;
+  }
+  50% {
+    background-color: rgb(255, 255, 255);
+  }
+}
+.ones {
+  animation: ones 2s infinite ease-in;
+  -webkit-animation: ones 2s infinite ease-in;
+  visibility: visible;
+  background-color: red;
+}
+
+.ones::before {
+  content: "😒"; /* Угрюмый смайл */
+  color: white;
+}
+
+@keyframes ones {
+  0% {
+    scale: 0.4;
+    background-color: azure;
+  }
+  50% {
+    scale: 0.7;
+    background-color: rgb(0, 0, 0);
+  }
+  70% {
+    scale: 0.8;
+    background-color: rgb(236, 0, 0);
+  }
+}
