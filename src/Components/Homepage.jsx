@@ -49,7 +49,15 @@ export default function Homepage() {
 							Удостоверения
 						</span>
 					</Link>{' '}
-						<Warning />
+					<Warning />
+				</div>
+				<div className={[s.link5, s.link].join(' ')}>
+					{' '}
+					<Link to='inspection'>
+						<span className={[s.link7, s.link, s.l].join(' ')}>
+							Тех-осмотр тельф.
+						</span>
+					</Link>{' '}
 				</div>
 				<div className={[s.link6, s.link].join(' ')}></div>
 			</main>
