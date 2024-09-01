@@ -9,6 +9,7 @@ import rpReduser from '../sliceReduce/rpReduser'
 import engineREduser from '../sliceReduce/engineREduser'
 import dutyReducer from '../sliceReduce/dutyReducer'
 import paintReducer from '../sliceReduce/paintingReducer'
+import ispectHoistReducer from '../sliceReduce/InspectionReducer/InspectionReducer'
 
 const store = configureStore({
 	reducer: {
@@ -22,6 +23,7 @@ const store = configureStore({
 		engine: engineREduser,
 		duty: dutyReducer,
 		paint: paintReducer,
+		ispectHoist: ispectHoistReducer,
 	},
 })
 export default store

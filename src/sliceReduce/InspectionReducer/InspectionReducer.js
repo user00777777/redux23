@@ -86,7 +86,12 @@ const initialState = {
 		// newInspTellf(""),
 		// newInspTellf(""),
 	],
-}
+}.telf.sort((a, b) => {
+  const dateA = new Date(a.start);  // Сортировка по полю start
+  const dateB = new Date(b.start);
+  
+  return dateA - dateB;  // Сортировка по возрастанию
+});
 const InspectionSlice = createSlice({
 	name: 'Inspection',
 	initialState,

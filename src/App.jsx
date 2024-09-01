@@ -52,7 +52,8 @@ import RegCrane from './Components/Cranes/RegCrane'
 import Licence from './Components/Licence/Licence'
 import Warning from './Components/Licence/Warning/Warning'
 import Person from './Components/Licence/Warning/Person'
-import Inspection from './Components/BackPage/Inspection/Inspection'
+import Inspection from './Components/Inspection/Inspection'
+import OneTelfInspect from './Components/Inspection/OneTelfInspect'
 
 function App() {
 	return (
@@ -105,6 +106,7 @@ function App() {
 					<Route path='warning' element={<Warning />} />
 					<Route path='person' element={<Person />} />
 					<Route path='inspection' element={<Inspection />} />
+					<Route path='oneTelfInspect' element={<OneTelfInspect />} />
 					{/* <Route path='pumps' element={<BackPage />} /> */}
 				</Route>
 			</Routes>
