@@ -1,3 +1,4 @@
+@import './head';
 @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap');
 
 .containerInspect {
@@ -23,22 +24,20 @@
 	}
 	.wrapper {
 		min-width: 100%;
-
-		.wrapTelf {
-			min-width: 100%;
-
-			display: grid;
-
-			min-height: 100dvh;
-			// grid-template-columns: ;
-			// grid-template-rows: ;
-			// grid-auto-rows: ;
-
-			list-style: none; 
-
-			li {
-				border: none;
-			}
-		}
+		min-height: 100dvh;
+		// align-content: center;
+		display: flex;
+		flex-flow: column;
+		align-items: center;
 	}
+}
+button {
+	cursor: pointer;
+}
+.accordion {
+	padding-bottom: 10px;
+}
+
+.headAccord{min-width: 100%;
+padding: 0px;
 }

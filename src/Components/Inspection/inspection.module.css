@@ -1,4 +1,43 @@
 @import url("https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap");
+.headTelf {
+  background-color: orange;
+  display: grid;
+  min-width: 100%;
+  max-height: -moz-min-content;
+  max-height: min-content;
+  grid-template-columns: 15% 22% 20% 15% 15% 15%;
+  grid-template-rows: minmax(min-content, auto);
+  list-style: none;
+  gap: 1px;
+}
+.headTelf .itemTelf {
+  font-size: clamp(0.875rem, 0.125rem + 3.3vw, 1rem);
+}
+.headTelf .days {
+  font-size: 12px;
+}
+.headTelf .q {
+  background-color: lavender;
+}
+
+#wrapTelf {
+  display: grid;
+  min-width: 100%;
+  max-height: -moz-min-content;
+  max-height: min-content;
+  grid-template-columns: 15% 22% 20% 15% 15% 15%;
+  grid-auto-rows: minmax(min-content, auto);
+  list-style: none;
+  gap: 1px;
+}
+#wrapTelf li {
+  background-color: rgb(237, 237, 146);
+  font-size: clamp(0.875rem, 0.125rem + 3.3vw, 1rem);
+}
+#wrapTelf .telfer {
+  font-size: clamp(0.5rem, -0.41rem + 5vw, 1rem);
+}
+
 .containerInspect {
   background: linear-gradient(to bottom, #feffff 0%, #ddf1f9 35%, #a0d8ef 100%);
   min-width: 100%;
@@ -20,13 +59,21 @@
 }
 .containerInspect .wrapper {
   min-width: 100%;
-}
-.containerInspect .wrapper .wrapTelf {
-  min-width: 100%;
-  display: grid;
   min-height: 100dvh;
-  list-style: none;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
-.containerInspect .wrapper .wrapTelf li {
-  border: none;
+
+button {
+  cursor: pointer;
+}
+
+.accordion {
+  padding-bottom: 10px;
+}
+
+.headAccord {
+  min-width: 100%;
+  padding: 0px;
 }

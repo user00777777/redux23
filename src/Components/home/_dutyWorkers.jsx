@@ -18,7 +18,7 @@ export default function getDuty(electr, plumb, gas) {
 	let dayOfYear = Math.floor(
 		(currentDate - new Date(currentDate.getFullYear(), 0, 0)) / 86400000
 	)
-	// console.log(month);
+	dayOfYear += 4
 
 	// console.log((dayOfYear )+3)
 	// console.log((dayOfMonth = 30))
@@ -31,10 +31,10 @@ export default function getDuty(electr, plumb, gas) {
 
 		let oneShift = firstOneShift.map(el => {
 			if (
-				el.toLowerCase() == 'круглый' &&
-				dayOfMonth >= 12 &&
-				dayOfMonth <= 23 &&
-				month == 8
+				el.toLowerCase() == 'лысенко' &&
+				dayOfMonth >= 2 &&
+				dayOfMonth <= 30 &&
+				month == 9
 			) {
 				// console.log('ok')
 
@@ -43,12 +43,12 @@ export default function getDuty(electr, plumb, gas) {
 
 			if (
 				el.toLowerCase() == 'немченко' &&
-				dayOfMonth >= 17 &&
-				dayOfMonth <= 31 &&
-				month == 8
+				dayOfMonth >= 1 &&
+				dayOfMonth <= 17 &&
+				month == 9
 			) {
-				el = 'Павлюченко';
-        return el
+				el = 'Павлюченко'
+				return el
 			} else {
 				// console.log('no');
 
@@ -81,15 +81,15 @@ export default function getDuty(electr, plumb, gas) {
 	let dutyGas = duty(...gas.gas)
 	let dutyPlumb = duty(...plumb.plumb)
 	let dutyEl = duty(...electr.el)
-  // console.log(dutyPlumb);
-  
+	// console.log(dutyPlumb);
+
 	const handleDuty = (el, elBool = true) => {
 		// console.log(el);
-// console.log(dayOfYear += 3)
+		// console.log(dayOfYear += 3)
 
 		// console.log(elBool)
 		// dayOfYear=dayOfYear-1
-// console.log([dayOfYear % el.length])
+		// console.log([dayOfYear % el.length])
 
 		let duty = el[dayOfYear % el.length]
 

@@ -15,9 +15,11 @@ export default function Inspection() {
 				<h2>Тех-осмотр тельфера {'ОЦЛП'}</h2>
 			</div>
 			<div className={s.wrapper}>
-				<ul className={s.wrapTelf}>
-					<OneTelfInspect />
-				</ul>
+				<OneTelfInspect daysDifference={{ num: 10, strDays: 'десять' }}     / >
+				<OneTelfInspect daysDifference={{ num: 30, strDays: 'месяц' }} />
+				<OneTelfInspect daysDifference={{ num: 61, strDays: 'полгода' }} />
+				<OneTelfInspect daysDifference={{ num: 365, strDays: 'год' }} />
+				<OneTelfInspect daysDifference={{ num: 740, strDays: 'два года' }} />
 			</div>
 		</div>
 	)

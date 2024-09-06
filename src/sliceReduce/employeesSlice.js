@@ -27,7 +27,7 @@ const initialState = {
 				{ date: '2025-05-13', name: Vus },
 				{ date: '2025-01-15', name: Pog },
 				{ date: '2025-05-01', name: GpmCranes },
-				{ date: '2024-09-13', name: Shlif },
+				{ date: '2025-09-04', name: Shlif },
 			],
 			2
 		),
@@ -36,9 +36,9 @@ const initialState = {
 			[
 				{ date: '', name: El },
 				{ date: '2025-05-03', name: Vus },
-				{ date: '2024-09-04', name: Pog },
+				{ date: '2025-09-04', name: Pog },
 				{ date: '2025-01-02', name: GpmCranes },
-				{ date: '2024-09-13', name: Shlif },
+				{ date: '2025-09-04', name: Shlif },
 			],
 			3
 		),

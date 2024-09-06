@@ -1,0 +1,43 @@
+.headTelf {
+	background-color: orange;
+
+	display: grid;
+	min-width: 100%;
+	max-height: min-content;
+	grid-template-columns: 15% 22% 20% 15% 15% 15%;
+	grid-template-rows: minmax(min-content, auto);
+	// grid-auto-rows: ;
+
+	list-style: none; //
+	gap: 1px;
+	.itemTelf {
+    font-size: clamp(0.875rem, 0.125rem + 3.3vw, 1rem);
+		// font-size: 14px;
+	}
+  .days{	font-size: 12px;}
+	// .check{font-size: 10px;}
+	.q {
+		background-color: lavender;
+	}
+}
+#wrapTelf {
+	// background-color: red;
+	li {
+		background-color: rgb(237, 237, 146);
+		// border-: none;
+		font-size: clamp(0.875rem, 0.125rem + 3.3vw, 1rem);
+	}
+
+	display: grid;
+	min-width: 100%;
+	max-height: min-content;
+	grid-template-columns: 15% 22% 20% 15% 15% 15%;
+	// grid-template-rows: minmax(min-content, auto);
+	grid-auto-rows: minmax(min-content, auto);
+
+	list-style: none; //
+	gap: 1px;
+	.telfer {
+		font-size: clamp(0.5rem, -0.41rem + 5vw, 1rem);
+	}
+}

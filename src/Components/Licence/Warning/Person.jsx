@@ -55,7 +55,7 @@ export default function Person(props) {
 					</div>
 					{state.map(employee =>
 						employee.licences.map(licence => {
-							console.log(licence.date)
+							{/* console.log(licence.date) */}
 							const licenceDate = new Date(licence.date)
 							const daysDifference = Math.floor(
 								(licenceDate - currentDate) / (1000 * 60 * 60 * 24)
