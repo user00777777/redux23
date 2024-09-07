@@ -5,7 +5,7 @@
   min-width: 100%;
   max-height: -moz-min-content;
   max-height: min-content;
-  grid-template-columns: 15% 22% 20% 15% 15% 15%;
+  grid-template-columns: 15% 21% 21% 10% 15% 18%;
   grid-template-rows: minmax(min-content, auto);
   list-style: none;
   gap: 1px;
@@ -13,8 +13,14 @@
 .headTelf .itemTelf {
   font-size: clamp(0.875rem, 0.125rem + 3.3vw, 1rem);
 }
+.headTelf .telferHead {
+  font-size: clamp(0.625rem, 0.125rem + 2.5vw, 0.75rem);
+}
 .headTelf .days {
   font-size: 12px;
+}
+.headTelf .check {
+  font-size: clamp(0.625rem, -1.625rem + 10vw, 0.875rem);
 }
 .headTelf .q {
   background-color: lavender;
@@ -25,7 +31,7 @@
   min-width: 100%;
   max-height: -moz-min-content;
   max-height: min-content;
-  grid-template-columns: 15% 22% 20% 15% 15% 15%;
+  grid-template-columns: 15% 21% 21% 10% 15% 18%;
   grid-auto-rows: minmax(min-content, auto);
   list-style: none;
   gap: 1px;
@@ -35,6 +41,9 @@
   font-size: clamp(0.875rem, 0.125rem + 3.3vw, 1rem);
 }
 #wrapTelf .telfer {
+  font-size: clamp(0.5rem, -0.41rem + 5vw, 1rem);
+}
+#wrapTelf .check1 {
   font-size: clamp(0.5rem, -0.41rem + 5vw, 1rem);
 }
 

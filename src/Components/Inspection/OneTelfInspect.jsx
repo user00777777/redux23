@@ -28,7 +28,7 @@ export default function OneTelfInspect({ daysDifference }) {
 			>
 				<div className={s.wrapOneTelf}>
 					<ul className={s.headTelf}>
-						<li className={`${s.itemTelf}`}>Тельфер</li>
+						<li className={`${s.itemTelf} ${s.telferHead}`}>Тельфер</li>
 						<li className={`${s.itemTelf} ${s.check}`}>Проверено</li>
 						<li className={`${s.itemTelf} ${s.check}`}>Сдача</li>
 						<li className={`${s.itemTelf} ${s.q}`}>Q</li>
@@ -45,8 +45,8 @@ export default function OneTelfInspect({ daysDifference }) {
 							<div key={id}>
 								<ul className={s.wrapContent} id={s.wrapTelf}>
 									<li className={`${s.telf} ${s.telfer}`}> {el.telf}</li>
-									<li className={`${s.telf}`}>{el.start}</li>
-									<li className={`${s.telf}`}>{el.end}</li>
+									<li className={`${s.telf} ${s.check1}`}>{el.start}</li>
+									<li className={`${s.telf} ${s.check1}`}>{el.end}</li>
 									<li className={`${s.telf}`}>{el.q}</li>
 									<li className={`${s.telf}`}>{el.area}</li>
 									<li className={`${s.telf}`}>{el.exactLocation}</li>
