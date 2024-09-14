@@ -46,6 +46,11 @@
 #wrapTelf .check1 {
   font-size: clamp(0.5rem, -0.38rem + 5vw, 1rem);
 }
+#wrapTelf .exactLocation {
+  font-size: clamp(0.625rem, -0.175rem + 4vw, 0.875rem);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
 
 .containerInspect {
   background: linear-gradient(to bottom, #feffff 0%, #ddf1f9 35%, #a0d8ef 100%);
