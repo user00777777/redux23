@@ -2,10 +2,12 @@ import React from 'react'
 import getDuty from './_dutyWorkers'
 import s from './duty.module.css'
 
-function Duty(props) {
+function Duty({duty}) {
+
+  
 	return (
 		<>
-			{props && <div className={s.dutyContainer}>{getDuty(...props.duty)}</div>}
+			{duty && <div className={s.dutyContainer}>{getDuty(...duty)}</div>}
    
 		</>
 	)

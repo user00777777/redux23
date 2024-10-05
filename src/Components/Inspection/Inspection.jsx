@@ -1,9 +1,9 @@
 import useStore from '../../Zustund/firstZ'
-import React, { useState, useEffect, useRef } from 'react'
 import s from './inspection.module.css'
 import BackPage from '../BackPage/BackPage'
 import OneTelfInspect from './OneTelfInspect'
 import { useSelector } from 'react-redux'
+import { useEffect, useRef, useState } from 'react'
 
 export default function Inspection() {
 	const state = useSelector(state => state.ispectHoist)
@@ -11,55 +11,54 @@ export default function Inspection() {
 		useStore()
 	const [strRes, setStrRes] = useState([])
 	const wrapRef = useRef(null)
-	// console.log(state.length)
-	const inspectTen = state.some(el => {
-		const dif = el.daysDifference
 
+	const inspectTen = state.some(el => {
+		const dif = Number(el.daysDifference)
 		return dif >= 0 && dif <= 10
 	})
-	console.log(inspectTen)
-	const inspectMonth = state.some(el => {
-		const dif = el.daysDifference
 
+	const inspectMonth = state.some(el => {
+		const dif = Number(el.daysDifference)
 		return dif >= 0 && dif <= 30
 	})
-	console.log(inspectMonth)
-	const inspectHalfaYear = state.some(el => {
-		const dif = el.daysDifference
 
+	const inspectHalfaYear = state.some(el => {
+		const dif = Number(el.daysDifference)
 		return dif >= 0 && dif <= 180
 	})
-	console.log(inspectHalfaYear)
-	const inspectYear = state.some(el => {
-		const dif = el.daysDifference
 
+	const inspectYear = state.some(el => {
+		const dif = Number(el.daysDifference)
 		return dif >= 0 && dif <= 365
 	})
-	console.log(inspectYear)
-	const inspectTwoYear = state.some(el => {
-		const dif = el.daysDifference
 
+	const inspectTwoYear = state.some(el => {
+		const dif = Number(el.daysDifference)
 		return dif >= 0 && dif <= 730
 	})
-	console.log(inspectTwoYear)
 
-	// Хук useEffect для логирования и добавления/удаления класса активного состояния
-	useEffect(() => {
-		console.log('strRes при рендере:', strRes)
+	// console.log(inspectTwoYear)
 
-		if (wrapRef.current) {
-			Array.from(wrapRef.current.children).forEach(element => {
-				if (!strRes.includes(element.innerText)) {
-					element.classList.add(s.activeOff)
-				} else {
-					element.classList.remove(s.activeOff)
-				}
-			})
-		}
-	}, [strRes, wrapRef]) // Добавлен wrapRef в зависимости
+useEffect(() => {
+	// Убедимся, что wrapRef определён
+	if (wrapRef.current) {
+		// Пробегаемся по элементам внутри wrapRef
+		Array.from(wrapRef.current.children).forEach(element => {
+			// Если элемент не содержится в массиве strRes, добавляем класс
+			if (!strRes.includes(element.innerText)) {
+				element.classList.add(s.activeOff)
+			} else {
+				element.classList.remove(s.activeOff)
+			}
+		})
+	}
+	// Добавляем только strRes в зависимости, убираем wrapRef
+}, [strRes])
 
-	// Обработчик кликов, добавляющий элементы в массив состояний
+
 	const handleClick = str => {
+    console.log(str);
+    
 		const validOptions = ['десять', 'месяц', 'полгода', 'год', 'два года']
 		if (validOptions.includes(str)) {
 			setStrRes(prevStrRes => {
@@ -71,7 +70,6 @@ export default function Inspection() {
 		}
 	}
 
-	// Функция для рендера компонента OneTelfInspect
 	const renderOneTelfInspect = (strDays, num, datas) => (
 		<OneTelfInspect
 			daysDifference={{
@@ -93,7 +91,7 @@ export default function Inspection() {
 				{inspectTen && renderOneTelfInspect('десять', 10)}
 				{inspectMonth && renderOneTelfInspect('месяц', 30)}
 				{inspectHalfaYear && renderOneTelfInspect('полгода', 180)}
-				{inspectYear && renderOneTelfInspect('год', 365, 2)}
+				{inspectYear && renderOneTelfInspect('год', 365)}
 				{inspectTwoYear && renderOneTelfInspect('два года', 730)}
 			</div>
 		</div>

@@ -4,12 +4,22 @@ import { createElement } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
 import s from '../css/Cranes.module.css'
-import {  setData } from '../sliceReduce/tableSlice'
-import Telega from './Telega'
+import { setData } from '../sliceReduce/tableSlice'
+import
+         Telega from './Telega'
+import useStore from '../Zustund/firstZ'
 
 // import infoTelpher from './Telpher/infoTelpher'
 
 function Telphers() {
+	const { getHoists, addHoist, removeHoist } = useStore()
+  
+  console.log(getHoists())
+  useEffect(() => {
+		const hoists = getHoists()
+		console.log(hoists) // Это должно вывести [1, 2]
+	}, [])
+
 	const refP = useRef(null)
 
 	const telRef = useRef(null)
@@ -24,11 +34,10 @@ function Telphers() {
 
 	const state = useSelector(state => state.hoist)
 
-
-
 	// console.log(isDataset)
 
 	function infoTelpher(e) {
+    // useSelector
 		setData(e.target.dataset.hoist)
 		// console.log(isNum)
 		SetNum((isNum += e.detail))
@@ -167,6 +176,22 @@ function Telphers() {
 			}
 		}
 	}, [isBool])
+const findTel = el => {
+	let newArHoist = Array.from(el.target.children)
+		.filter(el => el.dataset.hoist)
+		.map(el => el.dataset.hoist)
+
+	// Добавляем каждый элемент массива по отдельности
+addHoist(newArHoist)
+}
+
+
+	useEffect(() => {
+		if (refP.current) {
+			// Вызываем findTel сразу после монтирования компонента
+			findTel({ target: refP.current })
+		}
+	}, [])
 
 	return (
 		<>

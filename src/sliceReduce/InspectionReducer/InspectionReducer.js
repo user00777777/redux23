@@ -76,15 +76,7 @@ const initialState = {
 		newInspTellf('52045', '1', '2026-12-15', '2024-12-15', '6',''),
 		newInspTellf('52046', '1', '2026-12-15', '2024-12-15', '6',''),
 		newInspTellf('51871', '0.5', '2026-10-13', '2024-10-13', '6',''),
-		// newInspTellf(""),
-		// newInspTellf(""),
-		// newInspTellf(""),
-		// newInspTellf(""),
-		// newInspTellf(""),
-		// newInspTellf(""),
-		// newInspTellf(""),
-		// newInspTellf(""),
-		// newInspTellf(""),
+
 	],
 }.telf.sort((a, b) => {
   const dateA = new Date(a.start);  // Сортировка по полю start

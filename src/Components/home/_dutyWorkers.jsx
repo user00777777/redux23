@@ -18,7 +18,7 @@ export default function getDuty(electr, plumb, gas) {
 	let dayOfYear = Math.floor(
 		(currentDate - new Date(currentDate.getFullYear(), 0, 0)) / 86400000
 	)
-	dayOfYear += 4
+	// dayOfYear += 1
 
 	// console.log((dayOfYear )+3)
 	// console.log((dayOfMonth = 30))
@@ -33,10 +33,20 @@ export default function getDuty(electr, plumb, gas) {
 			if (
 				el.toLowerCase() == 'лысенко' &&
 				dayOfMonth >= 2 &&
-				dayOfMonth <= 30 &&
-				month == 9
+				dayOfMonth <= 8 &&
+				month == 10
 			) {
 				// console.log('ok')
+
+				return (el = 'Гекало')
+			}
+			if (
+				el.toLowerCase() == 'малько' &&
+				dayOfMonth >= 9 &&
+				dayOfMonth <= 31 &&
+				month == 10
+			) {
+				console.log('малько')
 
 				return (el = 'Гекало')
 			}

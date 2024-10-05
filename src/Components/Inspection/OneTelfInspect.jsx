@@ -1,66 +1,46 @@
-import React, { useEffect, useRef, useState } from 'react'
-import s from './inspection.module.css'
-import { useSelector } from 'react-redux'
 import { Accordion, AccordionItem } from '@szhsin/react-accordion'
+import { useRef, useState, useEffect } from 'react' // Хуки React
+import { useSelector } from 'react-redux' // Хук Redux
+import s from './inspection.module.css'
 import useStore from '../../Zustund/firstZ'
 
 export default function OneTelfInspect({ daysDifference }) {
 	const refActiv = useRef()
 	const state = useSelector(state => state.ispectHoist)
-	const [ind, setInd] = useState(true)
+	const [arrTelf, setArrTelf] = useState([])
+  const hoists = useStore.getState().hoists
+	const hoistForDays = useStore.getState().hoistForDays
 
-	// Подключаем Zustand store
-	const { increment, count, removeAllCounts, decrement, updateCounts } =
-		useStore()
+	console.log('Hoists:', hoists)
+	console.log('Hoists for Days:', hoistForDays)
+const { getHoistsForDays, addHoistForDays } = useStore()
+useEffect(() => {
+  addHoistForDays(arrTelf)
+}, [])
+console.log(getHoistsForDays())
+const sortedState = [...state].sort(
+  (a, b) => a.daysDifference - b.daysDifference
+)
 
-	// Сортируем состояние по daysDifference
-	const sortedState = [...state].sort(
-		(a, b) => a.daysDifference - b.daysDifference
-	)
+	useEffect(() => {
+		const newArrTelf = reduceHandleClick(
+			sortedState,
+			daysDifference.num,
+			daysDifference.strDays
+		)
 
-	// Функция для обработки кликов
+		// Простая проверка изменения состояния
+		if (newArrTelf.length !== arrTelf.length) {
+			setArrTelf(newArrTelf)
+		}
+	}, [sortedState, daysDifference])
+
 	const handleItemClick = () => {
-		sortedState.filter(el => {
-			const conditions = [
-				{
-					days: 'год',
-					valid:
-						el.daysDifference < daysDifference.num && el.daysDifference >= 0,
-				},
-				{
-					days: 'месяц',
-					valid:
-						el.daysDifference < daysDifference.num && el.daysDifference >= 0,
-				},
-				{
-					days: 'полгода',
-					valid:
-						el.daysDifference < daysDifference.num && el.daysDifference >= 0,
-				},
-				{
-					days: 'десять',
-					valid:
-						el.daysDifference < daysDifference.num && el.daysDifference >= 0,
-				},
-				{
-					days: 'два года',
-					valid:
-						el.daysDifference < daysDifference.num && el.daysDifference >= 0,
-				},
-			]
-
-			const matchedCondition = conditions.find(
-				cond => cond.days === daysDifference.strDays && cond.valid
-			)
-
-			if (matchedCondition && daysDifference?.handleClick) {
-				daysDifference.handleClick(daysDifference.strDays)
-			}
-		})
+		if (daysDifference?.handleClick) {
+			daysDifference.handleClick(daysDifference.strDays)
+		}
 	}
-// useEffect(() => {
-//   handleItemClick()
-// },[])
+
 	return (
 		<Accordion className={s.headAccord}>
 			<AccordionItem
@@ -68,32 +48,22 @@ export default function OneTelfInspect({ daysDifference }) {
 					daysDifference?.num === 10 ? 'дней' : ''
 				}`}
 				className={s.accordion}
-				data-datas={daysDifference?.datas}
-				data-dataw='dd'
-				onClick={handleItemClick} // Добавляем событие клика
+				onClick={handleItemClick}
 			>
 				<div className={s.wrapOneTelf} ref={refActiv}>
 					<ul className={s.headTelf}>
 						<li className={`${s.itemTelf} ${s.telferHead}`}>Тельфер</li>
 						<li className={`${s.itemTelf} ${s.check}`}>Проверено</li>
 						<li className={`${s.itemTelf} ${s.check}`}>Сдача</li>
-						<li className={`${s.itemTelf} ${s.q}`}>Q</li>
+						<li className={s.itemTelf}>Q</li>
 						<li className={s.itemTelf}>Пролет</li>
 						<li className={`${s.itemTelf} ${s.days}`}>Место</li>
 					</ul>
-					{sortedState
-						.filter(
-							el =>
-								el.daysDifference < daysDifference.num && el.daysDifference >= 0
-						)
-						.map((el, id) => (
+					{arrTelf &&
+						arrTelf.map((el, id) => (
 							<div key={id}>
-								<ul
-									className={s.wrapContent}
-									id={s.wrapTelf}
-									data-datas={daysDifference?.datas}
-								>
-									<li className={`${s.telf} ${s.telfer}`}> {el.telf}</li>
+								<ul className={s.wrapContent} id={s.wrapTelf}>
+									<li className={`${s.telf} ${s.telfer}`}>{el.telf}</li>
 									<li className={`${s.telf} ${s.check1}`}>{el.start}</li>
 									<li className={`${s.telf} ${s.check1}`}>{el.end}</li>
 									<li className={s.telf}>{el.q}</li>
@@ -108,4 +78,41 @@ export default function OneTelfInspect({ daysDifference }) {
 			</AccordionItem>
 		</Accordion>
 	)
+}
+
+const reduceHandleClick = (state, differenceNam, difStr) => {
+
+	return state.reduce((acc, el) => {
+		const conditions = [
+			{
+				days: 'год',
+				valid: el.daysDifference < differenceNam && el.daysDifference >= 0,
+			},
+			{
+				days: 'месяц',
+				valid: el.daysDifference < differenceNam && el.daysDifference >= 0,
+			},
+			{
+				days: 'полгода',
+				valid: el.daysDifference < differenceNam && el.daysDifference >= 0,
+			},
+			{
+				days: 'десять',
+				valid: el.daysDifference < differenceNam && el.daysDifference >= 0,
+			},
+			{
+				days: 'два года',
+				valid: el.daysDifference < differenceNam && el.daysDifference >= 0,
+			},
+		]
+
+		const matchedCondition = conditions.find(
+			cond => cond.days === difStr && cond.valid
+		)
+		if (matchedCondition) {
+			acc.push(el) // Важно возвращать объект, а не только поле el.telf
+		}
+
+		return acc
+	}, [])
 }
