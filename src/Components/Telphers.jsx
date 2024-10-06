@@ -606,7 +606,7 @@ addHoist(newArHoist)
 				<div
 					data-hoist='52019'
 					data-machine='выход с к'
-					className={[s.div62, s.t, s.ma, 't'].join(' ')}
+					className={[s.div62, s.t, s.mal, 't'].join(' ')}
 				>
 					52019
 				</div>

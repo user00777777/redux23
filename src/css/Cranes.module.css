@@ -279,25 +279,32 @@
 	grid-area: 20/ 6 / 20 / 4;
 }
 .div61 {
-	grid-area: 21 / 7 / 19 / 6;
+	grid-area: 20 / 7 / 21 / 6;
 }
 .div62 {
-	grid-area: 22 / 7 / 19 / 6;
-	height: 20px;
-	font-size: 12px;
+	grid-area: 21 / 7 / 22 / 6;
+
 }
 .div63 {
-	grid-area: 23 / 7 / 19 / 6;
+	grid-area: 22 / 7 / 23 / 6;
+  min-height: 30px;
+  max-height:30px;
 }
 .mal {
 	height: fit-content;
-	font-size: 12px;
-	gap: 6px;
+	font-size: 18px;
+  background-color: #6f0d43;
 }
 .h3 {
-	grid-area: 20 / 4 / 19 / 7;
-	color: rgb(48, 2, 232);
-	font-size: 22px;
+  grid-area: 19 / 4 / 20 / 6;
+  color: rgb(255, 255, 255);
+border-radius: 10% / 50%; ;
+  font-size:clamp(1.125rem, -1.125rem + 10vw, 1.375rem);
+  background-color: #6f0d43;
+  -webkit-border-radius:5px ;
+  -moz-border-radius:5px ;
+  -ms-border-radius:5px ;
+  -o-border-radius:5px ;
 }
 .pp {
 	font-size: 1rem; /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ff1a00+0,ff1a00+100;Red+Flat+%231 */
