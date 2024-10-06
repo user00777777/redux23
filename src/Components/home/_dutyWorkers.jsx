@@ -1,130 +1,74 @@
 import { useEffect, useState } from 'react'
 import GasDuty from './gasDuty/GasDuty'
 
-export default function getDuty(electr, plumb, gas) {
-	// console.log(gas.gas)
-	// const [el, gas] = props
-	// console.log(el)
-
+const getDuty = (electr, plumb, gas) => {
 	const currentDate = new Date()
-	let dayOfMonth = currentDate.getDate()
-	// console.log(dayOfMonth);
-
-	// const dayOfWeek = currentDate.getDay()
-	let hour = currentDate.getHours()
-	const minutes = currentDate.getMinutes()
+	const dayOfMonth = currentDate.getDate()
+	const hour = currentDate.getHours()
 	const month = currentDate.getMonth() + 1
 
-	let dayOfYear = Math.floor(
-		(currentDate - new Date(currentDate.getFullYear(), 0, 0)) / 86400000
-	)
-	// dayOfYear += 1
+	const dayOfYear =
+		Math.floor(
+			(currentDate - new Date(currentDate.getFullYear(), 0, 0)) / 86400000
+		) + 4
 
-	// console.log((dayOfYear )+3)
-	// console.log((dayOfMonth = 30))
-	// console.log(hour=24);
-
-	// hour = 1
-
-	let duty = (one, two, three, four) => {
-		let firstOneShift = [one, two, three, four]
-
-		let oneShift = firstOneShift.map(el => {
-			if (
-				el.toLowerCase() == 'лысенко' &&
-				dayOfMonth >= 2 &&
-				dayOfMonth <= 8 &&
-				month == 10
-			) {
-				// console.log('ok')
-
-				return (el = 'Гекало')
-			}
-			if (
-				el.toLowerCase() == 'малько' &&
-				dayOfMonth >= 9 &&
-				dayOfMonth <= 31 &&
-				month == 10
-			) {
-				console.log('малько')
-
-				return (el = 'Гекало')
-			}
-
-			if (
-				el.toLowerCase() == 'немченко' &&
-				dayOfMonth >= 1 &&
-				dayOfMonth <= 17 &&
-				month == 9
-			) {
-				el = 'Павлюченко'
-				return el
-			} else {
-				// console.log('no');
-
-				return el
-			}
-		})
+	const duty = shiftNames => {
+		const oneShift = shiftNames.map(changeDuty)
 
 		const twoShift = [...oneShift.slice(3), ...oneShift.slice(0, 3)]
-		// console.log('two', twoShift)
-		// console.log(oneShift,'one')
 
 		if (hour >= 7 && hour < 19) {
-			// console.log('day')
-
-			return { shift: oneShift, bool: true }
-		}
-		if (hour >= 19 && hour <= 23) {
-			// console.log('evening')
-
-			return { shift: twoShift, bool: true }
+			return { shift: oneShift, isDay: true }
+		} else if (hour >= 19 && hour <= 23) {
+			return { shift: twoShift, isDay: true }
 		} else {
-			// console.log('night')
-			let twoChangeShift = [...oneShift.slice(2), ...oneShift.slice(0, 2)]
-			// console.log(twoChangeShift)
-
-			return { shift: twoChangeShift, bool: false }
+			const nightShift = [...oneShift.slice(2), ...oneShift.slice(0, 2)]
+			return { shift: nightShift, isDay: false }
 		}
 	}
 
-	let dutyGas = duty(...gas.gas)
-	let dutyPlumb = duty(...plumb.plumb)
-	let dutyEl = duty(...electr.el)
-	// console.log(dutyPlumb);
+	const dutyGas = duty(['Полищук', 'Стасюк', 'Чеча', 'Выходец'])
+	const dutyPlumb = duty(plumb.plumb)
+	const dutyEl = duty(electr.el)
 
-	const handleDuty = (el, elBool = true) => {
-		// console.log(el);
-		// console.log(dayOfYear += 3)
+	const handleDuty = (shift, isDay) => shift[dayOfYear % shift.length]
 
-		// console.log(elBool)
-		// dayOfYear=dayOfYear-1
-		// console.log([dayOfYear % el.length])
-
-		let duty = el[dayOfYear % el.length]
-
-		// console.log(duty)
-
-		return duty
-	}
-
-	const manGas = handleDuty(dutyGas.shift, dutyGas.bool)
-	const manPlumb = handleDuty(dutyPlumb.shift, dutyPlumb.bool)
-	const manEl = handleDuty(dutyEl.shift, dutyEl.bool)
-	// console.log(manEl, manGas, manPlumb)
+	const manGas = handleDuty(dutyGas.shift, dutyGas.isDay)
+	const manPlumb = handleDuty(dutyPlumb.shift, dutyPlumb.isDay)
+	const manEl = handleDuty(dutyEl.shift, dutyEl.isDay)
 
 	return (
 		<ul>
 			<li>
-				Дежурный електрик <span> {manEl}</span>
+				Дежурный електрик <span>{manEl}</span>
 			</li>
 			<li>
-				Дежурный сантехник<span>{manPlumb}</span>
+				Дежурный сантехник <span>{manPlumb}</span>
 			</li>
 			<li>
-				Дежурный газовщик<span>{manGas}</span>
+				Дежурный газовщик <span>{manGas}</span>
 			</li>
 		</ul>
 	)
 }
-// one, two, three, four
+
+const changeDuty = el => {
+	const currentDate = new Date()
+	const dayOfMonth = currentDate.getDate()
+	const month = currentDate.getMonth() + 1
+
+	const specialCases = {
+		лысенко: () =>
+			dayOfMonth >= 2 && dayOfMonth <= 8 && month === 10 ? 'Гекало' : el,
+		малько: () =>
+			dayOfMonth >= 9 && dayOfMonth <= 31 && month === 10 ? 'Гекало' : el,
+		немченко: () =>
+			dayOfMonth >= 1 && dayOfMonth <= 17 && month === 9 ? 'Павлюченко' : el,
+		выходец: () => (dayOfMonth >= 29 && dayOfMonth <= 31 ? 'Колабин' : el),
+		головченко: () => (dayOfMonth >= 7 && dayOfMonth <= 31 ? 'Дубовик' : el),
+	}
+
+	return specialCases[el.toLowerCase()] ? specialCases[el.toLowerCase()]() : el
+}
+
+export default getDuty
