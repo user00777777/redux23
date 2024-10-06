@@ -1,12 +1,12 @@
 .parent {
 	padding-top: 1px;
 	justify-content: center;
-	height: 100vh;
+	min-height: 100dvh;
 	width: 100%;
 	align-items: center;
 	display: grid;
 	grid-template-columns: 100px 0px 100px 100px 0px 100px;
-	grid-template-rows: repeat(23, 40px);
+	grid-template-rows: repeat(22, 40px);
 	grid-column-gap: 0px;
 	grid-row-gap: 0px;
 	background: #feffff; /* Old browsers */
