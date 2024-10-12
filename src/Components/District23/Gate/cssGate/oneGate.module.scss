@@ -1,44 +1,32 @@
-@mixin bgLog {
-	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fefcea+0,f1da36+100;Gold+3D */
-	background: rgb(254, 252, 234); /* Old browsers */
-	background: -moz-linear-gradient(
-		top,
-		rgba(254, 252, 234, 1) 0%,
-		rgba(241, 218, 54, 1) 100%
-	); /* FF3.6-15 */
-	background: -webkit-linear-gradient(
-		top,
-		rgba(254, 252, 234, 1) 0%,
-		rgba(241, 218, 54, 1) 100%
-	); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(
-		to bottom,
-		rgba(254, 252, 234, 1) 0%,
-		rgba(241, 218, 54, 1) 100%
-	); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36',GradientType=0 ); /* IE6-9 */
-	// border: 1px dotted;
-}
+.con{
+min-width: 100%;
+min-height: 100%;
 
+}
 .wrap {
-	@include bgLog();
-	width: 101%;
-	height: 100%;
-	// padding: 20px 12px;
-}
-.con {
-	// width: 170px;
-	height: 100%;
-	width: 10rem;
-}
-.item {
-	span {
-		width: max-content;
-		height: min-content;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-width: 100%;
+	min-height: 100%;
+	background-color: rgb(222, 177, 177);
+	.item {
+		min-width: 150px;
+		min-height: 100%;
+		// background-color: cyan;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
 	}
-}
-.item5 {
-	background-color: red;
-	width: 100%;
-	height: 30px;
+
+	.item3 {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    // background-color: red;
+    b{
+        color: rgb(0, 0, 0);}
+	}
 }
