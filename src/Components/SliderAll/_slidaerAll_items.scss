@@ -1,0 +1,29 @@
+.parent {
+	display: flex;
+
+	flex-direction: column;
+
+	//list-style:none;
+	.wrapMap {
+		margin-bottom: 0.5rem;
+
+		background-color: rgb(255, 255, 255);
+		.ac {
+			border: none;
+			background-color: skyblue;
+			min-height: max-content;
+			max-height: clamp(1rem, 0.6rem + 2vw, 1.2rem);
+			font-size: clamp(1rem, 0.6rem + 2vw, 1.1rem);
+		}
+		.notes {
+			background-color: honeydew;
+			// white-space: normal;
+			span {
+				text-align: center;
+				padding: 1px 20px;
+				min-width: auto;
+				max-width: 91%;
+			}
+		}
+	}
+}

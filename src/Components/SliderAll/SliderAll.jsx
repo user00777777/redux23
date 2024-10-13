@@ -5,7 +5,22 @@ export default function SliderAll(props) {
 	const [currentSlide, setCurrentSlide] = useState(0)
 	// console.log(props)
 	const { craneId, cranName, f, repair } = props
-	// console.log(repair)
+  
+  useEffect(() => {
+  let notes = document.querySelector(`.${s.notes}`)
+
+console.log(notes);
+
+}, []) 
+function toggleAccordion(notes) {
+
+	if (notes.style.maxHeight) {
+		notes.style.maxHeight = null
+	} else {
+		notes.style.maxHeight = notes.scrollHeight + 'px'
+	}
+}
+
 	function prewSlide(el) {
     // console.log(el);
     
@@ -20,23 +35,7 @@ export default function SliderAll(props) {
 		console.log(newIndex);
 	}
 
-	useEffect(() => {
-		parentAc.current.addEventListener('click', p)
 
-		function p(e) {
-			let btn = e.target.className
-      // console.log(btn);
-			if (btn == s.btn) {
-			// console.log();
-      }
-
-			// console.log(btn);
-
-			return () => {
-				parentAc.current.removeEventListener('click', p)
-			}
-		}
-	}, [])
 
 	return (
 		<div ref={parentAc} className={s.parent}>
@@ -66,7 +65,7 @@ export default function SliderAll(props) {
 						<ul key={i} className={s.wrapMap} id={s.idCrane}>
 							<li className={`${s.ac} ${s.title}`}>{el.title}</li>
 							<li className={`${s.ac} ${s.data}`}>{el.data}</li>
-							<li className={`${s.ac} ${s.notes}`}>{el.notes}</li>
+							<li className={`${s.ac} ${s.notes}`}> <span> {el.notes}</span></li>
 						</ul>
 					)
 				})}

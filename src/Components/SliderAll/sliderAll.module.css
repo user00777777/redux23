@@ -1,14 +1,42 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+.parent {
+  display: flex;
+  flex-direction: column;
+}
+.parent .wrapMap {
+  margin-bottom: 0.5rem;
+  background-color: rgb(255, 255, 255);
+}
+.parent .wrapMap .ac {
+  border: none;
+  background-color: skyblue;
+  min-height: -moz-max-content;
+  min-height: max-content;
+  max-height: clamp(1rem, 0.6rem + 2vw, 1.2rem);
+  font-size: clamp(1rem, 0.6rem + 2vw, 1.1rem);
+}
+.parent .wrapMap .notes {
+  background-color: honeydew;
+}
+.parent .wrapMap .notes span {
+  text-align: center;
+  padding: 1px 20px;
+  min-width: auto;
+  max-width: 91%;
+}
+
+/* Правильный импорт */
 @media screen and (min-width: 370px) {
-  .parent .data {
-    font-size: clamp(1rem, -1rem + 10vw, 1.5rem);
-  }
-  .parent .notes {
-    height: auto;
-    color: red;
-  }
-  .parent :is(#idCrane) .notes {
-    background: rgb(255, 255, 255);
+  .parent {
+    /* .data { font-size: clamp(1rem, -1rem + 10vw, 1.5rem); } */
+    /* .notes {
+      height: auto;
+      color: red;
+    } */
+    /* :is(#idCrane) .notes {
+      background: rgb(255, 255, 255);
+    } */
   }
 }
 .parent {
@@ -16,31 +44,33 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  /* justify-content: space-around; */
   align-items: auto;
+  /* list-style: none; */
 }
 
 .btns {
   display: flex;
   margin: 10px 0px;
   justify-content: space-between;
+  /* margin-bottom: 10px; */
 }
 .btns .btn {
   margin: 0px 70px;
 }
 
-#idCrane {
+/* #idCrane {
   margin-bottom: 20px;
   display: grid;
-}
-#idCrane li {
-  background: linear-gradient(to bottom, #e9f6fd 0%, #d3eefb 100%);
-}
 
-:is(#idCrane).ac {
+  li {
+    background: linear-gradient(to bottom, #e9f6fd 0%, #d3eefb 100%);
+  }
+} */
+/* :is(#idCrane).ac {
   color: rgb(238, 14, 14);
   font-size: clamp(0.75rem, -0.25rem + 5vw, 1rem);
-}
-
+} */
 .header {
   background-color: #d3eefb;
   font-family: "Lobster", sans-serif;
@@ -49,7 +79,11 @@
   font-size: 1.3rem;
 }
 
+/* .arrowRight {
+  width: 20px;
+} */
 .btn {
   width: 80px;
   color: red;
+  /* background-color: none; */
 }
