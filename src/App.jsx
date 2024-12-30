@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import './App.css'
 import Employees from './Components/Employees'
 
@@ -54,8 +54,22 @@ import Warning from './Components/Licence/Warning/Warning'
 import Person from './Components/Licence/Warning/Person'
 import Inspection from './Components/Inspection/Inspection'
 import OneTelfInspect from './Components/Inspection/OneTelfInspect'
+import { useEffect } from 'react'
+import ReactGA from 'react-ga4';
+// import NewComponent from './Components/Cranes/NewComponent'
 
 function App() {
+
+	const location = useLocation();
+
+
+
+	useEffect(() => {
+	  ReactGA.send({ hitType: "pageview", page: location.pathname });
+	}, [location]);
+  
+
+
 	return (
 		<div>
 			<Routes>
@@ -106,7 +120,7 @@ function App() {
 					<Route path='warning' element={<Warning />} />
 					<Route path='person' element={<Person />} />
 					<Route path='inspection' element={<Inspection />} />
-					<Route path='oneTelfInspect' element={<OneTelfInspect />} />
+					
 					{/* <Route path='pumps' element={<BackPage />} /> */}
 				</Route>
 			</Routes>
