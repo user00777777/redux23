@@ -2,15 +2,17 @@ import { useEffect, useState } from 'react'
 import GasDuty from './gasDuty/GasDuty'
 
 const getDuty = (electr, plumb, gas) => {
-	const currentDate = new Date()
+	const currentDate = new Date() 
 	const dayOfMonth = currentDate.getDate()
 	const hour = currentDate.getHours()
 	const month = currentDate.getMonth() + 1
 
-	const dayOfYear =
+	let dayOfYear =
 		Math.floor(
 			(currentDate - new Date(currentDate.getFullYear(), 0, 0)) / 86400000
-		) + 4
+		) + 2
+
+// console.log(dayOfYear+=2);
 
 	const duty = shiftNames => {
 		const oneShift = shiftNames.map(changeDuty)
@@ -30,6 +32,7 @@ const getDuty = (electr, plumb, gas) => {
 	const dutyGas = duty(['Полищук', 'Стасюк', 'Чеча', 'Выходец'])
 	const dutyPlumb = duty(plumb.plumb)
 	const dutyEl = duty(electr.el)
+	
 
 	const handleDuty = (shift, isDay) => shift[dayOfYear % shift.length]
 
@@ -58,14 +61,14 @@ const changeDuty = el => {
 	const month = currentDate.getMonth() + 1
 
 	const specialCases = {
-		лысенко: () =>
-			dayOfMonth >= 2 && dayOfMonth <= 8 && month === 10 ? 'Гекало' : el,
-		малько: () =>
-			dayOfMonth >= 9 && dayOfMonth <= 31 && month === 10 ? 'Гекало' : el,
-		немченко: () =>
-			dayOfMonth >= 1 && dayOfMonth <= 17 && month === 9 ? 'Павлюченко' : el,
-		выходец: () => (dayOfMonth >= 29 && dayOfMonth <= 31 ? 'Колабин' : el),
-		головченко: () => (dayOfMonth >= 7 && dayOfMonth <= 31 ? 'Дубовик' : el),
+		// лысенко: () =>
+		// 	dayOfMonth >= 2 && dayOfMonth <= 8 && month === 10 ? 'Гекало' : el,
+		// малько: () =>
+		// 	dayOfMonth >= 9 && dayOfMonth <= 31 && month === 10 ? 'Гекало' : el,
+		// немченко: () =>
+		// 	dayOfMonth >= 1 && dayOfMonth <= 17 && month === 9 ? 'Павлюченко' : el,
+		// выходец: () => (dayOfMonth >= 29 && dayOfMonth <= 31 ? 'Колабин' : el),
+		// головченко: () => (dayOfMonth >= 7 && dayOfMonth <= 31 ? 'Дубовик' : el),
 	}
 
 	return specialCases[el.toLowerCase()] ? specialCases[el.toLowerCase()]() : el
