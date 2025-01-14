@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import GasDuty from './gasDuty/GasDuty'
 
 const getDuty = (electr, plumb, gas) => {
+	console.log(plumb);
+	
 	const currentDate = new Date() 
 	const dayOfMonth = currentDate.getDate()
 	const hour = currentDate.getHours()
@@ -63,12 +65,14 @@ const changeDuty = el => {
 	const specialCases = {
 		// лысенко: () =>
 		// 	dayOfMonth >= 2 && dayOfMonth <= 8 && month === 10 ? 'Гекало' : el,
-		// малько: () =>
-		// 	dayOfMonth >= 9 && dayOfMonth <= 31 && month === 10 ? 'Гекало' : el,
+		Гекало: () =>
+			dayOfMonth >= 19 && dayOfMonth <= 31  ? 'Синькевич' : el,
+		Гекало: () =>
+			dayOfMonth >= 19 && dayOfMonth <= 31&&month==2  ? 'Синькевич' : el,
 		// немченко: () =>
 		// 	dayOfMonth >= 1 && dayOfMonth <= 17 && month === 9 ? 'Павлюченко' : el,
 		// выходец: () => (dayOfMonth >= 29 && dayOfMonth <= 31 ? 'Колабин' : el),
-		// головченко: () => (dayOfMonth >= 7 && dayOfMonth <= 31 ? 'Дубовик' : el),
+	// полищук: () => (dayOfMonth >= 7 && dayOfMonth <= 31 ? 'Дубовик' : el),
 	}
 
 	return specialCases[el.toLowerCase()] ? specialCases[el.toLowerCase()]() : el
