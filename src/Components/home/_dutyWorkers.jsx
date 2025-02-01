@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import GasDuty from './gasDuty/GasDuty'
+import s from './duty.module.css'
 
 const getDuty = (electr, plumb, gas) => {
 	console.log(plumb);
@@ -45,13 +46,13 @@ const getDuty = (electr, plumb, gas) => {
 	return (
 		<ul>
 			<li>
-				Дежурный електрик <span>{manEl}</span>
+				Деж-й електрик <span>{manEl}<code className={s.telDuty}>6-22</code></span>
 			</li>
 			<li>
-				Дежурный сантехник <span>{manPlumb}</span>
+				Деж-й сантехник <span>{manPlumb}<code className={s.telDuty}>8-53</code></span>
 			</li>
 			<li>
-				Дежурный газовщик <span>{manGas}</span>
+				Деж-й газовщик <span>{manGas}<code className={s.telDuty}>4-20</code></span>
 			</li>
 		</ul>
 	)
@@ -65,13 +66,13 @@ const changeDuty = el => {
 	const specialCases = {
 		// лысенко: () =>
 		// 	dayOfMonth >= 2 && dayOfMonth <= 8 && month === 10 ? 'Гекало' : el,
-		Гекало: () =>
-			dayOfMonth >= 19 && dayOfMonth <= 31  ? 'Синькевич' : el,
-		Гекало: () =>
-			dayOfMonth >= 19 && dayOfMonth <= 31&&month==2  ? 'Синькевич' : el,
+		// Гекало: () =>
+		// 	dayOfMonth >= 1 && dayOfMonth <= 31  ? 'Синькевич' : el,
+		// Гекало: () =>
+		// 	dayOfMonth >= 19 && dayOfMonth <= 31&&month==2  ? 'Синькевич' : el,
 		// немченко: () =>
 		// 	dayOfMonth >= 1 && dayOfMonth <= 17 && month === 9 ? 'Павлюченко' : el,
-		// выходец: () => (dayOfMonth >= 29 && dayOfMonth <= 31 ? 'Колабин' : el),
+		стасюк: () => (dayOfMonth >= 1 && dayOfMonth <= 31 ? 'Выходец' : el),
 	// полищук: () => (dayOfMonth >= 7 && dayOfMonth <= 31 ? 'Дубовик' : el),
 	}
 

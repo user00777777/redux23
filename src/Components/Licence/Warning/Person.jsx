@@ -8,7 +8,7 @@ export default function Person(props) {
 	const state = useSelector(state => state.job.list)
 	let currentDate = new Date()
 
-	console.log(props)
+	// console.log(props)
 
 	return (
 		<div>
@@ -28,7 +28,8 @@ export default function Person(props) {
 							const daysDifference = Math.floor(
 								(licenceDate - currentDate) / (1000 * 60 * 60 * 24)
 							)
-							if (daysDifference < 14) {
+							if (daysDifference < 14&&daysDifference>=0) {
+
 								return (
 									<ul
 										className={s.listWorkers}
@@ -60,7 +61,7 @@ export default function Person(props) {
 							const daysDifference = Math.floor(
 								(licenceDate - currentDate) / (1000 * 60 * 60 * 24)
 							)
-							if (daysDifference < 30) {
+							if (daysDifference < 30&&daysDifference>=0) {
 								return (
 									<ul
 										className={s.listWorkers}
@@ -92,7 +93,7 @@ export default function Person(props) {
 								const daysDifference = Math.floor(
 									(licenceDate - currentDate) / (1000 * 60 * 60 * 24)
 								)
-								if (daysDifference < 366) {
+								if (daysDifference < 366&&daysDifference>=0) {
 									return (
 										<ul
 											className={s.listWorkers}
