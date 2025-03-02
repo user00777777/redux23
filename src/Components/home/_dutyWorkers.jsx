@@ -2,13 +2,11 @@ import { useEffect, useState } from 'react'
 import GasDuty from './gasDuty/GasDuty'
 import s from './duty.module.css'
 
-const getDuty = (electr, plumb, gas) => {
+const getDuty = (electr, plumb) => {
 	console.log(plumb);
 	
 	const currentDate = new Date() 
-	const dayOfMonth = currentDate.getDate()
 	const hour = currentDate.getHours()
-	const month = currentDate.getMonth() + 1
 
 	let dayOfYear =
 		Math.floor(
@@ -37,7 +35,7 @@ const getDuty = (electr, plumb, gas) => {
 	const dutyEl = duty(electr.el)
 	
 
-	const handleDuty = (shift, isDay) => shift[dayOfYear % shift.length]
+	const handleDuty = (shift) => shift[dayOfYear % shift.length]
 
 	const manGas = handleDuty(dutyGas.shift, dutyGas.isDay)
 	const manPlumb = handleDuty(dutyPlumb.shift, dutyPlumb.isDay)
@@ -55,13 +53,10 @@ const getDuty = (electr, plumb, gas) => {
 				Деж-й газовщик <span>{manGas}<code className={s.telDuty}>4-20</code></span>
 			</li>
 		</ul>
-	)
-}
-
+	)}
 const changeDuty = el => {
 	const currentDate = new Date()
 	const dayOfMonth = currentDate.getDate()
-	const month = currentDate.getMonth() + 1
 
 	const specialCases = {
 		// лысенко: () =>
@@ -69,7 +64,7 @@ const changeDuty = el => {
 		// Гекало: () =>
 		// 	dayOfMonth >= 1 && dayOfMonth <= 31  ? 'Синькевич' : el,
 		// Гекало: () =>
-		// 	dayOfMonth >= 19 && dayOfMonth <= 31&&month==2  ? 'Синькевич' : el,
+		// 	dayOfMonth >= 19 && dayOfMonth <= 31&&month==2  ? 'Синькевич' : el, 
 		// немченко: () =>
 		// 	dayOfMonth >= 1 && dayOfMonth <= 17 && month === 9 ? 'Павлюченко' : el,
 		стасюк: () => (dayOfMonth >= 1 && dayOfMonth <= 31 ? 'Выходец' : el),
