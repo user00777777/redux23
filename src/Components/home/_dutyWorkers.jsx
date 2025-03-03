@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react'
 import GasDuty from './gasDuty/GasDuty'
 import s from './duty.module.css'
 
-const getDuty = (electr, plumb) => {
-	console.log(plumb);
+const getDuty = (electr, plumb,gas) => {
+	// console.log(g.gas);
 	
 	const currentDate = new Date() 
 	const hour = currentDate.getHours()
@@ -30,7 +30,7 @@ const getDuty = (electr, plumb) => {
 		}
 	}
 
-	const dutyGas = duty(['Полищук', 'Стасюк', 'Чеча', 'Выходец'])
+	const dutyGas = duty(gas.gas)
 	const dutyPlumb = duty(plumb.plumb)
 	const dutyEl = duty(electr.el)
 	
@@ -67,7 +67,7 @@ const changeDuty = el => {
 		// 	dayOfMonth >= 19 && dayOfMonth <= 31&&month==2  ? 'Синькевич' : el, 
 		// немченко: () =>
 		// 	dayOfMonth >= 1 && dayOfMonth <= 17 && month === 9 ? 'Павлюченко' : el,
-		стасюк: () => (dayOfMonth >= 1 && dayOfMonth <= 31 ? 'Выходец' : el),
+		// стасюк: () => (dayOfMonth >= 1 && dayOfMonth <= 31 ? 'Выходец' : el),
 	// полищук: () => (dayOfMonth >= 7 && dayOfMonth <= 31 ? 'Дубовик' : el),
 	}
 
