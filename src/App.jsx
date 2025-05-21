@@ -56,9 +56,10 @@ import Inspection from './Components/Inspection/Inspection'
 import OneTelfInspect from './Components/Inspection/OneTelfInspect'
 import { useEffect } from 'react'
 import ReactGA from 'react-ga4';
+import Enter from './Components/Enter/Enter'
 // import NewComponent from './Components/Cranes/NewComponent'
 
-function App() {
+function App() 
 
 	const location = useLocation();
 
@@ -120,6 +121,9 @@ function App() {
 					<Route path='warning' element={<Warning />} />
 					<Route path='person' element={<Person />} />
 					<Route path='inspection' element={<Inspection />} />
+					<Route path='enter' element={<Enter />} />
+
+					{/* <Route path='enter' element={<Enter />} /> */}
 					
 					{/* <Route path='pumps' element={<BackPage />} /> */}
 				</Route>

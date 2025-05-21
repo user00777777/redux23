@@ -7,6 +7,7 @@ import PlumbersDuty from '../css/homeComponent/Plambers/PlumbersDuty'
 import Duty from './home/Duty'
 import GasDuty from './home/gasDuty/GasDuty'
 import Warning from './Licence/Warning/Warning'
+import Enter from './Enter/Enter'
 
 export default function Homepage() {
 	const state = useSelector(state => state.duty.duty)
@@ -19,6 +20,7 @@ export default function Homepage() {
 			<div className={s.dutyContainer}>
 				<Duty duty={state} />
 			</div>
+			<Enter duty={state} />
 
 			<main className={s.links}>
 				<div className={[s.link1, s.link].join(' ')}>
