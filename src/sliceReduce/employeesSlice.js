@@ -21,7 +21,7 @@ const initialState = {
 			1
 		),
 		newEmployee(
-			'Петриченко Ю.',
+			'',
 			[
 				{ date: '', name: El },
 				{ date: '2025-05-13', name: Vus },
@@ -32,7 +32,7 @@ const initialState = {
 			2
 		),
 		newEmployee(
-			'Тригуб Д.',
+			'',
 			[
 				{ date: '', name: El },
 				{ date: '2025-05-03', name: Vus },
