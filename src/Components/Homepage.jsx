@@ -25,7 +25,7 @@ export default function Homepage() {
 			<main className={s.links}>
 				<div className={[s.link1, s.link].join(' ')}>
 					<Link to='/phones'>
-						<span className={s.l}>Телефоны</span>
+						<span className={s.l}>Телефоныa</span>
 					</Link>
 				</div>
 				<div className={[s.link2, s.link].join(' ')}>
