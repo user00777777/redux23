@@ -7,12 +7,12 @@ function Duty({duty}) {
 	
 
   
-	return (
-		<><div className={s.wrapHeader}><h2>Дежурные  данных нет</h2></div>
-			{duty && <div className={s.dutyContainer}>{getDuty(...duty)}</div>}
+	// return (
+	// 	<><div className={s.wrapHeader}><h2>Дежурные  данных нет</h2></div>
+	// 		{duty && <div className={s.dutyContainer}>{getDuty(...duty)}</div>}
    
-		</>
-	)
+	// 	</>
+	// )
 }
 export default Duty
 // import React, { useEffect,useState } from 'react';

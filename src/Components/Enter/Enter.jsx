@@ -17,8 +17,8 @@ export default function Enter() {
       
         return (
           <div>
-            <input type="text" value={value} onChange={handleChange} />
-            <button onClick={handleClick}>Отправить</button>
+            {/* <input type="text" value={value} onChange={handleChange} />
+            <button onClick={handleClick}>Отправить</button> */}
           </div>
         )
 }
