@@ -38,10 +38,7 @@
     "vite": "^4.5.5",
     "vite-plugin-imagemin": "^0.6.1"
   },
-  
   "engines": {
     "node": "18.x"
   }
-
-
 }

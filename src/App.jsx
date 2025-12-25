@@ -79,7 +79,7 @@ function App() {
 					<Route path='log' element={<Log />} />
 					<Route index element={<Homepage />} />
 					<Route path='workers' element={<Employees />} />
-					{/* <Route path='machineTools' element={<MachineTools />} /> */}
+					<Route path='machineTools' element={<MachineTools />} />
 					{/* <Route path='/main' element={<Main/>}/> */}
 					<Route path='telphers' element={<Telphers />} />
 					<Route path='district23' element={<District23 />} />
