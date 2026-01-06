@@ -83,7 +83,7 @@ export default function Substation() {
 				refA.current?.classList.add(s.avmBlinc)
 				refA2.current?.classList.remove(s.avmBlinc)
 				refA2.current?.classList.add(s.avm2)
-	
+
 			}
 		}
 		if (newKey != 'T2') {
@@ -272,7 +272,7 @@ export default function Substation() {
 			</div>
 			<div className={s.buPearent}>
 				{/* <button  className={s.but} onClick={btn} > Tp1</button>
-    <button className={s.but2} onClick={btn2} > Tp2</button> */}
+     <button className={s.but2} onClick={btn2} > Tp2</button> */}
 			</div>
 		</div>
 	)
